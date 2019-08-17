@@ -1,6 +1,6 @@
-# phpseclib API Documentation for phpseclib
+## phpseclib API Documentation for phpseclib
 
-## Branches
+### Branches
 
 * [1.0](1.0)
 * [2.0](2.0)
