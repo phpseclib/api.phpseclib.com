@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>phpseclib\File\ASN1 | phpseclib API Documentation</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">phpseclib API Documentation</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../phpseclib/File.html">phpseclib\File</a>\ASN1</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>ASN1</strong></p>
+
+            <div class="description">
+            <p>Pure-PHP ASN.1 Parser</p>
+            <p>
+</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>CLASS_UNIVERSAL</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CLASS_APPLICATION</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CLASS_CONTEXT_SPECIFIC</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>CLASS_PRIVATE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_BOOLEAN</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_INTEGER</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_BIT_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_OCTET_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_NULL</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_OBJECT_IDENTIFIER</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_REAL</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_ENUMERATED</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_UTF8_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_SEQUENCE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_SET</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_NUMERIC_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_PRINTABLE_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_TELETEX_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_VIDEOTEX_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_IA5_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_UTC_TIME</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_GENERALIZED_TIME</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_GRAPHIC_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_VISIBLE_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_GENERAL_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_UNIVERSAL_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_BMP_STRING</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_CHOICE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>TYPE_ANY</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_oids">
+                                                            array
+                </td>
+                <td>$oids</td>
+                <td class="last">ASN.1 object identifier</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_format">
+                                                            string
+                </td>
+                <td>$format</td>
+                <td class="last">Default date format</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_encoded">
+                                                            array
+                </td>
+                <td>$encoded</td>
+                <td class="last">Default date format</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filters">
+                                                            array
+                </td>
+                <td>$filters</td>
+                <td class="last">Filters</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ANYmap">
+                                                            array
+                </td>
+                <td>$ANYmap</td>
+                <td class="last">Type mapping table for the ANY type.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_stringTypeSize">
+                                                            array
+                </td>
+                <td>$stringTypeSize</td>
+                <td class="last">String type to character size mapping table.</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_decodeBER">decodeBER</a>(string $encoded)
+                    <p>Parse BER-encoding</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method__decode_ber">_decode_ber</a>(string $encoded, int $start, int $encoded_pos)
+                    <p>Parse BER-encoding (Helper function)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_asn1map">asn1map</a>(array $decoded, array $mapping, array $special = array())
+                    <p>ASN.1 Map</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_encodeDER">encodeDER</a>($source, $mapping, $special = array())
+                    <p>ASN.1 Encode</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__encode_der">_encode_der</a>($source, $mapping, $idx = null, $special = array())
+                    <p>ASN.1 Encode (Helper function)</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__encodeLength">_encodeLength</a>(int $length)
+                    <p>DER-encode the length</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__decodeOID">_decodeOID</a>(string $content)
+                    <p>BER-decode the OID</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__encodeOID">_encodeOID</a>($source)
+                    <p>DER-encode the OID</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__decodeTime">_decodeTime</a>(string $content, int $tag)
+                    <p>BER-decode the time</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setTimeFormat">setTimeFormat</a>(string $format)
+                    <p>Set the time format</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_loadOIDs">loadOIDs</a>(array $oids)
+                    <p>Load OIDs</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_loadFilters">loadFilters</a>(array $filters)
+                    <p>Load filters</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__string_shift">_string_shift</a>(string $string, int $index = 1)
+                    <p>String Shift</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_convert">convert</a>(string $in, int $from = self::TYPE_UTF8_STRING, int $to = self::TYPE_UTF8_STRING)
+                    <p>String type conversion</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method_decodeBER">
+        <div class="location">at line 209</div>
+        <code>            public            array
+    <strong>decodeBER</strong>(string $encoded)</code>
+    </h3>
+    <div class="details">
+        <p>Parse BER-encoding</p>
+        <p>Serves a similar purpose to openssl's asn1parse</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$encoded</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__decode_ber">
+        <div class="location">at line 233</div>
+        <code>            public            array
+    <strong>_decode_ber</strong>(string $encoded, int $start, int $encoded_pos)</code>
+    </h3>
+    <div class="details">
+        <p>Parse BER-encoding (Helper function)</p>
+        <p>Sometimes we want to get the BER encoding of a particular tag.  $start lets us do that without having to reencode.
+$encoded is passed by reference for the recursive calls done for self::TYPE<em>BIT</em>STRING and
+self::TYPE<em>OCTET</em>STRING. In those cases, the indefinite length is used.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$encoded</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$start</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$encoded_pos</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_asn1map">
+        <div class="location">at line 494</div>
+        <code>            public            array
+    <strong>asn1map</strong>(array $decoded, array $mapping, array $special = array())</code>
+    </h3>
+    <div class="details">
+        <p>ASN.1 Map</p>
+        <p>Provides an ASN.1 semantic mapping ($mapping) from a parsed BER-encoding to a human readable format.</p>
+
+<p>"Special" mappings may be applied on a per tag-name basis via $special.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$decoded</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$mapping</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$special</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_encodeDER">
+        <div class="location">at line 793</div>
+        <code>            public            string
+    <strong>encodeDER</strong>($source, $mapping, $special = array())</code>
+    </h3>
+    <div class="details">
+        <p>ASN.1 Encode</p>
+        <p>DER-encodes an ASN.1 semantic mapping ($mapping).  Some libraries would probably call this function
+an ASN.1 compiler.</p>
+
+<p>"Special" mappings can be applied via $special.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$source</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$mapping</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$special</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__encode_der">
+        <div class="location">at line 808</div>
+        <code>            public            string
+    <strong>_encode_der</strong>($source, $mapping, $idx = null, $special = array())</code>
+    </h3>
+    <div class="details">
+        <p>ASN.1 Encode (Helper function)</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$source</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$mapping</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$idx</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$special</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__encodeLength">
+        <div class="location">at line 1096</div>
+        <code>            public            string
+    <strong>_encodeLength</strong>(int $length)</code>
+    </h3>
+    <div class="details">
+        <p>DER-encode the length</p>
+        <p>DER supports lengths up to (2<strong>8)</strong>127, however, we'll only support lengths up to (2<strong>8)</strong>4.  See
+{@link http://itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf#p=13 X.690 paragraph 8.1.3} for more information.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__decodeOID">
+        <div class="location">at line 1115</div>
+        <code>            public            string
+    <strong>_decodeOID</strong>(string $content)</code>
+    </h3>
+    <div class="details">
+        <p>BER-decode the OID</p>
+        <p>Called by <em>decode</em>ber()</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__encodeOID">
+        <div class="location">at line 1163</div>
+        <code>            public            string
+    <strong>_encodeOID</strong>($source)</code>
+    </h3>
+    <div class="details">
+        <p>DER-encode the OID</p>
+        <p>Called by <em>encode</em>der()</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$source</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__decodeTime">
+        <div class="location">at line 1218</div>
+        <code>            public            string
+    <strong>_decodeTime</strong>(string $content, int $tag)</code>
+    </h3>
+    <div class="details">
+        <p>BER-decode the time</p>
+        <p>Called by <em>decode</em>ber() and in the case of implicit tags asn1map().</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$content</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$tag</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setTimeFormat">
+        <div class="location">at line 1264</div>
+        <code>            public            
+    <strong>setTimeFormat</strong>(string $format)</code>
+    </h3>
+    <div class="details">
+        <p>Set the time format</p>
+        <p>Sets the time / date format for asn1map().</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadOIDs">
+        <div class="location">at line 1277</div>
+        <code>            public            
+    <strong>loadOIDs</strong>(array $oids)</code>
+    </h3>
+    <div class="details">
+        <p>Load OIDs</p>
+        <p>Load the relevant OIDs for a particular ASN.1 semantic mapping.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$oids</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadFilters">
+        <div class="location">at line 1290</div>
+        <code>            public            
+    <strong>loadFilters</strong>(array $filters)</code>
+    </h3>
+    <div class="details">
+        <p>Load filters</p>
+        <p>See \phpseclib\File\X509, etc, for an example.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$filters</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__string_shift">
+        <div class="location">at line 1305</div>
+        <code>            public            string
+    <strong>_string_shift</strong>(string $string, int $index = 1)</code>
+    </h3>
+    <div class="details">
+        <p>String Shift</p>
+        <p>Inspired by array_shift</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_convert">
+        <div class="location">at line 1324</div>
+        <code>            public            string
+    <strong>convert</strong>(string $in, int $from = self::TYPE_UTF8_STRING, int $to = self::TYPE_UTF8_STRING)</code>
+    </h3>
+    <div class="details">
+        <p>String type conversion</p>
+        <p>This is a lazy conversion, dealing only with character size.
+No real conversion table is used.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$in</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$from</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$to</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

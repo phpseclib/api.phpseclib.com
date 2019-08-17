@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>phpseclib\System\SSH\Agent | phpseclib API Documentation</title>
+                    <link rel="stylesheet" type="text/css" href="../../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../../classes.html">Classes</a></li>
+                            <li><a href="../../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../../traits.html">Traits</a></li>
+            <li><a href="../../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">phpseclib API Documentation</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../../phpseclib/System/SSH.html">phpseclib\System\SSH</a>\Agent</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>Agent</strong></p>
+
+            <div class="description">
+            <p>Pure-PHP ssh-agent client identity factory</p>
+            <p>requestIdentities() method pumps out \phpseclib\System\SSH\Agent\Identity objects</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>SSH_AGENTC_REQUEST_IDENTITIES</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SSH_AGENT_IDENTITIES_ANSWER</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SSH_AGENTC_SIGN_REQUEST</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SSH_AGENT_SIGN_RESPONSE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORWARD_NONE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORWARD_REQUEST</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORWARD_ACTIVE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SSH_AGENT_FAILURE</td>
+                <td class="last">
+                    <p><em>Unused</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_fsock">
+                                                            resource
+                </td>
+                <td>$fsock</td>
+                <td class="last">Socket Resource</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_forward_status">
+                                                            
+                </td>
+                <td>$forward_status</td>
+                <td class="last">Agent forwarding status</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_socket_buffer">
+                                                            
+                </td>
+                <td>$socket_buffer</td>
+                <td class="last">Buffer for accumulating forwarded authentication agent data arriving on SSH data channel destined for agent unix socket</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_expected_bytes">
+                                                            
+                </td>
+                <td>$expected_bytes</td>
+                <td class="last">Tracking the number of bytes we are expecting to arrive for the agent socket on the SSH data channel</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../../phpseclib/System/SSH/Agent.html"><abbr title="phpseclib\System\SSH\Agent">Agent</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>($address = null)
+                    <p>Default Constructor</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_requestIdentities">requestIdentities</a>()
+                    <p>Request Identities</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_startSSHForwarding">startSSHForwarding</a>(<abbr title="phpseclib\System\SSH\Net_SSH2">Net_SSH2</abbr> $ssh)
+                    <p>Signal that agent forwarding should be requested when a channel is opened</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method__request_forwarding">_request_forwarding</a>(<abbr title="phpseclib\System\SSH\Net_SSH2">Net_SSH2</abbr> $ssh)
+                    <p>Request agent forwarding of remote server</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__on_channel_open">_on_channel_open</a>(<abbr title="phpseclib\System\SSH\Net_SSH2">Net_SSH2</abbr> $ssh)
+                    <p>On successful channel open</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="phpseclib\System\SSH\data">data</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method__forward_data">_forward_data</a>(string $data)
+                    <p>Forward data to SSH Agent and return data reply</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 120</div>
+        <code>            public            <a href="../../../phpseclib/System/SSH/Agent.html"><abbr title="phpseclib\System\SSH\Agent">Agent</abbr></a>
+    <strong>__construct</strong>($address = null)</code>
+    </h3>
+    <div class="details">
+        <p>Default Constructor</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$address</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../../phpseclib/System/SSH/Agent.html"><abbr title="phpseclib\System\SSH\Agent">Agent</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_requestIdentities">
+        <div class="location">at line 151</div>
+        <code>            public            array
+    <strong>requestIdentities</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Request Identities</p>
+        <p>See "2.5.2 Requesting a list of protocol 2 keys"
+Returns an array containing zero or more \phpseclib\System\SSH\Agent\Identity objects</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_startSSHForwarding">
+        <div class="location">at line 212</div>
+        <code>            public            bool
+    <strong>startSSHForwarding</strong>(<abbr title="phpseclib\System\SSH\Net_SSH2">Net_SSH2</abbr> $ssh)</code>
+    </h3>
+    <div class="details">
+        <p>Signal that agent forwarding should be requested when a channel is opened</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="phpseclib\System\SSH\Net_SSH2">Net_SSH2</abbr></td>
+                <td>$ssh</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__request_forwarding">
+        <div class="location">at line 226</div>
+        <code>            public            bool
+    <strong>_request_forwarding</strong>(<abbr title="phpseclib\System\SSH\Net_SSH2">Net_SSH2</abbr> $ssh)</code>
+    </h3>
+    <div class="details">
+        <p>Request agent forwarding of remote server</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="phpseclib\System\SSH\Net_SSH2">Net_SSH2</abbr></td>
+                <td>$ssh</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__on_channel_open">
+        <div class="location">at line 269</div>
+        <code>            public            
+    <strong>_on_channel_open</strong>(<abbr title="phpseclib\System\SSH\Net_SSH2">Net_SSH2</abbr> $ssh)</code>
+    </h3>
+    <div class="details">
+        <p>On successful channel open</p>
+        <p>This method is called upon successful channel
+open to give the SSH Agent an opportunity
+to take further action. i.e. request agent forwarding</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><abbr title="phpseclib\System\SSH\Net_SSH2">Net_SSH2</abbr></td>
+                <td>$ssh</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__forward_data">
+        <div class="location">at line 283</div>
+        <code>            public            <abbr title="phpseclib\System\SSH\data">data</abbr>
+    <strong>_forward_data</strong>(string $data)</code>
+    </h3>
+    <div class="details">
+        <p>Forward data to SSH Agent and return data reply</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="phpseclib\System\SSH\data">data</abbr></td>
+            <td>from SSH Agent</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

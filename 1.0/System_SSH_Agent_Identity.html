@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>System_SSH_Agent_Identity | phpseclib API Documentation</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="traits.html">Traits</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">phpseclib API Documentation</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>System_SSH_Agent_Identity</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>System_SSH_Agent_Identity</strong></p>
+
+            <div class="description">
+            <p>Pure-PHP ssh-agent client identity object</p>
+            <p>Instantiation should only be performed by System<em>SSH</em>Agent class.
+This could be thought of as implementing an interface that Crypt<em>RSA
+implements. ie. maybe a Net</em>SSH<em>Auth</em>PublicKey interface or something.
+The methods in this interface would be getPublicKey, setSignatureMode
+and sign since those are the methods phpseclib looks for to perform
+public key authentication.</p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_key">
+                                                            <a href="Crypt_RSA.html"><abbr title="Crypt_RSA">Crypt_RSA</abbr></a>
+                </td>
+                <td>$key</td>
+                <td class="last">Key Object</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_key_blob">
+                                                            string
+                </td>
+                <td>$key_blob</td>
+                <td class="last">Key Blob</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_fsock">
+                                                            resource
+                </td>
+                <td>$fsock</td>
+                <td class="last">Socket Resource</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_flags">
+                                                            int
+                </td>
+                <td>$flags</td>
+                <td class="last">Signature flags</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="System_SSH_Agent_Identity.html"><abbr title="System_SSH_Agent_Identity">System_SSH_Agent_Identity</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>(resource $fsock)
+                    <p>Default Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_System_SSH_Agent_Identity">System_SSH_Agent_Identity</a>(resource $fsock)
+                    <p>PHP4 compatible Default Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPublicKey">setPublicKey</a>(<a href="Crypt_RSA.html"><abbr title="Crypt_RSA">Crypt_RSA</abbr></a> $key)
+                    <p>Set Public Key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPublicKeyBlob">setPublicKeyBlob</a>(string $key_blob)
+                    <p>Set Public Key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getPublicKey">getPublicKey</a>(int $format = null)
+                    <p>Get Public Key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSignatureMode">setSignatureMode</a>(int $mode)
+                    <p>Set Signature Mode</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setHash">setHash</a>(string $hash)
+                    <p>Set Hash</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_sign">sign</a>(string $message)
+                    <p>Create a signature</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__string_shift">_string_shift</a>(string $string, int $index = 1)
+                    <p>String Shift</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 153</div>
+        <code>            public            <a href="System_SSH_Agent_Identity.html"><abbr title="System_SSH_Agent_Identity">System_SSH_Agent_Identity</abbr></a>
+    <strong>__construct</strong>(resource $fsock)</code>
+    </h3>
+    <div class="details">
+        <p>Default Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>resource</td>
+                <td>$fsock</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="System_SSH_Agent_Identity.html"><abbr title="System_SSH_Agent_Identity">System_SSH_Agent_Identity</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_System_SSH_Agent_Identity">
+        <div class="location">at line 165</div>
+        <code>            public            
+    <strong>System_SSH_Agent_Identity</strong>(resource $fsock)</code>
+    </h3>
+    <div class="details">
+        <p>PHP4 compatible Default Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>resource</td>
+                <td>$fsock</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::__construct()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_setPublicKey">
+        <div class="location">at line 178</div>
+        <code>            public            
+    <strong>setPublicKey</strong>(<a href="Crypt_RSA.html"><abbr title="Crypt_RSA">Crypt_RSA</abbr></a> $key)</code>
+    </h3>
+    <div class="details">
+        <p>Set Public Key</p>
+        <p>Called by System<em>SSH</em>Agent::requestIdentities()</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="Crypt_RSA.html"><abbr title="Crypt_RSA">Crypt_RSA</abbr></a></td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPublicKeyBlob">
+        <div class="location">at line 193</div>
+        <code>            public            
+    <strong>setPublicKeyBlob</strong>(string $key_blob)</code>
+    </h3>
+    <div class="details">
+        <p>Set Public Key</p>
+        <p>Called by System<em>SSH</em>Agent::requestIdentities(). The key blob could be extracted from $this->key
+but this saves a small amount of computation.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key_blob</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPublicKey">
+        <div class="location">at line 207</div>
+        <code>            public            mixed
+    <strong>getPublicKey</strong>(int $format = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get Public Key</p>
+        <p>Wrapper for $this->key->getPublicKey()</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSignatureMode">
+        <div class="location">at line 221</div>
+        <code>            public            
+    <strong>setSignatureMode</strong>(int $mode)</code>
+    </h3>
+    <div class="details">
+        <p>Set Signature Mode</p>
+        <p>Doesn't do anything as ssh-agent doesn't let you pick and choose the signature mode. ie.
+ssh-agent's only supported mode is CRYPT<em>RSA</em>SIGNATURE_PKCS1</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setHash">
+        <div class="location">at line 233</div>
+        <code>            public            
+    <strong>setHash</strong>(string $hash)</code>
+    </h3>
+    <div class="details">
+        <p>Set Hash</p>
+        <p>ssh-agent doesn't support using hashes for RSA other than SHA1</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$hash</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sign">
+        <div class="location">at line 259</div>
+        <code>            public            string
+    <strong>sign</strong>(string $message)</code>
+    </h3>
+    <div class="details">
+        <p>Create a signature</p>
+        <p>See "2.6.2 Protocol 2 private key signature request"</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__string_shift">
+        <div class="location">at line 299</div>
+        <code>            public            string
+    <strong>_string_shift</strong>(string $string, int $index = 1)</code>
+    </h3>
+    <div class="details">
+        <p>String Shift</p>
+        <p>Inspired by array_shift</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

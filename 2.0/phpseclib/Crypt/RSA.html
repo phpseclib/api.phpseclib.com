@@ -1,0 +1,3333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>phpseclib\Crypt\RSA | phpseclib API Documentation</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">phpseclib API Documentation</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../phpseclib/Crypt.html">phpseclib\Crypt</a>\RSA</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>RSA</strong></p>
+
+            <div class="description">
+            <p>Pure-PHP PKCS#1 compliant implementation of RSA.</p>
+            <p>
+</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>ENCRYPTION_OAEP</td>
+                <td class="last">
+                    <p><em>Use {@link http://en.wikipedia.org/wiki/Optimal<em>Asymmetric</em>Encryption_Padding Optimal Asymmetric Encryption Padding} (OAEP) for encryption / decryption.</em></p>
+                    <p>Uses sha1 by default.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ENCRYPTION_PKCS1</td>
+                <td class="last">
+                    <p><em>Use PKCS#1 padding.</em></p>
+                    <p>Although self::ENCRYPTION_OAEP offers more security, including PKCS#1 padding is necessary for purposes of backwards
+compatibility with protocols (like SSH-1) written before OAEP's introduction.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ENCRYPTION_NONE</td>
+                <td class="last">
+                    <p><em>Do not use any padding</em></p>
+                    <p>Although this method is not recommended it can none-the-less sometimes be useful if you're trying to decrypt some legacy
+stuff, if you're trying to diagnose why an encrypted message isn't decrypting, etc.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SIGNATURE_PSS</td>
+                <td class="last">
+                    <p><em>Use the Probabilistic Signature Scheme for signing</em></p>
+                    <p>Uses sha1 by default.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SIGNATURE_PKCS1</td>
+                <td class="last">
+                    <p><em>Use the PKCS#1 scheme by default.</em></p>
+                    <p>Although self::SIGNATURE_PSS offers more security, including PKCS#1 signing is necessary for purposes of backwards
+compatibility with protocols (like SSH-2) written before PSS's introduction.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ASN1_INTEGER</td>
+                <td class="last">
+                    <p><em>ASN1 Integer</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ASN1_BITSTRING</td>
+                <td class="last">
+                    <p><em>ASN1 Bit String</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ASN1_OCTETSTRING</td>
+                <td class="last">
+                    <p><em>ASN1 Octet String</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ASN1_OBJECT</td>
+                <td class="last">
+                    <p><em>ASN1 Object Identifier</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ASN1_SEQUENCE</td>
+                <td class="last">
+                    <p><em>ASN1 Sequence (with the constucted bit set)</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODE_INTERNAL</td>
+                <td class="last">
+                    <p><em>To use the pure-PHP implementation</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>MODE_OPENSSL</td>
+                <td class="last">
+                    <p><em>To use the OpenSSL library</em></p>
+                    <p>(if enabled; otherwise, the internal implementation will be used)</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRIVATE_FORMAT_PKCS1</td>
+                <td class="last">
+                    <p><em>PKCS#1 formatted private key</em></p>
+                    <p>Used by OpenSSH</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRIVATE_FORMAT_PUTTY</td>
+                <td class="last">
+                    <p><em>PuTTY formatted private key</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRIVATE_FORMAT_XML</td>
+                <td class="last">
+                    <p><em>XML formatted private key</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRIVATE_FORMAT_PKCS8</td>
+                <td class="last">
+                    <p><em>PKCS#8 formatted private key</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PRIVATE_FORMAT_OPENSSH</td>
+                <td class="last">
+                    <p><em>OpenSSH formatted private key</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PUBLIC_FORMAT_RAW</td>
+                <td class="last">
+                    <p><em>Raw public key</em></p>
+                    <p>An array containing two \phpseclib\Math\BigInteger objects.</p>
+
+<p>The exponent can be indexed with any of the following:</p>
+
+<p>0, e, exponent, publicExponent</p>
+
+<p>The modulus can be indexed with any of the following:</p>
+
+<p>1, n, modulo, modulus</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PUBLIC_FORMAT_PKCS1</td>
+                <td class="last">
+                    <p><em>PKCS#1 formatted public key (raw)</em></p>
+                    <p>Used by File/X509.php</p>
+
+<p>Has the following header:</p>
+
+<p>-----BEGIN RSA PUBLIC KEY-----</p>
+
+<p>Analogous to ssh-keygen's pem format (as specified by -m)</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PUBLIC_FORMAT_PKCS1_RAW</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PUBLIC_FORMAT_XML</td>
+                <td class="last">
+                    <p><em>XML formatted public key</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PUBLIC_FORMAT_OPENSSH</td>
+                <td class="last">
+                    <p><em>OpenSSH formatted public key</em></p>
+                    <p>Place in $HOME/.ssh/authorized_keys</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>PUBLIC_FORMAT_PKCS8</td>
+                <td class="last">
+                    <p><em>PKCS#1 formatted public key (encapsulated)</em></p>
+                    <p>Used by PHP's openssl<em>public</em>encrypt() and openssl's rsautl (when -pubin is set)</p>
+
+<p>Has the following header:</p>
+
+<p>-----BEGIN PUBLIC KEY-----</p>
+
+<p>Analogous to ssh-keygen's pkcs8 format (as specified by -m). Although PKCS8
+is specific to private keys it's basically creating a DER-encoded wrapper
+for keys. This just extends that same concept to public keys (much like ssh-keygen)</p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_zero">
+                                                            <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td>$zero</td>
+                <td class="last">Precomputed Zero</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_one">
+                                                            <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td>$one</td>
+                <td class="last">Precomputed One</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_privateKeyFormat">
+                                                            int
+                </td>
+                <td>$privateKeyFormat</td>
+                <td class="last">Private Key Format</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_publicKeyFormat">
+                                                            int
+                </td>
+                <td>$publicKeyFormat</td>
+                <td class="last">Public Key Format</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modulus">
+                                                            <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td>$modulus</td>
+                <td class="last">Modulus (ie.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_k">
+                                                            <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td>$k</td>
+                <td class="last">Modulus length</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_exponent">
+                                                            <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td>$exponent</td>
+                <td class="last">Exponent (ie.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_primes">
+                                                            array
+                </td>
+                <td>$primes</td>
+                <td class="last">Primes for Chinese Remainder Theorem (ie.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_exponents">
+                                                            array
+                </td>
+                <td>$exponents</td>
+                <td class="last">Exponents for Chinese Remainder Theorem (ie.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_coefficients">
+                                                            array
+                </td>
+                <td>$coefficients</td>
+                <td class="last">Coefficients for Chinese Remainder Theorem (ie.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hashName">
+                                                            string
+                </td>
+                <td>$hashName</td>
+                <td class="last">Hash name</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hash">
+                                                            <a href="../../phpseclib/Crypt/Hash.html"><abbr title="phpseclib\Crypt\Hash">Hash</abbr></a>
+                </td>
+                <td>$hash</td>
+                <td class="last">Hash function</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hLen">
+                                                            int
+                </td>
+                <td>$hLen</td>
+                <td class="last">Length of hash function output</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sLen">
+                                                            int
+                </td>
+                <td>$sLen</td>
+                <td class="last">Length of salt</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mgfHash">
+                                                            <a href="../../phpseclib/Crypt/Hash.html"><abbr title="phpseclib\Crypt\Hash">Hash</abbr></a>
+                </td>
+                <td>$mgfHash</td>
+                <td class="last">Hash function for the Mask Generation Function</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mgfHLen">
+                                                            int
+                </td>
+                <td>$mgfHLen</td>
+                <td class="last">Length of MGF hash function output</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_encryptionMode">
+                                                            int
+                </td>
+                <td>$encryptionMode</td>
+                <td class="last">Encryption mode</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_signatureMode">
+                                                            int
+                </td>
+                <td>$signatureMode</td>
+                <td class="last">Signature mode</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_publicExponent">
+                                                            mixed
+                </td>
+                <td>$publicExponent</td>
+                <td class="last">Public Exponent</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_password">
+                                                            string
+                </td>
+                <td>$password</td>
+                <td class="last">Password</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_components">
+                                                            array
+                </td>
+                <td>$components</td>
+                <td class="last">Components</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_current">
+                                                            mixed
+                </td>
+                <td>$current</td>
+                <td class="last">Current String</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_configFile">
+                                                            mixed
+                </td>
+                <td>$configFile</td>
+                <td class="last">OpenSSL configuration file name.</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_comment">
+                                                            string
+                </td>
+                <td>$comment</td>
+                <td class="last">Public key comment field.</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../phpseclib/Crypt/RSA.html"><abbr title="phpseclib\Crypt\RSA">RSA</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>()
+                    <p>The constructor</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_createKey">createKey</a>($bits = 1024, $timeout = false, $partial = array())
+                    <p>Create public / private key pair</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__convertPrivateKey">_convertPrivateKey</a>($n, $e, $d, $primes, $exponents, $coefficients)
+                    <p>Convert a private key to the appropriate format.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__convertPublicKey">_convertPublicKey</a>($n, $e)
+                    <p>Convert a public key to the appropriate format</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|bool
+                </td>
+                <td class="last">
+                    <a href="#method__parseKey">_parseKey</a>(string|array $key, int $type)
+                    <p>Break a public or private key down into its constituant components</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method_getSize">getSize</a>()
+                    <p>Returns the key size</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__start_element_handler">_start_element_handler</a>(resource $parser, string $name, array $attribs)
+                    <p>Start Element Handler</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__stop_element_handler">_stop_element_handler</a>(resource $parser, string $name)
+                    <p>Stop Element Handler</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__data_handler">_data_handler</a>(resource $parser, string $data)
+                    <p>Data Handler</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_loadKey">loadKey</a>(string|<a href="../../phpseclib/Crypt/RSA.html"><abbr title="phpseclib\Crypt\RSA">RSA</abbr></a>|array $key, bool|int $type = false)
+                    <p>Loads a public or private key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPassword">setPassword</a>(string $password = false)
+                    <p>Sets the password</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_setPublicKey">setPublicKey</a>(string $key = false, int $type = false)
+                    <p>Defines the public key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_setPrivateKey">setPrivateKey</a>(string $key = false, int $type = false)
+                    <p>Defines the private key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_getPublicKey">getPublicKey</a>($type = self::PUBLIC_FORMAT_PKCS8)
+                    <p>Returns the public key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getPublicKeyFingerprint">getPublicKeyFingerprint</a>(string $algorithm = &#039;md5&#039;)
+                    <p>Returns the public key's fingerprint</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getPrivateKey">getPrivateKey</a>($type = self::PUBLIC_FORMAT_PKCS1)
+                    <p>Returns the private key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__getPrivatePublicKey">_getPrivatePublicKey</a>($mode = self::PUBLIC_FORMAT_PKCS8)
+                    <p>Returns a minimalistic private key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method___toString">__toString</a>()
+                    <p>__toString() magic method</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <abbr title="phpseclib\Crypt\Crypt_RSA">Crypt_RSA</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method___clone">__clone</a>()
+                    <p>__clone() magic method</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method__generateMinMax">_generateMinMax</a>(int $bits)
+                    <p>Generates the smallest and largest numbers requiring $bits bits</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method__decodeLength">_decodeLength</a>(string $string)
+                    <p>DER-decode the length</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__encodeLength">_encodeLength</a>(int $length)
+                    <p>DER-encode the length</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__string_shift">_string_shift</a>(string $string, int $index = 1)
+                    <p>String Shift</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPrivateKeyFormat">setPrivateKeyFormat</a>(int $format)
+                    <p>Determines the private key format</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPublicKeyFormat">setPublicKeyFormat</a>(int $format)
+                    <p>Determines the public key format</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setHash">setHash</a>(string $hash)
+                    <p>Determines which hashing function should be used</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setMGFHash">setMGFHash</a>(string $hash)
+                    <p>Determines which hashing function should be used for the mask generation function</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSaltLength">setSaltLength</a>($sLen)
+                    <p>Determines the salt length</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__i2osp">_i2osp</a>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $x, int $xLen)
+                    <p>Integer-to-Octet-String primitive</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method__os2ip">_os2ip</a>(string $x)
+                    <p>Octet-String-to-Integer primitive</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method__exponentiate">_exponentiate</a>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $x)
+                    <p>Exponentiate with or without Chinese Remainder Theorem</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method__blind">_blind</a>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $x, <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $r, int $i)
+                    <p>Performs RSA Blinding</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method__equals">_equals</a>(string $x, string $y)
+                    <p>Performs blinded RSA equality testing</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method__rsaep">_rsaep</a>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $m)
+                    <p>RSAEP</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method__rsadp">_rsadp</a>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $c)
+                    <p>RSADP</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method__rsasp1">_rsasp1</a>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $m)
+                    <p>RSASP1</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method__rsavp1">_rsavp1</a>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $s)
+                    <p>RSAVP1</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__mgf1">_mgf1</a>($mgfSeed, $maskLen)
+                    <p>MGF1</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__rsaes_oaep_encrypt">_rsaes_oaep_encrypt</a>(string $m, string $l = &#039;&#039;)
+                    <p>RSAES-OAEP-ENCRYPT</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__rsaes_oaep_decrypt">_rsaes_oaep_decrypt</a>(string $c, string $l = &#039;&#039;)
+                    <p>RSAES-OAEP-DECRYPT</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__raw_encrypt">_raw_encrypt</a>(string $m)
+                    <p>Raw Encryption / Decryption</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__rsaes_pkcs1_v1_5_encrypt">_rsaes_pkcs1_v1_5_encrypt</a>(string $m)
+                    <p>RSAES-PKCS1-V1_5-ENCRYPT</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__rsaes_pkcs1_v1_5_decrypt">_rsaes_pkcs1_v1_5_decrypt</a>(string $c)
+                    <p>RSAES-PKCS1-V1_5-DECRYPT</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__emsa_pss_encode">_emsa_pss_encode</a>(string $m, int $emBits)
+                    <p>EMSA-PSS-ENCODE</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__emsa_pss_verify">_emsa_pss_verify</a>(string $m, string $em, int $emBits)
+                    <p>EMSA-PSS-VERIFY</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__rsassa_pss_sign">_rsassa_pss_sign</a>(string $m)
+                    <p>RSASSA-PSS-SIGN</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__rsassa_pss_verify">_rsassa_pss_verify</a>(string $m, string $s)
+                    <p>RSASSA-PSS-VERIFY</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__emsa_pkcs1_v1_5_encode">_emsa_pkcs1_v1_5_encode</a>(string $m, int $emLen)
+                    <p>EMSA-PKCS1-V1_5-ENCODE</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__rsassa_pkcs1_v1_5_sign">_rsassa_pkcs1_v1_5_sign</a>(string $m)
+                    <p>RSASSA-PKCS1-V1_5-SIGN</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__rsassa_pkcs1_v1_5_verify">_rsassa_pkcs1_v1_5_verify</a>($m, $s)
+                    <p>RSASSA-PKCS1-V1_5-VERIFY</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setEncryptionMode">setEncryptionMode</a>(int $mode)
+                    <p>Set Encryption Mode</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSignatureMode">setSignatureMode</a>(int $mode)
+                    <p>Set Signature Mode</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setComment">setComment</a>(string $comment)
+                    <p>Set public key comment.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getComment">getComment</a>()
+                    <p>Get public key comment.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_encrypt">encrypt</a>(string $plaintext)
+                    <p>Encryption</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_decrypt">decrypt</a>($ciphertext)
+                    <p>Decryption</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_sign">sign</a>(string $message)
+                    <p>Create a signature</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_verify">verify</a>(string $message, string $signature)
+                    <p>Verifies a signature</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__extractBER">_extractBER</a>(string $str)
+                    <p>Extract raw BER from Base64 encoding</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 461</div>
+        <code>            public            <a href="../../phpseclib/Crypt/RSA.html"><abbr title="phpseclib\Crypt\RSA">RSA</abbr></a>
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>The constructor</p>
+        <p>If you want to make use of the openssl extension, you'll need to set the mode manually, yourself.  The reason
+\phpseclib\Crypt\RSA doesn't do it is because OpenSSL doesn't fail gracefully.  openssl<em>pkey</em>new(), in particular, requires
+openssl.cnf be present somewhere and, unfortunately, the only real way to find out is too late.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../phpseclib/Crypt/RSA.html"><abbr title="phpseclib\Crypt\RSA">RSA</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_createKey">
+        <div class="location">at line 542</div>
+        <code>            public            
+    <strong>createKey</strong>($bits = 1024, $timeout = false, $partial = array())</code>
+    </h3>
+    <div class="details">
+        <p>Create public / private key pair</p>
+        <p>Returns an array with the following three elements:
+ - 'privatekey': The private key.
+ - 'publickey':  The public key.
+ - 'partialkey': A partially computed key (if the execution time exceeded $timeout).
+                 Will need to be passed back to \phpseclib\Crypt\RSA::createKey() as the third parameter for further processing.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$bits</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$timeout</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$partial</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__convertPrivateKey">
+        <div class="location">at line 722</div>
+        <code>            public            string
+    <strong>_convertPrivateKey</strong>($n, $e, $d, $primes, $exponents, $coefficients)</code>
+    </h3>
+    <div class="details">
+        <p>Convert a private key to the appropriate format.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$n</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$e</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$d</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$primes</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$exponents</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$coefficients</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::setPrivateKeyFormat()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method__convertPublicKey">
+        <div class="location">at line 1003</div>
+        <code>            public            string
+    <strong>_convertPublicKey</strong>($n, $e)</code>
+    </h3>
+    <div class="details">
+        <p>Convert a public key to the appropriate format</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$n</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$e</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::setPublicKeyFormat()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method__parseKey">
+        <div class="location">at line 1083</div>
+        <code>            public            array|bool
+    <strong>_parseKey</strong>(string|array $key, int $type)</code>
+    </h3>
+    <div class="details">
+        <p>Break a public or private key down into its constituant components</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::_convertPublicKey()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::_convertPrivateKey()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getSize">
+        <div class="location">at line 1552</div>
+        <code>            public            int
+    <strong>getSize</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the key size</p>
+        <p>More specifically, this returns the size of the modulo in bits.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__start_element_handler">
+        <div class="location">at line 1567</div>
+        <code>            public            
+    <strong>_start_element_handler</strong>(resource $parser, string $name, array $attribs)</code>
+    </h3>
+    <div class="details">
+        <p>Start Element Handler</p>
+        <p>Called by xml<em>set</em>element_handler()</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>resource</td>
+                <td>$parser</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$attribs</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__stop_element_handler">
+        <div class="location">at line 1607</div>
+        <code>            public            
+    <strong>_stop_element_handler</strong>(resource $parser, string $name)</code>
+    </h3>
+    <div class="details">
+        <p>Stop Element Handler</p>
+        <p>Called by xml<em>set</em>element_handler()</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>resource</td>
+                <td>$parser</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__data_handler">
+        <div class="location">at line 1624</div>
+        <code>            public            
+    <strong>_data_handler</strong>(resource $parser, string $data)</code>
+    </h3>
+    <div class="details">
+        <p>Data Handler</p>
+        <p>Called by xml<em>set</em>character<em>data</em>handler()</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>resource</td>
+                <td>$parser</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadKey">
+        <div class="location">at line 1642</div>
+        <code>            public            bool
+    <strong>loadKey</strong>(string|<a href="../../phpseclib/Crypt/RSA.html"><abbr title="phpseclib\Crypt\RSA">RSA</abbr></a>|array $key, bool|int $type = false)</code>
+    </h3>
+    <div class="details">
+        <p>Loads a public or private key</p>
+        <p>Returns true on success and false on failure (ie. an incorrect password was provided or the key was malformed)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|<a href="../../phpseclib/Crypt/RSA.html"><abbr title="phpseclib\Crypt\RSA">RSA</abbr></a>|array</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>bool|int</td>
+                <td>$type</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPassword">
+        <div class="location">at line 1768</div>
+        <code>            public            
+    <strong>setPassword</strong>(string $password = false)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the password</p>
+        <p>Private keys can be encrypted with a password.  To unset the password, pass in the empty string or false.
+Or rather, pass in $password such that empty($password) &amp;&amp; !is_string($password) is true.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::createKey()</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>self::loadKey()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_setPublicKey">
+        <div class="location">at line 1794</div>
+        <code>            public            bool
+    <strong>setPublicKey</strong>(string $key = false, int $type = false)</code>
+    </h3>
+    <div class="details">
+        <p>Defines the public key</p>
+        <p>Some private key formats define the public exponent and some don't.  Those that don't define it are problematic when
+used in certain contexts.  For example, in SSH-2, RSA authentication works by sending the public key along with a
+message signed by the private key to the server.  The SSH-2 server looks the public key up in an index of public keys
+and if it's present then proceeds to verify the signature.  Problem is, if your private key doesn't include the public
+exponent this won't work unless you manually add the public exponent. phpseclib tries to guess if the key being used
+is the public key but in the event that it guesses incorrectly you might still want to explicitly set the key as being
+public.</p>
+
+<p>Do note that when a new key is loaded the index will be cleared.</p>
+
+<p>Returns true on success, false on failure</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::getPublicKey()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_setPrivateKey">
+        <div class="location">at line 1854</div>
+        <code>            public            bool
+    <strong>setPrivateKey</strong>(string $key = false, int $type = false)</code>
+    </h3>
+    <div class="details">
+        <p>Defines the private key</p>
+        <p>If phpseclib guessed a private key was a public key and loaded it as such it might be desirable to force
+phpseclib to treat the key as a private key. This function will do that.</p>
+
+<p>Do note that when a new key is loaded the index will be cleared.</p>
+
+<p>Returns true on success, false on failure</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::getPublicKey()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getPublicKey">
+        <div class="location">at line 1884</div>
+        <code>            public            
+    <strong>getPublicKey</strong>($type = self::PUBLIC_FORMAT_PKCS8)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the public key</p>
+        <p>The public key is only returned under two circumstances - if the private key had the public key embedded within it
+or if the public key was set via setPublicKey().  If the currently loaded key is supposed to be the public key this
+function won't return it since this library, for the most part, doesn't distinguish between public and private keys.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::getPublicKey()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_getPublicKeyFingerprint">
+        <div class="location">at line 1909</div>
+        <code>            public            mixed
+    <strong>getPublicKeyFingerprint</strong>(string $algorithm = &#039;md5&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the public key's fingerprint</p>
+        <p>The public key's fingerprint is returned, which is equivalent to running <code>ssh-keygen -lf rsa.pub</code>. If there is
+no public key currently loaded, false is returned.
+Example output (md5): "c1:b1:30:29:d7:b8:de:6c:97:77:10:d7:46:41:63:87" (as specified by RFC 4716)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$algorithm</td>
+                <td>The hashing algorithm to be used. Valid options are 'md5' and 'sha256'. False is returned for invalid values.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPrivateKey">
+        <div class="location">at line 1943</div>
+        <code>            public            mixed
+    <strong>getPrivateKey</strong>($type = self::PUBLIC_FORMAT_PKCS1)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the private key</p>
+        <p>The private key is only returned if the currently loaded key contains the constituent prime numbers.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::getPublicKey()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method__getPrivatePublicKey">
+        <div class="location">at line 1967</div>
+        <code>            public            
+    <strong>_getPrivatePublicKey</strong>($mode = self::PUBLIC_FORMAT_PKCS8)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a minimalistic private key</p>
+        <p>Returns the private key without the prime number constituants.  Structurally identical to a public key that
+hasn't been set as the public key</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$mode</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::getPrivateKey()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method___toString">
+        <div class="location">at line 1986</div>
+        <code>            public            string
+    <strong>__toString</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>__toString() magic method</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method___clone">
+        <div class="location">at line 2002</div>
+        <code>            public            <abbr title="phpseclib\Crypt\Crypt_RSA">Crypt_RSA</abbr>
+    <strong>__clone</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>__clone() magic method</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><abbr title="phpseclib\Crypt\Crypt_RSA">Crypt_RSA</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__generateMinMax">
+        <div class="location">at line 2016</div>
+        <code>            public            array
+    <strong>_generateMinMax</strong>(int $bits)</code>
+    </h3>
+    <div class="details">
+        <p>Generates the smallest and largest numbers requiring $bits bits</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$bits</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__decodeLength">
+        <div class="location">at line 2045</div>
+        <code>            public            int
+    <strong>_decodeLength</strong>(string $string)</code>
+    </h3>
+    <div class="details">
+        <p>DER-decode the length</p>
+        <p>DER supports lengths up to (2<strong>8)</strong>127, however, we'll only support lengths up to (2<strong>8)</strong>4.  See
+{@link http://itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf#p=13 X.690 paragraph 8.1.3} for more information.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__encodeLength">
+        <div class="location">at line 2066</div>
+        <code>            public            string
+    <strong>_encodeLength</strong>(int $length)</code>
+    </h3>
+    <div class="details">
+        <p>DER-encode the length</p>
+        <p>DER supports lengths up to (2<strong>8)</strong>127, however, we'll only support lengths up to (2<strong>8)</strong>4.  See
+{@link http://itu.int/ITU-T/studygroups/com17/languages/X.690-0207.pdf#p=13 X.690 paragraph 8.1.3} for more information.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__string_shift">
+        <div class="location">at line 2086</div>
+        <code>            public            string
+    <strong>_string_shift</strong>(string $string, int $index = 1)</code>
+    </h3>
+    <div class="details">
+        <p>String Shift</p>
+        <p>Inspired by array_shift</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPrivateKeyFormat">
+        <div class="location">at line 2100</div>
+        <code>            public            
+    <strong>setPrivateKeyFormat</strong>(int $format)</code>
+    </h3>
+    <div class="details">
+        <p>Determines the private key format</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::createKey()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_setPublicKeyFormat">
+        <div class="location">at line 2112</div>
+        <code>            public            
+    <strong>setPublicKeyFormat</strong>(int $format)</code>
+    </h3>
+    <div class="details">
+        <p>Determines the public key format</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::createKey()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_setHash">
+        <div class="location">at line 2126</div>
+        <code>            public            
+    <strong>setHash</strong>(string $hash)</code>
+    </h3>
+    <div class="details">
+        <p>Determines which hashing function should be used</p>
+        <p>Used with signature production / verification and (if the encryption mode is self::ENCRYPTION_OAEP) encryption and
+decryption.  If $hash isn't supported, sha1 is used.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$hash</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setMGFHash">
+        <div class="location">at line 2155</div>
+        <code>            public            
+    <strong>setMGFHash</strong>(string $hash)</code>
+    </h3>
+    <div class="details">
+        <p>Determines which hashing function should be used for the mask generation function</p>
+        <p>The mask generation function is used by self::ENCRYPTION<em>OAEP and self::SIGNATURE</em>PSS and although it's
+best if Hash and MGFHash are set to the same thing this is not a requirement.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$hash</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSaltLength">
+        <div class="location">at line 2184</div>
+        <code>            public            
+    <strong>setSaltLength</strong>($sLen)</code>
+    </h3>
+    <div class="details">
+        <p>Determines the salt length</p>
+        <p>To quote from {@link http://tools.ietf.org/html/rfc3447#page-38 RFC3447#page-38}:</p>
+
+<p>Typical salt lengths in octets are hLen (the length of the output
+   of the hash function Hash) and 0.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$sLen</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__i2osp">
+        <div class="location">at line 2199</div>
+        <code>            public            string
+    <strong>_i2osp</strong>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $x, int $xLen)</code>
+    </h3>
+    <div class="details">
+        <p>Integer-to-Octet-String primitive</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-4.1 RFC3447#section-4.1}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$x</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$xLen</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__os2ip">
+        <div class="location">at line 2218</div>
+        <code>            public            <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+    <strong>_os2ip</strong>(string $x)</code>
+    </h3>
+    <div class="details">
+        <p>Octet-String-to-Integer primitive</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-4.2 RFC3447#section-4.2}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$x</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__exponentiate">
+        <div class="location">at line 2232</div>
+        <code>            public            <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+    <strong>_exponentiate</strong>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $x)</code>
+    </h3>
+    <div class="details">
+        <p>Exponentiate with or without Chinese Remainder Theorem</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-5.1.1 RFC3447#section-5.1.2}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$x</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__blind">
+        <div class="location">at line 2318</div>
+        <code>            public            <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+    <strong>_blind</strong>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $x, <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $r, int $i)</code>
+    </h3>
+    <div class="details">
+        <p>Performs RSA Blinding</p>
+        <p>Protects against timing attacks by employing RSA Blinding.
+Returns $x->modPow($this->exponents[$i], $this->primes[$i])</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$x</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$r</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$i</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__equals">
+        <div class="location">at line 2344</div>
+        <code>            public            bool
+    <strong>_equals</strong>(string $x, string $y)</code>
+    </h3>
+    <div class="details">
+        <p>Performs blinded RSA equality testing</p>
+        <p>Protects against a particular type of timing attack described.</p>
+
+<p>See {@link http://codahale.com/a-lesson-in-timing-attacks/ A Lesson In Timing Attacks (or, Don't use MessageDigest.isEquals)}</p>
+
+<p>Thanks for the heads up singpolyma!</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$x</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$y</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__rsaep">
+        <div class="location">at line 2372</div>
+        <code>            public            <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+    <strong>_rsaep</strong>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $m)</code>
+    </h3>
+    <div class="details">
+        <p>RSAEP</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-5.1.1 RFC3447#section-5.1.1}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$m</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__rsadp">
+        <div class="location">at line 2390</div>
+        <code>            public            <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+    <strong>_rsadp</strong>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $c)</code>
+    </h3>
+    <div class="details">
+        <p>RSADP</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-5.1.2 RFC3447#section-5.1.2}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$c</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__rsasp1">
+        <div class="location">at line 2408</div>
+        <code>            public            <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+    <strong>_rsasp1</strong>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $m)</code>
+    </h3>
+    <div class="details">
+        <p>RSASP1</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-5.2.1 RFC3447#section-5.2.1}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$m</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__rsavp1">
+        <div class="location">at line 2426</div>
+        <code>            public            <a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a>
+    <strong>_rsavp1</strong>(<a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a> $s)</code>
+    </h3>
+    <div class="details">
+        <p>RSAVP1</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-5.2.2 RFC3447#section-5.2.2}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$s</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../phpseclib/Math/BigInteger.html"><abbr title="phpseclib\Math\BigInteger">BigInteger</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__mgf1">
+        <div class="location">at line 2445</div>
+        <code>            public            string
+    <strong>_mgf1</strong>($mgfSeed, $maskLen)</code>
+    </h3>
+    <div class="details">
+        <p>MGF1</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#appendix-B.2.1 RFC3447#appendix-B.2.1}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$mgfSeed</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$maskLen</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__rsaes_oaep_encrypt">
+        <div class="location">at line 2470</div>
+        <code>            public            string
+    <strong>_rsaes_oaep_encrypt</strong>(string $m, string $l = &#039;&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>RSAES-OAEP-ENCRYPT</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-7.1.1 RFC3447#section-7.1.1} and
+{http://en.wikipedia.org/wiki/Optimal<em>Asymmetric</em>Encryption_Padding OAES}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$m</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$l</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__rsaes_oaep_decrypt">
+        <div class="location">at line 2533</div>
+        <code>            public            string
+    <strong>_rsaes_oaep_decrypt</strong>(string $c, string $l = &#039;&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>RSAES-OAEP-DECRYPT</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-7.1.2 RFC3447#section-7.1.2}.  The fact that the error
+messages aren't distinguishable from one another hinders debugging, but, to quote from RFC3447#section-7.1.2:</p>
+
+<p>Note.  Care must be taken to ensure that an opponent cannot
+   distinguish the different error conditions in Step 3.g, whether by
+   error message or timing, or, more generally, learn partial
+   information about the encoded message EM.  Otherwise an opponent may
+   be able to obtain useful information about the decryption of the
+   ciphertext C, leading to a chosen-ciphertext attack such as the one
+   observed by Manger [36].</p>
+
+<p>As for $l...  to quote from {@link http://tools.ietf.org/html/rfc3447#page-17 RFC3447#page-17}:</p>
+
+<p>Both the encryption and the decryption operations of RSAES-OAEP take
+   the value of a label L as input.  In this version of PKCS #1, L is
+   the empty string; other uses of the label are outside the scope of
+   this document.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$c</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$l</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__raw_encrypt">
+        <div class="location">at line 2598</div>
+        <code>            public            string
+    <strong>_raw_encrypt</strong>(string $m)</code>
+    </h3>
+    <div class="details">
+        <p>Raw Encryption / Decryption</p>
+        <p>Doesn't use padding and is not recommended.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$m</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__rsaes_pkcs1_v1_5_encrypt">
+        <div class="location">at line 2614</div>
+        <code>            public            string
+    <strong>_rsaes_pkcs1_v1_5_encrypt</strong>(string $m)</code>
+    </h3>
+    <div class="details">
+        <p>RSAES-PKCS1-V1_5-ENCRYPT</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-7.2.1 RFC3447#section-7.2.1}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$m</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__rsaes_pkcs1_v1_5_decrypt">
+        <div class="location">at line 2673</div>
+        <code>            public            string
+    <strong>_rsaes_pkcs1_v1_5_decrypt</strong>(string $c)</code>
+    </h3>
+    <div class="details">
+        <p>RSAES-PKCS1-V1_5-DECRYPT</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-7.2.2 RFC3447#section-7.2.2}.</p>
+
+<p>For compatibility purposes, this function departs slightly from the description given in RFC3447.
+The reason being that RFC2313#section-8.1 (PKCS#1 v1.5) states that ciphertext's encrypted by the
+private key should have the second byte set to either 0 or 1 and that ciphertext's encrypted by the
+public key should have the second byte set to 2.  In RFC3447 (PKCS#1 v2.1), the second byte is supposed
+to be 2 regardless of which key is used.  For compatibility purposes, we'll just check to make sure the
+second byte is 2 or less.  If it is, we'll accept the decrypted string as valid.</p>
+
+<p>As a consequence of this, a private key encrypted ciphertext produced with \phpseclib\Crypt\RSA may not decrypt
+with a strictly PKCS#1 v1.5 compliant RSA implementation.  Public key encrypted ciphertext's should but
+not private key encrypted ciphertext's.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$c</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__emsa_pss_encode">
+        <div class="location">at line 2722</div>
+        <code>            public            
+    <strong>_emsa_pss_encode</strong>(string $m, int $emBits)</code>
+    </h3>
+    <div class="details">
+        <p>EMSA-PSS-ENCODE</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-9.1.1 RFC3447#section-9.1.1}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$m</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$emBits</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__emsa_pss_verify">
+        <div class="location">at line 2760</div>
+        <code>            public            string
+    <strong>_emsa_pss_verify</strong>(string $m, string $em, int $emBits)</code>
+    </h3>
+    <div class="details">
+        <p>EMSA-PSS-VERIFY</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-9.1.2 RFC3447#section-9.1.2}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$m</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$em</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$emBits</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__rsassa_pss_sign">
+        <div class="location">at line 2805</div>
+        <code>            public            string
+    <strong>_rsassa_pss_sign</strong>(string $m)</code>
+    </h3>
+    <div class="details">
+        <p>RSASSA-PSS-SIGN</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-8.1.1 RFC3447#section-8.1.1}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$m</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__rsassa_pss_verify">
+        <div class="location">at line 2832</div>
+        <code>            public            string
+    <strong>_rsassa_pss_verify</strong>(string $m, string $s)</code>
+    </h3>
+    <div class="details">
+        <p>RSASSA-PSS-VERIFY</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-8.1.2 RFC3447#section-8.1.2}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$m</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$s</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__emsa_pkcs1_v1_5_encode">
+        <div class="location">at line 2872</div>
+        <code>            public            string
+    <strong>_emsa_pkcs1_v1_5_encode</strong>(string $m, int $emLen)</code>
+    </h3>
+    <div class="details">
+        <p>EMSA-PKCS1-V1_5-ENCODE</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-9.2 RFC3447#section-9.2}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$m</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$emLen</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__rsassa_pkcs1_v1_5_sign">
+        <div class="location">at line 2923</div>
+        <code>            public            string
+    <strong>_rsassa_pkcs1_v1_5_sign</strong>(string $m)</code>
+    </h3>
+    <div class="details">
+        <p>RSASSA-PKCS1-V1_5-SIGN</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-8.2.1 RFC3447#section-8.2.1}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$m</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__rsassa_pkcs1_v1_5_verify">
+        <div class="location">at line 2953</div>
+        <code>            public            string
+    <strong>_rsassa_pkcs1_v1_5_verify</strong>($m, $s)</code>
+    </h3>
+    <div class="details">
+        <p>RSASSA-PKCS1-V1_5-VERIFY</p>
+        <p>See {@link http://tools.ietf.org/html/rfc3447#section-8.2.2 RFC3447#section-8.2.2}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$m</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$s</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setEncryptionMode">
+        <div class="location">at line 2996</div>
+        <code>            public            
+    <strong>setEncryptionMode</strong>(int $mode)</code>
+    </h3>
+    <div class="details">
+        <p>Set Encryption Mode</p>
+        <p>Valid values include self::ENCRYPTION<em>OAEP and self::ENCRYPTION</em>PKCS1.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSignatureMode">
+        <div class="location">at line 3009</div>
+        <code>            public            
+    <strong>setSignatureMode</strong>(int $mode)</code>
+    </h3>
+    <div class="details">
+        <p>Set Signature Mode</p>
+        <p>Valid values include self::SIGNATURE<em>PSS and self::SIGNATURE</em>PKCS1</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setComment">
+        <div class="location">at line 3020</div>
+        <code>            public            
+    <strong>setComment</strong>(string $comment)</code>
+    </h3>
+    <div class="details">
+        <p>Set public key comment.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$comment</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getComment">
+        <div class="location">at line 3031</div>
+        <code>            public            string
+    <strong>getComment</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get public key comment.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_encrypt">
+        <div class="location">at line 3048</div>
+        <code>            public            string
+    <strong>encrypt</strong>(string $plaintext)</code>
+    </h3>
+    <div class="details">
+        <p>Encryption</p>
+        <p>Both self::ENCRYPTION<em>OAEP and self::ENCRYPTION</em>PKCS1 both place limits on how long $plaintext can be.
+If $plaintext exceeds those limits it will be broken up so that it does and the resultant ciphertext's will
+be concatenated together.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$plaintext</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::decrypt()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_decrypt">
+        <div class="location">at line 3094</div>
+        <code>            public            string
+    <strong>decrypt</strong>($ciphertext)</code>
+    </h3>
+    <div class="details">
+        <p>Decryption</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$ciphertext</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::encrypt()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_sign">
+        <div class="location">at line 3136</div>
+        <code>            public            string
+    <strong>sign</strong>(string $message)</code>
+    </h3>
+    <div class="details">
+        <p>Create a signature</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::verify()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_verify">
+        <div class="location">at line 3160</div>
+        <code>            public            bool
+    <strong>verify</strong>(string $message, string $signature)</code>
+    </h3>
+    <div class="details">
+        <p>Verifies a signature</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$signature</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::sign()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method__extractBER">
+        <div class="location">at line 3182</div>
+        <code>            public            string
+    <strong>_extractBER</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Extract raw BER from Base64 encoding</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

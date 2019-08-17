@@ -1,0 +1,4769 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>phpseclib\File\X509 | phpseclib API Documentation</title>
+                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="../../classes.html">Classes</a></li>
+                            <li><a href="../../namespaces.html">Namespaces</a></li>
+                        <li><a href="../../interfaces.html">Interfaces</a></li>
+            <li><a href="../../traits.html">Traits</a></li>
+            <li><a href="../../doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">phpseclib API Documentation</div>
+
+            <div class="type">Class</div>
+    <h1><a href="../../phpseclib/File.html">phpseclib\File</a>\X509</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>X509</strong></p>
+
+            <div class="description">
+            <p>Pure-PHP X.509 Parser</p>
+            <p>
+</p>
+        </div>
+    
+            <h2>Constants</h2>
+
+            <table>
+                    <tr>
+                <td>VALIDATE_SIGNATURE_BY_CA</td>
+                <td class="last">
+                    <p><em>Flag to only accept signatures signed by certificate authorities</em></p>
+                    <p>Not really used anymore but retained all the same to suppress E_NOTICEs from old installs</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DN_ARRAY</td>
+                <td class="last">
+                    <p><em>Return internal array representation</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DN_STRING</td>
+                <td class="last">
+                    <p><em>Return string</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DN_ASN1</td>
+                <td class="last">
+                    <p><em>Return ASN.1 name string</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DN_OPENSSL</td>
+                <td class="last">
+                    <p><em>Return OpenSSL compatible array</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DN_CANON</td>
+                <td class="last">
+                    <p><em>Return canonical ASN.1 RDNs string</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DN_HASH</td>
+                <td class="last">
+                    <p><em>Return name hash for file indexing</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORMAT_PEM</td>
+                <td class="last">
+                    <p><em>Save as PEM</em></p>
+                    <p>ie. a base64-encoded PEM with a header and a footer</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORMAT_DER</td>
+                <td class="last">
+                    <p><em>Save as DER</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORMAT_SPKAC</td>
+                <td class="last">
+                    <p><em>Save as a SPKAC</em></p>
+                    <p>Only works on CSRs. Not currently supported.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORMAT_AUTO_DETECT</td>
+                <td class="last">
+                    <p><em>Auto-detect the format</em></p>
+                    <p>Used only by the load*() functions</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_ALL</td>
+                <td class="last">
+                    <p><em>Attribute value disposition.</em></p>
+                    <p>If disposition is >= 0, this is the index of the target value.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_APPEND</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_REPLACE</td>
+                <td class="last">
+                    <p><em>
+</em></p>
+                    <p>
+</p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_Certificate">
+                                                            array
+                </td>
+                <td>$Certificate</td>
+                <td class="last">ASN.1 syntax for X.509 certificates</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_DirectoryString">
+                                                            
+                </td>
+                <td>$DirectoryString</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_PKCS9String">
+                                                            
+                </td>
+                <td>$PKCS9String</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_AttributeValue">
+                                                            
+                </td>
+                <td>$AttributeValue</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_Extensions">
+                                                            
+                </td>
+                <td>$Extensions</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_KeyUsage">
+                                                            
+                </td>
+                <td>$KeyUsage</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ExtKeyUsageSyntax">
+                                                            
+                </td>
+                <td>$ExtKeyUsageSyntax</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_BasicConstraints">
+                                                            
+                </td>
+                <td>$BasicConstraints</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_KeyIdentifier">
+                                                            
+                </td>
+                <td>$KeyIdentifier</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_CRLDistributionPoints">
+                                                            
+                </td>
+                <td>$CRLDistributionPoints</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_AuthorityKeyIdentifier">
+                                                            
+                </td>
+                <td>$AuthorityKeyIdentifier</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_CertificatePolicies">
+                                                            
+                </td>
+                <td>$CertificatePolicies</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_AuthorityInfoAccessSyntax">
+                                                            
+                </td>
+                <td>$AuthorityInfoAccessSyntax</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_SubjectAltName">
+                                                            
+                </td>
+                <td>$SubjectAltName</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_SubjectDirectoryAttributes">
+                                                            
+                </td>
+                <td>$SubjectDirectoryAttributes</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_PrivateKeyUsagePeriod">
+                                                            
+                </td>
+                <td>$PrivateKeyUsagePeriod</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_IssuerAltName">
+                                                            
+                </td>
+                <td>$IssuerAltName</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_PolicyMappings">
+                                                            
+                </td>
+                <td>$PolicyMappings</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_NameConstraints">
+                                                            
+                </td>
+                <td>$NameConstraints</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_CPSuri">
+                                                            
+                </td>
+                <td>$CPSuri</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_UserNotice">
+                                                            
+                </td>
+                <td>$UserNotice</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_netscape_cert_type">
+                                                            
+                </td>
+                <td>$netscape_cert_type</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_netscape_comment">
+                                                            
+                </td>
+                <td>$netscape_comment</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_netscape_ca_policy_url">
+                                                            
+                </td>
+                <td>$netscape_ca_policy_url</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_Name">
+                                                            
+                </td>
+                <td>$Name</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_RelativeDistinguishedName">
+                                                            
+                </td>
+                <td>$RelativeDistinguishedName</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_CRLNumber">
+                                                            
+                </td>
+                <td>$CRLNumber</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_CRLReason">
+                                                            
+                </td>
+                <td>$CRLReason</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_IssuingDistributionPoint">
+                                                            
+                </td>
+                <td>$IssuingDistributionPoint</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_InvalidityDate">
+                                                            
+                </td>
+                <td>$InvalidityDate</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_CertificateIssuer">
+                                                            
+                </td>
+                <td>$CertificateIssuer</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_HoldInstructionCode">
+                                                            
+                </td>
+                <td>$HoldInstructionCode</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_SignedPublicKeyAndChallenge">
+                                                            
+                </td>
+                <td>$SignedPublicKeyAndChallenge</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_PostalAddress">
+                                                            
+                </td>
+                <td>$PostalAddress</td>
+                <td class="last">
+</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_CertificationRequest">
+                                                            array
+                </td>
+                <td>$CertificationRequest</td>
+                <td class="last">ASN.1 syntax for Certificate Signing Requests (RFC2986)</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_CertificateList">
+                                                            array
+                </td>
+                <td>$CertificateList</td>
+                <td class="last">ASN.1 syntax for Certificate Revocation Lists (RFC5280)</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dn">
+                                                            array
+                </td>
+                <td>$dn</td>
+                <td class="last">Distinguished Name</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_publicKey">
+                                                            string
+                </td>
+                <td>$publicKey</td>
+                <td class="last">Public key</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_privateKey">
+                                                            string
+                </td>
+                <td>$privateKey</td>
+                <td class="last">Private key</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_oids">
+                                                            array
+                </td>
+                <td>$oids</td>
+                <td class="last">Object identifiers for X.509 certificates</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_CAs">
+                                                            array
+                </td>
+                <td>$CAs</td>
+                <td class="last">The certificate authorities</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentCert">
+                                                            array
+                </td>
+                <td>$currentCert</td>
+                <td class="last">The currently loaded certificate</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_signatureSubject">
+                                                            string
+                </td>
+                <td>$signatureSubject</td>
+                <td class="last">The signature subject</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_startDate">
+                                                            string
+                </td>
+                <td>$startDate</td>
+                <td class="last">Certificate Start Date</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_endDate">
+                                                            string
+                </td>
+                <td>$endDate</td>
+                <td class="last">Certificate End Date</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_serialNumber">
+                                                            string
+                </td>
+                <td>$serialNumber</td>
+                <td class="last">Serial Number</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_currentKeyIdentifier">
+                                                            string
+                </td>
+                <td>$currentKeyIdentifier</td>
+                <td class="last">Key Identifier</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_caFlag">
+                                                            bool
+                </td>
+                <td>$caFlag</td>
+                <td class="last">CA Flag</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_challenge">
+                                                            string
+                </td>
+                <td>$challenge</td>
+                <td class="last">SPKAC Challenge</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>()
+                    <p>Default Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_loadX509">loadX509</a>(string $cert, int $mode = self::FORMAT_AUTO_DETECT)
+                    <p>Load X.509 certificate</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_saveX509">saveX509</a>(array $cert, int $format = self::FORMAT_PEM)
+                    <p>Save X.509 certificate</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__mapInExtensions">_mapInExtensions</a>(array $root, string $path, object $asn1)
+                    <p>Map extension values from octet string to extension-specific internal   format.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__mapOutExtensions">_mapOutExtensions</a>(array $root, string $path, object $asn1)
+                    <p>Map extension values from extension-specific internal format to   octet string.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__mapInAttributes">_mapInAttributes</a>(array $root, string $path, object $asn1)
+                    <p>Map attribute values from ANY type to attribute-specific internal   format.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__mapOutAttributes">_mapOutAttributes</a>(array $root, string $path, object $asn1)
+                    <p>Map attribute values from attribute-specific internal format to   ANY type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__mapInDNs">_mapInDNs</a>(array $root, string $path, object $asn1)
+                    <p>Map DN values from ANY type to DN-specific internal   format.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__mapOutDNs">_mapOutDNs</a>(array $root, string $path, object $asn1)
+                    <p>Map DN values from DN-specific internal format to   ANY type.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method__getMapping">_getMapping</a>(string $extnId)
+                    <p>Associate an extension ID to an extension mapping</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_loadCA">loadCA</a>(string $cert)
+                    <p>Load an X.509 certificate as a certificate authority</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_validateURL">validateURL</a>(string $url)
+                    <p>Validate an X.509 certificate against a URL</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_validateDate">validateDate</a>(<a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>|string $date = null)
+                    <p>Validate a date</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method__testForIntermediate">_testForIntermediate</a>(bool $caonly, int $count)
+                    <p>Validates an intermediate cert as identified via authority info access extension</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_validateSignature">validateSignature</a>(bool $caonly = true)
+                    <p>Validate a signature</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method__validateSignatureCountable">_validateSignatureCountable</a>(bool $caonly, int $count)
+                    <p>Validate a signature</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int
+                </td>
+                <td class="last">
+                    <a href="#method__validateSignature">_validateSignature</a>(string $publicKeyAlgorithm, string $publicKey, string $signatureAlgorithm, string $signature, string $signatureSubject)
+                    <p>Validates a signature</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__reformatKey">_reformatKey</a>(string $algorithm, string $key)
+                    <p>Reformat public keys</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__decodeIP">_decodeIP</a>(string $ip)
+                    <p>Decodes an IP address</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method__decodeNameConstraintIP">_decodeNameConstraintIP</a>(string $ip)
+                    <p>Decodes an IP address in a name constraints extension</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__encodeIP">_encodeIP</a>(string|array $ip)
+                    <p>Encodes an IP address</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method__translateDNProp">_translateDNProp</a>(string $propName)
+                    <p>"Normalizes" a Distinguished Name property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_setDNProp">setDNProp</a>(string $propName, mixed $propValue, string $type = &#039;utf8String&#039;)
+                    <p>Set a Distinguished Name property</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_removeDNProp">removeDNProp</a>(string $propName)
+                    <p>Remove Distinguished Name properties</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getDNProp">getDNProp</a>(string $propName, array $dn = null, bool $withType = false)
+                    <p>Get Distinguished Name properties</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_setDN">setDN</a>(mixed $dn, bool $merge = false, string $type = &#039;utf8String&#039;)
+                    <p>Set a Distinguished Name</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_getDN">getDN</a>(mixed $format = self::DN_ARRAY, array $dn = null)
+                    <p>Get the Distinguished Name for a certificates subject</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getIssuerDN">getIssuerDN</a>(int $format = self::DN_ARRAY)
+                    <p>Get the Distinguished Name for a certificate/crl issuer</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getSubjectDN">getSubjectDN</a>(int $format = self::DN_ARRAY)
+                    <p>Get the Distinguished Name for a certificate/csr subject Alias of getDN()</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getIssuerDNProp">getIssuerDNProp</a>(string $propName, bool $withType = false)
+                    <p>Get an individual Distinguished Name property for a certificate/crl issuer</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getSubjectDNProp">getSubjectDNProp</a>(string $propName, bool $withType = false)
+                    <p>Get an individual Distinguished Name property for a certificate/csr subject</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getChain">getChain</a>()
+                    <p>Get the certificate chain for the current cert</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_setPublicKey">setPublicKey</a>(object $key)
+                    <p>Set public key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setPrivateKey">setPrivateKey</a>(object $key)
+                    <p>Set private key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setChallenge">setChallenge</a>(string $challenge)
+                    <p>Set challenge</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getPublicKey">getPublicKey</a>()
+                    <p>Gets the public key</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_loadCSR">loadCSR</a>($csr, $mode = self::FORMAT_AUTO_DETECT)
+                    <p>Load a Certificate Signing Request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_saveCSR">saveCSR</a>(array $csr, int $format = self::FORMAT_PEM)
+                    <p>Save CSR request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_loadSPKAC">loadSPKAC</a>($spkac)
+                    <p>Load a SPKAC CSR</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_saveSPKAC">saveSPKAC</a>($spkac, $format = self::FORMAT_PEM)
+                    <p>Save a SPKAC CSR request</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_loadCRL">loadCRL</a>($crl, $mode = self::FORMAT_AUTO_DETECT)
+                    <p>Load a Certificate Revocation List</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_saveCRL">saveCRL</a>(array $crl, int $format = self::FORMAT_PEM)
+                    <p>Save Certificate Revocation List.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method__timeField">_timeField</a>(string $date)
+                    <p>Helper function to build a time field according to RFC 3280 section  - 4.1.2.5 Validity  - 5.1.2.4 This Update  - 5.1.2.5 Next Update  - 5.1.2.6 Revoked Certificates by choosing utcTime iff year of date given is before 2050 and generalTime else.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_sign">sign</a>(<a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a> $issuer, <a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a> $subject, string $signatureAlgorithm = &#039;sha1WithRSAEncryption&#039;)
+                    <p>Sign an X.509 certificate</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_signCSR">signCSR</a>($signatureAlgorithm = &#039;sha1WithRSAEncryption&#039;)
+                    <p>Sign a CSR</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_signSPKAC">signSPKAC</a>($signatureAlgorithm = &#039;sha1WithRSAEncryption&#039;)
+                    <p>Sign a SPKAC</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_signCRL">signCRL</a>(<a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a> $issuer, <a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a> $crl, string $signatureAlgorithm = &#039;sha1WithRSAEncryption&#039;)
+                    <p>Sign a CRL</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method__sign">_sign</a>($key, $signatureAlgorithm)
+                    <p>X.509 certificate signing helper function.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setStartDate">setStartDate</a>(string $date)
+                    <p>Set certificate start date</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setEndDate">setEndDate</a>(string $date)
+                    <p>Set certificate end date</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setSerialNumber">setSerialNumber</a>(string $serial, <abbr title="phpseclib\File\$base">$base</abbr> $base = -256)
+                    <p>Set Serial Number</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_makeCA">makeCA</a>()
+                    <p>Turns the certificate into a certificate authority</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    boolean
+                </td>
+                <td class="last">
+                    <a href="#method__isSubArrayValid">_isSubArrayValid</a>(array $root, string $path)
+                    <p>Check for validity of subarray</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|<abbr title="phpseclib\File\false">false</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method__subArrayUnchecked">_subArrayUnchecked</a>(array $root, string $path, bool $create = false)
+                    <p>Get a reference to a subarray</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|<abbr title="phpseclib\File\false">false</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method__subArray">_subArray</a>(array $root, string $path, bool $create = false)
+                    <p>Get a reference to a subarray</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array|<abbr title="phpseclib\File\false">false</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method__extensions">_extensions</a>(array $root, string $path = null, bool $create = false)
+                    <p>Get a reference to an extension subarray</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method__removeExtension">_removeExtension</a>(string $id, string $path = null)
+                    <p>Remove an Extension</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method__getExtension">_getExtension</a>(string $id, array $cert = null, string $path = null)
+                    <p>Get an Extension</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method__getExtensions">_getExtensions</a>(array $cert = null, string $path = null)
+                    <p>Returns a list of all extensions in use</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method__setExtension">_setExtension</a>(string $id, mixed $value, bool $critical = false, bool $replace = true, string $path = null)
+                    <p>Set an Extension</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_removeExtension">removeExtension</a>(string $id)
+                    <p>Remove a certificate, CSR or CRL Extension</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getExtension">getExtension</a>(string $id, array $cert = null)
+                    <p>Get a certificate, CSR or CRL Extension</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getExtensions">getExtensions</a>(array $cert = null)
+                    <p>Returns a list of all extensions in use in certificate, CSR or CRL</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_setExtension">setExtension</a>(string $id, mixed $value, bool $critical = false, bool $replace = true)
+                    <p>Set a certificate, CSR or CRL Extension</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_removeAttribute">removeAttribute</a>(string $id, int $disposition = self::ATTR_ALL)
+                    <p>Remove a CSR attribute.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getAttribute">getAttribute</a>(string $id, int $disposition = self::ATTR_ALL, array $csr = null)
+                    <p>Get a CSR attribute</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getAttributes">getAttributes</a>(array $csr = null)
+                    <p>Returns a list of all CSR attributes in use</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_setAttribute">setAttribute</a>(string $id, mixed $value, bool $disposition = self::ATTR_ALL)
+                    <p>Set a CSR attribute</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setKeyIdentifier">setKeyIdentifier</a>(string $value)
+                    <p>Sets the subject key identifier</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_computeKeyIdentifier">computeKeyIdentifier</a>(mixed $key = null, int $method = 1)
+                    <p>Compute a public key identifier.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method__formatSubjectPublicKey">_formatSubjectPublicKey</a>()
+                    <p>Format a public key as appropriate</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_setDomain">setDomain</a>()
+                    <p>Set the domain name's which the cert is to be valid for</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setIPAddress">setIPAddress</a>()
+                    <p>Set the IP Addresses's which the cert is to be valid for</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method__dnsName">_dnsName</a>(string $domain)
+                    <p>Helper function to build domain array</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method__iPAddress">_iPAddress</a>(string $address)
+                    <p>Helper function to build IP Address array</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    int|<abbr title="phpseclib\File\false">false</abbr>
+                </td>
+                <td class="last">
+                    <a href="#method__revokedCertificate">_revokedCertificate</a>(array $rclist, string $serial, bool $create = false)
+                    <p>Get the index of a revoked certificate.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_revoke">revoke</a>(string $serial, string $date = null)
+                    <p>Revoke a certificate.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_unrevoke">unrevoke</a>(string $serial)
+                    <p>Unrevoke a certificate.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getRevoked">getRevoked</a>(string $serial)
+                    <p>Get a revoked certificate.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_listRevoked">listRevoked</a>(array $crl = null)
+                    <p>List revoked certificates</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_removeRevokedCertificateExtension">removeRevokedCertificateExtension</a>(string $serial, string $id)
+                    <p>Remove a Revoked Certificate Extension</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    mixed
+                </td>
+                <td class="last">
+                    <a href="#method_getRevokedCertificateExtension">getRevokedCertificateExtension</a>(string $serial, string $id, array $crl = null)
+                    <p>Get a Revoked Certificate Extension</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    array
+                </td>
+                <td class="last">
+                    <a href="#method_getRevokedCertificateExtensions">getRevokedCertificateExtensions</a>(string $serial, array $crl = null)
+                    <p>Returns a list of all extensions in use for a given revoked certificate</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    bool
+                </td>
+                <td class="last">
+                    <a href="#method_setRevokedCertificateExtension">setRevokedCertificateExtension</a>(string $serial, string $id, mixed $value, bool $critical = false, bool $replace = true)
+                    <p>Set a Revoked Certificate Extension</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__extractBER">_extractBER</a>(string $str)
+                    <p>Extract raw BER from Base64 encoding</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getOID">getOID</a>($name)
+                    <p>Returns the OID corresponding to a name</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 330</div>
+        <code>            public            <a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a>
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Default Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadX509">
+        <div class="location">at line 1465</div>
+        <code>            public            mixed
+    <strong>loadX509</strong>(string $cert, int $mode = self::FORMAT_AUTO_DETECT)</code>
+    </h3>
+    <div class="details">
+        <p>Load X.509 certificate</p>
+        <p>Returns an associative array describing the X.509 cert or a false if the cert failed to load</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$cert</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_saveX509">
+        <div class="location">at line 1538</div>
+        <code>            public            string
+    <strong>saveX509</strong>(array $cert, int $format = self::FORMAT_PEM)</code>
+    </h3>
+    <div class="details">
+        <p>Save X.509 certificate</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$cert</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__mapInExtensions">
+        <div class="location">at line 1616</div>
+        <code>            public            
+    <strong>_mapInExtensions</strong>(array $root, string $path, object $asn1)</code>
+    </h3>
+    <div class="details">
+        <p>Map extension values from octet string to extension-specific internal   format.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$root</td>
+                <td>ref $root</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$asn1</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__mapOutExtensions">
+        <div class="location">at line 1669</div>
+        <code>            public            
+    <strong>_mapOutExtensions</strong>(array $root, string $path, object $asn1)</code>
+    </h3>
+    <div class="details">
+        <p>Map extension values from extension-specific internal format to   octet string.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$root</td>
+                <td>ref $root</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$asn1</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__mapInAttributes">
+        <div class="location">at line 1735</div>
+        <code>            public            
+    <strong>_mapInAttributes</strong>(array $root, string $path, object $asn1)</code>
+    </h3>
+    <div class="details">
+        <p>Map attribute values from ANY type to attribute-specific internal   format.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$root</td>
+                <td>ref $root</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$asn1</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__mapOutAttributes">
+        <div class="location">at line 1776</div>
+        <code>            public            
+    <strong>_mapOutAttributes</strong>(array $root, string $path, object $asn1)</code>
+    </h3>
+    <div class="details">
+        <p>Map attribute values from attribute-specific internal format to   ANY type.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$root</td>
+                <td>ref $root</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$asn1</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__mapInDNs">
+        <div class="location">at line 1819</div>
+        <code>            public            
+    <strong>_mapInDNs</strong>(array $root, string $path, object $asn1)</code>
+    </h3>
+    <div class="details">
+        <p>Map DN values from ANY type to DN-specific internal   format.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$root</td>
+                <td>ref $root</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$asn1</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__mapOutDNs">
+        <div class="location">at line 1849</div>
+        <code>            public            
+    <strong>_mapOutDNs</strong>(array $root, string $path, object $asn1)</code>
+    </h3>
+    <div class="details">
+        <p>Map DN values from DN-specific internal format to   ANY type.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$root</td>
+                <td>ref $root</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>object</td>
+                <td>$asn1</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__getMapping">
+        <div class="location">at line 1879</div>
+        <code>            public            mixed
+    <strong>_getMapping</strong>(string $extnId)</code>
+    </h3>
+    <div class="details">
+        <p>Associate an extension ID to an extension mapping</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$extnId</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadCA">
+        <div class="location">at line 1987</div>
+        <code>            public            bool
+    <strong>loadCA</strong>(string $cert)</code>
+    </h3>
+    <div class="details">
+        <p>Load an X.509 certificate as a certificate authority</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$cert</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_validateURL">
+        <div class="location">at line 2054</div>
+        <code>            public            bool
+    <strong>validateURL</strong>(string $url)</code>
+    </h3>
+    <div class="details">
+        <p>Validate an X.509 certificate against a URL</p>
+        <p>From RFC2818 "HTTP over TLS":</p>
+
+<p>Matching is performed using the matching rules specified by
+[RFC2459].  If more than one identity of a given type is present in
+the certificate (e.g., more than one dNSName name, a match in any one
+of the set is considered acceptable.) Names may contain the wildcard
+character * which is considered to match any single domain name
+component or component fragment. E.g., <em>.a.com matches foo.a.com but
+not bar.foo.a.com. f</em>.com matches foo.com but not bar.com.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_validateDate">
+        <div class="location">at line 2113</div>
+        <code>            public            
+    <strong>validateDate</strong>(<a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>|string $date = null)</code>
+    </h3>
+    <div class="details">
+        <p>Validate a date</p>
+        <p>If $date isn't defined it is assumed to be the current date.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="http://php.net/DateTime"><abbr title="DateTime">DateTime</abbr></a>|string</td>
+                <td>$date</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__testForIntermediate">
+        <div class="location">at line 2204</div>
+        <code>            public            bool
+    <strong>_testForIntermediate</strong>(bool $caonly, int $count)</code>
+    </h3>
+    <div class="details">
+        <p>Validates an intermediate cert as identified via authority info access extension</p>
+        <p>See https://tools.ietf.org/html/rfc4325 for more info</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>bool</td>
+                <td>$caonly</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_validateSignature">
+        <div class="location">at line 2271</div>
+        <code>            public            mixed
+    <strong>validateSignature</strong>(bool $caonly = true)</code>
+    </h3>
+    <div class="details">
+        <p>Validate a signature</p>
+        <p>Works on X.509 certs, CSR's and CRL's.
+Returns true if the signature is verified, false if it is not correct or null on error</p>
+
+<p>By default returns false for self-signed certs. Call validateSignature(false) to make this support
+self-signed.</p>
+
+<p>The behavior of this function is inspired by {@link http://php.net/openssl-verify openssl_verify}.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>bool</td>
+                <td>$caonly</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__validateSignatureCountable">
+        <div class="location">at line 2286</div>
+        <code>            public            mixed
+    <strong>_validateSignatureCountable</strong>(bool $caonly, int $count)</code>
+    </h3>
+    <div class="details">
+        <p>Validate a signature</p>
+        <p>Performs said validation whilst keeping track of how many times validation method is called</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>bool</td>
+                <td>$caonly</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__validateSignature">
+        <div class="location">at line 2419</div>
+        <code>            public            int
+    <strong>_validateSignature</strong>(string $publicKeyAlgorithm, string $publicKey, string $signatureAlgorithm, string $signature, string $signatureSubject)</code>
+    </h3>
+    <div class="details">
+        <p>Validates a signature</p>
+        <p>Returns true if the signature is verified, false if it is not correct or null on error</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$publicKeyAlgorithm</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$publicKey</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$signatureAlgorithm</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$signature</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$signatureSubject</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__reformatKey">
+        <div class="location">at line 2496</div>
+        <code>            public            string
+    <strong>_reformatKey</strong>(string $algorithm, string $key)</code>
+    </h3>
+    <div class="details">
+        <p>Reformat public keys</p>
+        <p>Reformats a public key to a format supported by phpseclib (if applicable)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$algorithm</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__decodeIP">
+        <div class="location">at line 2521</div>
+        <code>            public            string
+    <strong>_decodeIP</strong>(string $ip)</code>
+    </h3>
+    <div class="details">
+        <p>Decodes an IP address</p>
+        <p>Takes in a base64 encoded "blob" and returns a human readable IP address</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$ip</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__decodeNameConstraintIP">
+        <div class="location">at line 2535</div>
+        <code>            public            array
+    <strong>_decodeNameConstraintIP</strong>(string $ip)</code>
+    </h3>
+    <div class="details">
+        <p>Decodes an IP address in a name constraints extension</p>
+        <p>Takes in a base64 encoded "blob" and returns a human readable IP address / mask</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$ip</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__encodeIP">
+        <div class="location">at line 2553</div>
+        <code>            public            string
+    <strong>_encodeIP</strong>(string|array $ip)</code>
+    </h3>
+    <div class="details">
+        <p>Encodes an IP address</p>
+        <p>Takes a human readable IP address into a base64-encoded "blob"</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string|array</td>
+                <td>$ip</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__translateDNProp">
+        <div class="location">at line 2567</div>
+        <code>            public            mixed
+    <strong>_translateDNProp</strong>(string $propName)</code>
+    </h3>
+    <div class="details">
+        <p>"Normalizes" a Distinguished Name property</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$propName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDNProp">
+        <div class="location">at line 2661</div>
+        <code>            public            bool
+    <strong>setDNProp</strong>(string $propName, mixed $propValue, string $type = &#039;utf8String&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Set a Distinguished Name property</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$propName</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$propValue</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeDNProp">
+        <div class="location">at line 2692</div>
+        <code>            public            
+    <strong>removeDNProp</strong>(string $propName)</code>
+    </h3>
+    <div class="details">
+        <p>Remove Distinguished Name properties</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$propName</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDNProp">
+        <div class="location">at line 2726</div>
+        <code>            public            mixed
+    <strong>getDNProp</strong>(string $propName, array $dn = null, bool $withType = false)</code>
+    </h3>
+    <div class="details">
+        <p>Get Distinguished Name properties</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$propName</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$dn</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withType</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDN">
+        <div class="location">at line 2790</div>
+        <code>            public            bool
+    <strong>setDN</strong>(mixed $dn, bool $merge = false, string $type = &#039;utf8String&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Set a Distinguished Name</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$dn</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$merge</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getDN">
+        <div class="location">at line 2832</div>
+        <code>            public            bool
+    <strong>getDN</strong>(mixed $format = self::DN_ARRAY, array $dn = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get the Distinguished Name for a certificates subject</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$dn</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIssuerDN">
+        <div class="location">at line 2980</div>
+        <code>            public            mixed
+    <strong>getIssuerDN</strong>(int $format = self::DN_ARRAY)</code>
+    </h3>
+    <div class="details">
+        <p>Get the Distinguished Name for a certificate/crl issuer</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSubjectDN">
+        <div class="location">at line 3002</div>
+        <code>            public            mixed
+    <strong>getSubjectDN</strong>(int $format = self::DN_ARRAY)</code>
+    </h3>
+    <div class="details">
+        <p>Get the Distinguished Name for a certificate/csr subject Alias of getDN()</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getIssuerDNProp">
+        <div class="location">at line 3026</div>
+        <code>            public            mixed
+    <strong>getIssuerDNProp</strong>(string $propName, bool $withType = false)</code>
+    </h3>
+    <div class="details">
+        <p>Get an individual Distinguished Name property for a certificate/crl issuer</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$propName</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withType</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getSubjectDNProp">
+        <div class="location">at line 3048</div>
+        <code>            public            mixed
+    <strong>getSubjectDNProp</strong>(string $propName, bool $withType = false)</code>
+    </h3>
+    <div class="details">
+        <p>Get an individual Distinguished Name property for a certificate/csr subject</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$propName</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withType</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getChain">
+        <div class="location">at line 3070</div>
+        <code>            public            mixed
+    <strong>getChain</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Get the certificate chain for the current cert</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPublicKey">
+        <div class="location">at line 3118</div>
+        <code>            public            bool
+    <strong>setPublicKey</strong>(object $key)</code>
+    </h3>
+    <div class="details">
+        <p>Set public key</p>
+        <p>Key needs to be a \phpseclib\Crypt\RSA object</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>object</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setPrivateKey">
+        <div class="location">at line 3132</div>
+        <code>            public            
+    <strong>setPrivateKey</strong>(object $key)</code>
+    </h3>
+    <div class="details">
+        <p>Set private key</p>
+        <p>Key needs to be a \phpseclib\Crypt\RSA object</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>object</td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setChallenge">
+        <div class="location">at line 3145</div>
+        <code>            public            
+    <strong>setChallenge</strong>(string $challenge)</code>
+    </h3>
+    <div class="details">
+        <p>Set challenge</p>
+        <p>Used for SPKAC CSR's</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$challenge</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getPublicKey">
+        <div class="location">at line 3158</div>
+        <code>            public            mixed
+    <strong>getPublicKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Gets the public key</p>
+        <p>Returns a \phpseclib\Crypt\RSA object or a false.</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadCSR">
+        <div class="location">at line 3198</div>
+        <code>            public            mixed
+    <strong>loadCSR</strong>($csr, $mode = self::FORMAT_AUTO_DETECT)</code>
+    </h3>
+    <div class="details">
+        <p>Load a Certificate Signing Request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$csr</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$mode</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_saveCSR">
+        <div class="location">at line 3280</div>
+        <code>            public            string
+    <strong>saveCSR</strong>(array $csr, int $format = self::FORMAT_PEM)</code>
+    </h3>
+    <div class="details">
+        <p>Save CSR request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$csr</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadSPKAC">
+        <div class="location">at line 3335</div>
+        <code>            public            mixed
+    <strong>loadSPKAC</strong>($spkac)</code>
+    </h3>
+    <div class="details">
+        <p>Load a SPKAC CSR</p>
+        <p>SPKAC's are produced by the HTML5 keygen element:</p>
+
+<p>https://developer.mozilla.org/en-US/docs/HTML/Element/keygen</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$spkac</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_saveSPKAC">
+        <div class="location">at line 3407</div>
+        <code>            public            string
+    <strong>saveSPKAC</strong>($spkac, $format = self::FORMAT_PEM)</code>
+    </h3>
+    <div class="details">
+        <p>Save a SPKAC CSR request</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$spkac</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$format</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadCRL">
+        <div class="location">at line 3449</div>
+        <code>            public            mixed
+    <strong>loadCRL</strong>($crl, $mode = self::FORMAT_AUTO_DETECT)</code>
+    </h3>
+    <div class="details">
+        <p>Load a Certificate Revocation List</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$crl</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$mode</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_saveCRL">
+        <div class="location">at line 3519</div>
+        <code>            public            string
+    <strong>saveCRL</strong>(array $crl, int $format = self::FORMAT_PEM)</code>
+    </h3>
+    <div class="details">
+        <p>Save Certificate Revocation List.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$crl</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__timeField">
+        <div class="location">at line 3581</div>
+        <code>            public            array
+    <strong>_timeField</strong>(string $date)</code>
+    </h3>
+    <div class="details">
+        <p>Helper function to build a time field according to RFC 3280 section  - 4.1.2.5 Validity  - 5.1.2.4 This Update  - 5.1.2.5 Next Update  - 5.1.2.6 Revoked Certificates by choosing utcTime iff year of date given is before 2050 and generalTime else.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td>in format date('D, d M Y H:i:s O')</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_sign">
+        <div class="location">at line 3608</div>
+        <code>            public            mixed
+    <strong>sign</strong>(<a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a> $issuer, <a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a> $subject, string $signatureAlgorithm = &#039;sha1WithRSAEncryption&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Sign an X.509 certificate</p>
+        <p>$issuer's private key needs to be loaded.
+$subject can be either an existing X.509 cert (if you want to resign it),
+a CSR or something with the DN and public key explicitly set.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a></td>
+                <td>$issuer</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a></td>
+                <td>$subject</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$signatureAlgorithm</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_signCSR">
+        <div class="location">at line 3789</div>
+        <code>            public            mixed
+    <strong>signCSR</strong>($signatureAlgorithm = &#039;sha1WithRSAEncryption&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Sign a CSR</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$signatureAlgorithm</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_signSPKAC">
+        <div class="location">at line 3847</div>
+        <code>            public            mixed
+    <strong>signSPKAC</strong>($signatureAlgorithm = &#039;sha1WithRSAEncryption&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Sign a SPKAC</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$signatureAlgorithm</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_signCRL">
+        <div class="location">at line 3917</div>
+        <code>            public            mixed
+    <strong>signCRL</strong>(<a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a> $issuer, <a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a> $crl, string $signatureAlgorithm = &#039;sha1WithRSAEncryption&#039;)</code>
+    </h3>
+    <div class="details">
+        <p>Sign a CRL</p>
+        <p>$issuer's private key needs to be loaded.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td><a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a></td>
+                <td>$issuer</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><a href="../../phpseclib/File/X509.html"><abbr title="phpseclib\File\X509">X509</abbr></a></td>
+                <td>$crl</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$signatureAlgorithm</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__sign">
+        <div class="location">at line 4048</div>
+        <code>            public            mixed
+    <strong>_sign</strong>($key, $signatureAlgorithm)</code>
+    </h3>
+    <div class="details">
+        <p>X.509 certificate signing helper function.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$signatureAlgorithm</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setStartDate">
+        <div class="location">at line 4076</div>
+        <code>            public            
+    <strong>setStartDate</strong>(string $date)</code>
+    </h3>
+    <div class="details">
+        <p>Set certificate start date</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setEndDate">
+        <div class="location">at line 4091</div>
+        <code>            public            
+    <strong>setEndDate</strong>(string $date)</code>
+    </h3>
+    <div class="details">
+        <p>Set certificate end date</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setSerialNumber">
+        <div class="location">at line 4121</div>
+        <code>            public            
+    <strong>setSerialNumber</strong>(string $serial, <abbr title="phpseclib\File\$base">$base</abbr> $base = -256)</code>
+    </h3>
+    <div class="details">
+        <p>Set Serial Number</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td><abbr title="phpseclib\File\$base">$base</abbr></td>
+                <td>$base</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_makeCA">
+        <div class="location">at line 4131</div>
+        <code>            public            
+    <strong>makeCA</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Turns the certificate into a certificate authority</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__isSubArrayValid">
+        <div class="location">at line 4148</div>
+        <code>            public            boolean
+    <strong>_isSubArrayValid</strong>(array $root, string $path)</code>
+    </h3>
+    <div class="details">
+        <p>Check for validity of subarray</p>
+        <p>This is intended for use in conjunction with <em>subArrayUnchecked(),
+implementing the checks included in _subArray() but without copying
+a potentially large array by passing its reference by-value to is</em>array().</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$root</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>boolean</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__subArrayUnchecked">
+        <div class="location">at line 4185</div>
+        <code>            public            array|<abbr title="phpseclib\File\false">false</abbr>
+    <strong>_subArrayUnchecked</strong>(array $root, string $path, bool $create = false)</code>
+    </h3>
+    <div class="details">
+        <p>Get a reference to a subarray</p>
+        <p>This variant of <em>subArray() does no is</em>array() checking,
+so $root should be checked with _isSubArrayValid() first.</p>
+
+<p>This is here for performance reasons:
+Passing a reference (i.e. $root) by-value (i.e. to is_array())
+creates a copy. If $root is an especially large array, this is expensive.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$root</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>absolute path with / as component separator</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$create</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|<abbr title="phpseclib\File\false">false</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__subArray">
+        <div class="location">at line 4213</div>
+        <code>            public            array|<abbr title="phpseclib\File\false">false</abbr>
+    <strong>_subArray</strong>(array $root, string $path, bool $create = false)</code>
+    </h3>
+    <div class="details">
+        <p>Get a reference to a subarray</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$root</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>absolute path with / as component separator</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$create</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|<abbr title="phpseclib\File\false">false</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__extensions">
+        <div class="location">at line 4249</div>
+        <code>            public            array|<abbr title="phpseclib\File\false">false</abbr>
+    <strong>_extensions</strong>(array $root, string $path = null, bool $create = false)</code>
+    </h3>
+    <div class="details">
+        <p>Get a reference to an extension subarray</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$root</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>optional absolute path with / as component separator</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$create</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array|<abbr title="phpseclib\File\false">false</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__removeExtension">
+        <div class="location">at line 4303</div>
+        <code>            public            bool
+    <strong>_removeExtension</strong>(string $id, string $path = null)</code>
+    </h3>
+    <div class="details">
+        <p>Remove an Extension</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__getExtension">
+        <div class="location">at line 4338</div>
+        <code>            public            mixed
+    <strong>_getExtension</strong>(string $id, array $cert = null, string $path = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get an Extension</p>
+        <p>Returns the extension if it exists and false if not</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$cert</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__getExtensions">
+        <div class="location">at line 4363</div>
+        <code>            public            array
+    <strong>_getExtensions</strong>(array $cert = null, string $path = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a list of all extensions in use</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$cert</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__setExtension">
+        <div class="location">at line 4388</div>
+        <code>            public            bool
+    <strong>_setExtension</strong>(string $id, mixed $value, bool $critical = false, bool $replace = true, string $path = null)</code>
+    </h3>
+    <div class="details">
+        <p>Set an Extension</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$critical</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$replace</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeExtension">
+        <div class="location">at line 4420</div>
+        <code>            public            bool
+    <strong>removeExtension</strong>(string $id)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a certificate, CSR or CRL Extension</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExtension">
+        <div class="location">at line 4435</div>
+        <code>            public            mixed
+    <strong>getExtension</strong>(string $id, array $cert = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get a certificate, CSR or CRL Extension</p>
+        <p>Returns the extension if it exists and false if not</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$cert</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getExtensions">
+        <div class="location">at line 4447</div>
+        <code>            public            array
+    <strong>getExtensions</strong>(array $cert = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a list of all extensions in use in certificate, CSR or CRL</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$cert</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setExtension">
+        <div class="location">at line 4462</div>
+        <code>            public            bool
+    <strong>setExtension</strong>(string $id, mixed $value, bool $critical = false, bool $replace = true)</code>
+    </h3>
+    <div class="details">
+        <p>Set a certificate, CSR or CRL Extension</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$critical</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$replace</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeAttribute">
+        <div class="location">at line 4475</div>
+        <code>            public            bool
+    <strong>removeAttribute</strong>(string $id, int $disposition = self::ATTR_ALL)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a CSR attribute.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$disposition</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttribute">
+        <div class="location">at line 4526</div>
+        <code>            public            mixed
+    <strong>getAttribute</strong>(string $id, int $disposition = self::ATTR_ALL, array $csr = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get a CSR attribute</p>
+        <p>Returns the attribute if it exists and false if not</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$disposition</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$csr</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getAttributes">
+        <div class="location">at line 4566</div>
+        <code>            public            array
+    <strong>getAttributes</strong>(array $csr = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a list of all CSR attributes in use</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$csr</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setAttribute">
+        <div class="location">at line 4593</div>
+        <code>            public            bool
+    <strong>setAttribute</strong>(string $id, mixed $value, bool $disposition = self::ATTR_ALL)</code>
+    </h3>
+    <div class="details">
+        <p>Set a CSR attribute</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$disposition</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setKeyIdentifier">
+        <div class="location">at line 4648</div>
+        <code>            public            
+    <strong>setKeyIdentifier</strong>(string $value)</code>
+    </h3>
+    <div class="details">
+        <p>Sets the subject key identifier</p>
+        <p>This is used by the id-ce-authorityKeyIdentifier and the id-ce-subjectKeyIdentifier extensions.</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_computeKeyIdentifier">
+        <div class="location">at line 4675</div>
+        <code>            public            string
+    <strong>computeKeyIdentifier</strong>(mixed $key = null, int $method = 1)</code>
+    </h3>
+    <div class="details">
+        <p>Compute a public key identifier.</p>
+        <p>Although key identifiers may be set to any unique value, this function
+computes key identifiers from public key according to the two
+recommended methods (4.2.1.2 RFC 3280).
+Highly polymorphic: try to accept all possible forms of key:
+- Key object
+- \phpseclib\File\X509 object with public or private key defined
+- Certificate or CSR array
+- \phpseclib\File\ASN1\Element object
+- PEM or DER string</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$method</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>binary key identifier</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__formatSubjectPublicKey">
+        <div class="location">at line 4749</div>
+        <code>            public            array
+    <strong>_formatSubjectPublicKey</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Format a public key as appropriate</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setDomain">
+        <div class="location">at line 4770</div>
+        <code>            public            array
+    <strong>setDomain</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Set the domain name's which the cert is to be valid for</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setIPAddress">
+        <div class="location">at line 4783</div>
+        <code>            public            
+    <strong>setIPAddress</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Set the IP Addresses's which the cert is to be valid for</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__dnsName">
+        <div class="location">at line 4801</div>
+        <code>            public            array
+    <strong>_dnsName</strong>(string $domain)</code>
+    </h3>
+    <div class="details">
+        <p>Helper function to build domain array</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$domain</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__iPAddress">
+        <div class="location">at line 4815</div>
+        <code>            public            array
+    <strong>_iPAddress</strong>(string $address)</code>
+    </h3>
+    <div class="details">
+        <p>Helper function to build IP Address array</p>
+        <p>(IPv6 is not currently supported)</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$address</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__revokedCertificate">
+        <div class="location">at line 4829</div>
+        <code>            public            int|<abbr title="phpseclib\File\false">false</abbr>
+    <strong>_revokedCertificate</strong>(array $rclist, string $serial, bool $create = false)</code>
+    </h3>
+    <div class="details">
+        <p>Get the index of a revoked certificate.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$rclist</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$create</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>int|<abbr title="phpseclib\File\false">false</abbr></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_revoke">
+        <div class="location">at line 4858</div>
+        <code>            public            bool
+    <strong>revoke</strong>(string $serial, string $date = null)</code>
+    </h3>
+    <div class="details">
+        <p>Revoke a certificate.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_unrevoke">
+        <div class="location">at line 4884</div>
+        <code>            public            bool
+    <strong>unrevoke</strong>(string $serial)</code>
+    </h3>
+    <div class="details">
+        <p>Unrevoke a certificate.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRevoked">
+        <div class="location">at line 4904</div>
+        <code>            public            mixed
+    <strong>getRevoked</strong>(string $serial)</code>
+    </h3>
+    <div class="details">
+        <p>Get a revoked certificate.</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_listRevoked">
+        <div class="location">at line 4922</div>
+        <code>            public            array
+    <strong>listRevoked</strong>(array $crl = null)</code>
+    </h3>
+    <div class="details">
+        <p>List revoked certificates</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>array</td>
+                <td>$crl</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_removeRevokedCertificateExtension">
+        <div class="location">at line 4951</div>
+        <code>            public            bool
+    <strong>removeRevokedCertificateExtension</strong>(string $serial, string $id)</code>
+    </h3>
+    <div class="details">
+        <p>Remove a Revoked Certificate Extension</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRevokedCertificateExtension">
+        <div class="location">at line 4973</div>
+        <code>            public            mixed
+    <strong>getRevokedCertificateExtension</strong>(string $serial, string $id, array $crl = null)</code>
+    </h3>
+    <div class="details">
+        <p>Get a Revoked Certificate Extension</p>
+        <p>Returns the extension if it exists and false if not</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$crl</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>mixed</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getRevokedCertificateExtensions">
+        <div class="location">at line 4996</div>
+        <code>            public            array
+    <strong>getRevokedCertificateExtensions</strong>(string $serial, array $crl = null)</code>
+    </h3>
+    <div class="details">
+        <p>Returns a list of all extensions in use for a given revoked certificate</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$crl</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>array</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setRevokedCertificateExtension">
+        <div class="location">at line 5022</div>
+        <code>            public            bool
+    <strong>setRevokedCertificateExtension</strong>(string $serial, string $id, mixed $value, bool $critical = false, bool $replace = true)</code>
+    </h3>
+    <div class="details">
+        <p>Set a Revoked Certificate Extension</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$critical</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$replace</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>bool</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__extractBER">
+        <div class="location">at line 5042</div>
+        <code>            public            string
+    <strong>_extractBER</strong>(string $str)</code>
+    </h3>
+    <div class="details">
+        <p>Extract raw BER from Base64 encoding</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getOID">
+        <div class="location">at line 5080</div>
+        <code>            public            string
+    <strong>getOID</strong>($name)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the OID corresponding to a name</p>
+        <p>What's returned in the associative array returned by loadX509() (or load*()) is either a name or an OID if
+no OID to name mapping is available. The problem with this is that what may be an unmapped OID in one version
+of phpseclib may not be unmapped in the next version, so apps that are looking at this OID may not be able
+to work from version to version.</p>
+
+<p>This method will return the OID if a name is passed to it and if no mapping is avialable it'll assume that
+what's being passed to it already is an OID and return that instead. A few examples.</p>
+
+<p>getOID('2.16.840.1.101.3.4.2.1') == '2.16.840.1.101.3.4.2.1'
+getOID('id-sha256') == '2.16.840.1.101.3.4.2.1'
+getOID('zzz') == 'zzz'</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$name</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>

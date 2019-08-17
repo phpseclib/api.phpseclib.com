@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="robots" content="index, follow, all" />
+        <title>File_ANSI | phpseclib API Documentation</title>
+                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+                            </head>
+        <body id="class">
+            <div class="header">
+        <ul>
+            <li><a href="classes.html">Classes</a></li>
+                        <li><a href="interfaces.html">Interfaces</a></li>
+            <li><a href="traits.html">Traits</a></li>
+            <li><a href="doc-index.html">Index</a></li>
+            
+        </ul>
+
+        <div id="title">phpseclib API Documentation</div>
+
+            <div class="type">Class</div>
+    <h1><a href=".html"></a>File_ANSI</h1>
+    </div>
+        <div class="content">
+                <p>    class
+    <strong>File_ANSI</strong></p>
+
+            <div class="description">
+            <p>Pure-PHP ANSI Decoder</p>
+            <p>
+</p>
+        </div>
+    
+    
+            <h2>Properties</h2>
+
+            <table>
+                    <tr>
+                <td class="type" id="property_max_x">
+                                                            int
+                </td>
+                <td>$max_x</td>
+                <td class="last">Max Width</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_max_y">
+                                                            int
+                </td>
+                <td>$max_y</td>
+                <td class="last">Max Height</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_max_history">
+                                                            int
+                </td>
+                <td>$max_history</td>
+                <td class="last">Max History</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_history">
+                                                            array
+                </td>
+                <td>$history</td>
+                <td class="last">History</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_history_attrs">
+                                                            array
+                </td>
+                <td>$history_attrs</td>
+                <td class="last">History Attributes</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_x">
+                                                            int
+                </td>
+                <td>$x</td>
+                <td class="last">Current Column</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_y">
+                                                            int
+                </td>
+                <td>$y</td>
+                <td class="last">Current Row</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_old_x">
+                                                            int
+                </td>
+                <td>$old_x</td>
+                <td class="last">Old Column</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_old_y">
+                                                            int
+                </td>
+                <td>$old_y</td>
+                <td class="last">Old Row</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_base_attr_cell">
+                                                            object
+                </td>
+                <td>$base_attr_cell</td>
+                <td class="last">An empty attribute cell</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attr_cell">
+                                                            object
+                </td>
+                <td>$attr_cell</td>
+                <td class="last">The current attribute cell</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attr_row">
+                                                            array
+                </td>
+                <td>$attr_row</td>
+                <td class="last">An empty attribute row</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_screen">
+                                                            array
+                </td>
+                <td>$screen</td>
+                <td class="last">The current screen text</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_attrs">
+                                                            array
+                </td>
+                <td>$attrs</td>
+                <td class="last">The current screen attributes</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ansi">
+                                                            string
+                </td>
+                <td>$ansi</td>
+                <td class="last">Current ANSI code</td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tokenization">
+                                                            array
+                </td>
+                <td>$tokenization</td>
+                <td class="last">Tokenization</td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <table>
+                    <tr>
+                <td class="type">
+                    <a href="File_ANSI.html"><abbr title="File_ANSI">File_ANSI</abbr></a>
+                </td>
+                <td class="last">
+                    <a href="#method___construct">__construct</a>()
+                    <p>Default Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_File_ANSI">File_ANSI</a>()
+                    <p>PHP4 compatible Default Constructor.</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setDimensions">setDimensions</a>(int $x, int $y)
+                    <p>Set terminal width and height</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_setHistory">setHistory</a>($history)
+                    <p>Set the number of lines that should be logged past the terminal height</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_loadString">loadString</a>(string $source)
+                    <p>Load a string</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method_appendString">appendString</a>(string $source)
+                    <p>Appdend a string</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    
+                </td>
+                <td class="last">
+                    <a href="#method__newLine">_newLine</a>()
+                    <p>Add a new line</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__processCoordinate">_processCoordinate</a>($last_attr, $cur_attr, $char)
+                    <p>Returns the current coordinate without preformating</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method__getScreen">_getScreen</a>()
+                    <p>Returns the current screen without preformating</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getScreen">getScreen</a>()
+                    <p>Returns the current screen</p>
+                </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type">
+                    string
+                </td>
+                <td class="last">
+                    <a href="#method_getHistory">getHistory</a>()
+                    <p>Returns the current screen and the x previous lines</p>
+                </td>
+                <td></td>
+            </tr>
+            </table>
+
+
+        <h2>Details</h2>
+
+                        <h3 id="method___construct">
+        <div class="location">at line 182</div>
+        <code>            public            <a href="File_ANSI.html"><abbr title="File_ANSI">File_ANSI</abbr></a>
+    <strong>__construct</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Default Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td><a href="File_ANSI.html"><abbr title="File_ANSI">File_ANSI</abbr></a></td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_File_ANSI">
+        <div class="location">at line 204</div>
+        <code>            public            
+    <strong>File_ANSI</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>PHP4 compatible Default Constructor.</p>
+        <p>
+</p>
+        <div class="tags">
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table>
+                    <tr>
+                <td>self::__construct()</td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+                <h3 id="method_setDimensions">
+        <div class="location">at line 218</div>
+        <code>            public            
+    <strong>setDimensions</strong>(int $x, int $y)</code>
+    </h3>
+    <div class="details">
+        <p>Set terminal width and height</p>
+        <p>Resets the screen as well</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>int</td>
+                <td>$x</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$y</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_setHistory">
+        <div class="location">at line 237</div>
+        <code>            public            
+    <strong>setHistory</strong>($history)</code>
+    </h3>
+    <div class="details">
+        <p>Set the number of lines that should be logged past the terminal height</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$history</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_loadString">
+        <div class="location">at line 248</div>
+        <code>            public            
+    <strong>loadString</strong>(string $source)</code>
+    </h3>
+    <div class="details">
+        <p>Load a string</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_appendString">
+        <div class="location">at line 260</div>
+        <code>            public            
+    <strong>appendString</strong>(string $source)</code>
+    </h3>
+    <div class="details">
+        <p>Appdend a string</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td>string</td>
+                <td>$source</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__newLine">
+        <div class="location">at line 464</div>
+        <code>            public            
+    <strong>_newLine</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Add a new line</p>
+        <p>Also update the $this->screen and $this->history buffers</p>
+        <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__processCoordinate">
+        <div class="location">at line 493</div>
+        <code>            public            string
+    <strong>_processCoordinate</strong>($last_attr, $cur_attr, $char)</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current coordinate without preformating</p>
+        <p>
+</p>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table>
+                    <tr>
+                <td></td>
+                <td>$last_attr</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$cur_attr</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$char</td>
+                <td>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method__getScreen">
+        <div class="location">at line 550</div>
+        <code>            public            string
+    <strong>_getScreen</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current screen without preformating</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getScreen">
+        <div class="location">at line 574</div>
+        <code>            public            string
+    <strong>getScreen</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current screen</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+                <h3 id="method_getHistory">
+        <div class="location">at line 585</div>
+        <code>            public            string
+    <strong>getHistory</strong>()</code>
+    </h3>
+    <div class="details">
+        <p>Returns the current screen and the x previous lines</p>
+        <p>
+</p>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table>
+        <tr>
+            <td>string</td>
+            <td>
+</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+    
+            </div>
+            <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+    </div>
+    </body>
+</html>
