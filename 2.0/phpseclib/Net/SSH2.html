@@ -513,6 +513,13 @@ to call read() multiple times when using this option</p>
                 <td class="last">The Window Size</td>
             </tr>
                     <tr>
+                <td class="type" id="property_window_resize">
+                                                            int
+                </td>
+                <td>$window_resize</td>
+                <td class="last">What we resize the window to</td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_window_size_server_to_client">
                                                             array
                 </td>
@@ -1677,7 +1684,7 @@ to call read() multiple times when using this option</p>
         <h2>Details</h2>
 
                         <h3 id="method___construct">
-        <div class="location">at line 963</div>
+        <div class="location">at line 977</div>
         <code>            public            <a href="../../phpseclib/Net/SSH2.html"><abbr title="phpseclib\Net\SSH2">SSH2</abbr></a>
     <strong>__construct</strong>(mixed $host, int $port = 22, int $timeout = 10)</code>
     </h3>
@@ -1734,7 +1741,7 @@ to call read() multiple times when using this option</p>
     </div>
 
                 <h3 id="method_setCryptoEngine">
-        <div class="location">at line 1065</div>
+        <div class="location">at line 1079</div>
         <code>            public            
     <strong>setCryptoEngine</strong>(int $engine)</code>
     </h3>
@@ -1761,7 +1768,7 @@ CRYPT<em>MODE</em>INTERNAL, CRYPT<em>MODE</em>MCRYPT</p>
     </div>
 
                 <h3 id="method_sendIdentificationStringFirst">
-        <div class="location">at line 1079</div>
+        <div class="location">at line 1093</div>
         <code>            public            
     <strong>sendIdentificationStringFirst</strong>()</code>
     </h3>
@@ -1778,7 +1785,7 @@ theory it shouldn't matter but it is a fact of life that some SSH servers are si
     </div>
 
                 <h3 id="method_sendIdentificationStringLast">
-        <div class="location">at line 1093</div>
+        <div class="location">at line 1107</div>
         <code>            public            
     <strong>sendIdentificationStringLast</strong>()</code>
     </h3>
@@ -1795,7 +1802,7 @@ theory it shouldn't matter but it is a fact of life that some SSH servers are si
     </div>
 
                 <h3 id="method_sendKEXINITFirst">
-        <div class="location">at line 1107</div>
+        <div class="location">at line 1121</div>
         <code>            public            
     <strong>sendKEXINITFirst</strong>()</code>
     </h3>
@@ -1812,7 +1819,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method_sendKEXINITLast">
-        <div class="location">at line 1121</div>
+        <div class="location">at line 1135</div>
         <code>            public            
     <strong>sendKEXINITLast</strong>()</code>
     </h3>
@@ -1829,7 +1836,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method__connect">
-        <div class="location">at line 1132</div>
+        <div class="location">at line 1146</div>
         <code>            public            bool
     <strong>_connect</strong>()</code>
     </h3>
@@ -1855,7 +1862,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method__generate_identifier">
-        <div class="location">at line 1288</div>
+        <div class="location">at line 1302</div>
         <code>            public            string
     <strong>_generate_identifier</strong>()</code>
     </h3>
@@ -1880,7 +1887,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method__key_exchange">
-        <div class="location">at line 1322</div>
+        <div class="location">at line 1336</div>
         <code>            public            
     <strong>_key_exchange</strong>(string $kexinit_payload_server = false)</code>
     </h3>
@@ -1906,7 +1913,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method__encryption_algorithm_to_key_size">
-        <div class="location">at line 1968</div>
+        <div class="location">at line 1982</div>
         <code>            public            int|null
     <strong>_encryption_algorithm_to_key_size</strong>(string $algorithm)</code>
     </h3>
@@ -1941,7 +1948,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method__encryption_algorithm_to_crypt_instance">
-        <div class="location">at line 2012</div>
+        <div class="location">at line 2026</div>
         <code>            public            mixed
     <strong>_encryption_algorithm_to_crypt_instance</strong>(string $algorithm)</code>
     </h3>
@@ -1976,7 +1983,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method__bad_algorithm_candidate">
-        <div class="location">at line 2057</div>
+        <div class="location">at line 2071</div>
         <code>            public            bool
     <strong>_bad_algorithm_candidate</strong>(string $algorithm)</code>
     </h3>
@@ -2012,7 +2019,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method_login">
-        <div class="location">at line 2081</div>
+        <div class="location">at line 2095</div>
         <code>            public            bool
     <strong>login</strong>($username)</code>
     </h3>
@@ -2057,7 +2064,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method__login">
-        <div class="location">at line 2098</div>
+        <div class="location">at line 2112</div>
         <code>            public            bool
     <strong>_login</strong>($username)</code>
     </h3>
@@ -2103,7 +2110,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method__login_helper">
-        <div class="location">at line 2129</div>
+        <div class="location">at line 2143</div>
         <code>            public            bool
     <strong>_login_helper</strong>(string $username, string $password = null)</code>
     </h3>
@@ -2146,7 +2153,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method__keyboard_interactive_login">
-        <div class="location">at line 2329</div>
+        <div class="location">at line 2343</div>
         <code>            public            bool
     <strong>_keyboard_interactive_login</strong>(string $username, string $password)</code>
     </h3>
@@ -2188,7 +2195,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method__keyboard_interactive_process">
-        <div class="location">at line 2360</div>
+        <div class="location">at line 2374</div>
         <code>            public            bool
     <strong>_keyboard_interactive_process</strong>()</code>
     </h3>
@@ -2214,7 +2221,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method__ssh_agent_login">
-        <div class="location">at line 2494</div>
+        <div class="location">at line 2508</div>
         <code>            public            bool
     <strong>_ssh_agent_login</strong>(string $username, <a href="../../phpseclib/System/SSH/Agent.html"><abbr title="phpseclib\System\SSH\Agent">Agent</abbr></a> $agent)</code>
     </h3>
@@ -2257,7 +2264,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method__privatekey_login">
-        <div class="location">at line 2517</div>
+        <div class="location">at line 2531</div>
         <code>            public            bool
     <strong>_privatekey_login</strong>($username, $privatekey)</code>
     </h3>
@@ -2300,7 +2307,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
     </div>
 
                 <h3 id="method_setTimeout">
-        <div class="location">at line 2647</div>
+        <div class="location">at line 2661</div>
         <code>            public            
     <strong>setTimeout</strong>(mixed $timeout)</code>
     </h3>
@@ -2327,7 +2334,7 @@ Setting $timeout to false or 0 will mean there is no timeout.</p>
     </div>
 
                 <h3 id="method_getStdError">
-        <div class="location">at line 2657</div>
+        <div class="location">at line 2671</div>
         <code>            public            
     <strong>getStdError</strong>()</code>
     </h3>
@@ -2343,7 +2350,7 @@ Setting $timeout to false or 0 will mean there is no timeout.</p>
     </div>
 
                 <h3 id="method_exec">
-        <div class="location">at line 2673</div>
+        <div class="location">at line 2687</div>
         <code>            public            string
     <strong>exec</strong>(string $command, <abbr title="phpseclib\Net\Callback">Callback</abbr> $callback = null)</code>
     </h3>
@@ -2386,7 +2393,7 @@ In all likelihood, this is not a feature you want to be taking advantage of.</p>
     </div>
 
                 <h3 id="method__initShell">
-        <div class="location">at line 2829</div>
+        <div class="location">at line 2843</div>
         <code>            public            bool
     <strong>_initShell</strong>()</code>
     </h3>
@@ -2425,7 +2432,7 @@ In all likelihood, this is not a feature you want to be taking advantage of.</p>
     </div>
 
                 <h3 id="method__get_interactive_channel">
-        <div class="location">at line 2937</div>
+        <div class="location">at line 2951</div>
         <code>            public            int
     <strong>_get_interactive_channel</strong>()</code>
     </h3>
@@ -2464,7 +2471,7 @@ In all likelihood, this is not a feature you want to be taking advantage of.</p>
     </div>
 
                 <h3 id="method__get_open_channel">
-        <div class="location">at line 2955</div>
+        <div class="location">at line 2969</div>
         <code>            public            int
     <strong>_get_open_channel</strong>()</code>
     </h3>
@@ -2490,7 +2497,7 @@ In all likelihood, this is not a feature you want to be taking advantage of.</p>
     </div>
 
                 <h3 id="method_read">
-        <div class="location">at line 2979</div>
+        <div class="location">at line 2993</div>
         <code>            public            string
     <strong>read</strong>(string $expect = &#039;&#039;, int $mode = self::READ_SIMPLE)</code>
     </h3>
@@ -2542,7 +2549,7 @@ if $mode == self::READ_REGEX, a regular expression.</p>
     </div>
 
                 <h3 id="method_write">
-        <div class="location">at line 3028</div>
+        <div class="location">at line 3042</div>
         <code>            public            bool
     <strong>write</strong>(string $cmd)</code>
     </h3>
@@ -2588,7 +2595,7 @@ if $mode == self::READ_REGEX, a regular expression.</p>
     </div>
 
                 <h3 id="method_startSubsystem">
-        <div class="location">at line 3057</div>
+        <div class="location">at line 3071</div>
         <code>            public            bool
     <strong>startSubsystem</strong>(string $subsystem)</code>
     </h3>
@@ -2637,7 +2644,7 @@ if there's sufficient demand for such a feature.</p>
     </div>
 
                 <h3 id="method_stopSubsystem">
-        <div class="location">at line 3119</div>
+        <div class="location">at line 3133</div>
         <code>            public            bool
     <strong>stopSubsystem</strong>()</code>
     </h3>
@@ -2672,7 +2679,7 @@ if there's sufficient demand for such a feature.</p>
     </div>
 
                 <h3 id="method_reset">
-        <div class="location">at line 3133</div>
+        <div class="location">at line 3147</div>
         <code>            public            
     <strong>reset</strong>()</code>
     </h3>
@@ -2687,7 +2694,7 @@ if there's sufficient demand for such a feature.</p>
     </div>
 
                 <h3 id="method_isTimeout">
-        <div class="location">at line 3145</div>
+        <div class="location">at line 3159</div>
         <code>            public            
     <strong>isTimeout</strong>()</code>
     </h3>
@@ -2702,7 +2709,7 @@ if there's sufficient demand for such a feature.</p>
     </div>
 
                 <h3 id="method_disconnect">
-        <div class="location">at line 3155</div>
+        <div class="location">at line 3169</div>
         <code>            public            
     <strong>disconnect</strong>()</code>
     </h3>
@@ -2718,7 +2725,7 @@ if there's sufficient demand for such a feature.</p>
     </div>
 
                 <h3 id="method___destruct">
-        <div class="location">at line 3171</div>
+        <div class="location">at line 3185</div>
         <code>            public            
     <strong>__destruct</strong>()</code>
     </h3>
@@ -2734,7 +2741,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method_isConnected">
-        <div class="location">at line 3182</div>
+        <div class="location">at line 3196</div>
         <code>            public            bool
     <strong>isConnected</strong>()</code>
     </h3>
@@ -2760,7 +2767,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method_isAuthenticated">
-        <div class="location">at line 3193</div>
+        <div class="location">at line 3207</div>
         <code>            public            bool
     <strong>isAuthenticated</strong>()</code>
     </h3>
@@ -2786,7 +2793,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method_ping">
-        <div class="location">at line 3206</div>
+        <div class="location">at line 3220</div>
         <code>            public            bool
     <strong>ping</strong>()</code>
     </h3>
@@ -2811,7 +2818,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method__reconnect">
-        <div class="location">at line 3248</div>
+        <div class="location">at line 3262</div>
         <code>            public            boolean
     <strong>_reconnect</strong>()</code>
     </h3>
@@ -2837,7 +2844,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method__reset_connection">
-        <div class="location">at line 3267</div>
+        <div class="location">at line 3281</div>
         <code>            public            
     <strong>_reset_connection</strong>(int $reason)</code>
     </h3>
@@ -2864,7 +2871,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method__get_binary_packet">
-        <div class="location">at line 3288</div>
+        <div class="location">at line 3302</div>
         <code>            public            string
     <strong>_get_binary_packet</strong>($skip_channel_filter = false)</code>
     </h3>
@@ -2909,7 +2916,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method__filter">
-        <div class="location">at line 3390</div>
+        <div class="location">at line 3404</div>
         <code>            public            string
     <strong>_filter</strong>($payload, $skip_channel_filter)</code>
     </h3>
@@ -2960,7 +2967,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method_enableQuietMode">
-        <div class="location">at line 3551</div>
+        <div class="location">at line 3565</div>
         <code>            public            
     <strong>enableQuietMode</strong>()</code>
     </h3>
@@ -2975,7 +2982,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method_disableQuietMode">
-        <div class="location">at line 3563</div>
+        <div class="location">at line 3577</div>
         <code>            public            
     <strong>disableQuietMode</strong>()</code>
     </h3>
@@ -2990,7 +2997,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method_isQuietModeEnabled">
-        <div class="location">at line 3576</div>
+        <div class="location">at line 3590</div>
         <code>            public            bool
     <strong>isQuietModeEnabled</strong>()</code>
     </h3>
@@ -3029,7 +3036,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method_enablePTY">
-        <div class="location">at line 3586</div>
+        <div class="location">at line 3600</div>
         <code>            public            
     <strong>enablePTY</strong>()</code>
     </h3>
@@ -3045,7 +3052,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method_disablePTY">
-        <div class="location">at line 3596</div>
+        <div class="location">at line 3610</div>
         <code>            public            
     <strong>disablePTY</strong>()</code>
     </h3>
@@ -3061,7 +3068,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method_isPTYEnabled">
-        <div class="location">at line 3613</div>
+        <div class="location">at line 3627</div>
         <code>            public            bool
     <strong>isPTYEnabled</strong>()</code>
     </h3>
@@ -3100,7 +3107,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method__get_channel_packet">
-        <div class="location">at line 3627</div>
+        <div class="location">at line 3641</div>
         <code>            public            mixed
     <strong>_get_channel_packet</strong>($client_channel, $skip_extended = false)</code>
     </h3>
@@ -3142,7 +3149,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method__send_binary_packet">
-        <div class="location">at line 3897</div>
+        <div class="location">at line 3913</div>
         <code>            public            bool
     <strong>_send_binary_packet</strong>(string $data, string $logged = null)</code>
     </h3>
@@ -3193,7 +3200,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method__append_log">
-        <div class="location">at line 3955</div>
+        <div class="location">at line 3971</div>
         <code>            public            
     <strong>_append_log</strong>($message_number, $message)</code>
     </h3>
@@ -3225,7 +3232,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method__send_channel_packet">
-        <div class="location">at line 4033</div>
+        <div class="location">at line 4049</div>
         <code>            public            bool
     <strong>_send_channel_packet</strong>(int $client_channel, string $data)</code>
     </h3>
@@ -3267,7 +3274,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method__close_channel">
-        <div class="location">at line 4081</div>
+        <div class="location">at line 4097</div>
         <code>            public            bool
     <strong>_close_channel</strong>(int $client_channel, bool $want_reply = false)</code>
     </h3>
@@ -3311,7 +3318,7 @@ for SCP more than anything.</p>
     </div>
 
                 <h3 id="method__disconnect">
-        <div class="location">at line 4114</div>
+        <div class="location">at line 4130</div>
         <code>            public            bool
     <strong>_disconnect</strong>(int $reason)</code>
     </h3>
@@ -3348,7 +3355,7 @@ for SCP more than anything.</p>
     </div>
 
                 <h3 id="method__string_shift">
-        <div class="location">at line 4139</div>
+        <div class="location">at line 4155</div>
         <code>            public            string
     <strong>_string_shift</strong>(string $string, int $index = 1)</code>
     </h3>
@@ -3390,7 +3397,7 @@ for SCP more than anything.</p>
     </div>
 
                 <h3 id="method__define_array">
-        <div class="location">at line 4156</div>
+        <div class="location">at line 4172</div>
         <code>            public            
     <strong>_define_array</strong>()</code>
     </h3>
@@ -3407,7 +3414,7 @@ If any of the constants that would be defined already exists, none of the consta
     </div>
 
                 <h3 id="method_getLog">
-        <div class="location">at line 4178</div>
+        <div class="location">at line 4194</div>
         <code>            public            array|<abbr title="phpseclib\Net\false">false</abbr>|string
     <strong>getLog</strong>()</code>
     </h3>
@@ -3432,7 +3439,7 @@ If any of the constants that would be defined already exists, none of the consta
     </div>
 
                 <h3 id="method__format_log">
-        <div class="location">at line 4203</div>
+        <div class="location">at line 4219</div>
         <code>            public            string
     <strong>_format_log</strong>(array $message_log, array $message_number_log)</code>
     </h3>
@@ -3475,7 +3482,7 @@ If any of the constants that would be defined already exists, none of the consta
     </div>
 
                 <h3 id="method__format_log_helper">
-        <div class="location">at line 4238</div>
+        <div class="location">at line 4254</div>
         <code>            public            string
     <strong>_format_log_helper</strong>(array $matches)</code>
     </h3>
@@ -3511,7 +3518,7 @@ If any of the constants that would be defined already exists, none of the consta
     </div>
 
                 <h3 id="method__on_channel_open">
-        <div class="location">at line 4252</div>
+        <div class="location">at line 4268</div>
         <code>            public            
     <strong>_on_channel_open</strong>()</code>
     </h3>
@@ -3528,7 +3535,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method__array_intersect_first">
-        <div class="location">at line 4268</div>
+        <div class="location">at line 4284</div>
         <code>            public            mixed
     <strong>_array_intersect_first</strong>(array $array1, array $array2)</code>
     </h3>
@@ -3569,7 +3576,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getErrors">
-        <div class="location">at line 4284</div>
+        <div class="location">at line 4300</div>
         <code>            public            string[]
     <strong>getErrors</strong>()</code>
     </h3>
@@ -3595,7 +3602,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getLastError">
-        <div class="location">at line 4295</div>
+        <div class="location">at line 4311</div>
         <code>            public            string
     <strong>getLastError</strong>()</code>
     </h3>
@@ -3621,7 +3628,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getServerIdentification">
-        <div class="location">at line 4310</div>
+        <div class="location">at line 4326</div>
         <code>            public            string
     <strong>getServerIdentification</strong>()</code>
     </h3>
@@ -3647,7 +3654,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getKexAlgorithms">
-        <div class="location">at line 4323</div>
+        <div class="location">at line 4339</div>
         <code>            public            array
     <strong>getKexAlgorithms</strong>()</code>
     </h3>
@@ -3673,7 +3680,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getServerHostKeyAlgorithms">
-        <div class="location">at line 4336</div>
+        <div class="location">at line 4352</div>
         <code>            public            array
     <strong>getServerHostKeyAlgorithms</strong>()</code>
     </h3>
@@ -3699,7 +3706,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getEncryptionAlgorithmsClient2Server">
-        <div class="location">at line 4349</div>
+        <div class="location">at line 4365</div>
         <code>            public            array
     <strong>getEncryptionAlgorithmsClient2Server</strong>()</code>
     </h3>
@@ -3725,7 +3732,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getEncryptionAlgorithmsServer2Client">
-        <div class="location">at line 4362</div>
+        <div class="location">at line 4378</div>
         <code>            public            array
     <strong>getEncryptionAlgorithmsServer2Client</strong>()</code>
     </h3>
@@ -3751,7 +3758,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getMACAlgorithmsClient2Server">
-        <div class="location">at line 4375</div>
+        <div class="location">at line 4391</div>
         <code>            public            array
     <strong>getMACAlgorithmsClient2Server</strong>()</code>
     </h3>
@@ -3777,7 +3784,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getMACAlgorithmsServer2Client">
-        <div class="location">at line 4388</div>
+        <div class="location">at line 4404</div>
         <code>            public            array
     <strong>getMACAlgorithmsServer2Client</strong>()</code>
     </h3>
@@ -3803,7 +3810,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getCompressionAlgorithmsClient2Server">
-        <div class="location">at line 4401</div>
+        <div class="location">at line 4417</div>
         <code>            public            array
     <strong>getCompressionAlgorithmsClient2Server</strong>()</code>
     </h3>
@@ -3829,7 +3836,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getCompressionAlgorithmsServer2Client">
-        <div class="location">at line 4414</div>
+        <div class="location">at line 4430</div>
         <code>            public            array
     <strong>getCompressionAlgorithmsServer2Client</strong>()</code>
     </h3>
@@ -3855,7 +3862,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getLanguagesServer2Client">
-        <div class="location">at line 4427</div>
+        <div class="location">at line 4443</div>
         <code>            public            array
     <strong>getLanguagesServer2Client</strong>()</code>
     </h3>
@@ -3881,7 +3888,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getLanguagesClient2Server">
-        <div class="location">at line 4440</div>
+        <div class="location">at line 4456</div>
         <code>            public            array
     <strong>getLanguagesClient2Server</strong>()</code>
     </h3>
@@ -3907,7 +3914,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getServerAlgorithms">
-        <div class="location">at line 4453</div>
+        <div class="location">at line 4469</div>
         <code>            public            array
     <strong>getServerAlgorithms</strong>()</code>
     </h3>
@@ -3933,7 +3940,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getSupportedKEXAlgorithms">
-        <div class="location">at line 4481</div>
+        <div class="location">at line 4497</div>
         <code>            public            array
     <strong>getSupportedKEXAlgorithms</strong>()</code>
     </h3>
@@ -3959,7 +3966,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getSupportedHostKeyAlgorithms">
-        <div class="location">at line 4514</div>
+        <div class="location">at line 4530</div>
         <code>            public            array
     <strong>getSupportedHostKeyAlgorithms</strong>()</code>
     </h3>
@@ -3985,7 +3992,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getSupportedEncryptionAlgorithms">
-        <div class="location">at line 4530</div>
+        <div class="location">at line 4546</div>
         <code>            public            array
     <strong>getSupportedEncryptionAlgorithms</strong>()</code>
     </h3>
@@ -4011,7 +4018,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getSupportedMACAlgorithms">
-        <div class="location">at line 4605</div>
+        <div class="location">at line 4621</div>
         <code>            public            array
     <strong>getSupportedMACAlgorithms</strong>()</code>
     </h3>
@@ -4037,7 +4044,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getSupportedCompressionAlgorithms">
-        <div class="location">at line 4625</div>
+        <div class="location">at line 4641</div>
         <code>            public            array
     <strong>getSupportedCompressionAlgorithms</strong>()</code>
     </h3>
@@ -4063,7 +4070,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getAlgorithmsNegotiated">
-        <div class="location">at line 4641</div>
+        <div class="location">at line 4657</div>
         <code>            public            array
     <strong>getAlgorithmsNegotiated</strong>()</code>
     </h3>
@@ -4088,7 +4095,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_setPreferredAlgorithms">
-        <div class="location">at line 4668</div>
+        <div class="location">at line 4684</div>
         <code>            public            
     <strong>setPreferredAlgorithms</strong>(array $methods)</code>
     </h3>
@@ -4115,7 +4122,7 @@ channel open confirmation received</p>
     </div>
 
                 <h3 id="method_getBannerMessage">
-        <div class="location">at line 4756</div>
+        <div class="location">at line 4772</div>
         <code>            public            string
     <strong>getBannerMessage</strong>()</code>
     </h3>
@@ -4141,7 +4148,7 @@ authentication may be relevant for getting legal protection."</p>
     </div>
 
                 <h3 id="method_getServerPublicHostKey">
-        <div class="location">at line 4770</div>
+        <div class="location">at line 4786</div>
         <code>            public            mixed
     <strong>getServerPublicHostKey</strong>()</code>
     </h3>
@@ -4167,7 +4174,7 @@ is recommended.  Returns false if the server signature is not signed correctly w
     </div>
 
                 <h3 id="method_getExitStatus">
-        <div class="location">at line 4976</div>
+        <div class="location">at line 4992</div>
         <code>            public            <abbr title="phpseclib\Net\false">false</abbr>|int
     <strong>getExitStatus</strong>()</code>
     </h3>
@@ -4193,7 +4200,7 @@ is recommended.  Returns false if the server signature is not signed correctly w
     </div>
 
                 <h3 id="method_getWindowColumns">
-        <div class="location">at line 4990</div>
+        <div class="location">at line 5006</div>
         <code>            public            int
     <strong>getWindowColumns</strong>()</code>
     </h3>
@@ -4219,7 +4226,7 @@ is recommended.  Returns false if the server signature is not signed correctly w
     </div>
 
                 <h3 id="method_getWindowRows">
-        <div class="location">at line 5001</div>
+        <div class="location">at line 5017</div>
         <code>            public            int
     <strong>getWindowRows</strong>()</code>
     </h3>
@@ -4245,7 +4252,7 @@ is recommended.  Returns false if the server signature is not signed correctly w
     </div>
 
                 <h3 id="method_setWindowColumns">
-        <div class="location">at line 5012</div>
+        <div class="location">at line 5028</div>
         <code>            public            
     <strong>setWindowColumns</strong>(int $value)</code>
     </h3>
@@ -4272,7 +4279,7 @@ is recommended.  Returns false if the server signature is not signed correctly w
     </div>
 
                 <h3 id="method_setWindowRows">
-        <div class="location">at line 5023</div>
+        <div class="location">at line 5039</div>
         <code>            public            
     <strong>setWindowRows</strong>(int $value)</code>
     </h3>
@@ -4299,7 +4306,7 @@ is recommended.  Returns false if the server signature is not signed correctly w
     </div>
 
                 <h3 id="method_setWindowSize">
-        <div class="location">at line 5035</div>
+        <div class="location">at line 5051</div>
         <code>            public            
     <strong>setWindowSize</strong>(int $columns = 80, int $rows = 24)</code>
     </h3>
