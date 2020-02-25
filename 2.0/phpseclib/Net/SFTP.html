@@ -2260,7 +2260,7 @@ to call read() multiple times when using this option</p>
                     bool
                 </td>
                 <td class="last">
-                    <a href="#method__delete_recursive">_delete_recursive</a>($path)
+                    <a href="#method__delete_recursive">_delete_recursive</a>(string $path, int $i)
                     <p>Recursively deletes directories on the SFTP server</p>
                 </td>
                 <td></td>
@@ -3684,7 +3684,7 @@ disconnect().</p>
     </div>
 
                 <h3 id="method__reset_connection">
-        <div class="location">at line 2952</div>
+        <div class="location">at line 2985</div>
         <code>            public            
     <strong>_reset_connection</strong>(int $reason)</code>
     </h3>
@@ -4158,7 +4158,7 @@ for SCP more than anything.</p>
     </div>
 
                 <h3 id="method__disconnect">
-        <div class="location">at line 3131</div>
+        <div class="location">at line 3164</div>
         <code>            public            bool
     <strong>_disconnect</strong>(int $reason)</code>
     </h3>
@@ -6315,7 +6315,7 @@ If $recursive is true than this just returns true or false.</p>
     </div>
 
                 <h3 id="method_readlink">
-        <div class="location">at line 1672</div>
+        <div class="location">at line 1682</div>
         <code>            public            mixed
     <strong>readlink</strong>(string $link)</code>
     </h3>
@@ -6352,7 +6352,7 @@ If $recursive is true than this just returns true or false.</p>
     </div>
 
                 <h3 id="method_symlink">
-        <div class="location">at line 1722</div>
+        <div class="location">at line 1732</div>
         <code>            public            bool
     <strong>symlink</strong>(string $target, string $link)</code>
     </h3>
@@ -6394,7 +6394,7 @@ If $recursive is true than this just returns true or false.</p>
     </div>
 
                 <h3 id="method_mkdir">
-        <div class="location">at line 1761</div>
+        <div class="location">at line 1771</div>
         <code>            public            bool
     <strong>mkdir</strong>($dir, $mode = -1, $recursive = false)</code>
     </h3>
@@ -6443,7 +6443,7 @@ If $recursive is true than this just returns true or false.</p>
     </div>
 
                 <h3 id="method__mkdir_helper">
-        <div class="location">at line 1796</div>
+        <div class="location">at line 1806</div>
         <code>            public            bool
     <strong>_mkdir_helper</strong>($dir, $attr)</code>
     </h3>
@@ -6486,7 +6486,7 @@ If $recursive is true than this just returns true or false.</p>
     </div>
 
                 <h3 id="method_rmdir">
-        <div class="location">at line 1827</div>
+        <div class="location">at line 1837</div>
         <code>            public            bool
     <strong>rmdir</strong>(string $dir)</code>
     </h3>
@@ -6523,7 +6523,7 @@ If $recursive is true than this just returns true or false.</p>
     </div>
 
                 <h3 id="method_put">
-        <div class="location">at line 1912</div>
+        <div class="location">at line 1922</div>
         <code>            public            bool
     <strong>put</strong>(string $remote_file, string|resource $data, int $mode = self::SOURCE_STRING, int $start = -1, int $local_start = -1, callable|null $progressCallback = null)</code>
     </h3>
@@ -6619,7 +6619,7 @@ middle of one.</p>
     </div>
 
                 <h3 id="method__read_put_responses">
-        <div class="location">at line 2066</div>
+        <div class="location">at line 2084</div>
         <code>            public            bool
     <strong>_read_put_responses</strong>(int $i)</code>
     </h3>
@@ -6656,7 +6656,7 @@ SSH<em>FXP</em>WRITEs, in succession, and then reading $i responses.</p>
     </div>
 
                 <h3 id="method__close_handle">
-        <div class="location">at line 2095</div>
+        <div class="location">at line 2113</div>
         <code>            public            bool
     <strong>_close_handle</strong>(string $handle)</code>
     </h3>
@@ -6693,7 +6693,7 @@ SSH<em>FXP</em>WRITEs, in succession, and then reading $i responses.</p>
     </div>
 
                 <h3 id="method_get">
-        <div class="location">at line 2138</div>
+        <div class="location">at line 2156</div>
         <code>            public            mixed
     <strong>get</strong>(string $remote_file, string $local_file = false, int $offset, int $length = -1, callable|null $progressCallback = null)</code>
     </h3>
@@ -6757,7 +6757,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_delete">
-        <div class="location">at line 2285</div>
+        <div class="location">at line 2303</div>
         <code>            public            bool
     <strong>delete</strong>(string $path, bool $recursive = true)</code>
     </h3>
@@ -6800,9 +6800,9 @@ operation.</p>
     </div>
 
                 <h3 id="method__delete_recursive">
-        <div class="location">at line 2345</div>
+        <div class="location">at line 2365</div>
         <code>            public            bool
-    <strong>_delete_recursive</strong>($path)</code>
+    <strong>_delete_recursive</strong>(string $path, int $i)</code>
     </h3>
     <div class="details">
         <p>Recursively deletes directories on the SFTP server</p>
@@ -6812,8 +6812,14 @@ operation.</p>
 
                     <table>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$path</td>
+                <td>
+</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$i</td>
                 <td>
 </td>
             </tr>
@@ -6836,7 +6842,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_file_exists">
-        <div class="location">at line 2398</div>
+        <div class="location">at line 2431</div>
         <code>            public            bool
     <strong>file_exists</strong>(string $path)</code>
     </h3>
@@ -6873,7 +6879,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_is_dir">
-        <div class="location">at line 2421</div>
+        <div class="location">at line 2454</div>
         <code>            public            bool
     <strong>is_dir</strong>(string $path)</code>
     </h3>
@@ -6910,7 +6916,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_is_file">
-        <div class="location">at line 2437</div>
+        <div class="location">at line 2470</div>
         <code>            public            bool
     <strong>is_file</strong>(string $path)</code>
     </h3>
@@ -6947,7 +6953,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_is_link">
-        <div class="location">at line 2453</div>
+        <div class="location">at line 2486</div>
         <code>            public            bool
     <strong>is_link</strong>(string $path)</code>
     </h3>
@@ -6984,7 +6990,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_is_readable">
-        <div class="location">at line 2469</div>
+        <div class="location">at line 2502</div>
         <code>            public            bool
     <strong>is_readable</strong>(string $path)</code>
     </h3>
@@ -7021,7 +7027,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_is_writable">
-        <div class="location">at line 2497</div>
+        <div class="location">at line 2530</div>
         <code>            public            bool
     <strong>is_writable</strong>(string $path)</code>
     </h3>
@@ -7058,7 +7064,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_is_writeable">
-        <div class="location">at line 2527</div>
+        <div class="location">at line 2560</div>
         <code>            public            bool
     <strong>is_writeable</strong>(string $path)</code>
     </h3>
@@ -7094,7 +7100,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_fileatime">
-        <div class="location">at line 2539</div>
+        <div class="location">at line 2572</div>
         <code>            public            mixed
     <strong>fileatime</strong>(string $path)</code>
     </h3>
@@ -7131,7 +7137,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_filemtime">
-        <div class="location">at line 2551</div>
+        <div class="location">at line 2584</div>
         <code>            public            mixed
     <strong>filemtime</strong>(string $path)</code>
     </h3>
@@ -7168,7 +7174,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_fileperms">
-        <div class="location">at line 2563</div>
+        <div class="location">at line 2596</div>
         <code>            public            mixed
     <strong>fileperms</strong>(string $path)</code>
     </h3>
@@ -7205,7 +7211,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_fileowner">
-        <div class="location">at line 2575</div>
+        <div class="location">at line 2608</div>
         <code>            public            mixed
     <strong>fileowner</strong>(string $path)</code>
     </h3>
@@ -7242,7 +7248,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_filegroup">
-        <div class="location">at line 2587</div>
+        <div class="location">at line 2620</div>
         <code>            public            mixed
     <strong>filegroup</strong>(string $path)</code>
     </h3>
@@ -7279,7 +7285,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_filesize">
-        <div class="location">at line 2599</div>
+        <div class="location">at line 2632</div>
         <code>            public            mixed
     <strong>filesize</strong>(string $path)</code>
     </h3>
@@ -7316,7 +7322,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_filetype">
-        <div class="location">at line 2611</div>
+        <div class="location">at line 2644</div>
         <code>            public            mixed
     <strong>filetype</strong>(string $path)</code>
     </h3>
@@ -7353,7 +7359,7 @@ operation.</p>
     </div>
 
                 <h3 id="method__get_stat_cache_prop">
-        <div class="location">at line 2646</div>
+        <div class="location">at line 2679</div>
         <code>            public            mixed
     <strong>_get_stat_cache_prop</strong>(string $path, string $prop)</code>
     </h3>
@@ -7395,7 +7401,7 @@ operation.</p>
     </div>
 
                 <h3 id="method__get_lstat_cache_prop">
-        <div class="location">at line 2661</div>
+        <div class="location">at line 2694</div>
         <code>            public            mixed
     <strong>_get_lstat_cache_prop</strong>(string $path, string $prop)</code>
     </h3>
@@ -7437,7 +7443,7 @@ operation.</p>
     </div>
 
                 <h3 id="method__get_xstat_cache_prop">
-        <div class="location">at line 2676</div>
+        <div class="location">at line 2709</div>
         <code>            public            mixed
     <strong>_get_xstat_cache_prop</strong>($path, $prop, $type)</code>
     </h3>
@@ -7485,7 +7491,7 @@ operation.</p>
     </div>
 
                 <h3 id="method_rename">
-        <div class="location">at line 2705</div>
+        <div class="location">at line 2738</div>
         <code>            public            bool
     <strong>rename</strong>(string $oldname, string $newname)</code>
     </h3>
@@ -7528,7 +7534,7 @@ operation.</p>
     </div>
 
                 <h3 id="method__parseAttributes">
-        <div class="location">at line 2757</div>
+        <div class="location">at line 2790</div>
         <code>            public            array
     <strong>_parseAttributes</strong>(string $response)</code>
     </h3>
@@ -7564,7 +7570,7 @@ operation.</p>
     </div>
 
                 <h3 id="method__parseMode">
-        <div class="location">at line 2839</div>
+        <div class="location">at line 2872</div>
         <code>            public            int
     <strong>_parseMode</strong>(int $mode)</code>
     </h3>
@@ -7600,7 +7606,7 @@ operation.</p>
     </div>
 
                 <h3 id="method__parseLongname">
-        <div class="location">at line 2886</div>
+        <div class="location">at line 2919</div>
         <code>            public            mixed
     <strong>_parseLongname</strong>(string $longname)</code>
     </h3>
@@ -7642,7 +7648,7 @@ The result is returned using the
     </div>
 
                 <h3 id="method__send_sftp_packet">
-        <div class="location">at line 2918</div>
+        <div class="location">at line 2951</div>
         <code>            public            bool
     <strong>_send_sftp_packet</strong>($type, $data, $request_id = 1)</code>
     </h3>
@@ -7703,7 +7709,7 @@ The result is returned using the
     </div>
 
                 <h3 id="method__get_sftp_packet">
-        <div class="location">at line 2973</div>
+        <div class="location">at line 3006</div>
         <code>            public            string
     <strong>_get_sftp_packet</strong>($request_id = null)</code>
     </h3>
@@ -7752,7 +7758,7 @@ messages containing one SFTP packet.</p>
     </div>
 
                 <h3 id="method_getSFTPLog">
-        <div class="location">at line 3071</div>
+        <div class="location">at line 3104</div>
         <code>            public            string
     <strong>getSFTPLog</strong>()</code>
     </h3>
@@ -7776,7 +7782,7 @@ messages containing one SFTP packet.</p>
     </div>
 
                 <h3 id="method_getSFTPErrors">
-        <div class="location">at line 3093</div>
+        <div class="location">at line 3126</div>
         <code>            public            array
     <strong>getSFTPErrors</strong>()</code>
     </h3>
@@ -7802,7 +7808,7 @@ messages containing one SFTP packet.</p>
     </div>
 
                 <h3 id="method_getLastSFTPError">
-        <div class="location">at line 3104</div>
+        <div class="location">at line 3137</div>
         <code>            public            string
     <strong>getLastSFTPError</strong>()</code>
     </h3>
@@ -7828,7 +7834,7 @@ messages containing one SFTP packet.</p>
     </div>
 
                 <h3 id="method_getSupportedVersions">
-        <div class="location">at line 3115</div>
+        <div class="location">at line 3148</div>
         <code>            public            array
     <strong>getSupportedVersions</strong>()</code>
     </h3>
