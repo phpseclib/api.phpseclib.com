@@ -1010,7 +1010,7 @@
             </tr>
                     <tr>
                 <td class="type">
-                    string
+                    string|bool
                 </td>
                 <td class="last">
                     <a href="#method_read">read</a>(string $expect = &#039;&#039;, int $mode = NET_SSH2_READ_SIMPLE)
@@ -3189,7 +3189,7 @@ In all likelihood, this is not a feature you want to be taking advantage of.</p>
 
                 <h3 id="method_read">
         <div class="location">in <a href="Net_SSH2.html#method_read"><abbr title="Net_SSH2">Net_SSH2</abbr></a> at line 3025</div>
-        <code>            public            string
+        <code>            public            string|bool
     <strong>read</strong>(string $expect = &#039;&#039;, int $mode = NET_SSH2_READ_SIMPLE)</code>
     </h3>
     <div class="details">
@@ -3219,7 +3219,7 @@ if $mode == NET<em>SSH2</em>READ_REGEX, a regular expression.</p>
 
                     <table>
         <tr>
-            <td>string</td>
+            <td>string|bool</td>
             <td>
 </td>
         </tr>
