@@ -1,421 +1,488 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="robots" content="index, follow, all" />
-        <title>Net_SFTP_Stream | phpseclib API Documentation</title>
-                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-                            </head>
-        <body id="class">
-            <div class="header">
-        <ul>
-            <li><a href="classes.html">Classes</a></li>
-                        <li><a href="interfaces.html">Interfaces</a></li>
-            <li><a href="traits.html">Traits</a></li>
-            <li><a href="doc-index.html">Index</a></li>
-            
-        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Net_SFTP_Stream | phpseclib API Documentation</title>
 
-        <div id="title">phpseclib API Documentation</div>
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
 
-            <div class="type">Class</div>
-    <h1><a href=".html"></a>Net_SFTP_Stream</h1>
+    <body id="class" data-name="class:Net_SFTP_Stream" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select  class="form-control" id="version-switcher" name="version">
+                                            <option value="../1.0/index.html" data-version="1.0">1.0</option>
+                                            <option value="../2.0/index.html" data-version="2.0">2.0</option>
+                                            <option value="../3.0/index.html" data-version="3.0">3.0</option>
+                                            <option value="../master/index.html" data-version="master">master</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
     </div>
-        <div class="content">
-                <p>    class
-    <strong>Net_SFTP_Stream</strong></p>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">phpseclib API Documentation</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Net_SFTP_Stream
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Net_SFTP_Stream</strong>        (<a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php">View source</a>)
+</p>
+
+        
+    
 
             <div class="description">
-            <p>SFTP Stream Wrapper</p>
-            <p>
-</p>
-        </div>
+            <p>SFTP Stream Wrapper</p>                                </div>
+    
     
     
             <h2>Properties</h2>
 
-            <table>
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_instances">
+                    static                                                            array
+                </td>
+                <td>$instances</td>
+                <td class="last">SFTP instances</td>
+                <td></td>
+            </tr>
                     <tr>
                 <td class="type" id="property_sftp">
-                                                            object
+                                                                                object
                 </td>
                 <td>$sftp</td>
                 <td class="last">SFTP instance</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_path">
-                                                            string
+                                                                                string
                 </td>
                 <td>$path</td>
                 <td class="last">Path</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_mode">
-                                                            string
+                                                                                string
                 </td>
                 <td>$mode</td>
                 <td class="last">Mode</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_pos">
-                                                            int
+                                                                                int
                 </td>
                 <td>$pos</td>
                 <td class="last">Position</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_size">
-                                                            int
+                                                                                int
                 </td>
                 <td>$size</td>
                 <td class="last">Size</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_entries">
-                                                            array
+                                                                                array
                 </td>
                 <td>$entries</td>
                 <td class="last">Directory entries</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_eof">
-                                                            bool
+                                                                                bool
                 </td>
                 <td>$eof</td>
                 <td class="last">EOF flag</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_context">
-                                                            resource
+                                                                                resource
                 </td>
                 <td>$context</td>
                 <td class="last">Context resource</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_notification">
-                                                            callable
+                                                                                callable
                 </td>
                 <td>$notification</td>
                 <td class="last">Notification callback function</td>
+                <td></td>
             </tr>
             </table>
 
     
             <h2>Methods</h2>
 
-            <table>
-                    <tr>
-                <td class="type">
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_register">register</a>(string $protocol = &#039;sftp&#039;)
+        
+                                            <p>Registers this class as a URL wrapper.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___construct">__construct</a>()
-                    <p>The Constructor</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>The Constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__parse_path">_parse_path</a>(string $path)
-                    <p>Path Parser</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Path Parser</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_open">_stream_open</a>(string $path, string $mode, int $options, string $opened_path)
-                    <p>Opens file or URL</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Opens file or URL</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_read">_stream_read</a>(int $count)
-                    <p>Read from stream</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Read from stream</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_write">_stream_write</a>(string $data)
-                    <p>Write to stream</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Write to stream</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_tell">_stream_tell</a>()
-                    <p>Retrieve the current position of a stream</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Retrieve the current position of a stream</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_eof">_stream_eof</a>()
-                    <p>Tests for end-of-file on a file pointer</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Tests for end-of-file on a file pointer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_seek">_stream_seek</a>(int $offset, int $whence)
-                    <p>Seeks to specific location in a stream</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Seeks to specific location in a stream</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_metadata">_stream_metadata</a>(string $path, int $option, mixed $var)
-                    <p>Change stream options</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Change stream options</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     resource
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_cast">_stream_cast</a>(int $cast_as)
-                    <p>Retrieve the underlaying resource</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Retrieve the underlaying resource</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_lock">_stream_lock</a>(int $operation)
-                    <p>Advisory file locking</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Advisory file locking</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__rename">_rename</a>(string $path_from, string $path_to)
-                    <p>Renames a file or directory</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Renames a file or directory</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__dir_opendir">_dir_opendir</a>(string $path, int $options)
-                    <p>Open directory handle</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Open directory handle</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__dir_readdir">_dir_readdir</a>()
-                    <p>Read entry from directory handle</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Read entry from directory handle</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__dir_rewinddir">_dir_rewinddir</a>()
-                    <p>Rewind directory handle</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Rewind directory handle</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__dir_closedir">_dir_closedir</a>()
-                    <p>Close directory handle</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Close directory handle</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__mkdir">_mkdir</a>(string $path, int $mode, int $options)
-                    <p>Create a directory</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Create a directory</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__rmdir">_rmdir</a>($path, $options)
-                    <p>Removes a directory</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Removes a directory</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_flush">_stream_flush</a>()
-                    <p>Flushes the output</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Flushes the output</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_stat">_stream_stat</a>()
-                    <p>Retrieve information about a file resource</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Retrieve information about a file resource</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__unlink">_unlink</a>(string $path)
-                    <p>Delete a file</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Delete a file</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__url_stat">_url_stat</a>(string $path, int $flags)
-                    <p>Retrieve information about a file</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Retrieve information about a file</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_truncate">_stream_truncate</a>(int $new_size)
-                    <p>Truncate stream</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Truncate stream</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_set_option">_stream_set_option</a>(int $option, int $arg1, int $arg2)
-                    <p>Change stream options</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Change stream options</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__stream_close">_stream_close</a>()
-                    <p>Close an resource</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Close an resource</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___call">__call</a>(string $name, array $arguments)
-                    <p>__call Magic Method</p>
-                </td>
-                <td></td>
-            </tr>
-            </table>
+        
+                                            <p>__call Magic Method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">at line 149</div>
-        <code>            public            
-    <strong>__construct</strong>()</code>
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_register">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L135">at line 135</a></div>
+        <code>        static            bool
+    <strong>register</strong>(string $protocol = &#039;sftp&#039;)
+        </code>
     </h3>
     <div class="details">
-        <p>The Constructor</p>
-        <p>
-</p>
-        <div class="tags">
             
-            
-            
-                    </div>
-    </div>
+    
 
-                <h3 id="method__parse_path">
-        <div class="location">at line 172</div>
-        <code>            public            string
-    <strong>_parse_path</strong>(string $path)</code>
-    </h3>
-    <div class="details">
-        <p>Path Parser</p>
-        <p>Extract a path from a URI and actually connect to an SSH server if appropriate</p>
-
-<p>If "notification" is set as a context parameter the message code for successful login is
-NET<em>SSH2</em>MSG<em>USERAUTH</em>SUCCESS. For a failed login it's NET<em>SSH2</em>MSG<em>USERAUTH</em>FAILURE.</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Registers this class as a URL wrapper.</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
-                <td>$path</td>
-                <td>
-</td>
+                <td>$protocol</td>
+                <td>The wrapper name to be registered.</td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
-            <td>string</td>
-            <td>
-</td>
+            <td>bool</td>
+            <td>True on success, false otherwise.</td>
         </tr>
     </table>
 
@@ -424,53 +491,117 @@ NET<em>SSH2</em>MSG<em>USERAUTH</em>SUCCESS. For a failed login it's NET<em>SSH2
                     </div>
     </div>
 
-                <h3 id="method__stream_open">
-        <div class="location">at line 278</div>
-        <code>            public            bool
-    <strong>_stream_open</strong>(string $path, string $mode, int $options, string $opened_path)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L149">at line 149</a></div>
+        <code>                    
+    <strong>__construct</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Opens file or URL</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The Constructor</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__parse_path">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L172">at line 172</a></div>
+        <code>                    string
+    <strong>_parse_path</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Path Parser</p>                    <p>Extract a path from a URI and actually connect to an SSH server if appropriate</p>
+
+<p>If "notification" is set as a context parameter the message code for successful login is
+NET_SSH2_MSG_USERAUTH_SUCCESS. For a failed login it's NET_SSH2_MSG_USERAUTH_FAILURE.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$path</td>
-                <td>
-</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_open">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L278">at line 278</a></div>
+        <code>                    bool
+    <strong>_stream_open</strong>(string $path, string $mode, int $options, string $opened_path)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Opens file or URL</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$mode</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$options</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$opened_path</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -479,35 +610,38 @@ NET<em>SSH2</em>MSG<em>USERAUTH</em>SUCCESS. For a failed login it's NET<em>SSH2
                     </div>
     </div>
 
-                <h3 id="method__stream_read">
-        <div class="location">at line 320</div>
-        <code>            public            mixed
-    <strong>_stream_read</strong>(int $count)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_read">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L320">at line 320</a></div>
+        <code>                    mixed
+    <strong>_stream_read</strong>(int $count)
+        </code>
     </h3>
     <div class="details">
-        <p>Read from stream</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Read from stream</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$count</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -516,35 +650,38 @@ NET<em>SSH2</em>MSG<em>USERAUTH</em>SUCCESS. For a failed login it's NET<em>SSH2
                     </div>
     </div>
 
-                <h3 id="method__stream_write">
-        <div class="location">at line 362</div>
-        <code>            public            mixed
-    <strong>_stream_write</strong>(string $data)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_write">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L362">at line 362</a></div>
+        <code>                    mixed
+    <strong>_stream_write</strong>(string $data)
+        </code>
     </h3>
     <div class="details">
-        <p>Write to stream</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Write to stream</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$data</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -553,24 +690,28 @@ NET<em>SSH2</em>MSG<em>USERAUTH</em>SUCCESS. For a failed login it's NET<em>SSH2
                     </div>
     </div>
 
-                <h3 id="method__stream_tell">
-        <div class="location">at line 396</div>
-        <code>            public            int
-    <strong>_stream_tell</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_tell">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L396">at line 396</a></div>
+        <code>                    int
+    <strong>_stream_tell</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Retrieve the current position of a stream</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the current position of a stream</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -579,28 +720,33 @@ NET<em>SSH2</em>MSG<em>USERAUTH</em>SUCCESS. For a failed login it's NET<em>SSH2
                     </div>
     </div>
 
-                <h3 id="method__stream_eof">
-        <div class="location">at line 414</div>
-        <code>            public            bool
-    <strong>_stream_eof</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_eof">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L414">at line 414</a></div>
+        <code>                    bool
+    <strong>_stream_eof</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Tests for end-of-file on a file pointer</p>
-        <p>In my testing there are four classes functions that normally effect the pointer:
+            
+    
+
+                    <div class="method-description">
+                                    <p>Tests for end-of-file on a file pointer</p>                    <p>In my testing there are four classes functions that normally effect the pointer:
 fseek, fputs  / fwrite, fgets / fread and ftruncate.</p>
 
 <p>Only fgets / fread, however, results in feof() returning true. do fputs($fp, 'aaa') on a blank file and feof()
 will return false. do fread($fp, 1) and feof() will then return true. do fseek($fp, 10) on ablank file and feof()
-will return false. do fread($fp, 1) and feof() will then return true.</p>
-        <div class="tags">
+will return false. do fread($fp, 1) and feof() will then return true.</p>                            </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -609,41 +755,43 @@ will return false. do fread($fp, 1) and feof() will then return true.</p>
                     </div>
     </div>
 
-                <h3 id="method__stream_seek">
-        <div class="location">at line 427</div>
-        <code>            public            bool
-    <strong>_stream_seek</strong>(int $offset, int $whence)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_seek">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L427">at line 427</a></div>
+        <code>                    bool
+    <strong>_stream_seek</strong>(int $offset, int $whence)
+        </code>
     </h3>
     <div class="details">
-        <p>Seeks to specific location in a stream</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Seeks to specific location in a stream</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$offset</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$whence</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -652,47 +800,48 @@ will return false. do fread($fp, 1) and feof() will then return true.</p>
                     </div>
     </div>
 
-                <h3 id="method__stream_metadata">
-        <div class="location">at line 456</div>
-        <code>            public            bool
-    <strong>_stream_metadata</strong>(string $path, int $option, mixed $var)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_metadata">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L456">at line 456</a></div>
+        <code>                    bool
+    <strong>_stream_metadata</strong>(string $path, int $option, mixed $var)
+        </code>
     </h3>
     <div class="details">
-        <p>Change stream options</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Change stream options</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$path</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$option</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>mixed</td>
                 <td>$var</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -701,35 +850,38 @@ will return false. do fread($fp, 1) and feof() will then return true.</p>
                     </div>
     </div>
 
-                <h3 id="method__stream_cast">
-        <div class="location">at line 488</div>
-        <code>            public            resource
-    <strong>_stream_cast</strong>(int $cast_as)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_cast">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L488">at line 488</a></div>
+        <code>                    resource
+    <strong>_stream_cast</strong>(int $cast_as)
+        </code>
     </h3>
     <div class="details">
-        <p>Retrieve the underlaying resource</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve the underlaying resource</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$cast_as</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>resource</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -738,35 +890,38 @@ will return false. do fread($fp, 1) and feof() will then return true.</p>
                     </div>
     </div>
 
-                <h3 id="method__stream_lock">
-        <div class="location">at line 500</div>
-        <code>            public            bool
-    <strong>_stream_lock</strong>(int $operation)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_lock">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L500">at line 500</a></div>
+        <code>                    bool
+    <strong>_stream_lock</strong>(int $operation)
+        </code>
     </h3>
     <div class="details">
-        <p>Advisory file locking</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Advisory file locking</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$operation</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -775,42 +930,45 @@ will return false. do fread($fp, 1) and feof() will then return true.</p>
                     </div>
     </div>
 
-                <h3 id="method__rename">
-        <div class="location">at line 517</div>
-        <code>            public            bool
-    <strong>_rename</strong>(string $path_from, string $path_to)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__rename">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L517">at line 517</a></div>
+        <code>                    bool
+    <strong>_rename</strong>(string $path_from, string $path_to)
+        </code>
     </h3>
     <div class="details">
-        <p>Renames a file or directory</p>
-        <p>Attempts to rename oldname to newname, moving it between directories if necessary.
+            
+    
+
+                    <div class="method-description">
+                                    <p>Renames a file or directory</p>                    <p>Attempts to rename oldname to newname, moving it between directories if necessary.
 If newname exists, it will be overwritten.  This is a departure from what Net_SFTP
-does.</p>
-        <div class="tags">
+does.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$path_from</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$path_to</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -819,21 +977,27 @@ does.</p>
                     </div>
     </div>
 
-                <h3 id="method__dir_opendir">
-        <div class="location">at line 569</div>
-        <code>            public            bool
-    <strong>_dir_opendir</strong>(string $path, int $options)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__dir_opendir">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L569">at line 569</a></div>
+        <code>                    bool
+    <strong>_dir_opendir</strong>(string $path, int $options)
+        </code>
     </h3>
     <div class="details">
-        <p>Open directory handle</p>
-        <p>The only $options is "whether or not to enforce safe_mode (0x04)". Since safe mode was deprecated in 5.3 and
+            
+    
+
+                    <div class="method-description">
+                                    <p>Open directory handle</p>                    <p>The only $options is "whether or not to enforce safe_mode (0x04)". Since safe mode was deprecated in 5.3 and
 removed in 5.4 I'm just going to ignore it.</p>
 
 <p>Also, nlist() is the best that this function is realistically going to be able to do. When an SFTP client
-sends a SSH<em>FXP</em>READDIR packet you don't generally get info on just one file but on multiple files. Quoting
+sends a SSH_FXP_READDIR packet you don't generally get info on just one file but on multiple files. Quoting
 the SFTP specs:</p>
 
-<p>The SSH<em>FXP</em>NAME response has the following format:</p>
+<p>The SSH_FXP_NAME response has the following format:</p>
 
 <pre><code>   uint32     id
    uint32     count
@@ -842,33 +1006,30 @@ the SFTP specs:</p>
            string     longname
            ATTRS      attrs
 </code></pre>
-</p>
-        <div class="tags">
+</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$path</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$options</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -877,24 +1038,28 @@ the SFTP specs:</p>
                     </div>
     </div>
 
-                <h3 id="method__dir_readdir">
-        <div class="location">at line 586</div>
-        <code>            public            mixed
-    <strong>_dir_readdir</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__dir_readdir">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L586">at line 586</a></div>
+        <code>                    mixed
+    <strong>_dir_readdir</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Read entry from directory handle</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Read entry from directory handle</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -903,24 +1068,28 @@ the SFTP specs:</p>
                     </div>
     </div>
 
-                <h3 id="method__dir_rewinddir">
-        <div class="location">at line 600</div>
-        <code>            public            bool
-    <strong>_dir_rewinddir</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__dir_rewinddir">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L600">at line 600</a></div>
+        <code>                    bool
+    <strong>_dir_rewinddir</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Rewind directory handle</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Rewind directory handle</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -929,24 +1098,28 @@ the SFTP specs:</p>
                     </div>
     </div>
 
-                <h3 id="method__dir_closedir">
-        <div class="location">at line 612</div>
-        <code>            public            bool
-    <strong>_dir_closedir</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__dir_closedir">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L612">at line 612</a></div>
+        <code>                    bool
+    <strong>_dir_closedir</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Close directory handle</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Close directory handle</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -955,46 +1128,48 @@ the SFTP specs:</p>
                     </div>
     </div>
 
-                <h3 id="method__mkdir">
-        <div class="location">at line 628</div>
-        <code>            public            bool
-    <strong>_mkdir</strong>(string $path, int $mode, int $options)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__mkdir">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L628">at line 628</a></div>
+        <code>                    bool
+    <strong>_mkdir</strong>(string $path, int $mode, int $options)
+        </code>
     </h3>
     <div class="details">
-        <p>Create a directory</p>
-        <p>Only valid $options is STREAM<em>MKDIR</em>RECURSIVE</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a directory</p>                    <p>Only valid $options is STREAM_MKDIR_RECURSIVE</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$path</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$mode</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$options</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1003,43 +1178,46 @@ the SFTP specs:</p>
                     </div>
     </div>
 
-                <h3 id="method__rmdir">
-        <div class="location">at line 652</div>
-        <code>            public            bool
-    <strong>_rmdir</strong>($path, $options)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__rmdir">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L652">at line 652</a></div>
+        <code>                    bool
+    <strong>_rmdir</strong>($path, $options)
+        </code>
     </h3>
     <div class="details">
-        <p>Removes a directory</p>
-        <p>Only valid $options is STREAM<em>MKDIR</em>RECURSIVE per <a href="http://php.net/streamwrapper.rmdir">http://php.net/streamwrapper.rmdir</a>, however,
+            
+    
+
+                    <div class="method-description">
+                                    <p>Removes a directory</p>                    <p>Only valid $options is STREAM_MKDIR_RECURSIVE per <a href="http://php.net/streamwrapper.rmdir">http://php.net/streamwrapper.rmdir</a>, however,
 <a href="http://php.net/rmdir">http://php.net/rmdir</a>  does not have a $recursive parameter as mkdir() does so I don't know how
-STREAM<em>MKDIR</em>RECURSIVE is supposed to be set. Also, when I try it out with rmdir() I get 8 as
-$options. What does 8 correspond to?</p>
-        <div class="tags">
+STREAM_MKDIR_RECURSIVE is supposed to be set. Also, when I try it out with rmdir() I get 8 as
+$options. What does 8 correspond to?</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td></td>
                 <td>$path</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td></td>
                 <td>$options</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1048,23 +1226,28 @@ $options. What does 8 correspond to?</p>
                     </div>
     </div>
 
-                <h3 id="method__stream_flush">
-        <div class="location">at line 670</div>
-        <code>            public            bool
-    <strong>_stream_flush</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_flush">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L670">at line 670</a></div>
+        <code>                    bool
+    <strong>_stream_flush</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Flushes the output</p>
-        <p>See <a href="http://php.net/fflush">http://php.net/fflush</a>. Always returns true because Net_SFTP doesn't cache stuff before writing</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Flushes the output</p>                    <p>See <a href="http://php.net/fflush">http://php.net/fflush</a>. Always returns true because Net_SFTP doesn't cache stuff before writing</p>                            </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1073,24 +1256,28 @@ $options. What does 8 correspond to?</p>
                     </div>
     </div>
 
-                <h3 id="method__stream_stat">
-        <div class="location">at line 681</div>
-        <code>            public            mixed
-    <strong>_stream_stat</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_stat">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L681">at line 681</a></div>
+        <code>                    mixed
+    <strong>_stream_stat</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Retrieve information about a file resource</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve information about a file resource</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1099,35 +1286,38 @@ $options. What does 8 correspond to?</p>
                     </div>
     </div>
 
-                <h3 id="method__unlink">
-        <div class="location">at line 697</div>
-        <code>            public            bool
-    <strong>_unlink</strong>(string $path)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__unlink">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L697">at line 697</a></div>
+        <code>                    bool
+    <strong>_unlink</strong>(string $path)
+        </code>
     </h3>
     <div class="details">
-        <p>Delete a file</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Delete a file</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$path</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1136,42 +1326,45 @@ $options. What does 8 correspond to?</p>
                     </div>
     </div>
 
-                <h3 id="method__url_stat">
-        <div class="location">at line 719</div>
-        <code>            public            mixed
-    <strong>_url_stat</strong>(string $path, int $flags)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__url_stat">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L719">at line 719</a></div>
+        <code>                    mixed
+    <strong>_url_stat</strong>(string $path, int $flags)
+        </code>
     </h3>
     <div class="details">
-        <p>Retrieve information about a file</p>
-        <p>Ignores the STREAM<em>URL</em>STAT<em>QUIET flag because the entirety of Net</em>SFTP_Stream is quiet by default
+            
+    
+
+                    <div class="method-description">
+                                    <p>Retrieve information about a file</p>                    <p>Ignores the STREAM_URL_STAT_QUIET flag because the entirety of Net_SFTP_Stream is quiet by default
 might be worthwhile to reconstruct bits 12-16 (ie. the file type) if mode doesn't have them but we'll
-cross that bridge when and if it's reached</p>
-        <div class="tags">
+cross that bridge when and if it's reached</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$path</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$flags</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1180,35 +1373,38 @@ cross that bridge when and if it's reached</p>
                     </div>
     </div>
 
-                <h3 id="method__stream_truncate">
-        <div class="location">at line 741</div>
-        <code>            public            bool
-    <strong>_stream_truncate</strong>(int $new_size)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_truncate">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L741">at line 741</a></div>
+        <code>                    bool
+    <strong>_stream_truncate</strong>(int $new_size)
+        </code>
     </h3>
     <div class="details">
-        <p>Truncate stream</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Truncate stream</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$new_size</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1217,47 +1413,49 @@ cross that bridge when and if it's reached</p>
                     </div>
     </div>
 
-                <h3 id="method__stream_set_option">
-        <div class="location">at line 765</div>
-        <code>            public            bool
-    <strong>_stream_set_option</strong>(int $option, int $arg1, int $arg2)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_set_option">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L765">at line 765</a></div>
+        <code>                    bool
+    <strong>_stream_set_option</strong>(int $option, int $arg1, int $arg2)
+        </code>
     </h3>
     <div class="details">
-        <p>Change stream options</p>
-        <p>STREAM<em>OPTION</em>WRITE<em>BUFFER isn't supported for the same reason stream</em>flush isn't.
-The other two aren't supported because of limitations in Net_SFTP.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Change stream options</p>                    <p>STREAM_OPTION_WRITE_BUFFER isn't supported for the same reason stream_flush isn't.
+The other two aren't supported because of limitations in Net_SFTP.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$option</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$arg1</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$arg2</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1266,61 +1464,69 @@ The other two aren't supported because of limitations in Net_SFTP.</p>
                     </div>
     </div>
 
-                <h3 id="method__stream_close">
-        <div class="location">at line 775</div>
-        <code>            public            
-    <strong>_stream_close</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__stream_close">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L775">at line 775</a></div>
+        <code>                    
+    <strong>_stream_close</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Close an resource</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Close an resource</p>                                                </div>
+                <div class="tags">
             
             
             
                     </div>
     </div>
 
-                <h3 id="method___call">
-        <div class="location">at line 794</div>
-        <code>            public            mixed
-    <strong>__call</strong>(string $name, array $arguments)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___call">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L794">at line 794</a></div>
+        <code>                    mixed
+    <strong>__call</strong>(string $name, array $arguments)
+        </code>
     </h3>
     <div class="details">
-        <p>__call Magic Method</p>
-        <p>When you're utilizing an SFTP stream you're not calling the methods in this class directly - PHP is calling them for you.
+            
+    
+
+                    <div class="method-description">
+                                    <p>__call Magic Method</p>                    <p>When you're utilizing an SFTP stream you're not calling the methods in this class directly - PHP is calling them for you.
 Which kinda begs the question... what methods is PHP calling and what parameters is it passing to them? This function
 lets you figure that out.</p>
 
-<p>If NET<em>SFTP</em>STREAM<em>LOGGING is defined all calls will be output on the screen and then (regardless of whether or not
-NET</em>SFTP<em>STREAM</em>LOGGING is enabled) the parameters will be passed through to the appropriate method.</p>
-        <div class="tags">
+<p>If NET_SFTP_STREAM_LOGGING is defined all calls will be output on the screen and then (regardless of whether or not
+NET_SFTP_STREAM_LOGGING is enabled) the parameters will be passed through to the appropriate method.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$name</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$arguments</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1329,10 +1535,14 @@ NET</em>SFTP<em>STREAM</em>LOGGING is enabled) the parameters will be passed thr
                     </div>
     </div>
 
-    
             </div>
-            <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
+
 </html>

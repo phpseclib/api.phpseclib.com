@@ -1,596 +1,679 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="robots" content="index, follow, all" />
-        <title>Net_SSH1 | phpseclib API Documentation</title>
-                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-                            </head>
-        <body id="class">
-            <div class="header">
-        <ul>
-            <li><a href="classes.html">Classes</a></li>
-                        <li><a href="interfaces.html">Interfaces</a></li>
-            <li><a href="traits.html">Traits</a></li>
-            <li><a href="doc-index.html">Index</a></li>
-            
-        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Net_SSH1 | phpseclib API Documentation</title>
 
-        <div id="title">phpseclib API Documentation</div>
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
 
-            <div class="type">Class</div>
-    <h1><a href=".html"></a>Net_SSH1</h1>
+    <body id="class" data-name="class:Net_SSH1" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select  class="form-control" id="version-switcher" name="version">
+                                            <option value="../1.0/index.html" data-version="1.0">1.0</option>
+                                            <option value="../2.0/index.html" data-version="2.0">2.0</option>
+                                            <option value="../3.0/index.html" data-version="3.0">3.0</option>
+                                            <option value="../master/index.html" data-version="master">master</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
     </div>
-        <div class="content">
-                <p>    class
-    <strong>Net_SSH1</strong></p>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">phpseclib API Documentation</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Net_SSH1
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Net_SSH1</strong>        (<a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php">View source</a>)
+</p>
+
+        
+    
 
             <div class="description">
-            <p>Pure-PHP implementation of SSHv1.</p>
-            <p>
-</p>
-        </div>
+            <p>Pure-PHP implementation of SSHv1.</p>                                </div>
+    
     
     
             <h2>Properties</h2>
 
-            <table>
+            <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_identifier">
-                                                            string
+                                                                                string
                 </td>
                 <td>$identifier</td>
                 <td class="last">The SSH identifier</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_fsock">
-                                                            object
+                                                                                object
                 </td>
                 <td>$fsock</td>
                 <td class="last">The Socket Object</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_crypto">
-                                                            object
+                                                                                object
                 </td>
                 <td>$crypto</td>
                 <td class="last">The cryptography object</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_bitmap">
-                                                            int
+                                                                                int
                 </td>
                 <td>$bitmap</td>
                 <td class="last">Execution Bitmap</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_server_key_public_exponent">
-                                                            string
+                                                                                string
                 </td>
                 <td>$server_key_public_exponent</td>
                 <td class="last">The Server Key Public Exponent</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_server_key_public_modulus">
-                                                            string
+                                                                                string
                 </td>
                 <td>$server_key_public_modulus</td>
                 <td class="last">The Server Key Public Modulus</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_host_key_public_exponent">
-                                                            string
+                                                                                string
                 </td>
                 <td>$host_key_public_exponent</td>
                 <td class="last">The Host Key Public Exponent</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_host_key_public_modulus">
-                                                            string
+                                                                                string
                 </td>
                 <td>$host_key_public_modulus</td>
                 <td class="last">The Host Key Public Modulus</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_supported_ciphers">
-                                                            array
+                                                                                array
                 </td>
                 <td>$supported_ciphers</td>
                 <td class="last">Supported Ciphers</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_supported_authentications">
-                                                            array
+                                                                                array
                 </td>
                 <td>$supported_authentications</td>
                 <td class="last">Supported Authentications</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_server_identification">
-                                                            string
+                                                                                string
                 </td>
                 <td>$server_identification</td>
                 <td class="last">Server Identification</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_protocol_flags">
-                                                            array
+                                                                                array
                 </td>
                 <td>$protocol_flags</td>
                 <td class="last">Protocol Flags</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_protocol_flag_log">
-                                                            array
+                                                                                array
                 </td>
                 <td>$protocol_flag_log</td>
                 <td class="last">Protocol Flag Log</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_message_log">
-                                                            array
+                                                                                array
                 </td>
                 <td>$message_log</td>
                 <td class="last">Message Log</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_realtime_log_file">
-                                                            resource
+                                                                                resource
                 </td>
                 <td>$realtime_log_file</td>
                 <td class="last">Real-time log file pointer</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_realtime_log_size">
-                                                            int
+                                                                                int
                 </td>
                 <td>$realtime_log_size</td>
                 <td class="last">Real-time log file size</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_realtime_log_wrap">
-                                                            bool
+                                                                                bool
                 </td>
                 <td>$realtime_log_wrap</td>
                 <td class="last">Real-time log file wrap boolean</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_interactiveBuffer">
-                                                            array
+                                                                                array
                 </td>
                 <td>$interactiveBuffer</td>
                 <td class="last">Interactive Buffer</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_timeout">
-                                                            
+                                                                                
                 </td>
                 <td>$timeout</td>
                 <td class="last">Timeout</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_curTimeout">
-                                                            
+                                                                                
                 </td>
                 <td>$curTimeout</td>
                 <td class="last">Current Timeout</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_log_boundary">
-                                                            
+                                                                                
                 </td>
                 <td>$log_boundary</td>
                 <td class="last">Log Boundary</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_log_long_width">
-                                                            
+                                                                                
                 </td>
                 <td>$log_long_width</td>
                 <td class="last">Log Long Width</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_log_short_width">
-                                                            
+                                                                                
                 </td>
                 <td>$log_short_width</td>
                 <td class="last">Log Short Width</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_host">
-                                                            string
+                                                                                string
                 </td>
                 <td>$host</td>
                 <td class="last">Hostname</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_port">
-                                                            int
+                                                                                int
                 </td>
                 <td>$port</td>
                 <td class="last">Port Number</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_connectionTimeout">
-                                                            int
+                                                                                int
                 </td>
                 <td>$connectionTimeout</td>
                 <td class="last">Timeout for initial connection</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_cipher">
-                                                            int
+                                                                                int
                 </td>
                 <td>$cipher</td>
                 <td class="last">Default cipher</td>
+                <td></td>
             </tr>
             </table>
 
     
             <h2>Methods</h2>
 
-            <table>
-                    <tr>
-                <td class="type">
-                    <a href="Net_SSH1.html"><abbr title="Net_SSH1">Net_SSH1</abbr></a>
-                </td>
-                <td class="last">
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Net_SSH1.html">Net_SSH1</a>
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___construct">__construct</a>(string $host, int $port = 22, int $timeout = 10, int $cipher = NET_SSH1_CIPHER_3DES)
-                    <p>Default Constructor.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Default Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_Net_SSH1">Net_SSH1</a>(string $host, int $port = 22, int $timeout = 10, int $cipher = NET_SSH1_CIPHER_3DES)
-                    <p>PHP4 compatible Default Constructor.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>PHP4 compatible Default Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__connect">_connect</a>()
-                    <p>Connect to an SSHv1 server</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Connect to an SSHv1 server</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_login">login</a>(string $username, string $password = &#039;&#039;)
-                    <p>Login</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Login</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setTimeout">setTimeout</a>(mixed $timeout)
-                    <p>Set Timeout</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Set Timeout</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_exec">exec</a>($cmd, $block = true)
-                    <p>Executes a command on a non-interactive shell, returns the output, and quits.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Executes a command on a non-interactive shell, returns the output, and quits.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__initShell">_initShell</a>()
-                    <p>Creates an interactive shell</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Creates an interactive shell</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_write">write</a>(string $cmd)
-                    <p>Inputs a command into an interactive shell.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Inputs a command into an interactive shell.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_read">read</a>(string $expect, int $mode = NET_SSH1_READ_SIMPLE)
-                    <p>Returns the output of an interactive shell when there's a match for $expect</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Returns the output of an interactive shell when there's a match for $expect</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_interactiveWrite">interactiveWrite</a>(string $cmd)
-                    <p>Inputs a command into an interactive shell.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Inputs a command into an interactive shell.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_interactiveRead">interactiveRead</a>()
-                    <p>Returns the output of an interactive shell when no more output is available.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Returns the output of an interactive shell when no more output is available.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_disconnect">disconnect</a>()
-                    <p>Disconnect</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Disconnect</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___destruct">__destruct</a>()
-                    <p>Destructor.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Destructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__disconnect">_disconnect</a>(string $msg = &#039;Client Quit&#039;)
-                    <p>Disconnect</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Disconnect</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__get_binary_packet">_get_binary_packet</a>()
-                    <p>Gets Binary Packets</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Gets Binary Packets</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__send_binary_packet">_send_binary_packet</a>(string $data)
-                    <p>Sends Binary Packets</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Sends Binary Packets</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__crc">_crc</a>(string $data)
-                    <p>Cyclic Redundancy Check (CRC)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Cyclic Redundancy Check (CRC)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__string_shift">_string_shift</a>(string $string, int $index = 1)
-                    <p>String Shift</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    <a href="Math_BigInteger.html"><abbr title="Math_BigInteger">Math_BigInteger</abbr></a>
-                </td>
-                <td class="last">
-                    <a href="#method__rsa_crypt">_rsa_crypt</a>(<a href="Math_BigInteger.html"><abbr title="Math_BigInteger">Math_BigInteger</abbr></a> $m, array $key)
-                    <p>RSA Encrypt</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>String Shift</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Math_BigInteger.html">Math_BigInteger</a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__rsa_crypt">_rsa_crypt</a>(<a href="Math_BigInteger.html">Math_BigInteger</a> $m, array $key)
+        
+                                            <p>RSA Encrypt</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__define_array">_define_array</a>()
-                    <p>Define Array</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
-                    array|<abbr title="false">false</abbr>|string
-                </td>
-                <td class="last">
+        
+                                            <p>Define Array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|false|string
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getLog">getLog</a>()
-                    <p>Returns a log of the packets that have been sent and received.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Returns a log of the packets that have been sent and received.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__format_log">_format_log</a>(array $message_log, array $message_number_log)
-                    <p>Formats a log for printing</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Formats a log for printing</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__format_log_helper">_format_log_helper</a>(array $matches)
-                    <p>Helper function for <em>format</em>log</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Helper function for _format_log</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getServerKeyPublicExponent">getServerKeyPublicExponent</a>(bool $raw_output = false)
-                    <p>Return the server key public exponent</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Return the server key public exponent</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getServerKeyPublicModulus">getServerKeyPublicModulus</a>(bool $raw_output = false)
-                    <p>Return the server key public modulus</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Return the server key public modulus</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getHostKeyPublicExponent">getHostKeyPublicExponent</a>(bool $raw_output = false)
-                    <p>Return the host key public exponent</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Return the host key public exponent</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getHostKeyPublicModulus">getHostKeyPublicModulus</a>(bool $raw_output = false)
-                    <p>Return the host key public modulus</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Return the host key public modulus</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getSupportedCiphers">getSupportedCiphers</a>(bool $raw_output = false)
-                    <p>Return a list of ciphers supported by SSH1 server.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Return a list of ciphers supported by SSH1 server.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getSupportedAuthentications">getSupportedAuthentications</a>(bool $raw_output = false)
-                    <p>Return a list of authentications supported by SSH1 server.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Return a list of authentications supported by SSH1 server.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getServerIdentification">getServerIdentification</a>()
-                    <p>Return the server identification.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Return the server identification.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__append_log">_append_log</a>($protocol_flags, $message)
-                    <p>Logs data packets</p>
-                </td>
-                <td></td>
-            </tr>
-            </table>
+        
+                                            <p>Logs data packets</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">at line 518</div>
-        <code>            public            <a href="Net_SSH1.html"><abbr title="Net_SSH1">Net_SSH1</abbr></a>
-    <strong>__construct</strong>(string $host, int $port = 22, int $timeout = 10, int $cipher = NET_SSH1_CIPHER_3DES)</code>
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L518">at line 518</a></div>
+        <code>                    <a href="Net_SSH1.html">Net_SSH1</a>
+    <strong>__construct</strong>(string $host, int $port = 22, int $timeout = 10, int $cipher = NET_SSH1_CIPHER_3DES)
+        </code>
     </h3>
     <div class="details">
-        <p>Default Constructor.</p>
-        <p>Connects to an SSHv1 server</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Default Constructor.</p>                    <p>Connects to an SSHv1 server</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$host</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$port</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$timeout</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$cipher</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
-            <td><a href="Net_SSH1.html"><abbr title="Net_SSH1">Net_SSH1</abbr></a></td>
-            <td>
-</td>
+            <td><a href="Net_SSH1.html">Net_SSH1</a></td>
+            <td></td>
         </tr>
     </table>
 
@@ -599,42 +682,43 @@
                     </div>
     </div>
 
-                <h3 id="method_Net_SSH1">
-        <div class="location">at line 570</div>
-        <code>            public            
-    <strong>Net_SSH1</strong>(string $host, int $port = 22, int $timeout = 10, int $cipher = NET_SSH1_CIPHER_3DES)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Net_SSH1">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L570">at line 570</a></div>
+        <code>                    
+    <strong>Net_SSH1</strong>(string $host, int $port = 22, int $timeout = 10, int $cipher = NET_SSH1_CIPHER_3DES)
+        </code>
     </h3>
     <div class="details">
-        <p>PHP4 compatible Default Constructor.</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>PHP4 compatible Default Constructor.</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$host</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$port</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$timeout</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$cipher</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -643,9 +727,11 @@
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::__construct()</td>
+                <td>
+                                            \self::__construct()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -653,24 +739,28 @@
                     </div>
     </div>
 
-                <h3 id="method__connect">
-        <div class="location">at line 581</div>
-        <code>            public            bool
-    <strong>_connect</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__connect">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L581">at line 581</a></div>
+        <code>                    bool
+    <strong>_connect</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Connect to an SSHv1 server</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Connect to an SSHv1 server</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -679,41 +769,43 @@
                     </div>
     </div>
 
-                <h3 id="method_login">
-        <div class="location">at line 768</div>
-        <code>            public            bool
-    <strong>login</strong>(string $username, string $password = &#039;&#039;)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_login">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L768">at line 768</a></div>
+        <code>                    bool
+    <strong>login</strong>(string $username, string $password = &#039;&#039;)
+        </code>
     </h3>
     <div class="details">
-        <p>Login</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Login</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$username</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$password</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -722,24 +814,29 @@
                     </div>
     </div>
 
-                <h3 id="method_setTimeout">
-        <div class="location">at line 838</div>
-        <code>            public            
-    <strong>setTimeout</strong>(mixed $timeout)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setTimeout">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L838">at line 838</a></div>
+        <code>                    
+    <strong>setTimeout</strong>(mixed $timeout)
+        </code>
     </h3>
     <div class="details">
-        <p>Set Timeout</p>
-        <p>$ssh->exec('ping 127.0.0.1'); on a Linux host will never return and will run indefinitely.  setTimeout() makes it so it'll timeout.
-Setting $timeout to false or 0 will mean there is no timeout.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Timeout</p>                    <p>$ssh->exec('ping 127.0.0.1'); on a Linux host will never return and will run indefinitely.  setTimeout() makes it so it'll timeout.
+Setting $timeout to false or 0 will mean there is no timeout.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>mixed</td>
                 <td>$timeout</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -749,49 +846,52 @@ Setting $timeout to false or 0 will mean there is no timeout.</p>
                     </div>
     </div>
 
-                <h3 id="method_exec">
-        <div class="location">at line 863</div>
-        <code>            public            mixed
-    <strong>exec</strong>($cmd, $block = true)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exec">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L863">at line 863</a></div>
+        <code>                    mixed
+    <strong>exec</strong>($cmd, $block = true)
+        </code>
     </h3>
     <div class="details">
-        <p>Executes a command on a non-interactive shell, returns the output, and quits.</p>
-        <p>An SSH1 server will close the connection after a command has been executed on a non-interactive shell.  SSH2
+            
+    
+
+                    <div class="method-description">
+                                    <p>Executes a command on a non-interactive shell, returns the output, and quits.</p>                    <p>An SSH1 server will close the connection after a command has been executed on a non-interactive shell.  SSH2
 servers don't, however, this isn't an SSH2 client.  The way this works, on the server, is by initiating a
 shell with the -s option, as discussed in the following links:</p>
 
-<p>{@link http://www.faqs.org/docs/bashman/bashref<em>65.html http://www.faqs.org/docs/bashman/bashref</em>65.html}
-{@link http://www.faqs.org/docs/bashman/bashref<em>62.html http://www.faqs.org/docs/bashman/bashref</em>62.html}</p>
+<p>{@link http://www.faqs.org/docs/bashman/bashref_65.html http://www.faqs.org/docs/bashman/bashref_65.html}
+{@link http://www.faqs.org/docs/bashman/bashref_62.html http://www.faqs.org/docs/bashman/bashref_62.html}</p>
 
 <p>To execute further commands, a new Net_SSH1 object will need to be created.</p>
 
-<p>Returns false on failure and the output, otherwise.</p>
-        <div class="tags">
+<p>Returns false on failure and the output, otherwise.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td></td>
                 <td>$cmd</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td></td>
                 <td>$block</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -799,13 +899,17 @@ shell with the -s option, as discussed in the following links:</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::interactiveRead()</td>
+                <td>
+                                            \self::interactiveRead()
+                                    </td>
                 <td></td>
             </tr>
                     <tr>
-                <td>self::interactiveWrite()</td>
+                <td>
+                                            \self::interactiveWrite()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -813,24 +917,28 @@ shell with the -s option, as discussed in the following links:</p>
                     </div>
     </div>
 
-                <h3 id="method__initShell">
-        <div class="location">at line 912</div>
-        <code>            public            bool
-    <strong>_initShell</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__initShell">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L912">at line 912</a></div>
+        <code>                    bool
+    <strong>_initShell</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Creates an interactive shell</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates an interactive shell</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -838,13 +946,17 @@ shell with the -s option, as discussed in the following links:</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::interactiveRead()</td>
+                <td>
+                                            \self::interactiveRead()
+                                    </td>
                 <td></td>
             </tr>
                     <tr>
-                <td>self::interactiveWrite()</td>
+                <td>
+                                            \self::interactiveWrite()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -852,35 +964,38 @@ shell with the -s option, as discussed in the following links:</p>
                     </div>
     </div>
 
-                <h3 id="method_write">
-        <div class="location">at line 956</div>
-        <code>            public            bool
-    <strong>write</strong>(string $cmd)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_write">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L956">at line 956</a></div>
+        <code>                    bool
+    <strong>write</strong>(string $cmd)
+        </code>
     </h3>
     <div class="details">
-        <p>Inputs a command into an interactive shell.</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Inputs a command into an interactive shell.</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$cmd</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -888,9 +1003,11 @@ shell with the -s option, as discussed in the following links:</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::interactiveWrite()</td>
+                <td>
+                                            \self::interactiveWrite()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -898,41 +1015,44 @@ shell with the -s option, as discussed in the following links:</p>
                     </div>
     </div>
 
-                <h3 id="method_read">
-        <div class="location">at line 973</div>
-        <code>            public            bool
-    <strong>read</strong>(string $expect, int $mode = NET_SSH1_READ_SIMPLE)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_read">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L973">at line 973</a></div>
+        <code>                    bool
+    <strong>read</strong>(string $expect, int $mode = NET_SSH1_READ_SIMPLE)
+        </code>
     </h3>
     <div class="details">
-        <p>Returns the output of an interactive shell when there's a match for $expect</p>
-        <p>$expect can take the form of a string literal or, if $mode == NET<em>SSH1</em>READ_REGEX,
-a regular expression.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the output of an interactive shell when there's a match for $expect</p>                    <p>$expect can take the form of a string literal or, if $mode == NET_SSH1_READ_REGEX,
+a regular expression.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$expect</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$mode</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -940,9 +1060,11 @@ a regular expression.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::write()</td>
+                <td>
+                                            \self::write()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -950,35 +1072,38 @@ a regular expression.</p>
                     </div>
     </div>
 
-                <h3 id="method_interactiveWrite">
-        <div class="location">at line 1012</div>
-        <code>            public            bool
-    <strong>interactiveWrite</strong>(string $cmd)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_interactiveWrite">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1012">at line 1012</a></div>
+        <code>                    bool
+    <strong>interactiveWrite</strong>(string $cmd)
+        </code>
     </h3>
     <div class="details">
-        <p>Inputs a command into an interactive shell.</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Inputs a command into an interactive shell.</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$cmd</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -986,9 +1111,11 @@ a regular expression.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::interactiveRead()</td>
+                <td>
+                                            \self::interactiveRead()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -996,27 +1123,32 @@ a regular expression.</p>
                     </div>
     </div>
 
-                <h3 id="method_interactiveRead">
-        <div class="location">at line 1047</div>
-        <code>            public            string
-    <strong>interactiveRead</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_interactiveRead">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1047">at line 1047</a></div>
+        <code>                    string
+    <strong>interactiveRead</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Returns the output of an interactive shell when no more output is available.</p>
-        <p>Requires PHP 4.3.0 or later due to the use of the stream_select() function.  If you see stuff like
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the output of an interactive shell when no more output is available.</p>                    <p>Requires PHP 4.3.0 or later due to the use of the stream_select() function.  If you see stuff like
 "^[[00m", you're seeing ANSI escape codes.  According to
 {@link http://support.microsoft.com/kb/101875 How to Enable ANSI.SYS in a Command Window}, "Windows NT
 does not support ANSI escape sequences in Win32 Console applications", so if you're a Windows user,
-there's not going to be much recourse.</p>
-        <div class="tags">
+there's not going to be much recourse.</p>                            </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1024,9 +1156,11 @@ there's not going to be much recourse.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::interactiveRead()</td>
+                <td>
+                                            \self::interactiveRead()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1034,56 +1168,71 @@ there's not going to be much recourse.</p>
                     </div>
     </div>
 
-                <h3 id="method_disconnect">
-        <div class="location">at line 1074</div>
-        <code>            public            
-    <strong>disconnect</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disconnect">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1074">at line 1074</a></div>
+        <code>                    
+    <strong>disconnect</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Disconnect</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Disconnect</p>                                                </div>
+                <div class="tags">
             
             
             
                     </div>
     </div>
 
-                <h3 id="method___destruct">
-        <div class="location">at line 1087</div>
-        <code>            public            
-    <strong>__destruct</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___destruct">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1087">at line 1087</a></div>
+        <code>                    
+    <strong>__destruct</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Destructor.</p>
-        <p>Will be called, automatically, if you're supporting just PHP5.  If you're supporting PHP4, you'll need to call
-disconnect().</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Destructor.</p>                    <p>Will be called, automatically, if you're supporting just PHP5.  If you're supporting PHP4, you'll need to call
+disconnect().</p>                            </div>
+                <div class="tags">
             
             
             
                     </div>
     </div>
 
-                <h3 id="method__disconnect">
-        <div class="location">at line 1098</div>
-        <code>            public            
-    <strong>_disconnect</strong>(string $msg = &#039;Client Quit&#039;)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__disconnect">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1098">at line 1098</a></div>
+        <code>                    
+    <strong>_disconnect</strong>(string $msg = &#039;Client Quit&#039;)
+        </code>
     </h3>
     <div class="details">
-        <p>Disconnect</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Disconnect</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$msg</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -1093,26 +1242,31 @@ disconnect().</p>
                     </div>
     </div>
 
-                <h3 id="method__get_binary_packet">
-        <div class="location">at line 1136</div>
-        <code>            public            array
-    <strong>_get_binary_packet</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__get_binary_packet">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1136">at line 1136</a></div>
+        <code>                    array
+    <strong>_get_binary_packet</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Gets Binary Packets</p>
-        <p>See 'The Binary Packet Protocol' of protocol-1.5.txt for more info.</p>
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets Binary Packets</p>                    <p>See 'The Binary Packet Protocol' of protocol-1.5.txt for more info.</p>
 
 <p>Also, this function could be improved upon by adding detection for the following exploit:
-http://www.securiteam.com/securitynews/5LP042K3FY.html</p>
-        <div class="tags">
+http://www.securiteam.com/securitynews/5LP042K3FY.html</p>                            </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1120,9 +1274,11 @@ http://www.securiteam.com/securitynews/5LP042K3FY.html</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::_send_binary_packet()</td>
+                <td>
+                                            \self::_send_binary_packet()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1130,34 +1286,38 @@ http://www.securiteam.com/securitynews/5LP042K3FY.html</p>
                     </div>
     </div>
 
-                <h3 id="method__send_binary_packet">
-        <div class="location">at line 1223</div>
-        <code>            public            bool
-    <strong>_send_binary_packet</strong>(string $data)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__send_binary_packet">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1223">at line 1223</a></div>
+        <code>                    bool
+    <strong>_send_binary_packet</strong>(string $data)
+        </code>
     </h3>
     <div class="details">
-        <p>Sends Binary Packets</p>
-        <p>Returns true on success, false on failure.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sends Binary Packets</p>                    <p>Returns true on success, false on failure.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$data</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1165,9 +1325,11 @@ http://www.securiteam.com/securitynews/5LP042K3FY.html</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::_get_binary_packet()</td>
+                <td>
+                                            \self::_get_binary_packet()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1175,36 +1337,40 @@ http://www.securiteam.com/securitynews/5LP042K3FY.html</p>
                     </div>
     </div>
 
-                <h3 id="method__crc">
-        <div class="location">at line 1271</div>
-        <code>            public            int
-    <strong>_crc</strong>(string $data)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__crc">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1271">at line 1271</a></div>
+        <code>                    int
+    <strong>_crc</strong>(string $data)
+        </code>
     </h3>
     <div class="details">
-        <p>Cyclic Redundancy Check (CRC)</p>
-        <p>PHP's crc32 function is implemented slightly differently than the one that SSH v1 uses, so
+            
+    
+
+                    <div class="method-description">
+                                    <p>Cyclic Redundancy Check (CRC)</p>                    <p>PHP's crc32 function is implemented slightly differently than the one that SSH v1 uses, so
 we've reimplemented it. A more detailed discussion of the differences can be found after
-$crc<em>lookup</em>table's initialization.</p>
-        <div class="tags">
+$crc_lookup_table's initialization.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$data</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1212,13 +1378,17 @@ $crc<em>lookup</em>table's initialization.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::_get_binary_packet()</td>
+                <td>
+                                            \self::_get_binary_packet()
+                                    </td>
                 <td></td>
             </tr>
                     <tr>
-                <td>self::_send_binary_packet()</td>
+                <td>
+                                            \self::_send_binary_packet()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1226,40 +1396,43 @@ $crc<em>lookup</em>table's initialization.</p>
                     </div>
     </div>
 
-                <h3 id="method__string_shift">
-        <div class="location">at line 1368</div>
-        <code>            public            string
-    <strong>_string_shift</strong>(string $string, int $index = 1)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__string_shift">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1368">at line 1368</a></div>
+        <code>                    string
+    <strong>_string_shift</strong>(string $string, int $index = 1)
+        </code>
     </h3>
     <div class="details">
-        <p>String Shift</p>
-        <p>Inspired by array_shift</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>String Shift</p>                    <p>Inspired by array_shift</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$string</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$index</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1268,42 +1441,45 @@ $crc<em>lookup</em>table's initialization.</p>
                     </div>
     </div>
 
-                <h3 id="method__rsa_crypt">
-        <div class="location">at line 1388</div>
-        <code>            public            <a href="Math_BigInteger.html"><abbr title="Math_BigInteger">Math_BigInteger</abbr></a>
-    <strong>_rsa_crypt</strong>(<a href="Math_BigInteger.html"><abbr title="Math_BigInteger">Math_BigInteger</abbr></a> $m, array $key)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__rsa_crypt">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1388">at line 1388</a></div>
+        <code>                    <a href="Math_BigInteger.html">Math_BigInteger</a>
+    <strong>_rsa_crypt</strong>(<a href="Math_BigInteger.html">Math_BigInteger</a> $m, array $key)
+        </code>
     </h3>
     <div class="details">
-        <p>RSA Encrypt</p>
-        <p>Returns mod(pow($m, $e), $n), where $n should be the product of two (large) primes $p and $q and where $e
+            
+    
+
+                    <div class="method-description">
+                                    <p>RSA Encrypt</p>                    <p>Returns mod(pow($m, $e), $n), where $n should be the product of two (large) primes $p and $q and where $e
 should be a number with the property that gcd($e, ($p - 1) * ($q - 1)) == 1.  Could just make anything that
-calls this call modexp, instead, but I think this makes things clearer, maybe...</p>
-        <div class="tags">
+calls this call modexp, instead, but I think this makes things clearer, maybe...</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><a href="Math_BigInteger.html"><abbr title="Math_BigInteger">Math_BigInteger</abbr></a></td>
+                <td><a href="Math_BigInteger.html">Math_BigInteger</a></td>
                 <td>$m</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$key</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
-            <td><a href="Math_BigInteger.html"><abbr title="Math_BigInteger">Math_BigInteger</abbr></a></td>
-            <td>
-</td>
+            <td><a href="Math_BigInteger.html">Math_BigInteger</a></td>
+            <td></td>
         </tr>
     </table>
 
@@ -1311,9 +1487,11 @@ calls this call modexp, instead, but I think this makes things clearer, maybe...
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::Net_SSH1()</td>
+                <td>
+                                            \self::Net_SSH1()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1321,40 +1499,51 @@ calls this call modexp, instead, but I think this makes things clearer, maybe...
                     </div>
     </div>
 
-                <h3 id="method__define_array">
-        <div class="location">at line 1440</div>
-        <code>            public            
-    <strong>_define_array</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__define_array">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1440">at line 1440</a></div>
+        <code>                    
+    <strong>_define_array</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Define Array</p>
-        <p>Takes any number of arrays whose indices are integers and whose values are strings and defines a bunch of
+            
+    
+
+                    <div class="method-description">
+                                    <p>Define Array</p>                    <p>Takes any number of arrays whose indices are integers and whose values are strings and defines a bunch of
 named constants from it, using the value as the name of the constant and the index as the value of the constant.
-If any of the constants that would be defined already exists, none of the constants will be defined.</p>
-        <div class="tags">
+If any of the constants that would be defined already exists, none of the constants will be defined.</p>                            </div>
+                <div class="tags">
             
             
             
                     </div>
     </div>
 
-                <h3 id="method_getLog">
-        <div class="location">at line 1462</div>
-        <code>            public            array|<abbr title="false">false</abbr>|string
-    <strong>getLog</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLog">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1462">at line 1462</a></div>
+        <code>                    array|false|string
+    <strong>getLog</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Returns a log of the packets that have been sent and received.</p>
-        <p>Returns a string if NET<em>SSH1</em>LOGGING == NET<em>SSH1</em>LOG<em>COMPLEX, an array if NET</em>SSH1<em>LOGGING == NET</em>SSH1<em>LOG</em>SIMPLE and false if !defined('NET<em>SSH1</em>LOGGING')</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a log of the packets that have been sent and received.</p>                    <p>Returns a string if NET_SSH1_LOGGING == NET_SSH1_LOG_COMPLEX, an array if NET_SSH1_LOGGING == NET_SSH1_LOG_SIMPLE and false if !defined('NET_SSH1_LOGGING')</p>                            </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
-            <td>array|<abbr title="false">false</abbr>|string</td>
-            <td>
-</td>
+            <td>array|false|string</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1363,41 +1552,43 @@ If any of the constants that would be defined already exists, none of the consta
                     </div>
     </div>
 
-                <h3 id="method__format_log">
-        <div class="location">at line 1488</div>
-        <code>            public            string
-    <strong>_format_log</strong>(array $message_log, array $message_number_log)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__format_log">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1488">at line 1488</a></div>
+        <code>                    string
+    <strong>_format_log</strong>(array $message_log, array $message_number_log)
+        </code>
     </h3>
     <div class="details">
-        <p>Formats a log for printing</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Formats a log for printing</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$message_log</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$message_number_log</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1406,34 +1597,38 @@ If any of the constants that would be defined already exists, none of the consta
                     </div>
     </div>
 
-                <h3 id="method__format_log_helper">
-        <div class="location">at line 1523</div>
-        <code>            public            string
-    <strong>_format_log_helper</strong>(array $matches)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__format_log_helper">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1523">at line 1523</a></div>
+        <code>                    string
+    <strong>_format_log_helper</strong>(array $matches)
+        </code>
     </h3>
     <div class="details">
-        <p>Helper function for <em>format</em>log</p>
-        <p>For use with preg<em>replace</em>callback()</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Helper function for _format_log</p>                    <p>For use with preg_replace_callback()</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$matches</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1442,35 +1637,39 @@ If any of the constants that would be defined already exists, none of the consta
                     </div>
     </div>
 
-                <h3 id="method_getServerKeyPublicExponent">
-        <div class="location">at line 1538</div>
-        <code>            public            string
-    <strong>getServerKeyPublicExponent</strong>(bool $raw_output = false)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getServerKeyPublicExponent">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1538">at line 1538</a></div>
+        <code>                    string
+    <strong>getServerKeyPublicExponent</strong>(bool $raw_output = false)
+        </code>
     </h3>
     <div class="details">
-        <p>Return the server key public exponent</p>
-        <p>Returns, by default, the base-10 representation.  If $raw_output is set to true, returns, instead,
-the raw bytes.  This behavior is similar to PHP's md5() function.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the server key public exponent</p>                    <p>Returns, by default, the base-10 representation.  If $raw_output is set to true, returns, instead,
+the raw bytes.  This behavior is similar to PHP's md5() function.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>bool</td>
                 <td>$raw_output</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1479,35 +1678,39 @@ the raw bytes.  This behavior is similar to PHP's md5() function.</p>
                     </div>
     </div>
 
-                <h3 id="method_getServerKeyPublicModulus">
-        <div class="location">at line 1553</div>
-        <code>            public            string
-    <strong>getServerKeyPublicModulus</strong>(bool $raw_output = false)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getServerKeyPublicModulus">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1553">at line 1553</a></div>
+        <code>                    string
+    <strong>getServerKeyPublicModulus</strong>(bool $raw_output = false)
+        </code>
     </h3>
     <div class="details">
-        <p>Return the server key public modulus</p>
-        <p>Returns, by default, the base-10 representation.  If $raw_output is set to true, returns, instead,
-the raw bytes.  This behavior is similar to PHP's md5() function.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the server key public modulus</p>                    <p>Returns, by default, the base-10 representation.  If $raw_output is set to true, returns, instead,
+the raw bytes.  This behavior is similar to PHP's md5() function.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>bool</td>
                 <td>$raw_output</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1516,35 +1719,39 @@ the raw bytes.  This behavior is similar to PHP's md5() function.</p>
                     </div>
     </div>
 
-                <h3 id="method_getHostKeyPublicExponent">
-        <div class="location">at line 1568</div>
-        <code>            public            string
-    <strong>getHostKeyPublicExponent</strong>(bool $raw_output = false)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHostKeyPublicExponent">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1568">at line 1568</a></div>
+        <code>                    string
+    <strong>getHostKeyPublicExponent</strong>(bool $raw_output = false)
+        </code>
     </h3>
     <div class="details">
-        <p>Return the host key public exponent</p>
-        <p>Returns, by default, the base-10 representation.  If $raw_output is set to true, returns, instead,
-the raw bytes.  This behavior is similar to PHP's md5() function.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the host key public exponent</p>                    <p>Returns, by default, the base-10 representation.  If $raw_output is set to true, returns, instead,
+the raw bytes.  This behavior is similar to PHP's md5() function.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>bool</td>
                 <td>$raw_output</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1553,35 +1760,39 @@ the raw bytes.  This behavior is similar to PHP's md5() function.</p>
                     </div>
     </div>
 
-                <h3 id="method_getHostKeyPublicModulus">
-        <div class="location">at line 1583</div>
-        <code>            public            string
-    <strong>getHostKeyPublicModulus</strong>(bool $raw_output = false)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHostKeyPublicModulus">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1583">at line 1583</a></div>
+        <code>                    string
+    <strong>getHostKeyPublicModulus</strong>(bool $raw_output = false)
+        </code>
     </h3>
     <div class="details">
-        <p>Return the host key public modulus</p>
-        <p>Returns, by default, the base-10 representation.  If $raw_output is set to true, returns, instead,
-the raw bytes.  This behavior is similar to PHP's md5() function.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the host key public modulus</p>                    <p>Returns, by default, the base-10 representation.  If $raw_output is set to true, returns, instead,
+the raw bytes.  This behavior is similar to PHP's md5() function.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>bool</td>
                 <td>$raw_output</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1590,36 +1801,40 @@ the raw bytes.  This behavior is similar to PHP's md5() function.</p>
                     </div>
     </div>
 
-                <h3 id="method_getSupportedCiphers">
-        <div class="location">at line 1599</div>
-        <code>            public            array
-    <strong>getSupportedCiphers</strong>(bool $raw_output = false)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSupportedCiphers">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1599">at line 1599</a></div>
+        <code>                    array
+    <strong>getSupportedCiphers</strong>(bool $raw_output = false)
+        </code>
     </h3>
     <div class="details">
-        <p>Return a list of ciphers supported by SSH1 server.</p>
-        <p>Just because a cipher is supported by an SSH1 server doesn't mean it's supported by this library. If $raw<em>output
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a list of ciphers supported by SSH1 server.</p>                    <p>Just because a cipher is supported by an SSH1 server doesn't mean it's supported by this library. If $raw_output
 is set to true, returns, instead, an array of constants.  ie. instead of array('Triple-DES in CBC mode'), you'll
-get array(NET</em>SSH1<em>CIPHER</em>3DES).</p>
-        <div class="tags">
+get array(NET_SSH1_CIPHER_3DES).</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>bool</td>
                 <td>$raw_output</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1628,36 +1843,40 @@ get array(NET</em>SSH1<em>CIPHER</em>3DES).</p>
                     </div>
     </div>
 
-                <h3 id="method_getSupportedAuthentications">
-        <div class="location">at line 1615</div>
-        <code>            public            array
-    <strong>getSupportedAuthentications</strong>(bool $raw_output = false)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSupportedAuthentications">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1615">at line 1615</a></div>
+        <code>                    array
+    <strong>getSupportedAuthentications</strong>(bool $raw_output = false)
+        </code>
     </h3>
     <div class="details">
-        <p>Return a list of authentications supported by SSH1 server.</p>
-        <p>Just because a cipher is supported by an SSH1 server doesn't mean it's supported by this library. If $raw<em>output
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a list of authentications supported by SSH1 server.</p>                    <p>Just because a cipher is supported by an SSH1 server doesn't mean it's supported by this library. If $raw_output
 is set to true, returns, instead, an array of constants.  ie. instead of array('password authentication'), you'll
-get array(NET</em>SSH1<em>AUTH</em>PASSWORD).</p>
-        <div class="tags">
+get array(NET_SSH1_AUTH_PASSWORD).</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>bool</td>
                 <td>$raw_output</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1666,24 +1885,28 @@ get array(NET</em>SSH1<em>AUTH</em>PASSWORD).</p>
                     </div>
     </div>
 
-                <h3 id="method_getServerIdentification">
-        <div class="location">at line 1626</div>
-        <code>            public            string
-    <strong>getServerIdentification</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getServerIdentification">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1626">at line 1626</a></div>
+        <code>                    string
+    <strong>getServerIdentification</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Return the server identification.</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the server identification.</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1692,29 +1915,33 @@ get array(NET</em>SSH1<em>AUTH</em>PASSWORD).</p>
                     </div>
     </div>
 
-                <h3 id="method__append_log">
-        <div class="location">at line 1639</div>
-        <code>            public            
-    <strong>_append_log</strong>($protocol_flags, $message)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__append_log">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SSH1.php#L1639">at line 1639</a></div>
+        <code>                    
+    <strong>_append_log</strong>($protocol_flags, $message)
+        </code>
     </h3>
     <div class="details">
-        <p>Logs data packets</p>
-        <p>Makes sure that only the last 1MB worth of packets will be logged</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Logs data packets</p>                    <p>Makes sure that only the last 1MB worth of packets will be logged</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td></td>
                 <td>$protocol_flags</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td></td>
                 <td>$message</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -1724,10 +1951,14 @@ get array(NET</em>SSH1<em>AUTH</em>PASSWORD).</p>
                     </div>
     </div>
 
-    
             </div>
-            <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
+
 </html>

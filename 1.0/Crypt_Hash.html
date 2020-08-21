@@ -1,323 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="robots" content="index, follow, all" />
-        <title>Crypt_Hash | phpseclib API Documentation</title>
-                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-                            </head>
-        <body id="class">
-            <div class="header">
-        <ul>
-            <li><a href="classes.html">Classes</a></li>
-                        <li><a href="interfaces.html">Interfaces</a></li>
-            <li><a href="traits.html">Traits</a></li>
-            <li><a href="doc-index.html">Index</a></li>
-            
-        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Crypt_Hash | phpseclib API Documentation</title>
 
-        <div id="title">phpseclib API Documentation</div>
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
 
-            <div class="type">Class</div>
-    <h1><a href=".html"></a>Crypt_Hash</h1>
+    <body id="class" data-name="class:Crypt_Hash" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select  class="form-control" id="version-switcher" name="version">
+                                            <option value="../1.0/index.html" data-version="1.0">1.0</option>
+                                            <option value="../2.0/index.html" data-version="2.0">2.0</option>
+                                            <option value="../3.0/index.html" data-version="3.0">3.0</option>
+                                            <option value="../master/index.html" data-version="master">master</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
     </div>
-        <div class="content">
-                <p>    class
-    <strong>Crypt_Hash</strong></p>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">phpseclib API Documentation</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Crypt_Hash
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Crypt_Hash</strong>        (<a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php">View source</a>)
+</p>
+
+        
+    
 
             <div class="description">
-            <p>Pure-PHP implementations of keyed-hash message authentication codes (HMACs) and various cryptographic hashing functions.</p>
-            <p>
-</p>
-        </div>
+            <p>Pure-PHP implementations of keyed-hash message authentication codes (HMACs) and various cryptographic hashing functions.</p>                                </div>
+    
     
     
             <h2>Properties</h2>
 
-            <table>
+            <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_hashParam">
-                                                            int
+                                                                                int
                 </td>
                 <td>$hashParam</td>
                 <td class="last">Hash Parameter</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_b">
-                                                            int
+                                                                                int
                 </td>
                 <td>$b</td>
                 <td class="last">Byte-length of compression blocks / key (Internal HMAC)</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_l">
-                                                            int
+                                                                                int
                 </td>
                 <td>$l</td>
                 <td class="last">Byte-length of hash output (Internal HMAC)</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_hash">
-                                                            string
+                                                                                string
                 </td>
                 <td>$hash</td>
                 <td class="last">Hash Algorithm</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_key">
-                                                            string
+                                                                                string
                 </td>
                 <td>$key</td>
                 <td class="last">Key</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_computedKey">
-                                                            string
+                                                                                string
                 </td>
                 <td>$computedKey</td>
                 <td class="last">Computed Key</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_opad">
-                                                            string
+                                                                                string
                 </td>
                 <td>$opad</td>
                 <td class="last">Outer XOR (Internal HMAC)</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_ipad">
-                                                            string
+                                                                                string
                 </td>
                 <td>$ipad</td>
                 <td class="last">Inner XOR (Internal HMAC)</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_engine">
-                                                            string
+                                                                                string
                 </td>
                 <td>$engine</td>
                 <td class="last">Engine</td>
+                <td></td>
             </tr>
             </table>
 
     
             <h2>Methods</h2>
 
-            <table>
-                    <tr>
-                <td class="type">
-                    <a href="Crypt_Hash.html"><abbr title="Crypt_Hash">Crypt_Hash</abbr></a>
-                </td>
-                <td class="last">
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="Crypt_Hash.html">Crypt_Hash</a>
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___construct">__construct</a>(string $hash = &#039;sha1&#039;)
-                    <p>Default Constructor.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Default Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_Crypt_Hash">Crypt_Hash</a>($hash = &#039;sha1&#039;)
-                    <p>PHP4 compatible Default Constructor.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>PHP4 compatible Default Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setKey">setKey</a>(string $key = false)
-                    <p>Sets the key for HMACs</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Sets the key for HMACs</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__computeKey">_computeKey</a>()
-                    <p>Pre-compute the key used by the HMAC</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Pre-compute the key used by the HMAC</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getHash">getHash</a>()
-                    <p>Gets the hash function.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Gets the hash function.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setHash">setHash</a>(string $hash)
-                    <p>Sets the hash function.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Sets the hash function.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_hash">hash</a>(string $text)
-                    <p>Compute the HMAC.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Compute the HMAC.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getLength">getLength</a>()
-                    <p>Returns the hash length (in bytes)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Returns the hash length (in bytes)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__md5">_md5</a>(string $m)
-                    <p>Wrapper for MD5</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Wrapper for MD5</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__sha1">_sha1</a>(string $m)
-                    <p>Wrapper for SHA1</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Wrapper for SHA1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__md2">_md2</a>(string $m)
-                    <p>Pure-PHP implementation of MD2</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Pure-PHP implementation of MD2</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__sha256">_sha256</a>(string $m)
-                    <p>Pure-PHP implementation of SHA256</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Pure-PHP implementation of SHA256</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__sha512">_sha512</a>(string $m)
-                    <p>Pure-PHP implementation of SHA384 and SHA512</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Pure-PHP implementation of SHA384 and SHA512</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__rightRotate">_rightRotate</a>(int $int, int $amt)
-                    <p>Right Rotate</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Right Rotate</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__rightShift">_rightShift</a>(int $int, int $amt)
-                    <p>Right Shift</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Right Shift</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__not">_not</a>(int $int)
-                    <p>Not</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Not</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__add">_add</a>()
-                    <p>Add</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Add</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__string_shift">_string_shift</a>(string $string, int $index = 1)
-                    <p>String Shift</p>
-                </td>
-                <td></td>
-            </tr>
-            </table>
+        
+                                            <p>String Shift</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">at line 172</div>
-        <code>            public            <a href="Crypt_Hash.html"><abbr title="Crypt_Hash">Crypt_Hash</abbr></a>
-    <strong>__construct</strong>(string $hash = &#039;sha1&#039;)</code>
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L172">at line 172</a></div>
+        <code>                    <a href="Crypt_Hash.html">Crypt_Hash</a>
+    <strong>__construct</strong>(string $hash = &#039;sha1&#039;)
+        </code>
     </h3>
     <div class="details">
-        <p>Default Constructor.</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Default Constructor.</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$hash</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
-            <td><a href="Crypt_Hash.html"><abbr title="Crypt_Hash">Crypt_Hash</abbr></a></td>
-            <td>
-</td>
+            <td><a href="Crypt_Hash.html">Crypt_Hash</a></td>
+            <td></td>
         </tr>
     </table>
 
@@ -326,24 +393,28 @@
                     </div>
     </div>
 
-                <h3 id="method_Crypt_Hash">
-        <div class="location">at line 197</div>
-        <code>            public            
-    <strong>Crypt_Hash</strong>($hash = &#039;sha1&#039;)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Crypt_Hash">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L197">at line 197</a></div>
+        <code>                    
+    <strong>Crypt_Hash</strong>($hash = &#039;sha1&#039;)
+        </code>
     </h3>
     <div class="details">
-        <p>PHP4 compatible Default Constructor.</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>PHP4 compatible Default Constructor.</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td></td>
                 <td>$hash</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -352,9 +423,11 @@
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::__construct()</td>
+                <td>
+                                            \self::__construct()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -362,23 +435,28 @@
                     </div>
     </div>
 
-                <h3 id="method_setKey">
-        <div class="location">at line 210</div>
-        <code>            public            
-    <strong>setKey</strong>(string $key = false)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setKey">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L210">at line 210</a></div>
+        <code>                    
+    <strong>setKey</strong>(string $key = false)
+        </code>
     </h3>
     <div class="details">
-        <p>Sets the key for HMACs</p>
-        <p>Keys can be of any length.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the key for HMACs</p>                    <p>Keys can be of any length.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$key</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -388,43 +466,54 @@
                     </div>
     </div>
 
-                <h3 id="method__computeKey">
-        <div class="location">at line 228</div>
-        <code>            public            
-    <strong>_computeKey</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__computeKey">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L228">at line 228</a></div>
+        <code>                    
+    <strong>_computeKey</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Pre-compute the key used by the HMAC</p>
-        <p>Quoting http://tools.ietf.org/html/rfc2104#section-2, "Applications that use keys longer than B bytes
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pre-compute the key used by the HMAC</p>                    <p>Quoting http://tools.ietf.org/html/rfc2104#section-2, "Applications that use keys longer than B bytes
 will first hash the key using H and then use the resultant L byte string as the actual key to HMAC."</p>
 
-<p>As documented in https://www.reddit.com/r/PHP/comments/9nct2l/symfonypolyfill<em>hash</em>pbkdf2<em>correct</em>fix_for/
+<p>As documented in https://www.reddit.com/r/PHP/comments/9nct2l/symfonypolyfill_hash_pbkdf2_correct_fix_for/
 when doing an HMAC multiple times it's faster to compute the hash once instead of computing it during
-every call</p>
-        <div class="tags">
+every call</p>                            </div>
+                <div class="tags">
             
             
             
                     </div>
     </div>
 
-                <h3 id="method_getHash">
-        <div class="location">at line 260</div>
-        <code>            public            string
-    <strong>getHash</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHash">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L260">at line 260</a></div>
+        <code>                    string
+    <strong>getHash</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Gets the hash function.</p>
-        <p>As set by the constructor or by the setHash() method.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the hash function.</p>                    <p>As set by the constructor or by the setHash() method.</p>                            </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -433,24 +522,28 @@ every call</p>
                     </div>
     </div>
 
-                <h3 id="method_setHash">
-        <div class="location">at line 271</div>
-        <code>            public            
-    <strong>setHash</strong>(string $hash)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHash">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L271">at line 271</a></div>
+        <code>                    
+    <strong>setHash</strong>(string $hash)
+        </code>
     </h3>
     <div class="details">
-        <p>Sets the hash function.</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the hash function.</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$hash</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -460,35 +553,38 @@ every call</p>
                     </div>
     </div>
 
-                <h3 id="method_hash">
-        <div class="location">at line 397</div>
-        <code>            public            string
-    <strong>hash</strong>(string $text)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hash">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L397">at line 397</a></div>
+        <code>                    string
+    <strong>hash</strong>(string $text)
+        </code>
     </h3>
     <div class="details">
-        <p>Compute the HMAC.</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the HMAC.</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$text</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -497,24 +593,28 @@ every call</p>
                     </div>
     </div>
 
-                <h3 id="method_getLength">
-        <div class="location">at line 438</div>
-        <code>            public            int
-    <strong>getLength</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLength">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L438">at line 438</a></div>
+        <code>                    int
+    <strong>getLength</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Returns the hash length (in bytes)</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the hash length (in bytes)</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -523,24 +623,28 @@ every call</p>
                     </div>
     </div>
 
-                <h3 id="method__md5">
-        <div class="location">at line 449</div>
-        <code>            public            
-    <strong>_md5</strong>(string $m)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__md5">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L449">at line 449</a></div>
+        <code>                    
+    <strong>_md5</strong>(string $m)
+        </code>
     </h3>
     <div class="details">
-        <p>Wrapper for MD5</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrapper for MD5</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$m</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -550,24 +654,28 @@ every call</p>
                     </div>
     </div>
 
-                <h3 id="method__sha1">
-        <div class="location">at line 460</div>
-        <code>            public            
-    <strong>_sha1</strong>(string $m)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__sha1">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L460">at line 460</a></div>
+        <code>                    
+    <strong>_sha1</strong>(string $m)
+        </code>
     </h3>
     <div class="details">
-        <p>Wrapper for SHA1</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Wrapper for SHA1</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$m</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -577,23 +685,28 @@ every call</p>
                     </div>
     </div>
 
-                <h3 id="method__md2">
-        <div class="location">at line 473</div>
-        <code>            public            
-    <strong>_md2</strong>(string $m)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__md2">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L473">at line 473</a></div>
+        <code>                    
+    <strong>_md2</strong>(string $m)
+        </code>
     </h3>
     <div class="details">
-        <p>Pure-PHP implementation of MD2</p>
-        <p>See {@link http://tools.ietf.org/html/rfc1319 RFC1319}.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pure-PHP implementation of MD2</p>                    <p>See {@link http://tools.ietf.org/html/rfc1319 RFC1319}.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$m</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -603,23 +716,28 @@ every call</p>
                     </div>
     </div>
 
-                <h3 id="method__sha256">
-        <div class="location">at line 549</div>
-        <code>            public            
-    <strong>_sha256</strong>(string $m)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__sha256">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L549">at line 549</a></div>
+        <code>                    
+    <strong>_sha256</strong>(string $m)
+        </code>
     </h3>
     <div class="details">
-        <p>Pure-PHP implementation of SHA256</p>
-        <p>See {@link http://en.wikipedia.org/wiki/SHA<em>hash</em>functions#SHA-256<em>.28a</em>SHA-2<em>variant.29</em>pseudocode SHA-256 (a SHA-2 variant) pseudocode - Wikipedia}.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pure-PHP implementation of SHA256</p>                    <p>See {@link http://en.wikipedia.org/wiki/SHA_hash_functions#SHA-256_.28a_SHA-2_variant.29_pseudocode SHA-256 (a SHA-2 variant) pseudocode - Wikipedia}.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$m</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -629,24 +747,28 @@ every call</p>
                     </div>
     </div>
 
-                <h3 id="method__sha512">
-        <div class="location">at line 655</div>
-        <code>            public            
-    <strong>_sha512</strong>(string $m)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__sha512">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L655">at line 655</a></div>
+        <code>                    
+    <strong>_sha512</strong>(string $m)
+        </code>
     </h3>
     <div class="details">
-        <p>Pure-PHP implementation of SHA384 and SHA512</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pure-PHP implementation of SHA384 and SHA512</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$m</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -656,41 +778,43 @@ every call</p>
                     </div>
     </div>
 
-                <h3 id="method__rightRotate">
-        <div class="location">at line 841</div>
-        <code>            public            int
-    <strong>_rightRotate</strong>(int $int, int $amt)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__rightRotate">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L841">at line 841</a></div>
+        <code>                    int
+    <strong>_rightRotate</strong>(int $int, int $amt)
+        </code>
     </h3>
     <div class="details">
-        <p>Right Rotate</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Right Rotate</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$int</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$amt</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -698,9 +822,11 @@ every call</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::_sha256()</td>
+                <td>
+                                            \self::_sha256()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -708,41 +834,43 @@ every call</p>
                     </div>
     </div>
 
-                <h3 id="method__rightShift">
-        <div class="location">at line 857</div>
-        <code>            public            int
-    <strong>_rightShift</strong>(int $int, int $amt)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__rightShift">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L857">at line 857</a></div>
+        <code>                    int
+    <strong>_rightShift</strong>(int $int, int $amt)
+        </code>
     </h3>
     <div class="details">
-        <p>Right Shift</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Right Shift</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$int</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$amt</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -750,9 +878,11 @@ every call</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::_sha256()</td>
+                <td>
+                                            \self::_sha256()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -760,45 +890,50 @@ every call</p>
                     </div>
     </div>
 
-                <h3 id="method__not">
-        <div class="location">at line 871</div>
-        <code>            public            int
-    <strong>_not</strong>(int $int)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__not">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L871">at line 871</a></div>
+        <code>                    int
+    <strong>_not</strong>(int $int)
+        </code>
     </h3>
     <div class="details">
-        <p>Not</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Not</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$int</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
                 <td>
-</td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>int</td>
-            <td>
-</td>
-        </tr>
-    </table>
-
-            
-            
-                            <h4>See also</h4>
-
-                    <table>
-                    <tr>
-                <td>self::_sha256()</td>
+                                            \self::_sha256()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -806,24 +941,29 @@ every call</p>
                     </div>
     </div>
 
-                <h3 id="method__add">
-        <div class="location">at line 887</div>
-        <code>            public            int
-    <strong>_add</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__add">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L887">at line 887</a></div>
+        <code>                    int
+    <strong>_add</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Add</p>
-        <p><em>sha256() adds multiple unsigned 32-bit integers.  Since PHP doesn't support unsigned integers and since the
-possibility of overflow exists, care has to be taken.  Math</em>BigInteger() could be used but this should be faster.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add</p>                    <p>_sha256() adds multiple unsigned 32-bit integers.  Since PHP doesn't support unsigned integers and since the
+possibility of overflow exists, care has to be taken.  Math_BigInteger() could be used but this should be faster.</p>                            </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -831,9 +971,11 @@ possibility of overflow exists, care has to be taken.  Math</em>BigInteger() cou
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::_sha256()</td>
+                <td>
+                                            \self::_sha256()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -841,40 +983,43 @@ possibility of overflow exists, care has to be taken.  Math</em>BigInteger() cou
                     </div>
     </div>
 
-                <h3 id="method__string_shift">
-        <div class="location">at line 923</div>
-        <code>            public            string
-    <strong>_string_shift</strong>(string $string, int $index = 1)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__string_shift">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Hash.php#L923">at line 923</a></div>
+        <code>                    string
+    <strong>_string_shift</strong>(string $string, int $index = 1)
+        </code>
     </h3>
     <div class="details">
-        <p>String Shift</p>
-        <p>Inspired by array_shift</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>String Shift</p>                    <p>Inspired by array_shift</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$string</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$index</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -883,10 +1028,14 @@ possibility of overflow exists, care has to be taken.  Math</em>BigInteger() cou
                     </div>
     </div>
 
-    
             </div>
-            <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
+
 </html>

@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>phpseclib3\Crypt\RSA\PrivateKey | phpseclib API Documentation</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
+
+    <body id="class" data-name="class:phpseclib3_Crypt_RSA_PrivateKey" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select  class="form-control" id="version-switcher" name="version">
+                                            <option value="../../../../1.0/index.html" data-version="1.0">1.0</option>
+                                            <option value="../../../../2.0/index.html" data-version="2.0">2.0</option>
+                                            <option value="../../../../3.0/index.html" data-version="3.0">3.0</option>
+                                            <option value="../../../../master/index.html" data-version="master">master</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">phpseclib API Documentation</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../phpseclib3.html">phpseclib3</a></li><li class="backslash">\</li><li><a href="../../../phpseclib3/Crypt.html">Crypt</a></li><li class="backslash">\</li><li><a href="../../../phpseclib3/Crypt/RSA.html">RSA</a></li><li class="backslash">\</li><li>PrivateKey</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            PrivateKey
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>PrivateKey</strong>        extends <a href="../../../phpseclib3/Crypt/RSA.html"><abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a>        implements
+        <a href="../../../phpseclib3/Crypt/Common/PrivateKey.html"><abbr title="phpseclib3\Crypt\Common\PrivateKey">PrivateKey</abbr></a>        (<a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA/PrivateKey.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Raw RSA Key Handler</p>                                </div>
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../phpseclib3/Crypt/Common/Traits/PasswordProtected.html"><abbr title="phpseclib3\Crypt\Common\Traits\PasswordProtected">PasswordProtected</abbr></a>    </div>
+                <div class="col-md-6">Password Protected Trait for Private Keys</div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>ALGORITHM</td>
+                <td class="last">
+                    <p><em>Algorithm Name</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ENCRYPTION_OAEP</td>
+                <td class="last">
+                    <p><em>Use {@link http://en.wikipedia.org/wiki/Optimal_Asymmetric_Encryption_Padding Optimal Asymmetric Encryption Padding}
+(OAEP) for encryption / decryption.</em></p>
+                    <p>Uses sha256 by default</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ENCRYPTION_PKCS1</td>
+                <td class="last">
+                    <p><em>Use PKCS#1 padding.</em></p>
+                    <p>Although self::PADDING_OAEP / self::PADDING_PSS  offers more security, including PKCS#1 padding is necessary for purposes of backwards
+compatibility with protocols (like SSH-1) written before OAEP's introduction.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ENCRYPTION_NONE</td>
+                <td class="last">
+                    <p><em>Do not use any padding</em></p>
+                    <p>Although this method is not recommended it can none-the-less sometimes be useful if you're trying to decrypt some legacy
+stuff, if you're trying to diagnose why an encrypted message isn't decrypting, etc.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SIGNATURE_PSS</td>
+                <td class="last">
+                    <p><em>Use the Probabilistic Signature Scheme for signing</em></p>
+                    <p>Uses sha256 and 0 as the salt length</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SIGNATURE_RELAXED_PKCS1</td>
+                <td class="last">
+                    <p><em>Use a relaxed version of PKCS#1 padding for signature verification</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SIGNATURE_PKCS1</td>
+                <td class="last">
+                    <p><em>Use PKCS#1 padding for signature verification</em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_zero">
+                    static                    protected                                        <a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td>$zero</td>
+                <td class="last">Precomputed Zero</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#property_zero">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_one">
+                    static                    protected                                        <a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td>$one</td>
+                <td class="last">Precomputed One</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#property_one">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_format">
+                                        protected                                        string
+                </td>
+                <td>$format</td>
+                <td class="last">Format of the loaded key</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#property_format">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hash">
+                                        protected                                        <a href="../../../phpseclib3/Crypt/Hash.html"><abbr title="phpseclib3\Crypt\Hash">Hash</abbr></a>
+                </td>
+                <td>$hash</td>
+                <td class="last">Hash function</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#property_hash">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_engines">
+                    static                    protected                                        bool[]
+                </td>
+                <td>$engines</td>
+                <td class="last">Available Engines</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#property_engines">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_encryptionPadding">
+                                        protected                                        int
+                </td>
+                <td>$encryptionPadding</td>
+                <td class="last">Encryption padding mode</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#property_encryptionPadding">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_signaturePadding">
+                                        protected                                        int
+                </td>
+                <td>$signaturePadding</td>
+                <td class="last">Signature padding mode</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#property_signaturePadding">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hLen">
+                                        protected                                        int
+                </td>
+                <td>$hLen</td>
+                <td class="last">Length of hash function output</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#property_hLen">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_sLen">
+                                        protected                                        int
+                </td>
+                <td>$sLen</td>
+                <td class="last">Length of salt</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#property_sLen">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_label">
+                                        protected                                        string
+                </td>
+                <td>$label</td>
+                <td class="last">Label</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#property_label">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mgfHash">
+                                        protected                                        <a href="../../../phpseclib3/Crypt/Hash.html"><abbr title="phpseclib3\Crypt\Hash">Hash</abbr></a>
+                </td>
+                <td>$mgfHash</td>
+                <td class="last">Hash function for the Mask Generation Function</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#property_mgfHash">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mgfHLen">
+                                        protected                                        int
+                </td>
+                <td>$mgfHLen</td>
+                <td class="last">Length of MGF hash function output</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#property_mgfHLen">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_modulus">
+                                        protected                                        <a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td>$modulus</td>
+                <td class="last">Modulus (ie. n)</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#property_modulus">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_k">
+                                        protected                                        <a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td>$k</td>
+                <td class="last">Modulus length</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#property_k">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_exponent">
+                                        protected                                        <a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+                </td>
+                <td>$exponent</td>
+                <td class="last">Exponent (ie. e or d)</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#property_exponent">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_enableBlinding">
+                    static                    protected                                        bool
+                </td>
+                <td>$enableBlinding</td>
+                <td class="last">Enable Blinding?</td>
+                <td><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#property_enableBlinding">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_primes">
+                                        protected                                        array
+                </td>
+                <td>$primes</td>
+                <td class="last">Primes for Chinese Remainder Theorem (ie. p and q)</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_exponents">
+                                        protected                                        array
+                </td>
+                <td>$exponents</td>
+                <td class="last">Exponents for Chinese Remainder Theorem (ie. dP and dQ)</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_coefficients">
+                                        protected                                        array
+                </td>
+                <td>$coefficients</td>
+                <td class="last">Coefficients for Chinese Remainder Theorem (ie. qInv)</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_publicExponent">
+                                        protected                                        mixed
+                </td>
+                <td>$publicExponent</td>
+                <td class="last">Public Exponent</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Constructor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method___construct">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_initialize_static_variables">initialize_static_variables</a>()
+        
+                                            <p>Initialize static variables</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_initialize_static_variables">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;AsymmetricKey
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_load">load</a>(string $key, string $password = false)
+        
+                                            <p>Load the key</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_load">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;AsymmetricKey
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadFormat">loadFormat</a>($type, $key, $password = false)
+        
+                                            <p>Load the key, assuming a specific format</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_loadFormat">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validatePlugin">validatePlugin</a>(string $format, string $type, string $method = NULL)
+        
+                                            <p>Validate Plugin</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_validatePlugin">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSupportedKeyFormats">getSupportedKeyFormats</a>()
+        
+                                            <p>Returns a list of supported formats.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_getSupportedKeyFormats">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addFileFormat">addFileFormat</a>(string $fullname)
+        
+                                            <p>Add a fileformat plugin</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_addFileFormat">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLoadedFormat">getLoadedFormat</a>()
+        
+                                            <p>Returns the format of the loaded key.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_getLoadedFormat">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_useBestEngine">useBestEngine</a>()
+        
+                                            <p>Tests engine validity</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_useBestEngine">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_useInternalEngine">useInternalEngine</a>()
+        
+                                            <p>Flag to use internal engine only (useful for unit testing)</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_useInternalEngine">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___toString">__toString</a>()
+        
+                                            <p>__toString() magic method</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method___toString">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withHash">withHash</a>(string $hash)
+        
+                                            <p>Determines which hashing function should be used</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_withHash">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHash">getHash</a>()
+        
+                                            <p>Returns the hash algorithm currently being used</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_getHash">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computek">computek</a>(string $h1)
+        
+                                            <p>Compute the pseudorandom k for signature generation,
+using the process specified for deterministic DSA.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_computek">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_bits2int">bits2int</a>(string $in)
+        
+                                            <p>Bit String to Integer</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_bits2int">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setExponent">setExponent</a>(int $val)
+        
+                                            <p>Sets the public exponent for key generation</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_setExponent">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSmallestPrime">setSmallestPrime</a>(int $val)
+        
+                                            <p>Sets the smallest prime number in bits. Used for key generation</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_setSmallestPrime">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;RSA
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createKey">createKey</a>(int $bits = 2048)
+        
+                                            <p>Create a private key</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_createKey">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_onLoad">onLoad</a>(array $components)
+        
+                                            <p>OnLoad Handler</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_onLoad">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_i2osp">i2osp</a>(bool|<a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x, int $xLen)
+        
+                                            <p>Integer-to-Octet-String primitive</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_i2osp">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_os2ip">os2ip</a>(string $x)
+        
+                                            <p>Octet-String-to-Integer primitive</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_os2ip">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_emsa_pkcs1_v1_5_encode">emsa_pkcs1_v1_5_encode</a>(string $m, int $emLen)
+        
+                                            <p>EMSA-PKCS1-V1_5-ENCODE</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_emsa_pkcs1_v1_5_encode">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mgf1">mgf1</a>(string $mgfSeed, int $maskLen)
+        
+                                            <p>MGF1</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_mgf1">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLength">getLength</a>()
+        
+                                            <p>Returns the key size</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_getLength">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withMGFHash">withMGFHash</a>(string $hash)
+        
+                                            <p>Determines which hashing function should be used for the mask generation function</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_withMGFHash">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMGFHash">getMGFHash</a>()
+        
+                                            <p>Returns the MGF hash algorithm currently being used</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_getMGFHash">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withSaltLength">withSaltLength</a>(int $sLen)
+        
+                                            <p>Determines the salt length</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_withSaltLength">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSaltLength">getSaltLength</a>()
+        
+                                            <p>Returns the salt length currently being used</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_getSaltLength">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withLabel">withLabel</a>(string $label)
+        
+                                            <p>Determines the label</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_withLabel">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLabel">getLabel</a>()
+        
+                                            <p>Returns the label currently being used</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_getLabel">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withPadding">withPadding</a>($padding)
+        
+                                            <p>Determines the padding modes</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_withPadding">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPadding">getPadding</a>()
+        
+                                            <p>Returns the padding currently being used</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_getPadding">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEngine">getEngine</a>()
+        
+                                            <p>Returns the current engine being used</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_getEngine">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_enableBlinding">enableBlinding</a>()
+        
+                                            <p>Enable RSA Blinding</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_enableBlinding">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_disableBlinding">disableBlinding</a>()
+        
+                                            <p>Disable RSA Blinding</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/RSA.html#method_disableBlinding">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withPassword">withPassword</a>(string|bool $password = false)
+        
+                                            <p>Sets the password</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/Traits/PasswordProtected.html#method_withPassword">
+<abbr title="phpseclib3\Crypt\Common\Traits\PasswordProtected">PasswordProtected</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_exponentiate">exponentiate</a>(<a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x)
+        
+                                            <p>Exponentiate</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sign">sign</a>($message)
+        
+                                            <p>Create a signature</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool|string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decrypt">decrypt</a>($ciphertext)
+        
+                                            <p>Decryption</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPublicKey">getPublicKey</a>()
+        
+                                            <p>Returns the public key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toString">toString</a>($type, array $options = [])
+        
+                                            <p>Returns the private key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method___construct">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L446">at line 446</a></div>
+        <code>            protected        
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Constructor</p>                    <p>PublicKey and PrivateKey objects can only be created from abstract RSA class</p>                            </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_initialize_static_variables">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_initialize_static_variables">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L132">at line 132</a></div>
+        <code>        static    protected        
+    <strong>initialize_static_variables</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize static variables</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_load">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_load">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L152">at line 152</a></div>
+        <code>        static            AsymmetricKey
+    <strong>load</strong>(string $key, string $password = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load the key</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>AsymmetricKey</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadFormat">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_loadFormat">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L191">at line 191</a></div>
+        <code>        static            AsymmetricKey
+    <strong>loadFormat</strong>($type, $key, $password = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load the key, assuming a specific format</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$password</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>AsymmetricKey</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validatePlugin">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_validatePlugin">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L224">at line 224</a></div>
+        <code>        static    protected        mixed
+    <strong>validatePlugin</strong>(string $format, string $type, string $method = NULL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validate Plugin</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$method</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSupportedKeyFormats">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_getSupportedKeyFormats">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L272">at line 272</a></div>
+        <code>        static            array
+    <strong>getSupportedKeyFormats</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a list of supported formats.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_addFileFormat">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_addFileFormat">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L290">at line 290</a></div>
+        <code>        static            bool
+    <strong>addFileFormat</strong>(string $fullname)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a fileformat plugin</p>                    <p>The plugin needs to either already be loaded or be auto-loadable.
+Loading a plugin whose shortname overwrite an existing shortname will overwrite the old plugin.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fullname</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \self::load()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLoadedFormat">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_getLoadedFormat">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L314">at line 314</a></div>
+        <code>                    mixed
+    <strong>getLoadedFormat</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the format of the loaded key.</p>                    <p>If the key that was loaded wasn't in a valid or if the key was auto-generated
+with RSA::createKey() then this will throw an exception.</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \self::load()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_useBestEngine">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_useBestEngine">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L330">at line 330</a></div>
+        <code>        static            
+    <strong>useBestEngine</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Tests engine validity</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_useInternalEngine">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_useInternalEngine">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L349">at line 349</a></div>
+        <code>        static            
+    <strong>useInternalEngine</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Flag to use internal engine only (useful for unit testing)</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___toString">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method___toString">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L363">at line 363</a></div>
+        <code>                    string
+    <strong>__toString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>__toString() magic method</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withHash">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_withHash">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L596">at line 596</a></div>
+        <code>                    
+    <strong>withHash</strong>(string $hash)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determines which hashing function should be used</p>                    <p>Used with signature production / verification and (if the encryption mode is self::PADDING_OAEP) encryption and
+decryption.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$hash</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHash">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_getHash">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L389">at line 389</a></div>
+        <code>                    
+    <strong>getHash</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the hash algorithm currently being used</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computek">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_computek">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L402">at line 402</a></div>
+        <code>            protected        string
+    <strong>computek</strong>(string $h1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute the pseudorandom k for signature generation,
+using the process specified for deterministic DSA.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$h1</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bits2int">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_bits2int">
+<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/AsymmetricKey.php#L467">at line 467</a></div>
+        <code>            protected        <a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+    <strong>bits2int</strong>(string $in)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Bit String to Integer</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$in</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setExponent">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_setExponent">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L260">at line 260</a></div>
+        <code>        static            
+    <strong>setExponent</strong>(int $val)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the public exponent for key generation</p>                    <p>This will be 65537 unless changed.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$val</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSmallestPrime">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_setSmallestPrime">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L273">at line 273</a></div>
+        <code>        static            
+    <strong>setSmallestPrime</strong>(int $val)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the smallest prime number in bits. Used for key generation</p>                    <p>This will be 4096 unless changed.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$val</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createKey">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_createKey">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L287">at line 287</a></div>
+        <code>        static            RSA
+    <strong>createKey</strong>(int $bits = 2048)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a private key</p>                    <p>The public key can be extracted from the private key</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$bits</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>RSA</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_onLoad">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_onLoad">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L398">at line 398</a></div>
+        <code>        static    protected        bool
+    <strong>onLoad</strong>(array $components)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>OnLoad Handler</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$components</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_i2osp">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_i2osp">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L465">at line 465</a></div>
+        <code>            protected        bool|string
+    <strong>i2osp</strong>(bool|<a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x, int $xLen)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Integer-to-Octet-String primitive</p>                    <p>See {@link http://tools.ietf.org/html/rfc3447#section-4.1 RFC3447#section-4.1}.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool|<a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$x</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$xLen</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_os2ip">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_os2ip">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L486">at line 486</a></div>
+        <code>            protected        <a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+    <strong>os2ip</strong>(string $x)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Octet-String-to-Integer primitive</p>                    <p>See {@link http://tools.ietf.org/html/rfc3447#section-4.2 RFC3447#section-4.2}.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$x</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_emsa_pkcs1_v1_5_encode">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_emsa_pkcs1_v1_5_encode">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L502">at line 502</a></div>
+        <code>            protected        string
+    <strong>emsa_pkcs1_v1_5_encode</strong>(string $m, int $emLen)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>EMSA-PKCS1-V1_5-ENCODE</p>                    <p>See {@link http://tools.ietf.org/html/rfc3447#section-9.2 RFC3447#section-9.2}.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$m</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$emLen</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/LengthException">LengthException</a></td>
+                <td>if the intended encoded message length is too short</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mgf1">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_mgf1">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L560">at line 560</a></div>
+        <code>            protected        string
+    <strong>mgf1</strong>(string $mgfSeed, int $maskLen)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>MGF1</p>                    <p>See {@link http://tools.ietf.org/html/rfc3447#appendix-B.2.1 RFC3447#appendix-B.2.1}.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$mgfSeed</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$maskLen</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLength">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_getLength">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L582">at line 582</a></div>
+        <code>                    int
+    <strong>getLength</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the key size</p>                    <p>More specifically, this returns the size of the modulo in bits.</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withMGFHash">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_withMGFHash">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L632">at line 632</a></div>
+        <code>                    
+    <strong>withMGFHash</strong>(string $hash)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determines which hashing function should be used for the mask generation function</p>                    <p>The mask generation function is used by self::PADDING_OAEP and self::PADDING_PSS and although it's
+best if Hash and MGFHash are set to the same thing this is not a requirement.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$hash</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMGFHash">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_getMGFHash">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L664">at line 664</a></div>
+        <code>                    
+    <strong>getMGFHash</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the MGF hash algorithm currently being used</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withSaltLength">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_withSaltLength">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L682">at line 682</a></div>
+        <code>                    
+    <strong>withSaltLength</strong>(int $sLen)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determines the salt length</p>                    <p>Used by RSA::PADDING_PSS</p>
+
+<p>To quote from {@link http://tools.ietf.org/html/rfc3447#page-38 RFC3447#page-38}:</p>
+
+<p>Typical salt lengths in octets are hLen (the length of the output
+   of the hash function Hash) and 0.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$sLen</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSaltLength">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_getSaltLength">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L694">at line 694</a></div>
+        <code>                    
+    <strong>getSaltLength</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the salt length currently being used</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withLabel">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_withLabel">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L714">at line 714</a></div>
+        <code>                    
+    <strong>withLabel</strong>(string $label)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determines the label</p>                    <p>Used by RSA::PADDING_OAEP</p>
+
+<p>To quote from {@link http://tools.ietf.org/html/rfc3447#page-17 RFC3447#page-17}:</p>
+
+<p>Both the encryption and the decryption operations of RSAES-OAEP take
+   the value of a label L as input.  In this version of PKCS #1, L is
+   the empty string; other uses of the label are outside the scope of
+   this document.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$label</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLabel">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_getLabel">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L726">at line 726</a></div>
+        <code>                    
+    <strong>getLabel</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the label currently being used</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withPadding">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_withPadding">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L739">at line 739</a></div>
+        <code>                    
+    <strong>withPadding</strong>($padding)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determines the padding modes</p>                    <p>Example: $key->withPadding(RSA::ENCRYPTION_PKCS1 | RSA::SIGNATURE_PKCS1);</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$padding</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPadding">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_getPadding">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L788">at line 788</a></div>
+        <code>                    
+    <strong>getPadding</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the padding currently being used</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEngine">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_getEngine">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L801">at line 801</a></div>
+        <code>                    string
+    <strong>getEngine</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the current engine being used</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \self::useInternalEngine()
+                                    </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+                                            \self::useBestEngine()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enableBlinding">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_enableBlinding">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L811">at line 811</a></div>
+        <code>        static            
+    <strong>enableBlinding</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Enable RSA Blinding</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disableBlinding">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/RSA.html#method_disableBlinding">
+<abbr title="phpseclib3\Crypt\RSA">RSA</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA.php#L821">at line 821</a></div>
+        <code>        static            
+    <strong>disableBlinding</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Disable RSA Blinding</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withPassword">
+        <div class="location">in <a href="../../../phpseclib3/Crypt/Common/Traits/PasswordProtected.html#method_withPassword">
+<abbr title="phpseclib3\Crypt\Common\Traits\PasswordProtected">PasswordProtected</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/Traits/PasswordProtected.php#L45">at line 45</a></div>
+        <code>                    
+    <strong>withPassword</strong>(string|bool $password = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the password</p>                    <p>Private keys can be encrypted with a password.  To unset the password, pass in the empty string or false.
+Or rather, pass in $password such that empty($password) &amp;&amp; !is_string($password) is true.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|bool</td>
+                <td>$password</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \self::createKey()
+                                    </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+                                            \self::load()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_exponentiate">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA/PrivateKey.php#L110">at line 110</a></div>
+        <code>            protected        <a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+    <strong>exponentiate</strong>(<a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Exponentiate</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$x</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sign">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA/PrivateKey.php#L310">at line 310</a></div>
+        <code>                    
+    <strong>sign</strong>($message)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a signature</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \self::verify()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decrypt">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA/PrivateKey.php#L467">at line 467</a></div>
+        <code>                    bool|string
+    <strong>decrypt</strong>($ciphertext)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decryption</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$ciphertext</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool|string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \self::encrypt()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPublicKey">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA/PrivateKey.php#L487">at line 487</a></div>
+        <code>                    
+    <strong>getPublicKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the public key</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toString">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/RSA/PrivateKey.php#L510">at line 510</a></div>
+        <code>                    
+    <strong>toString</strong>($type, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the private key</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
+    </div>
+    </body>
+
+</html>

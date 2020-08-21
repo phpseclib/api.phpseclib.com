@@ -1,0 +1,3311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>phpseclib3\File\X509 | phpseclib API Documentation</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
+
+    <body id="class" data-name="class:phpseclib3_File_X509" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select  class="form-control" id="version-switcher" name="version">
+                                            <option value="../../../1.0/index.html" data-version="1.0">1.0</option>
+                                            <option value="../../../2.0/index.html" data-version="2.0">2.0</option>
+                                            <option value="../../../3.0/index.html" data-version="3.0">3.0</option>
+                                            <option value="../../../master/index.html" data-version="master">master</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">phpseclib API Documentation</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../phpseclib3.html">phpseclib3</a></li><li class="backslash">\</li><li><a href="../../phpseclib3/File.html">File</a></li><li class="backslash">\</li><li>X509</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            X509
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>X509</strong>        (<a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Pure-PHP X.509 Parser</p>                                </div>
+    
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>VALIDATE_SIGNATURE_BY_CA</td>
+                <td class="last">
+                    <p><em>Flag to only accept signatures signed by certificate authorities</em></p>
+                    <p>Not really used anymore but retained all the same to suppress E_NOTICEs from old installs</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DN_ARRAY</td>
+                <td class="last">
+                    <p><em>Return internal array representation</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DN_STRING</td>
+                <td class="last">
+                    <p><em>Return string</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DN_ASN1</td>
+                <td class="last">
+                    <p><em>Return ASN.1 name string</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DN_OPENSSL</td>
+                <td class="last">
+                    <p><em>Return OpenSSL compatible array</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DN_CANON</td>
+                <td class="last">
+                    <p><em>Return canonical ASN.1 RDNs string</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>DN_HASH</td>
+                <td class="last">
+                    <p><em>Return name hash for file indexing</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORMAT_PEM</td>
+                <td class="last">
+                    <p><em>Save as PEM</em></p>
+                    <p>ie. a base64-encoded PEM with a header and a footer</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORMAT_DER</td>
+                <td class="last">
+                    <p><em>Save as DER</em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORMAT_SPKAC</td>
+                <td class="last">
+                    <p><em>Save as a SPKAC</em></p>
+                    <p>Only works on CSRs. Not currently supported.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>FORMAT_AUTO_DETECT</td>
+                <td class="last">
+                    <p><em>Auto-detect the format</em></p>
+                    <p>Used only by the load*() functions</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_ALL</td>
+                <td class="last">
+                    <p><em>Attribute value disposition.</em></p>
+                    <p>If disposition is >= 0, this is the index of the target value.</p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_APPEND</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>ATTR_REPLACE</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../phpseclib3/File/X509.html"><abbr title="phpseclib3\File\X509">X509</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>()
+        
+                                            <p>Default Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadX509">loadX509</a>(string $cert, int $mode = self::FORMAT_AUTO_DETECT)
+        
+                                            <p>Load X.509 certificate</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveX509">saveX509</a>(array $cert, int $format = self::FORMAT_PEM)
+        
+                                            <p>Save X.509 certificate</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadCA">loadCA</a>(string $cert)
+        
+                                            <p>Load an X.509 certificate as a certificate authority</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateURL">validateURL</a>(string $url)
+        
+                                            <p>Validate an X.509 certificate against a URL</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateDate">validateDate</a>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTime">DateTime</a>|string $date = null)
+        
+                                            <p>Validate a date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_validateSignature">validateSignature</a>(bool $caonly = true)
+        
+                                            <p>Validate a signature</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRecurLimit">setRecurLimit</a>(int $count)
+        
+                                            <p>Sets the recursion limit</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_disableURLFetch">disableURLFetch</a>()
+        
+                                            <p>Prevents URIs from being automatically retrieved</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_enableURLFetch">enableURLFetch</a>()
+        
+                                            <p>Allows URIs to be automatically retrieved</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decodeIP">decodeIP</a>(string $ip)
+        
+                                            <p>Decodes an IP address</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_decodeNameConstraintIP">decodeNameConstraintIP</a>(string $ip)
+        
+                                            <p>Decodes an IP address in a name constraints extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeIP">encodeIP</a>(string|array $ip)
+        
+                                            <p>Encodes an IP address</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDNProp">setDNProp</a>(string $propName, mixed $propValue, string $type = &#039;utf8String&#039;)
+        
+                                            <p>Set a Distinguished Name property</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeDNProp">removeDNProp</a>(string $propName)
+        
+                                            <p>Remove Distinguished Name properties</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDNProp">getDNProp</a>(string $propName, array $dn = null, bool $withType = false)
+        
+                                            <p>Get Distinguished Name properties</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDN">setDN</a>(mixed $dn, bool $merge = false, string $type = &#039;utf8String&#039;)
+        
+                                            <p>Set a Distinguished Name</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDN">getDN</a>(mixed $format = self::DN_ARRAY, array $dn = null)
+        
+                                            <p>Get the Distinguished Name for a certificates subject</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIssuerDN">getIssuerDN</a>(int $format = self::DN_ARRAY)
+        
+                                            <p>Get the Distinguished Name for a certificate/crl issuer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSubjectDN">getSubjectDN</a>(int $format = self::DN_ARRAY)
+        
+                                            <p>Get the Distinguished Name for a certificate/csr subject
+Alias of getDN()</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getIssuerDNProp">getIssuerDNProp</a>(string $propName, bool $withType = false)
+        
+                                            <p>Get an individual Distinguished Name property for a certificate/crl issuer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSubjectDNProp">getSubjectDNProp</a>(string $propName, bool $withType = false)
+        
+                                            <p>Get an individual Distinguished Name property for a certificate/csr subject</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getChain">getChain</a>()
+        
+                                            <p>Get the certificate chain for the current cert</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPublicKey">setPublicKey</a>(<a href="../../phpseclib3/Crypt/Common/PublicKey.html"><abbr title="phpseclib3\Crypt\Common\PublicKey">PublicKey</abbr></a> $key)
+        
+                                            <p>Set public key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setPrivateKey">setPrivateKey</a>(<a href="../../phpseclib3/Crypt/Common/PrivateKey.html"><abbr title="phpseclib3\Crypt\Common\PrivateKey">PrivateKey</abbr></a> $key)
+        
+                                            <p>Set private key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setChallenge">setChallenge</a>(string $challenge)
+        
+                                            <p>Set challenge</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPublicKey">getPublicKey</a>()
+        
+                                            <p>Gets the public key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadCSR">loadCSR</a>(string $csr, int $mode = self::FORMAT_AUTO_DETECT)
+        
+                                            <p>Load a Certificate Signing Request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveCSR">saveCSR</a>(array $csr, int $format = self::FORMAT_PEM)
+        
+                                            <p>Save CSR request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadSPKAC">loadSPKAC</a>(string $spkac)
+        
+                                            <p>Load a SPKAC CSR</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveSPKAC">saveSPKAC</a>(array $spkac, int $format = self::FORMAT_PEM)
+        
+                                            <p>Save a SPKAC CSR request</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadCRL">loadCRL</a>(string $crl, int $mode = self::FORMAT_AUTO_DETECT)
+        
+                                            <p>Load a Certificate Revocation List</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_saveCRL">saveCRL</a>(array $crl, int $format = self::FORMAT_PEM)
+        
+                                            <p>Save Certificate Revocation List.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sign">sign</a>($issuer, $subject)
+        
+                                            <p>Sign an X.509 certificate</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_signCSR">signCSR</a>()
+        
+                                            <p>Sign a CSR</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_signSPKAC">signSPKAC</a>()
+        
+                                            <p>Sign a SPKAC</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_signCRL">signCRL</a>($issuer, $crl)
+        
+                                            <p>Sign a CRL</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setStartDate">setStartDate</a>(string $date)
+        
+                                            <p>Set certificate start date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setEndDate">setEndDate</a>(string $date)
+        
+                                            <p>Set certificate end date</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setSerialNumber">setSerialNumber</a>(string $serial, $base = -256)
+        
+                                            <p>Set Serial Number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_makeCA">makeCA</a>()
+        
+                                            <p>Turns the certificate into a certificate authority</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeExtension">removeExtension</a>(string $id)
+        
+                                            <p>Remove a certificate, CSR or CRL Extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExtension">getExtension</a>(string $id, array $cert = null, string $path = null)
+        
+                                            <p>Get a certificate, CSR or CRL Extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getExtensions">getExtensions</a>(array $cert = null, string $path = null)
+        
+                                            <p>Returns a list of all extensions in use in certificate, CSR or CRL</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setExtension">setExtension</a>(string $id, mixed $value, bool $critical = false, bool $replace = true)
+        
+                                            <p>Set a certificate, CSR or CRL Extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeAttribute">removeAttribute</a>(string $id, int $disposition = self::ATTR_ALL)
+        
+                                            <p>Remove a CSR attribute.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttribute">getAttribute</a>(string $id, int $disposition = self::ATTR_ALL, array $csr = null)
+        
+                                            <p>Get a CSR attribute</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getAttributes">getAttributes</a>(array $csr = null)
+        
+                                            <p>Returns a list of all CSR attributes in use</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setAttribute">setAttribute</a>(string $id, mixed $value, int $disposition = self::ATTR_ALL)
+        
+                                            <p>Set a CSR attribute</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setKeyIdentifier">setKeyIdentifier</a>(string $value)
+        
+                                            <p>Sets the subject key identifier</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_computeKeyIdentifier">computeKeyIdentifier</a>(mixed $key = null, int $method = 1)
+        
+                                            <p>Compute a public key identifier.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setDomain">setDomain</a>(...$domains)
+        
+                                            <p>Set the domain name's which the cert is to be valid for</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setIPAddress">setIPAddress</a>(...$ipAddresses)
+        
+                                            <p>Set the IP Addresses's which the cert is to be valid for</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_revoke">revoke</a>(string $serial, string $date = null)
+        
+                                            <p>Revoke a certificate.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unrevoke">unrevoke</a>(string $serial)
+        
+                                            <p>Unrevoke a certificate.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRevoked">getRevoked</a>(string $serial)
+        
+                                            <p>Get a revoked certificate.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listRevoked">listRevoked</a>(array $crl = null)
+        
+                                            <p>List revoked certificates</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_removeRevokedCertificateExtension">removeRevokedCertificateExtension</a>(string $serial, string $id)
+        
+                                            <p>Remove a Revoked Certificate Extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRevokedCertificateExtension">getRevokedCertificateExtension</a>(string $serial, string $id, array $crl = null)
+        
+                                            <p>Get a Revoked Certificate Extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRevokedCertificateExtensions">getRevokedCertificateExtensions</a>(string $serial, array $crl = null)
+        
+                                            <p>Returns a list of all extensions in use for a given revoked certificate</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setRevokedCertificateExtension">setRevokedCertificateExtension</a>(string $serial, string $id, mixed $value, bool $critical = false, bool $replace = true)
+        
+                                            <p>Set a Revoked Certificate Extension</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L273">at line 273</a></div>
+        <code>                    <a href="../../phpseclib3/File/X509.html"><abbr title="phpseclib3\File\X509">X509</abbr></a>
+    <strong>__construct</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Default Constructor.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../phpseclib3/File/X509.html"><abbr title="phpseclib3\File\X509">X509</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadX509">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L425">at line 425</a></div>
+        <code>                    mixed
+    <strong>loadX509</strong>(string $cert, int $mode = self::FORMAT_AUTO_DETECT)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load X.509 certificate</p>                    <p>Returns an associative array describing the X.509 cert or a false if the cert failed to load</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cert</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveX509">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L499">at line 499</a></div>
+        <code>                    string
+    <strong>saveX509</strong>(array $cert, int $format = self::FORMAT_PEM)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Save X.509 certificate</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$cert</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadCA">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L926">at line 926</a></div>
+        <code>                    bool
+    <strong>loadCA</strong>(string $cert)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load an X.509 certificate as a certificate authority</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$cert</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateURL">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L993">at line 993</a></div>
+        <code>                    bool
+    <strong>validateURL</strong>(string $url)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validate an X.509 certificate against a URL</p>                    <p>From RFC2818 "HTTP over TLS":</p>
+
+<p>Matching is performed using the matching rules specified by
+[RFC2459].  If more than one identity of a given type is present in
+the certificate (e.g., more than one dNSName name, a match in any one
+of the set is considered acceptable.) Names may contain the wildcard
+character * which is considered to match any single domain name
+component or component fragment. E.g., <em>.a.com matches foo.a.com but
+not bar.foo.a.com. f</em>.com matches foo.com but not bar.com.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateDate">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1053">at line 1053</a></div>
+        <code>                    bool
+    <strong>validateDate</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTime">DateTime</a>|string $date = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validate a date</p>                    <p>If $date isn't defined it is assumed to be the current date.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/DateTime">DateTime</a>|string</td>
+                <td>$date</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_validateSignature">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1215">at line 1215</a></div>
+        <code>                    mixed
+    <strong>validateSignature</strong>(bool $caonly = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validate a signature</p>                    <p>Works on X.509 certs, CSR's and CRL's.
+Returns true if the signature is verified, false if it is not correct or null on error</p>
+
+<p>By default returns false for self-signed certs. Call validateSignature(false) to make this support
+self-signed.</p>
+
+<p>The behavior of this function is inspired by {@link http://php.net/openssl-verify openssl_verify}.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$caonly</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRecurLimit">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1438">at line 1438</a></div>
+        <code>        static            
+    <strong>setRecurLimit</strong>(int $count)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the recursion limit</p>                    <p>When validating a signature it may be necessary to download intermediate certs from URI's.
+An intermediate cert that linked to itself would result in an infinite loop so to prevent
+that we set a recursion limit. A negative number means that there is no recursion limit.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$count</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disableURLFetch">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1448">at line 1448</a></div>
+        <code>        static            
+    <strong>disableURLFetch</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Prevents URIs from being automatically retrieved</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enableURLFetch">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1458">at line 1458</a></div>
+        <code>        static            
+    <strong>enableURLFetch</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Allows URIs to be automatically retrieved</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decodeIP">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1472">at line 1472</a></div>
+        <code>        static            string
+    <strong>decodeIP</strong>(string $ip)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decodes an IP address</p>                    <p>Takes in a base64 encoded "blob" and returns a human readable IP address</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ip</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decodeNameConstraintIP">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1486">at line 1486</a></div>
+        <code>        static            array
+    <strong>decodeNameConstraintIP</strong>(string $ip)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decodes an IP address in a name constraints extension</p>                    <p>Takes in a base64 encoded "blob" and returns a human readable IP address / mask</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$ip</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeIP">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1503">at line 1503</a></div>
+        <code>        static            string
+    <strong>encodeIP</strong>(string|array $ip)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encodes an IP address</p>                    <p>Takes a human readable IP address into a base64-encoded "blob"</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$ip</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDNProp">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1611">at line 1611</a></div>
+        <code>                    bool
+    <strong>setDNProp</strong>(string $propName, mixed $propValue, string $type = &#039;utf8String&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a Distinguished Name property</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$propName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$propValue</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeDNProp">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1642">at line 1642</a></div>
+        <code>                    
+    <strong>removeDNProp</strong>(string $propName)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove Distinguished Name properties</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$propName</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDNProp">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1676">at line 1676</a></div>
+        <code>                    mixed
+    <strong>getDNProp</strong>(string $propName, array $dn = null, bool $withType = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Distinguished Name properties</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$propName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$dn</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withType</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDN">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1738">at line 1738</a></div>
+        <code>                    bool
+    <strong>setDN</strong>(mixed $dn, bool $merge = false, string $type = &#039;utf8String&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a Distinguished Name</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$dn</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$merge</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDN">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1780">at line 1780</a></div>
+        <code>                    array|bool
+    <strong>getDN</strong>(mixed $format = self::DN_ARRAY, array $dn = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Distinguished Name for a certificates subject</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$dn</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIssuerDN">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1920">at line 1920</a></div>
+        <code>                    mixed
+    <strong>getIssuerDN</strong>(int $format = self::DN_ARRAY)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Distinguished Name for a certificate/crl issuer</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSubjectDN">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1942">at line 1942</a></div>
+        <code>                    mixed
+    <strong>getSubjectDN</strong>(int $format = self::DN_ARRAY)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the Distinguished Name for a certificate/csr subject
+Alias of getDN()</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getIssuerDNProp">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1966">at line 1966</a></div>
+        <code>                    mixed
+    <strong>getIssuerDNProp</strong>(string $propName, bool $withType = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an individual Distinguished Name property for a certificate/crl issuer</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$propName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withType</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSubjectDNProp">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L1988">at line 1988</a></div>
+        <code>                    mixed
+    <strong>getSubjectDNProp</strong>(string $propName, bool $withType = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get an individual Distinguished Name property for a certificate/csr subject</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$propName</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$withType</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getChain">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2010">at line 2010</a></div>
+        <code>                    mixed
+    <strong>getChain</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the certificate chain for the current cert</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPublicKey">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2058">at line 2058</a></div>
+        <code>                    bool
+    <strong>setPublicKey</strong>(<a href="../../phpseclib3/Crypt/Common/PublicKey.html"><abbr title="phpseclib3\Crypt\Common\PublicKey">PublicKey</abbr></a> $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set public key</p>                    <p>Key needs to be a \phpseclib3\Crypt\RSA object</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../phpseclib3/Crypt/Common/PublicKey.html"><abbr title="phpseclib3\Crypt\Common\PublicKey">PublicKey</abbr></a></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPrivateKey">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2071">at line 2071</a></div>
+        <code>                    
+    <strong>setPrivateKey</strong>(<a href="../../phpseclib3/Crypt/Common/PrivateKey.html"><abbr title="phpseclib3\Crypt\Common\PrivateKey">PrivateKey</abbr></a> $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set private key</p>                    <p>Key needs to be a \phpseclib3\Crypt\RSA object</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../phpseclib3/Crypt/Common/PrivateKey.html"><abbr title="phpseclib3\Crypt\Common\PrivateKey">PrivateKey</abbr></a></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setChallenge">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2084">at line 2084</a></div>
+        <code>                    
+    <strong>setChallenge</strong>(string $challenge)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set challenge</p>                    <p>Used for SPKAC CSR's</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$challenge</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPublicKey">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2097">at line 2097</a></div>
+        <code>                    mixed
+    <strong>getPublicKey</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Gets the public key</p>                    <p>Returns a \phpseclib3\Crypt\RSA object or a false.</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadCSR">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2144">at line 2144</a></div>
+        <code>                    mixed
+    <strong>loadCSR</strong>(string $csr, int $mode = self::FORMAT_AUTO_DETECT)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load a Certificate Signing Request</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$csr</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveCSR">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2219">at line 2219</a></div>
+        <code>                    string
+    <strong>saveCSR</strong>(array $csr, int $format = self::FORMAT_PEM)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Save CSR request</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$csr</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadSPKAC">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2265">at line 2265</a></div>
+        <code>                    mixed
+    <strong>loadSPKAC</strong>(string $spkac)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load a SPKAC CSR</p>                    <p>SPKAC's are produced by the HTML5 keygen element:</p>
+
+<p>https://developer.mozilla.org/en-US/docs/HTML/Element/keygen</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$spkac</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveSPKAC">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2330">at line 2330</a></div>
+        <code>                    string
+    <strong>saveSPKAC</strong>(array $spkac, int $format = self::FORMAT_PEM)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Save a SPKAC CSR request</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$spkac</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadCRL">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2368">at line 2368</a></div>
+        <code>                    mixed
+    <strong>loadCRL</strong>(string $crl, int $mode = self::FORMAT_AUTO_DETECT)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load a Certificate Revocation List</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$crl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveCRL">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2435">at line 2435</a></div>
+        <code>                    string
+    <strong>saveCRL</strong>(array $crl, int $format = self::FORMAT_PEM)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Save Certificate Revocation List.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$crl</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$format</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sign">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2520">at line 2520</a></div>
+        <code>                    mixed
+    <strong>sign</strong>($issuer, $subject)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sign an X.509 certificate</p>                    <p>$issuer's private key needs to be loaded.
+$subject can be either an existing X.509 cert (if you want to resign it),
+a CSR or something with the DN and public key explicitly set.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$issuer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$subject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_signCSR">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2714">at line 2714</a></div>
+        <code>                    mixed
+    <strong>signCSR</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sign a CSR</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_signSPKAC">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2770">at line 2770</a></div>
+        <code>                    mixed
+    <strong>signSPKAC</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sign a SPKAC</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_signCRL">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L2836">at line 2836</a></div>
+        <code>                    mixed
+    <strong>signCRL</strong>($issuer, $crl)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sign a CRL</p>                    <p>$issuer's private key needs to be loaded.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$issuer</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$crl</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setStartDate">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3023">at line 3023</a></div>
+        <code>                    
+    <strong>setStartDate</strong>(string $date)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set certificate start date</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setEndDate">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3038">at line 3038</a></div>
+        <code>                    
+    <strong>setEndDate</strong>(string $date)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set certificate end date</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setSerialNumber">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3067">at line 3067</a></div>
+        <code>                    
+    <strong>setSerialNumber</strong>(string $serial, $base = -256)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Serial Number</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$base</td>
+                <td>Optional</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeCA">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3077">at line 3077</a></div>
+        <code>                    
+    <strong>makeCA</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Turns the certificate into a certificate authority</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeExtension">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3366">at line 3366</a></div>
+        <code>                    bool
+    <strong>removeExtension</strong>(string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove a certificate, CSR or CRL Extension</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtension">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3382">at line 3382</a></div>
+        <code>                    mixed
+    <strong>getExtension</strong>(string $id, array $cert = null, string $path = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a certificate, CSR or CRL Extension</p>                    <p>Returns the extension if it exists and false if not</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$cert</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getExtensions">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3395">at line 3395</a></div>
+        <code>                    array
+    <strong>getExtensions</strong>(array $cert = null, string $path = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a list of all extensions in use in certificate, CSR or CRL</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$cert</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setExtension">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3410">at line 3410</a></div>
+        <code>                    bool
+    <strong>setExtension</strong>(string $id, mixed $value, bool $critical = false, bool $replace = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a certificate, CSR or CRL Extension</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$critical</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$replace</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeAttribute">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3423">at line 3423</a></div>
+        <code>                    bool
+    <strong>removeAttribute</strong>(string $id, int $disposition = self::ATTR_ALL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove a CSR attribute.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$disposition</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttribute">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3474">at line 3474</a></div>
+        <code>                    mixed
+    <strong>getAttribute</strong>(string $id, int $disposition = self::ATTR_ALL, array $csr = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a CSR attribute</p>                    <p>Returns the attribute if it exists and false if not</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$disposition</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$csr</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAttributes">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3514">at line 3514</a></div>
+        <code>                    array
+    <strong>getAttributes</strong>(array $csr = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a list of all CSR attributes in use</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$csr</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setAttribute">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3541">at line 3541</a></div>
+        <code>                    bool
+    <strong>setAttribute</strong>(string $id, mixed $value, int $disposition = self::ATTR_ALL)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a CSR attribute</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$disposition</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setKeyIdentifier">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3596">at line 3596</a></div>
+        <code>                    
+    <strong>setKeyIdentifier</strong>(string $value)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the subject key identifier</p>                    <p>This is used by the id-ce-authorityKeyIdentifier and the id-ce-subjectKeyIdentifier extensions.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_computeKeyIdentifier">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3623">at line 3623</a></div>
+        <code>                    string
+    <strong>computeKeyIdentifier</strong>(mixed $key = null, int $method = 1)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Compute a public key identifier.</p>                    <p>Although key identifiers may be set to any unique value, this function
+computes key identifiers from public key according to the two
+recommended methods (4.2.1.2 RFC 3280).
+Highly polymorphic: try to accept all possible forms of key:
+- Key object
+- \phpseclib3\File\X509 object with public or private key defined
+- Certificate or CSR array
+- \phpseclib3\File\ASN1\Element object
+- PEM or DER string</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$key</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$method</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>binary key identifier</td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDomain">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3718">at line 3718</a></div>
+        <code>                    array
+    <strong>setDomain</strong>(...$domains)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the domain name's which the cert is to be valid for</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>...$domains</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIPAddress">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3731">at line 3731</a></div>
+        <code>                    
+    <strong>setIPAddress</strong>(...$ipAddresses)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the IP Addresses's which the cert is to be valid for</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>...$ipAddresses</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_revoke">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3806">at line 3806</a></div>
+        <code>                    bool
+    <strong>revoke</strong>(string $serial, string $date = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Revoke a certificate.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$date</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unrevoke">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3832">at line 3832</a></div>
+        <code>                    bool
+    <strong>unrevoke</strong>(string $serial)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unrevoke a certificate.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRevoked">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3852">at line 3852</a></div>
+        <code>                    mixed
+    <strong>getRevoked</strong>(string $serial)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a revoked certificate.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listRevoked">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3870">at line 3870</a></div>
+        <code>                    array|bool
+    <strong>listRevoked</strong>(array $crl = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List revoked certificates</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$crl</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_removeRevokedCertificateExtension">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3899">at line 3899</a></div>
+        <code>                    bool
+    <strong>removeRevokedCertificateExtension</strong>(string $serial, string $id)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Remove a Revoked Certificate Extension</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRevokedCertificateExtension">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3921">at line 3921</a></div>
+        <code>                    mixed
+    <strong>getRevokedCertificateExtension</strong>(string $serial, string $id, array $crl = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a Revoked Certificate Extension</p>                    <p>Returns the extension if it exists and false if not</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$crl</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRevokedCertificateExtensions">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3944">at line 3944</a></div>
+        <code>                    array|bool
+    <strong>getRevokedCertificateExtensions</strong>(string $serial, array $crl = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a list of all extensions in use for a given revoked certificate</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$crl</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setRevokedCertificateExtension">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/X509.php#L3970">at line 3970</a></div>
+        <code>                    bool
+    <strong>setRevokedCertificateExtension</strong>(string $serial, string $id, mixed $value, bool $critical = false, bool $replace = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set a Revoked Certificate Extension</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$serial</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$critical</td>
+                <td>optional</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$replace</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
+    </div>
+    </body>
+
+</html>

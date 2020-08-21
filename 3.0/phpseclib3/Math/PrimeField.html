@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>phpseclib3\Math\PrimeField | phpseclib API Documentation</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
+
+    <body id="class" data-name="class:phpseclib3_Math_PrimeField" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select  class="form-control" id="version-switcher" name="version">
+                                            <option value="../../../1.0/index.html" data-version="1.0">1.0</option>
+                                            <option value="../../../2.0/index.html" data-version="2.0">2.0</option>
+                                            <option value="../../../3.0/index.html" data-version="3.0">3.0</option>
+                                            <option value="../../../master/index.html" data-version="master">master</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">phpseclib API Documentation</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../phpseclib3.html">phpseclib3</a></li><li class="backslash">\</li><li><a href="../../phpseclib3/Math.html">Math</a></li><li class="backslash">\</li><li>PrimeField</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            PrimeField
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>PrimeField</strong>        extends <a href="../../phpseclib3/Math/Common/FiniteField.html"><abbr title="phpseclib3\Math\Common\FiniteField">FiniteField</abbr></a>        (<a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Math/PrimeField.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Prime Finite Fields</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_instanceID">
+                                        protected                                        int
+                </td>
+                <td>$instanceID</td>
+                <td class="last">Keeps track of current instance</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $modulo)
+        
+                                            <p>Default constructor</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setReduction">setReduction</a>(callable $func)
+        
+                                            <p>Use a custom defined modular reduction function</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_newInteger">newInteger</a>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $num)
+        
+                                            <p>Returns an instance of a dynamically generated PrimeFieldInteger class</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_randomInteger">randomInteger</a>()
+        
+                                            <p>Returns an integer on the finite field between one and the prime modulo</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLengthInBytes">getLengthInBytes</a>()
+        
+                                            <p>Returns the length of the modulo in bytes</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLength">getLength</a>()
+        
+                                            <p>Returns the length of the modulo in bits</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Math/PrimeField.php#L49">at line 49</a></div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $modulo)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Default constructor</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$modulo</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setReduction">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Math/PrimeField.php#L65">at line 65</a></div>
+        <code>                    
+    <strong>setReduction</strong>(callable $func)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Use a custom defined modular reduction function</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$func</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newInteger">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Math/PrimeField.php#L75">at line 75</a></div>
+        <code>                    object
+    <strong>newInteger</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $num)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an instance of a dynamically generated PrimeFieldInteger class</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$num</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_randomInteger">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Math/PrimeField.php#L85">at line 85</a></div>
+        <code>                    object
+    <strong>randomInteger</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns an integer on the finite field between one and the prime modulo</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLengthInBytes">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Math/PrimeField.php#L100">at line 100</a></div>
+        <code>                    int
+    <strong>getLengthInBytes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the length of the modulo in bytes</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLength">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Math/PrimeField.php#L110">at line 110</a></div>
+        <code>                    int
+    <strong>getLength</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the length of the modulo in bits</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
+    </div>
+    </body>
+
+</html>

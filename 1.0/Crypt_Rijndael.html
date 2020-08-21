@@ -1,775 +1,935 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="robots" content="index, follow, all" />
-        <title>Crypt_Rijndael | phpseclib API Documentation</title>
-                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-                            </head>
-        <body id="class">
-            <div class="header">
-        <ul>
-            <li><a href="classes.html">Classes</a></li>
-                        <li><a href="interfaces.html">Interfaces</a></li>
-            <li><a href="traits.html">Traits</a></li>
-            <li><a href="doc-index.html">Index</a></li>
-            
-        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Crypt_Rijndael | phpseclib API Documentation</title>
 
-        <div id="title">phpseclib API Documentation</div>
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
 
-            <div class="type">Class</div>
-    <h1><a href=".html"></a>Crypt_Rijndael</h1>
+    <body id="class" data-name="class:Crypt_Rijndael" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select  class="form-control" id="version-switcher" name="version">
+                                            <option value="../1.0/index.html" data-version="1.0">1.0</option>
+                                            <option value="../2.0/index.html" data-version="2.0">2.0</option>
+                                            <option value="../3.0/index.html" data-version="3.0">3.0</option>
+                                            <option value="../master/index.html" data-version="master">master</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
     </div>
-        <div class="content">
-                <p>    class
-    <strong>Crypt_Rijndael</strong>        extends <a href="Crypt_Base.html"><abbr title="Crypt_Base">Crypt_Base</abbr></a></p>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">phpseclib API Documentation</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Crypt_Rijndael
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Crypt_Rijndael</strong>        extends <a href="Crypt_Base.html">Crypt_Base</a>        (<a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Rijndael.php">View source</a>)
+</p>
+
+        
+    
 
             <div class="description">
-            <p>Pure-PHP implementation of Rijndael.</p>
-            <p>
-</p>
-        </div>
+            <p>Pure-PHP implementation of Rijndael.</p>                                </div>
+    
     
     
             <h2>Properties</h2>
 
-            <table>
+            <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_mode">
-                                                            int
+                                                                                int
                 </td>
                 <td>$mode</td>
                 <td class="last">The Encryption Mode</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_mode">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_block_size">
-                                                            int
+                                                                                int
                 </td>
                 <td>$block_size</td>
                 <td class="last">The Block Length of the block cipher</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_block_size">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_key">
-                                                            string
+                                                                                string
                 </td>
                 <td>$key</td>
                 <td class="last">The Key</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_key">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_iv">
-                                                            string
+                                                                                string
                 </td>
                 <td>$iv</td>
                 <td class="last">The Initialization Vector</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_iv">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_encryptIV">
-                                                            string
+                                                                                string
                 </td>
                 <td>$encryptIV</td>
                 <td class="last">A "sliding" Initialization Vector</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_encryptIV">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_decryptIV">
-                                                            string
+                                                                                string
                 </td>
                 <td>$decryptIV</td>
                 <td class="last">A "sliding" Initialization Vector</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_decryptIV">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_continuousBuffer">
-                                                            bool
+                                                                                bool
                 </td>
                 <td>$continuousBuffer</td>
                 <td class="last">Continuous Buffer status</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_continuousBuffer">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_enbuffer">
-                                                            array
+                                                                                array
                 </td>
                 <td>$enbuffer</td>
                 <td class="last">Encryption buffer for CTR, OFB and CFB modes</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_enbuffer">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_debuffer">
-                                                            array
+                                                                                array
                 </td>
                 <td>$debuffer</td>
                 <td class="last">Decryption buffer for CTR, OFB and CFB modes</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_debuffer">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_enmcrypt">
-                                                            resource
+                                                                                resource
                 </td>
                 <td>$enmcrypt</td>
                 <td class="last">mcrypt resource for encryption</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_enmcrypt">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_demcrypt">
-                                                            resource
+                                                                                resource
                 </td>
                 <td>$demcrypt</td>
                 <td class="last">mcrypt resource for decryption</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_demcrypt">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_enchanged">
-                                                            bool
+                                                                                bool
                 </td>
                 <td>$enchanged</td>
                 <td class="last">Does the enmcrypt resource need to be (re)initialized?</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_enchanged">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_dechanged">
-                                                            bool
+                                                                                bool
                 </td>
                 <td>$dechanged</td>
                 <td class="last">Does the demcrypt resource need to be (re)initialized?</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_dechanged">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_ecb">
-                                                            resource
+                                                                                resource
                 </td>
                 <td>$ecb</td>
                 <td class="last">mcrypt resource for CFB mode</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_ecb">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_cfb_init_len">
-                                                            int
+                                                                                int
                 </td>
                 <td>$cfb_init_len</td>
                 <td class="last">Optimizing value while CFB-encrypting</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_cfb_init_len">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_changed">
-                                                            bool
+                                                                                bool
                 </td>
                 <td>$changed</td>
                 <td class="last">Does internal cipher state need to be (re)initialized?</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_changed">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_padding">
-                                                            bool
+                                                                                bool
                 </td>
                 <td>$padding</td>
                 <td class="last">Padding status</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_padding">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_paddable">
-                                                            bool
+                                                                                bool
                 </td>
                 <td>$paddable</td>
                 <td class="last">Is the mode one that is paddable?</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_paddable">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_engine">
-                                                            int
+                                                                                int
                 </td>
                 <td>$engine</td>
-                <td class="last">Holds which crypt engine internaly should be use, which will be determined automatically on __construct()</td>
+                <td class="last">Holds which crypt engine internaly should be use,
+which will be determined automatically on __construct()</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_engine">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_preferredEngine">
-                                                            int
+                                                                                int
                 </td>
                 <td>$preferredEngine</td>
                 <td class="last">Holds the preferred crypt engine</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_preferredEngine">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_cipher_name_mcrypt">
-                                                            string
+                                                                                string
                 </td>
                 <td>$cipher_name_mcrypt</td>
                 <td class="last">The mcrypt specific name of the cipher</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_cipher_name_openssl">
-                                                            string
+                                                                                string
                 </td>
                 <td>$cipher_name_openssl</td>
                 <td class="last">The openssl specific name of the cipher</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_cipher_name_openssl">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_cipher_name_openssl_ecb">
-                                                            string
+                                                                                string
                 </td>
                 <td>$cipher_name_openssl_ecb</td>
                 <td class="last">The openssl specific name of the cipher in ECB mode</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_cipher_name_openssl_ecb">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_password_default_salt">
-                                                            string
+                                                                                string
                 </td>
                 <td>$password_default_salt</td>
                 <td class="last">The default salt used by setPassword()</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_const_namespace">
-                                                            string
+                                                                                string
                 </td>
                 <td>$const_namespace</td>
                 <td class="last">The namespace used by the cipher for its constants.</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_inline_crypt">
-                                                            <abbr title="Callback">Callback</abbr>
+                                                                                callable
                 </td>
                 <td>$inline_crypt</td>
                 <td class="last">The name of the performance-optimized callback function</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_inline_crypt">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_use_inline_crypt">
-                                                            mixed
+                                                                                mixed
                 </td>
                 <td>$use_inline_crypt</td>
                 <td class="last">Holds whether performance-optimized $inline_crypt() can/should be used.</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_use_inline_crypt">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_openssl_emulate_ctr">
-                                                            bool
+                                                                                bool
                 </td>
                 <td>$openssl_emulate_ctr</td>
                 <td class="last">If OpenSSL can be used in ECB but not in CTR we can emulate CTR</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_openssl_emulate_ctr">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_openssl_options">
-                                                            mixed
+                                                                                mixed
                 </td>
                 <td>$openssl_options</td>
                 <td class="last">Determines what options are passed to openssl_encrypt/decrypt</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_openssl_options">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_explicit_key_length">
-                                                            bool
+                                                                                bool
                 </td>
                 <td>$explicit_key_length</td>
                 <td class="last">Has the key length explicitly been set or should it be derived from the key, itself?</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_explicit_key_length">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_skip_key_adjustment">
-                                                            bool
+                                                                                bool
                 </td>
                 <td>$skip_key_adjustment</td>
                 <td class="last">Don't truncate / null pad key</td>
+                <td><small>from&nbsp;<a href="Crypt_Base.html#property_skip_key_adjustment">
+Crypt_Base</a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_w">
-                                                            array
+                                                                                array
                 </td>
                 <td>$w</td>
                 <td class="last">The Key Schedule</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_dw">
-                                                            array
+                                                                                array
                 </td>
                 <td>$dw</td>
                 <td class="last">The Inverse Key Schedule</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_Nb">
-                                                            int
+                                                                                int
                 </td>
                 <td>$Nb</td>
                 <td class="last">The Block Length divided by 32</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_key_length">
-                                                            int
+                                                                                int
                 </td>
                 <td>$key_length</td>
                 <td class="last">The Key Length (in bytes)</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_Nk">
-                                                            int
+                                                                                int
                 </td>
                 <td>$Nk</td>
                 <td class="last">The Key Length divided by 32</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_Nr">
-                                                            int
+                                                                                int
                 </td>
                 <td>$Nr</td>
                 <td class="last">The Number of Rounds</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_c">
-                                                            array
+                                                                                array
                 </td>
                 <td>$c</td>
                 <td class="last">Shift offsets</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_kl">
-                                                            array
+                                                                                array
                 </td>
                 <td>$kl</td>
                 <td class="last">Holds the last used key- and block_size information</td>
+                <td></td>
             </tr>
             </table>
 
     
             <h2>Methods</h2>
 
-            <table>
-                    <tr>
-                <td class="type">
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___construct">__construct</a>(int $mode = CRYPT_MODE_CBC)
-                    <p>Default Constructor.</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method___construct"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Default Constructor.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method___construct">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_Crypt_Base">Crypt_Base</a>(int $mode = CRYPT_MODE_CBC)
-                    <p>PHP4 compatible Default Constructor.</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_Crypt_Base"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>PHP4 compatible Default Constructor.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_Crypt_Base">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setIV">setIV</a>(string $iv)
-                    <p>Sets the initialization vector.</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_setIV"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Sets the initialization vector. (optional)</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_setIV">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setKeyLength">setKeyLength</a>(int $length)
-                    <p>Sets the key length</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Sets the key length</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getKeyLength">getKeyLength</a>()
-                    <p>Returns the current key length in bits</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_getKeyLength"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Returns the current key length in bits</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_getKeyLength">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getBlockLength">getBlockLength</a>()
-                    <p>Returns the current block length in bits</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_getBlockLength"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Returns the current block length in bits</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_getBlockLength">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setKey">setKey</a>(string $key)
-                    <p>Sets the key.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Sets the key.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setPassword">setPassword</a>(string $password, string $method = &#039;pbkdf2&#039;)
-                    <p>Sets the password.</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_setPassword"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Sets the password.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_setPassword">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_encrypt">encrypt</a>(string $plaintext)
-                    <p>Encrypts a message.</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_encrypt"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Encrypts a message.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_encrypt">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_decrypt">decrypt</a>(string $ciphertext)
-                    <p>Decrypts a message.</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_decrypt"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Decrypts a message.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_decrypt">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__openssl_ctr_process">_openssl_ctr_process</a>(string $plaintext, string $encryptIV, array $buffer)
-                    <p>OpenSSL CTR Processor</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__openssl_ctr_process"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>OpenSSL CTR Processor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__openssl_ctr_process">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__openssl_ofb_process">_openssl_ofb_process</a>(string $plaintext, string $encryptIV, array $buffer)
-                    <p>OpenSSL OFB Processor</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__openssl_ofb_process"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>OpenSSL OFB Processor</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__openssl_ofb_process">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__openssl_translate_mode">_openssl_translate_mode</a>()
-                    <p>phpseclib <-> OpenSSL Mode Mapper</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__openssl_translate_mode"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>phpseclib <-> OpenSSL Mode Mapper</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__openssl_translate_mode">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_enablePadding">enablePadding</a>()
-                    <p>Pad "packets".</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_enablePadding"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Pad "packets".</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_enablePadding">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_disablePadding">disablePadding</a>()
-                    <p>Do not pad packets.</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_disablePadding"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Do not pad packets.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_disablePadding">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_enableContinuousBuffer">enableContinuousBuffer</a>()
-                    <p>Treat consecutive "packets" as if they are a continuous buffer.</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_enableContinuousBuffer"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Treat consecutive "packets" as if they are a continuous buffer.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_enableContinuousBuffer">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_disableContinuousBuffer">disableContinuousBuffer</a>()
-                    <p>Treat consecutive packets as if they are a discontinuous buffer.</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_disableContinuousBuffer"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Treat consecutive packets as if they are a discontinuous buffer.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_disableContinuousBuffer">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_isValidEngine">isValidEngine</a>(int $engine)
-                    <p>Test for engine validity</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Test for engine validity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setPreferredEngine">setPreferredEngine</a>(int $engine)
-                    <p>Sets the preferred crypt engine</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_setPreferredEngine"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Sets the preferred crypt engine</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_setPreferredEngine">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getEngine">getEngine</a>()
-                    <p>Returns the engine currently being utilized</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_getEngine"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Returns the engine currently being utilized</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_getEngine">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__setEngine">_setEngine</a>()
-                    <p>Sets the engine as appropriate</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__setEngine"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Sets the engine as appropriate</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__setEngine">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__encryptBlock">_encryptBlock</a>(string $in)
-                    <p>Encrypts a block</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Encrypts a block</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__decryptBlock">_decryptBlock</a>(string $in)
-                    <p>Decrypts a block</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Decrypts a block</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__setupKey">_setupKey</a>()
-                    <p>Setup the key (expansion)</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Setup the key (expansion)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__setup">_setup</a>()
-                    <p>Setup the CRYPT<em>ENGINE</em>INTERNAL $engine</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__setup"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Setup the CRYPT_ENGINE_INTERNAL $engine</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__setup">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__setupMcrypt">_setupMcrypt</a>()
-                    <p>Setup the CRYPT<em>ENGINE</em>MCRYPT $engine</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__setupMcrypt"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Setup the CRYPT_ENGINE_MCRYPT $engine</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__setupMcrypt">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__pad">_pad</a>(string $text)
-                    <p>Pads a string</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__pad"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Pads a string</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__pad">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__unpad">_unpad</a>(string $text)
-                    <p>Unpads a string.</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__unpad"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Unpads a string.</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__unpad">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__clearBuffers">_clearBuffers</a>()
-                    <p>Clears internal buffers</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__clearBuffers"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Clears internal buffers</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__clearBuffers">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__string_shift">_string_shift</a>(string $string, int $index = 1)
-                    <p>String Shift</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__string_shift"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>String Shift</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__string_shift">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__string_pop">_string_pop</a>(string $string, int $index = 1)
-                    <p>String Pop</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__string_pop"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>String Pop</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__string_pop">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__increment_str">_increment_str</a>(string $var)
-                    <p>Increment the current string</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__increment_str"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Increment the current string</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__increment_str">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__setupInlineCrypt">_setupInlineCrypt</a>()
-                    <p>Setup the performance-optimized function for de/encrypt()</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Setup the performance-optimized function for de/encrypt()</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__createInlineCryptFunction">_createInlineCryptFunction</a>(array $cipher_code)
-                    <p>Creates the performance-optimized function for en/decrypt()</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__createInlineCryptFunction"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Creates the performance-optimized function for en/decrypt()</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__createInlineCryptFunction">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__getLambdaFunctions">_getLambdaFunctions</a>()
-                    <p>Holds the lambda_functions table (classwide)</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__getLambdaFunctions"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Holds the lambda_functions table (classwide)</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__getLambdaFunctions">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
-                    <a href="#method__hashInlineCryptFunction">_hashInlineCryptFunction</a>(<abbr title="$bytes">$bytes</abbr> $bytes)
-                    <p>Generates a digest from $bytes</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method__hashInlineCryptFunction"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__hashInlineCryptFunction">_hashInlineCryptFunction</a>($bytes)
+        
+                                            <p>Generates a digest from $bytes</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method__hashInlineCryptFunction">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     int
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_safe_intval">safe_intval</a>(string $x)
-                    <p>Convert float to int</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_safe_intval"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Convert float to int</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_safe_intval">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_safe_intval_inline">safe_intval_inline</a>()
-                    <p>eval()'able string for in-line float to int</p>
-                </td>
-                <td><small>from&nbsp;<a href="Crypt_Base.html#method_safe_intval_inline"><abbr title="Crypt_Base">Crypt_Base</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>eval()'able string for in-line float to int</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="Crypt_Base.html#method_safe_intval_inline">
+Crypt_Base</a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setBlockLength">setBlockLength</a>(int $length)
-                    <p>Sets the block length</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Sets the block length</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__subWord">_subWord</a>(int $word)
-                    <p>Performs S-Box substitutions</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Performs S-Box substitutions</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__getTables">_getTables</a>()
-                    <p>Provides the mixColumns and sboxes tables</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Provides the mixColumns and sboxes tables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__getInvTables">_getInvTables</a>()
-                    <p>Provides the inverse mixColumns and inverse sboxes tables</p>
-                </td>
-                <td></td>
-            </tr>
-            </table>
+        
+                                            <p>Provides the inverse mixColumns and inverse sboxes tables</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">in <a href="Crypt_Base.html#method___construct"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 506</div>
-        <code>            public            
-    <strong>__construct</strong>(int $mode = CRYPT_MODE_CBC)</code>
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="Crypt_Base.html#method___construct">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L506">at line 506</a></div>
+        <code>                    
+    <strong>__construct</strong>(int $mode = CRYPT_MODE_CBC)
+        </code>
     </h3>
     <div class="details">
-        <p>Default Constructor.</p>
-        <p>Determines whether or not the mcrypt extension should be used.</p>
+            
+    
+
+                    <div class="method-description">
+                                    <p>Default Constructor.</p>                    <p>Determines whether or not the mcrypt extension should be used.</p>
 
 <p>$mode could be:</p>
 
 <ul>
-<li><p>CRYPT<em>MODE</em>ECB</p></li>
-<li><p>CRYPT<em>MODE</em>CBC</p></li>
-<li><p>CRYPT<em>MODE</em>CTR</p></li>
-<li><p>CRYPT<em>MODE</em>CFB</p></li>
-<li><p>CRYPT<em>MODE</em>OFB</p></li>
+<li><p>CRYPT_MODE_ECB</p></li>
+<li><p>CRYPT_MODE_CBC</p></li>
+<li><p>CRYPT_MODE_CTR</p></li>
+<li><p>CRYPT_MODE_CFB</p></li>
+<li><p>CRYPT_MODE_OFB</p></li>
 </ul>
 
-<p>(or the alias constants of the chosen cipher, for example for AES: CRYPT<em>AES</em>MODE<em>ECB or CRYPT</em>AES<em>MODE</em>CBC ...)</p>
+<p>(or the alias constants of the chosen cipher, for example for AES: CRYPT_AES_MODE_ECB or CRYPT_AES_MODE_CBC ...)</p>
 
-<p>If not explicitly set, CRYPT<em>MODE</em>CBC will be used.</p>
-        <div class="tags">
+<p>If not explicitly set, CRYPT_MODE_CBC will be used.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$mode</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -779,24 +939,29 @@
                     </div>
     </div>
 
-                <h3 id="method_Crypt_Base">
-        <div class="location">in <a href="Crypt_Base.html#method_Crypt_Base"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 541</div>
-        <code>            public            
-    <strong>Crypt_Base</strong>(int $mode = CRYPT_MODE_CBC)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Crypt_Base">
+        <div class="location">in <a href="Crypt_Base.html#method_Crypt_Base">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L541">at line 541</a></div>
+        <code>                    
+    <strong>Crypt_Base</strong>(int $mode = CRYPT_MODE_CBC)
+        </code>
     </h3>
     <div class="details">
-        <p>PHP4 compatible Default Constructor.</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>PHP4 compatible Default Constructor.</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$mode</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -805,9 +970,11 @@
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::__construct()</td>
+                <td>
+                                            \self::__construct()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -815,26 +982,30 @@
                     </div>
     </div>
 
-                <h3 id="method_setIV">
-        <div class="location">in <a href="Crypt_Base.html#method_setIV"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 556</div>
-        <code>            public            
-    <strong>setIV</strong>(string $iv)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setIV">
+        <div class="location">in <a href="Crypt_Base.html#method_setIV">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L556">at line 556</a></div>
+        <code>                    
+    <strong>setIV</strong>(string $iv)
+        </code>
     </h3>
     <div class="details">
-        <p>Sets the initialization vector.</p>
-        <p>(optional)</p>
+            
+    
 
-<p>SetIV is not required when CRYPT<em>MODE</em>ECB (or ie for AES: CRYPT<em>AES</em>MODE_ECB) is being used.  If not explicitly set, it'll be assumed
-to be all zero's.</p>
-        <div class="tags">
+                    <div class="method-description">
+                                    <p>Sets the initialization vector. (optional)</p>                    <p>SetIV is not required when CRYPT_MODE_ECB (or ie for AES: CRYPT_AES_MODE_ECB) is being used.  If not explicitly set, it'll be assumed
+to be all zero's.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$iv</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -844,14 +1015,20 @@ to be all zero's.</p>
                     </div>
     </div>
 
-                <h3 id="method_setKeyLength">
-        <div class="location">at line 305</div>
-        <code>            public            
-    <strong>setKeyLength</strong>(int $length)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setKeyLength">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Rijndael.php#L305">at line 305</a></div>
+        <code>                    
+    <strong>setKeyLength</strong>(int $length)
+        </code>
     </h3>
     <div class="details">
-        <p>Sets the key length</p>
-        <p>Valid key lengths are 128, 160, 192, 224, and 256.  If the length is less than 128, it will be rounded up to
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the key length</p>                    <p>Valid key lengths are 128, 160, 192, 224, and 256.  If the length is less than 128, it will be rounded up to
 128.  If the length is greater than 128 and invalid, it will be rounded down to the closest valid amount.</p>
 
 <p>Note: phpseclib extends Rijndael (and AES) for using 160- and 224-bit keys but they are officially not defined
@@ -864,16 +1041,15 @@ to be all zero's.</p>
 
 <p>Additional: In case of 160- and 224-bit keys, phpseclib will/can, for that reason, not use
             the mcrypt php extension, even if available.
-            This results then in slower encryption.</p>
-        <div class="tags">
+            This results then in slower encryption.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$length</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -883,24 +1059,29 @@ to be all zero's.</p>
                     </div>
     </div>
 
-                <h3 id="method_getKeyLength">
-        <div class="location">in <a href="Crypt_Base.html#method_getKeyLength"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 587</div>
-        <code>            public            int
-    <strong>getKeyLength</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getKeyLength">
+        <div class="location">in <a href="Crypt_Base.html#method_getKeyLength">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L587">at line 587</a></div>
+        <code>                    int
+    <strong>getKeyLength</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Returns the current key length in bits</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the current key length in bits</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -909,24 +1090,29 @@ to be all zero's.</p>
                     </div>
     </div>
 
-                <h3 id="method_getBlockLength">
-        <div class="location">in <a href="Crypt_Base.html#method_getBlockLength"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 598</div>
-        <code>            public            int
-    <strong>getBlockLength</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBlockLength">
+        <div class="location">in <a href="Crypt_Base.html#method_getBlockLength">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L598">at line 598</a></div>
+        <code>                    int
+    <strong>getBlockLength</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Returns the current block length in bits</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the current block length in bits</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -935,30 +1121,35 @@ to be all zero's.</p>
                     </div>
     </div>
 
-                <h3 id="method_setKey">
-        <div class="location">at line 261</div>
-        <code>            public            
-    <strong>setKey</strong>(string $key)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setKey">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Rijndael.php#L261">at line 261</a></div>
+        <code>                    
+    <strong>setKey</strong>(string $key)
+        </code>
     </h3>
     <div class="details">
-        <p>Sets the key.</p>
-        <p>Keys can be of any length.  Rijndael, itself, requires the use of a key that's between 128-bits and 256-bits long and
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the key.</p>                    <p>Keys can be of any length.  Rijndael, itself, requires the use of a key that's between 128-bits and 256-bits long and
 whose length is a multiple of 32.  If the key is less than 256-bits and the key length isn't set, we round the length
 up to the closest valid key length, padding $key with null bytes.  If the key is more than 256-bits, we trim the
 excess bits.</p>
 
 <p>If the key is not explicitly set, it'll be assumed to be all null bytes.</p>
 
-<p>Note: 160/224-bit keys must explicitly set by setKeyLength(), otherwise they will be round/pad up to 192/256 bits.</p>
-        <div class="tags">
+<p>Note: 160/224-bit keys must explicitly set by setKeyLength(), otherwise they will be round/pad up to 192/256 bits.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$key</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -967,13 +1158,17 @@ excess bits.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>Crypt_Base:setKey()</td>
-                <td></td>
+                <td>
+                                            r
+                                    </td>
+                <td>y</td>
             </tr>
                     <tr>
-                <td>self::setKeyLength()</td>
+                <td>
+                                            \self::setKeyLength()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -981,46 +1176,50 @@ excess bits.</p>
                     </div>
     </div>
 
-                <h3 id="method_setPassword">
-        <div class="location">in <a href="Crypt_Base.html#method_setPassword"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 645</div>
-        <code>            public            bool
-    <strong>setPassword</strong>(string $password, string $method = &#039;pbkdf2&#039;)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPassword">
+        <div class="location">in <a href="Crypt_Base.html#method_setPassword">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L645">at line 645</a></div>
+        <code>                    bool
+    <strong>setPassword</strong>(string $password, string $method = &#039;pbkdf2&#039;)
+        </code>
     </h3>
     <div class="details">
-        <p>Sets the password.</p>
-        <p>Depending on what $method is set to, setPassword()'s (optional) parameters are as follows:
-    {@link http://en.wikipedia.org/wiki/PBKDF2 pbkdf2} or pbkdf1:
-        $hash, $salt, $count, $dkLen</p>
+            
+    
 
-<pre><code>    Where $hash (default = sha1) currently supports the following hashes: see: Crypt/Hash.php
+                    <div class="method-description">
+                                    <p>Sets the password.</p>                    <p>Depending on what $method is set to, setPassword()'s (optional) parameters are as follows:
+{@link http://en.wikipedia.org/wiki/PBKDF2 pbkdf2} or pbkdf1:
+    $hash, $salt, $count, $dkLen</p>
+
+<pre><code>Where $hash (default = sha1) currently supports the following hashes: see: Crypt/Hash.php
 </code></pre>
-</p>
-        <div class="tags">
+</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$password</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$method</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1028,24 +1227,33 @@ excess bits.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>Crypt/Hash.php</td>
-                <td></td>
+                <td>
+                                            r
+                                    </td>
+                <td>y</td>
             </tr>
             </table>
 
                     </div>
     </div>
 
-                <h3 id="method_encrypt">
-        <div class="location">in <a href="Crypt_Base.html#method_encrypt"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 742</div>
-        <code>            public            string
-    <strong>encrypt</strong>(string $plaintext)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encrypt">
+        <div class="location">in <a href="Crypt_Base.html#method_encrypt">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L742">at line 742</a></div>
+        <code>                    string
+    <strong>encrypt</strong>(string $plaintext)
+        </code>
     </h3>
     <div class="details">
-        <p>Encrypts a message.</p>
-        <p>$plaintext will be padded with additional bytes such that it's length is a multiple of the block size. Other cipher
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encrypts a message.</p>                    <p>$plaintext will be padded with additional bytes such that it's length is a multiple of the block size. Other cipher
 implementations may or may not pad in the same manner.  Other common approaches to padding and the reasons why it's
 necessary are discussed in the following
 URL:</p>
@@ -1054,23 +1262,22 @@ URL:</p>
 
 <p>An alternative to padding is to, separately, send the length of the file.  This is what SSH, in fact, does.
 strlen($plaintext) will still need to be a multiple of the block size, however, arbitrary values can be added to make it that
-length.</p>
-        <div class="tags">
+length.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$plaintext</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
             <td>$ciphertext</td>
@@ -1081,9 +1288,11 @@ length.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::decrypt()</td>
+                <td>
+                                            \self::decrypt()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1091,31 +1300,37 @@ length.</p>
                     </div>
     </div>
 
-                <h3 id="method_decrypt">
-        <div class="location">in <a href="Crypt_Base.html#method_decrypt"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1043</div>
-        <code>            public            string
-    <strong>decrypt</strong>(string $ciphertext)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_decrypt">
+        <div class="location">in <a href="Crypt_Base.html#method_decrypt">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1043">at line 1043</a></div>
+        <code>                    string
+    <strong>decrypt</strong>(string $ciphertext)
+        </code>
     </h3>
     <div class="details">
-        <p>Decrypts a message.</p>
-        <p>If strlen($ciphertext) is not a multiple of the block size, null bytes will be added to the end of the string until
-it is.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decrypts a message.</p>                    <p>If strlen($ciphertext) is not a multiple of the block size, null bytes will be added to the end of the string until
+it is.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$ciphertext</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
             <td>$plaintext</td>
@@ -1126,9 +1341,11 @@ it is.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::encrypt()</td>
+                <td>
+                                            \self::encrypt()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1136,49 +1353,52 @@ it is.</p>
                     </div>
     </div>
 
-                <h3 id="method__openssl_ctr_process">
-        <div class="location">in <a href="Crypt_Base.html#method__openssl_ctr_process"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1339</div>
-        <code>            public            string
-    <strong>_openssl_ctr_process</strong>(string $plaintext, string $encryptIV, array $buffer)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__openssl_ctr_process">
+        <div class="location">in <a href="Crypt_Base.html#method__openssl_ctr_process">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1339">at line 1339</a></div>
+        <code>                    string
+    <strong>_openssl_ctr_process</strong>(string $plaintext, string $encryptIV, array $buffer)
+        </code>
     </h3>
     <div class="details">
-        <p>OpenSSL CTR Processor</p>
-        <p>PHP's OpenSSL bindings do not operate in continuous mode so we'll wrap around it. Since the keystream
-for CTR is the same for both encrypting and decrypting this function is re-used by both Crypt<em>Base::encrypt()
-and Crypt</em>Base::decrypt(). Also, OpenSSL doesn't implement CTR for all of it's symmetric ciphers so this
-function will emulate CTR with ECB when necessary.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>OpenSSL CTR Processor</p>                    <p>PHP's OpenSSL bindings do not operate in continuous mode so we'll wrap around it. Since the keystream
+for CTR is the same for both encrypting and decrypting this function is re-used by both Crypt_Base::encrypt()
+and Crypt_Base::decrypt(). Also, OpenSSL doesn't implement CTR for all of it's symmetric ciphers so this
+function will emulate CTR with ECB when necessary.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$plaintext</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$encryptIV</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$buffer</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1186,13 +1406,17 @@ function will emulate CTR with ECB when necessary.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::encrypt()</td>
+                <td>
+                                            \self::encrypt()
+                                    </td>
                 <td></td>
             </tr>
                     <tr>
-                <td>self::decrypt()</td>
+                <td>
+                                            \self::decrypt()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1200,48 +1424,51 @@ function will emulate CTR with ECB when necessary.</p>
                     </div>
     </div>
 
-                <h3 id="method__openssl_ofb_process">
-        <div class="location">in <a href="Crypt_Base.html#method__openssl_ofb_process"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1433</div>
-        <code>            public            string
-    <strong>_openssl_ofb_process</strong>(string $plaintext, string $encryptIV, array $buffer)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__openssl_ofb_process">
+        <div class="location">in <a href="Crypt_Base.html#method__openssl_ofb_process">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1433">at line 1433</a></div>
+        <code>                    string
+    <strong>_openssl_ofb_process</strong>(string $plaintext, string $encryptIV, array $buffer)
+        </code>
     </h3>
     <div class="details">
-        <p>OpenSSL OFB Processor</p>
-        <p>PHP's OpenSSL bindings do not operate in continuous mode so we'll wrap around it. Since the keystream
-for OFB is the same for both encrypting and decrypting this function is re-used by both Crypt<em>Base::encrypt()
-and Crypt</em>Base::decrypt().</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>OpenSSL OFB Processor</p>                    <p>PHP's OpenSSL bindings do not operate in continuous mode so we'll wrap around it. Since the keystream
+for OFB is the same for both encrypting and decrypting this function is re-used by both Crypt_Base::encrypt()
+and Crypt_Base::decrypt().</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$plaintext</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$encryptIV</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$buffer</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1249,13 +1476,17 @@ and Crypt</em>Base::decrypt().</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::encrypt()</td>
+                <td>
+                                            \self::encrypt()
+                                    </td>
                 <td></td>
             </tr>
                     <tr>
-                <td>self::decrypt()</td>
+                <td>
+                                            \self::decrypt()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1263,23 +1494,29 @@ and Crypt</em>Base::decrypt().</p>
                     </div>
     </div>
 
-                <h3 id="method__openssl_translate_mode">
-        <div class="location">in <a href="Crypt_Base.html#method__openssl_translate_mode"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1479</div>
-        <code>            public            int
-    <strong>_openssl_translate_mode</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__openssl_translate_mode">
+        <div class="location">in <a href="Crypt_Base.html#method__openssl_translate_mode">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1479">at line 1479</a></div>
+        <code>                    int
+    <strong>_openssl_translate_mode</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>phpseclib <-> OpenSSL Mode Mapper</p>
-        <p>May need to be overwritten by classes extending this one in some cases</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>phpseclib <-> OpenSSL Mode Mapper</p>                    <p>May need to be overwritten by classes extending this one in some cases</p>                            </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1288,30 +1525,39 @@ and Crypt</em>Base::decrypt().</p>
                     </div>
     </div>
 
-                <h3 id="method_enablePadding">
-        <div class="location">in <a href="Crypt_Base.html#method_enablePadding"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1510</div>
-        <code>            public            
-    <strong>enablePadding</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enablePadding">
+        <div class="location">in <a href="Crypt_Base.html#method_enablePadding">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1510">at line 1510</a></div>
+        <code>                    
+    <strong>enablePadding</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Pad "packets".</p>
-        <p>Block ciphers working by encrypting between their specified [$this->]block_size at a time
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pad "packets".</p>                    <p>Block ciphers working by encrypting between their specified [$this->]block_size at a time
 If you ever need to encrypt or decrypt something that isn't of the proper length, it becomes necessary to
 pad the input so that it is of the proper length.</p>
 
 <p>Padding is enabled by default.  Sometimes, however, it is undesirable to pad strings.  Such is the case in SSH,
 where "packets" are padded with random bytes before being encrypted.  Unpad these packets and you risk stripping
 away characters that shouldn't be stripped away. (SSH knows how many bytes are added because the length is
-transmitted separately)</p>
-        <div class="tags">
+transmitted separately)</p>                            </div>
+                <div class="tags">
             
             
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::disablePadding()</td>
+                <td>
+                                            \self::disablePadding()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1319,24 +1565,32 @@ transmitted separately)</p>
                     </div>
     </div>
 
-                <h3 id="method_disablePadding">
-        <div class="location">in <a href="Crypt_Base.html#method_disablePadding"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1521</div>
-        <code>            public            
-    <strong>disablePadding</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disablePadding">
+        <div class="location">in <a href="Crypt_Base.html#method_disablePadding">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1521">at line 1521</a></div>
+        <code>                    
+    <strong>disablePadding</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Do not pad packets.</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Do not pad packets.</p>                                                </div>
+                <div class="tags">
             
             
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::enablePadding()</td>
+                <td>
+                                            \self::enablePadding()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1344,14 +1598,21 @@ transmitted separately)</p>
                     </div>
     </div>
 
-                <h3 id="method_enableContinuousBuffer">
-        <div class="location">in <a href="Crypt_Base.html#method_enableContinuousBuffer"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1564</div>
-        <code>            public            
-    <strong>enableContinuousBuffer</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_enableContinuousBuffer">
+        <div class="location">in <a href="Crypt_Base.html#method_enableContinuousBuffer">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1564">at line 1564</a></div>
+        <code>                    
+    <strong>enableContinuousBuffer</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Treat consecutive "packets" as if they are a continuous buffer.</p>
-        <p>Say you have a 32-byte plaintext $plaintext.  Using the default behavior, the two following code snippets
+            
+    
+
+                    <div class="method-description">
+                                    <p>Treat consecutive "packets" as if they are a continuous buffer.</p>                    <p>Say you have a 32-byte plaintext $plaintext.  Using the default behavior, the two following code snippets
 will yield different outputs:</p>
 
 <p><code>
@@ -1380,16 +1641,18 @@ decryption round when the continuous buffer is enabled.  When it's disabled, the
 <p>Put another way, when the continuous buffer is enabled, the state of the Crypt_*() object changes after each
 encryption / decryption round, whereas otherwise, it'd remain constant.  For this reason, it's recommended that
 continuous buffers not be used.  They do offer better security and are, in fact, sometimes required (SSH uses them),
-however, they are also less intuitive and more likely to cause you problems.</p>
-        <div class="tags">
+however, they are also less intuitive and more likely to cause you problems.</p>                            </div>
+                <div class="tags">
             
             
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::disableContinuousBuffer()</td>
+                <td>
+                                            \self::disableContinuousBuffer()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1397,23 +1660,32 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     </div>
     </div>
 
-                <h3 id="method_disableContinuousBuffer">
-        <div class="location">in <a href="Crypt_Base.html#method_disableContinuousBuffer"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1584</div>
-        <code>            public            
-    <strong>disableContinuousBuffer</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_disableContinuousBuffer">
+        <div class="location">in <a href="Crypt_Base.html#method_disableContinuousBuffer">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1584">at line 1584</a></div>
+        <code>                    
+    <strong>disableContinuousBuffer</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Treat consecutive packets as if they are a discontinuous buffer.</p>
-        <p>The default behavior.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Treat consecutive packets as if they are a discontinuous buffer.</p>                    <p>The default behavior.</p>                            </div>
+                <div class="tags">
             
             
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::enableContinuousBuffer()</td>
+                <td>
+                                            \self::enableContinuousBuffer()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1421,34 +1693,38 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     </div>
     </div>
 
-                <h3 id="method_isValidEngine">
-        <div class="location">at line 360</div>
-        <code>            public            bool
-    <strong>isValidEngine</strong>(int $engine)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isValidEngine">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Rijndael.php#L360">at line 360</a></div>
+        <code>                    bool
+    <strong>isValidEngine</strong>(int $engine)
+        </code>
     </h3>
     <div class="details">
-        <p>Test for engine validity</p>
-        <p>This is mainly just a wrapper to set things up for Crypt_Base::isValidEngine()</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Test for engine validity</p>                    <p>This is mainly just a wrapper to set things up for Crypt_Base::isValidEngine()</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$engine</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1456,9 +1732,12 @@ however, they are also less intuitive and more likely to cause you problems.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>Crypt_Base::Crypt_Base()</td>
+                <td>
+                                            <a href="Crypt_Base.html#method_Crypt_Base">
+Crypt_Base::Crypt_Base</a>
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1466,42 +1745,50 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     </div>
     </div>
 
-                <h3 id="method_setPreferredEngine">
-        <div class="location">in <a href="Crypt_Base.html#method_setPreferredEngine"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1673</div>
-        <code>            public            
-    <strong>setPreferredEngine</strong>(int $engine)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setPreferredEngine">
+        <div class="location">in <a href="Crypt_Base.html#method_setPreferredEngine">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1673">at line 1673</a></div>
+        <code>                    
+    <strong>setPreferredEngine</strong>(int $engine)
+        </code>
     </h3>
     <div class="details">
-        <p>Sets the preferred crypt engine</p>
-        <p>Currently, $engine could be:</p>
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the preferred crypt engine</p>                    <p>Currently, $engine could be:</p>
 
 <ul>
-<li><p>CRYPT<em>ENGINE</em>OPENSSL  [very fast]</p></li>
-<li><p>CRYPT<em>ENGINE</em>MCRYPT   [fast]</p></li>
-<li><p>CRYPT<em>ENGINE</em>INTERNAL [slow]</p></li>
+<li><p>CRYPT_ENGINE_OPENSSL  [very fast]</p></li>
+<li><p>CRYPT_ENGINE_MCRYPT   [fast]</p></li>
+<li><p>CRYPT_ENGINE_INTERNAL [slow]</p></li>
 </ul>
 
-<p>If the preferred crypt engine is not available the fastest available one will be used</p>
-        <div class="tags">
+<p>If the preferred crypt engine is not available the fastest available one will be used</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$engine</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
                 <td>
-</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                            <h4>See also</h4>
-
-                    <table>
-                    <tr>
-                <td>self::Crypt_Base()</td>
+                                            \self::Crypt_Base()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1509,24 +1796,32 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     </div>
     </div>
 
-                <h3 id="method_getEngine">
-        <div class="location">in <a href="Crypt_Base.html#method_getEngine"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1694</div>
-        <code>            public            
-    <strong>getEngine</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEngine">
+        <div class="location">in <a href="Crypt_Base.html#method_getEngine">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1694">at line 1694</a></div>
+        <code>                    
+    <strong>getEngine</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Returns the engine currently being utilized</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the engine currently being utilized</p>                                                </div>
+                <div class="tags">
             
             
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::_setEngine()</td>
+                <td>
+                                            \self::_setEngine()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1534,24 +1829,32 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     </div>
     </div>
 
-                <h3 id="method__setEngine">
-        <div class="location">in <a href="Crypt_Base.html#method__setEngine"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1705</div>
-        <code>            public            
-    <strong>_setEngine</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__setEngine">
+        <div class="location">in <a href="Crypt_Base.html#method__setEngine">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1705">at line 1705</a></div>
+        <code>                    
+    <strong>_setEngine</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Sets the engine as appropriate</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the engine as appropriate</p>                                                </div>
+                <div class="tags">
             
             
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::Crypt_Base()</td>
+                <td>
+                                            \self::Crypt_Base()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1559,35 +1862,38 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     </div>
     </div>
 
-                <h3 id="method__encryptBlock">
-        <div class="location">at line 388</div>
-        <code>            public            string
-    <strong>_encryptBlock</strong>(string $in)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__encryptBlock">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Rijndael.php#L388">at line 388</a></div>
+        <code>                    string
+    <strong>_encryptBlock</strong>(string $in)
+        </code>
     </h3>
     <div class="details">
-        <p>Encrypts a block</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encrypts a block</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$in</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1596,35 +1902,38 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     </div>
     </div>
 
-                <h3 id="method__decryptBlock">
-        <div class="location">at line 489</div>
-        <code>            public            string
-    <strong>_decryptBlock</strong>(string $in)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__decryptBlock">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Rijndael.php#L489">at line 489</a></div>
+        <code>                    string
+    <strong>_decryptBlock</strong>(string $in)
+        </code>
     </h3>
     <div class="details">
-        <p>Decrypts a block</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Decrypts a block</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$in</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1633,24 +1942,32 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     </div>
     </div>
 
-                <h3 id="method__setupKey">
-        <div class="location">at line 578</div>
-        <code>            public            
-    <strong>_setupKey</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__setupKey">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Rijndael.php#L578">at line 578</a></div>
+        <code>                    
+    <strong>_setupKey</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Setup the key (expansion)</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setup the key (expansion)</p>                                                </div>
+                <div class="tags">
             
             
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>Crypt_Base::_setupKey()</td>
+                <td>
+                                            <a href="Crypt_Base.html#method__setupKey">
+Crypt_Base::_setupKey</a>
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1658,15 +1975,22 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     </div>
     </div>
 
-                <h3 id="method__setup">
-        <div class="location">in <a href="Crypt_Base.html#method__setup"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1805</div>
-        <code>            public            
-    <strong>_setup</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__setup">
+        <div class="location">in <a href="Crypt_Base.html#method__setup">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1805">at line 1805</a></div>
+        <code>                    
+    <strong>_setup</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Setup the CRYPT<em>ENGINE</em>INTERNAL $engine</p>
-        <p>(re)init, if necessary, the internal cipher $engine and flush all $buffers
-Used (only) if $engine == CRYPT<em>ENGINE</em>INTERNAL</p>
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setup the CRYPT_ENGINE_INTERNAL $engine</p>                    <p>(re)init, if necessary, the internal cipher $engine and flush all $buffers
+Used (only) if $engine == CRYPT_ENGINE_INTERNAL</p>
 
 <p>_setup() will be called each time if $changed === true
 typically this happens when using one or more of following public methods:</p>
@@ -1677,24 +2001,30 @@ typically this happens when using one or more of following public methods:</p>
 <li><p>disableContinuousBuffer()</p></li>
 <li><p>First run of encrypt() / decrypt() with no init-settings</p></li>
 </ul>
-</p>
-        <div class="tags">
+</p>                            </div>
+                <div class="tags">
             
             
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::setKey()</td>
+                <td>
+                                            \self::setKey()
+                                    </td>
                 <td></td>
             </tr>
                     <tr>
-                <td>self::setIV()</td>
+                <td>
+                                            \self::setIV()
+                                    </td>
                 <td></td>
             </tr>
                     <tr>
-                <td>self::disableContinuousBuffer()</td>
+                <td>
+                                            \self::disableContinuousBuffer()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1702,15 +2032,22 @@ typically this happens when using one or more of following public methods:</p>
                     </div>
     </div>
 
-                <h3 id="method__setupMcrypt">
-        <div class="location">in <a href="Crypt_Base.html#method__setupMcrypt"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1838</div>
-        <code>            public            
-    <strong>_setupMcrypt</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__setupMcrypt">
+        <div class="location">in <a href="Crypt_Base.html#method__setupMcrypt">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1838">at line 1838</a></div>
+        <code>                    
+    <strong>_setupMcrypt</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Setup the CRYPT<em>ENGINE</em>MCRYPT $engine</p>
-        <p>(re)init, if necessary, the (ext)mcrypt resources and flush all $buffers
-Used (only) if $engine = CRYPT<em>ENGINE</em>MCRYPT</p>
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setup the CRYPT_ENGINE_MCRYPT $engine</p>                    <p>(re)init, if necessary, the (ext)mcrypt resources and flush all $buffers
+Used (only) if $engine = CRYPT_ENGINE_MCRYPT</p>
 
 <p>_setupMcrypt() will be called each time if $changed === true
 typically this happens when using one or more of following public methods:</p>
@@ -1721,24 +2058,30 @@ typically this happens when using one or more of following public methods:</p>
 <li><p>disableContinuousBuffer()</p></li>
 <li><p>First run of encrypt() / decrypt()</p></li>
 </ul>
-</p>
-        <div class="tags">
+</p>                            </div>
+                <div class="tags">
             
             
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::setKey()</td>
+                <td>
+                                            \self::setKey()
+                                    </td>
                 <td></td>
             </tr>
                     <tr>
-                <td>self::setIV()</td>
+                <td>
+                                            \self::setIV()
+                                    </td>
                 <td></td>
             </tr>
                     <tr>
-                <td>self::disableContinuousBuffer()</td>
+                <td>
+                                            \self::disableContinuousBuffer()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1746,39 +2089,44 @@ typically this happens when using one or more of following public methods:</p>
                     </div>
     </div>
 
-                <h3 id="method__pad">
-        <div class="location">in <a href="Crypt_Base.html#method__pad"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1884</div>
-        <code>            public            string
-    <strong>_pad</strong>(string $text)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__pad">
+        <div class="location">in <a href="Crypt_Base.html#method__pad">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1884">at line 1884</a></div>
+        <code>                    string
+    <strong>_pad</strong>(string $text)
+        </code>
     </h3>
     <div class="details">
-        <p>Pads a string</p>
-        <p>Pads a string using the RSA PKCS padding standards so that its length is a multiple of the blocksize.
-$this->block<em>size - (strlen($text) % $this->block</em>size) bytes are added, each of which is equal to
-chr($this->block<em>size - (strlen($text) % $this->block</em>size)</p>
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pads a string</p>                    <p>Pads a string using the RSA PKCS padding standards so that its length is a multiple of the blocksize.
+$this->block_size - (strlen($text) % $this->block_size) bytes are added, each of which is equal to
+chr($this->block_size - (strlen($text) % $this->block_size)</p>
 
 <p>If padding is disabled and $text is not a multiple of the blocksize, the string will be padded regardless
-and padding will, hence forth, be enabled.</p>
-        <div class="tags">
+and padding will, hence forth, be enabled.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$text</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1786,9 +2134,11 @@ and padding will, hence forth, be enabled.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::_unpad()</td>
+                <td>
+                                            \self::_unpad()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1796,35 +2146,40 @@ and padding will, hence forth, be enabled.</p>
                     </div>
     </div>
 
-                <h3 id="method__unpad">
-        <div class="location">in <a href="Crypt_Base.html#method__unpad"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1913</div>
-        <code>            public            string
-    <strong>_unpad</strong>(string $text)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__unpad">
+        <div class="location">in <a href="Crypt_Base.html#method__unpad">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1913">at line 1913</a></div>
+        <code>                    string
+    <strong>_unpad</strong>(string $text)
+        </code>
     </h3>
     <div class="details">
-        <p>Unpads a string.</p>
-        <p>If padding is enabled and the reported padding length is invalid the encryption key will be assumed to be wrong
-and false will be returned.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unpads a string.</p>                    <p>If padding is enabled and the reported padding length is invalid the encryption key will be assumed to be wrong
+and false will be returned.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$text</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1832,9 +2187,11 @@ and false will be returned.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::_pad()</td>
+                <td>
+                                            \self::_pad()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1842,57 +2199,68 @@ and false will be returned.</p>
                     </div>
     </div>
 
-                <h3 id="method__clearBuffers">
-        <div class="location">in <a href="Crypt_Base.html#method__clearBuffers"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1938</div>
-        <code>            public            
-    <strong>_clearBuffers</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__clearBuffers">
+        <div class="location">in <a href="Crypt_Base.html#method__clearBuffers">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1938">at line 1938</a></div>
+        <code>                    
+    <strong>_clearBuffers</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Clears internal buffers</p>
-        <p>Clearing/resetting the internal buffers is done everytime
+            
+    
+
+                    <div class="method-description">
+                                    <p>Clears internal buffers</p>                    <p>Clearing/resetting the internal buffers is done everytime
 after disableContinuousBuffer() or on cipher $engine (re)init
-ie after setKey() or setIV()</p>
-        <div class="tags">
+ie after setKey() or setIV()</p>                            </div>
+                <div class="tags">
             
             
             
                     </div>
     </div>
 
-                <h3 id="method__string_shift">
-        <div class="location">in <a href="Crypt_Base.html#method__string_shift"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1961</div>
-        <code>            public            string
-    <strong>_string_shift</strong>(string $string, int $index = 1)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__string_shift">
+        <div class="location">in <a href="Crypt_Base.html#method__string_shift">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1961">at line 1961</a></div>
+        <code>                    string
+    <strong>_string_shift</strong>(string $string, int $index = 1)
+        </code>
     </h3>
     <div class="details">
-        <p>String Shift</p>
-        <p>Inspired by array_shift</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>String Shift</p>                    <p>Inspired by array_shift</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$string</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$index</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1901,40 +2269,44 @@ ie after setKey() or setIV()</p>
                     </div>
     </div>
 
-                <h3 id="method__string_pop">
-        <div class="location">in <a href="Crypt_Base.html#method__string_pop"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1978</div>
-        <code>            public            string
-    <strong>_string_pop</strong>(string $string, int $index = 1)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__string_pop">
+        <div class="location">in <a href="Crypt_Base.html#method__string_pop">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1978">at line 1978</a></div>
+        <code>                    string
+    <strong>_string_pop</strong>(string $string, int $index = 1)
+        </code>
     </h3>
     <div class="details">
-        <p>String Pop</p>
-        <p>Inspired by array_pop</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>String Pop</p>                    <p>Inspired by array_pop</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$string</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$index</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1943,39 +2315,48 @@ ie after setKey() or setIV()</p>
                     </div>
     </div>
 
-                <h3 id="method__increment_str">
-        <div class="location">in <a href="Crypt_Base.html#method__increment_str"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 1993</div>
-        <code>            public            
-    <strong>_increment_str</strong>(string $var)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__increment_str">
+        <div class="location">in <a href="Crypt_Base.html#method__increment_str">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L1993">at line 1993</a></div>
+        <code>                    
+    <strong>_increment_str</strong>(string $var)
+        </code>
     </h3>
     <div class="details">
-        <p>Increment the current string</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Increment the current string</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$var</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
                 <td>
-</td>
-            </tr>
-            </table>
-
-            
-            
-            
-                            <h4>See also</h4>
-
-                    <table>
-                    <tr>
-                <td>self::decrypt()</td>
+                                            \self::decrypt()
+                                    </td>
                 <td></td>
             </tr>
                     <tr>
-                <td>self::encrypt()</td>
+                <td>
+                                            \self::encrypt()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -1983,24 +2364,32 @@ ie after setKey() or setIV()</p>
                     </div>
     </div>
 
-                <h3 id="method__setupInlineCrypt">
-        <div class="location">at line 883</div>
-        <code>            public            
-    <strong>_setupInlineCrypt</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__setupInlineCrypt">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Rijndael.php#L883">at line 883</a></div>
+        <code>                    
+    <strong>_setupInlineCrypt</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Setup the performance-optimized function for de/encrypt()</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Setup the performance-optimized function for de/encrypt()</p>                                                </div>
+                <div class="tags">
             
             
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>Crypt_Base::_setupInlineCrypt()</td>
+                <td>
+                                            <a href="Crypt_Base.html#method__setupInlineCrypt">
+Crypt_Base::_setupInlineCrypt</a>
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -2008,64 +2397,75 @@ ie after setKey() or setIV()</p>
                     </div>
     </div>
 
-                <h3 id="method__createInlineCryptFunction">
-        <div class="location">in <a href="Crypt_Base.html#method__createInlineCryptFunction"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 2204</div>
-        <code>            public            string
-    <strong>_createInlineCryptFunction</strong>(array $cipher_code)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__createInlineCryptFunction">
+        <div class="location">in <a href="Crypt_Base.html#method__createInlineCryptFunction">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L2204">at line 2204</a></div>
+        <code>                    string
+    <strong>_createInlineCryptFunction</strong>(array $cipher_code)
+        </code>
     </h3>
     <div class="details">
-        <p>Creates the performance-optimized function for en/decrypt()</p>
-        <p>Internally for phpseclib developers:</p>
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates the performance-optimized function for en/decrypt()</p>                    <p>Internally for phpseclib developers:</p>
 
 <p>_createInlineCryptFunction():</p>
 
 <ul>
 <li><p>merge the $cipher_code [setup'ed by _setupInlineCrypt()]
- with the current [$this->]mode of operation code</p></li>
+with the current [$this->]mode of operation code</p></li>
 <li><p>create the $inline function, which called by encrypt() / decrypt()
- as its replacement to speed up the en/decryption operations.</p></li>
+as its replacement to speed up the en/decryption operations.</p></li>
 <li><p>return the name of the created $inline callback function</p></li>
-<li><p>used to speed up en/decryption</p>
+<li><p>used to speed up en/decryption</p></li>
+</ul>
 
-<p>The main reason why can speed up things [up to 50%] this way are:</p></li>
+<p>The main reason why can speed up things [up to 50%] this way are:</p>
+
+<ul>
 <li><p>using variables more effective then regular.
- (ie no use of expensive arrays but integers $k<em>0, $k</em>1 ...
- or even, for example, the pure $key[] values hardcoded)</p></li>
+(ie no use of expensive arrays but integers $k_0, $k_1 ...
+or even, for example, the pure $key[] values hardcoded)</p></li>
 <li><p>avoiding 1000's of function calls of ie _encryptBlock()
- but inlining the crypt operations.
- in the mode of operation for() loop.</p></li>
+but inlining the crypt operations.
+in the mode of operation for() loop.</p></li>
 <li><p>full loop unroll the (sometimes key-dependent) rounds
- avoiding this way ++$i counters and runtime-if's etc...</p>
+avoiding this way ++$i counters and runtime-if's etc...</p></li>
+</ul>
 
 <p>The basic code architectur of the generated $inline en/decrypt()
 lambda function, in pseudo php, is:</p>
 
 <p><code>
 +----------------------------------------------------------------------------------------------+
-| callback $inline = create<em>function:                                                          |
-| lambda</em>function<em>0001</em>crypt<em>ECB($action, $text)                                               |
+| callback $inline = create_function:                                                          |
+| lambda_function_0001_crypt_ECB($action, $text)                                               |
 | {                                                                                            |
 |     INSERT PHP CODE OF:                                                                      |
-|     $cipher</em>code['init<em>crypt'];                  // general init code.                       |
+|     $cipher_code['init_crypt'];                  // general init code.                       |
 |                                                  // ie: $sbox'es declarations used for       |
 |                                                  //     encrypt and decrypt'ing.             |
 |                                                                                              |
 |     switch ($action) {                                                                       |
 |         case 'encrypt':                                                                      |
 |             INSERT PHP CODE OF:                                                              |
-|             $cipher</em>code['init<em>encrypt'];       // encrypt sepcific init code.               |
+|             $cipher_code['init_encrypt'];       // encrypt sepcific init code.               |
 |                                                    ie: specified $key or $box                |
 |                                                        declarations for encrypt'ing.         |
 |                                                                                              |
 |             foreach ($ciphertext) {                                                          |
-|                 $in = $block</em>size of $ciphertext;                                            |
+|                 $in = $block_size of $ciphertext;                                            |
 |                                                                                              |
 |                 INSERT PHP CODE OF:                                                          |
-|                 $cipher<em>code['encrypt</em>block'];  // encrypt's (string) $in, which is always:  |
-|                                                 // strlen($in) == $this->block<em>size          |
+|                 $cipher_code['encrypt_block'];  // encrypt's (string) $in, which is always:  |
+|                                                 // strlen($in) == $this->block_size          |
 |                                                 // here comes the cipher algorithm in action |
 |                                                 // for encryption.                           |
-|                                                 // $cipher</em>code['encrypt<em>block'] has to      |
+|                                                 // $cipher_code['encrypt_block'] has to      |
 |                                                 // encrypt the content of the $in variable   |
 |                                                                                              |
 |                 $plaintext .= $in;                                                           |
@@ -2074,18 +2474,18 @@ lambda function, in pseudo php, is:</p>
 |                                                                                              |
 |         case 'decrypt':                                                                      |
 |             INSERT PHP CODE OF:                                                              |
-|             $cipher</em>code['init<em>decrypt'];       // decrypt sepcific init code                |
+|             $cipher_code['init_decrypt'];       // decrypt sepcific init code                |
 |                                                    ie: specified $key or $box                |
 |                                                        declarations for decrypt'ing.         |
 |             foreach ($plaintext) {                                                           |
-|                 $in = $block</em>size of $plaintext;                                             |
+|                 $in = $block_size of $plaintext;                                             |
 |                                                                                              |
 |                 INSERT PHP CODE OF:                                                          |
-|                 $cipher<em>code['decrypt</em>block'];  // decrypt's (string) $in, which is always   |
-|                                                 // strlen($in) == $this->block<em>size          |
+|                 $cipher_code['decrypt_block'];  // decrypt's (string) $in, which is always   |
+|                                                 // strlen($in) == $this->block_size          |
 |                                                 // here comes the cipher algorithm in action |
 |                                                 // for decryption.                           |
-|                                                 // $cipher</em>code['decrypt_block'] has to      |
+|                                                 // $cipher_code['decrypt_block'] has to      |
 |                                                 // decrypt the content of the $in variable   |
 |                 $ciphertext .= $in;                                                          |
 |             }                                                                                |
@@ -2095,37 +2495,34 @@ lambda function, in pseudo php, is:</p>
 +----------------------------------------------------------------------------------------------+
 </code></p>
 
-<p>See also the Crypt<em>*::</em>setupInlineCrypt()'s for
+<p>See also the Crypt_*::_setupInlineCrypt()'s for
 productive inline $cipher_code's how they works.</p>
 
 <p>Structure of:
 <code>
-$cipher<em>code = array(
-   'init</em>crypt'    => (string) '', // optional
-   'init<em>encrypt'  => (string) '', // optional
-   'init</em>decrypt'  => (string) '', // optional
-   'encrypt<em>block' => (string) '', // required
-   'decrypt</em>block' => (string) ''  // required
+$cipher_code = array(
+    'init_crypt'    => (string) '', // optional
+    'init_encrypt'  => (string) '', // optional
+    'init_decrypt'  => (string) '', // optional
+    'encrypt_block' => (string) '', // required
+    'decrypt_block' => (string) ''  // required
 );
-</code></p></li>
-</ul>
-</p>
-        <div class="tags">
+</code></p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>array</td>
                 <td>$cipher_code</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
             <td>(the name of the created callback function)</td>
@@ -2136,17 +2533,23 @@ $cipher<em>code = array(
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::_setupInlineCrypt()</td>
+                <td>
+                                            \self::_setupInlineCrypt()
+                                    </td>
                 <td></td>
             </tr>
                     <tr>
-                <td>self::encrypt()</td>
+                <td>
+                                            \self::encrypt()
+                                    </td>
                 <td></td>
             </tr>
                     <tr>
-                <td>self::decrypt()</td>
+                <td>
+                                            \self::decrypt()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -2154,26 +2557,33 @@ $cipher<em>code = array(
                     </div>
     </div>
 
-                <h3 id="method__getLambdaFunctions">
-        <div class="location">in <a href="Crypt_Base.html#method__getLambdaFunctions"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 2576</div>
-        <code>            public            array
-    <strong>_getLambdaFunctions</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__getLambdaFunctions">
+        <div class="location">in <a href="Crypt_Base.html#method__getLambdaFunctions">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L2576">at line 2576</a></div>
+        <code>                    array
+    <strong>_getLambdaFunctions</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Holds the lambda_functions table (classwide)</p>
-        <p>Each name of the lambda function, created from
+            
+    
+
+                    <div class="method-description">
+                                    <p>Holds the lambda_functions table (classwide)</p>                    <p>Each name of the lambda function, created from
 _setupInlineCrypt() &amp;&amp; _createInlineCryptFunction()
 is stored, classwide (!), here for reusing.</p>
 
 <p>The string-based index of $function is a classwide
 unique value representing, at least, the $mode of
 operation (or more... depends of the optimizing level)
-for which $mode the lambda function was created.</p>
-        <div class="tags">
+for which $mode the lambda function was created.</p>                            </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>array</td>
             <td>&amp;$functions</td>
@@ -2185,35 +2595,39 @@ for which $mode the lambda function was created.</p>
                     </div>
     </div>
 
-                <h3 id="method__hashInlineCryptFunction">
-        <div class="location">in <a href="Crypt_Base.html#method__hashInlineCryptFunction"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 2590</div>
-        <code>            public            string
-    <strong>_hashInlineCryptFunction</strong>(<abbr title="$bytes">$bytes</abbr> $bytes)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__hashInlineCryptFunction">
+        <div class="location">in <a href="Crypt_Base.html#method__hashInlineCryptFunction">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L2590">at line 2590</a></div>
+        <code>                    string
+    <strong>_hashInlineCryptFunction</strong>($bytes)
+        </code>
     </h3>
     <div class="details">
-        <p>Generates a digest from $bytes</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Generates a digest from $bytes</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td><abbr title="$bytes">$bytes</abbr></td>
+                <td></td>
                 <td>$bytes</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -2221,9 +2635,11 @@ for which $mode the lambda function was created.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::_setupInlineCrypt()</td>
+                <td>
+                                            \self::_setupInlineCrypt()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -2231,34 +2647,39 @@ for which $mode the lambda function was created.</p>
                     </div>
     </div>
 
-                <h3 id="method_safe_intval">
-        <div class="location">in <a href="Crypt_Base.html#method_safe_intval"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 2626</div>
-        <code>            public            int
-    <strong>safe_intval</strong>(string $x)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_safe_intval">
+        <div class="location">in <a href="Crypt_Base.html#method_safe_intval">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L2626">at line 2626</a></div>
+        <code>                    int
+    <strong>safe_intval</strong>(string $x)
+        </code>
     </h3>
     <div class="details">
-        <p>Convert float to int</p>
-        <p>On 32-bit Linux installs running PHP &lt; 5.3 converting floats to ints doesn't always work</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert float to int</p>                    <p>On 32-bit Linux installs running PHP &lt; 5.3 converting floats to ints doesn't always work</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$x</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>int</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -2267,24 +2688,29 @@ for which $mode the lambda function was created.</p>
                     </div>
     </div>
 
-                <h3 id="method_safe_intval_inline">
-        <div class="location">in <a href="Crypt_Base.html#method_safe_intval_inline"><abbr title="Crypt_Base">Crypt_Base</abbr></a> at line 2646</div>
-        <code>            public            string
-    <strong>safe_intval_inline</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_safe_intval_inline">
+        <div class="location">in <a href="Crypt_Base.html#method_safe_intval_inline">
+Crypt_Base</a> <a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Base.php#L2646">at line 2646</a></div>
+        <code>                    string
+    <strong>safe_intval_inline</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>eval()'able string for in-line float to int</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>eval()'able string for in-line float to int</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -2293,24 +2719,29 @@ for which $mode the lambda function was created.</p>
                     </div>
     </div>
 
-                <h3 id="method_setBlockLength">
-        <div class="location">at line 336</div>
-        <code>            public            
-    <strong>setBlockLength</strong>(int $length)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBlockLength">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Rijndael.php#L336">at line 336</a></div>
+        <code>                    
+    <strong>setBlockLength</strong>(int $length)
+        </code>
     </h3>
     <div class="details">
-        <p>Sets the block length</p>
-        <p>Valid block lengths are 128, 160, 192, 224, and 256.  If the length is less than 128, it will be rounded up to
-128.  If the length is greater than 128 and invalid, it will be rounded down to the closest valid amount.</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the block length</p>                    <p>Valid block lengths are 128, 160, 192, 224, and 256.  If the length is less than 128, it will be rounded up to
+128.  If the length is greater than 128 and invalid, it will be rounded down to the closest valid amount.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$length</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -2320,47 +2751,109 @@ for which $mode the lambda function was created.</p>
                     </div>
     </div>
 
-                <h3 id="method__subWord">
-        <div class="location">at line 691</div>
-        <code>            public            
-    <strong>_subWord</strong>(int $word)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__subWord">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Rijndael.php#L691">at line 691</a></div>
+        <code>                    
+    <strong>_subWord</strong>(int $word)
+        </code>
     </h3>
     <div class="details">
-        <p>Performs S-Box substitutions</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Performs S-Box substitutions</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$word</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__getTables">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Rijndael.php#L713">at line 713</a></div>
+        <code>                    array
+    <strong>_getTables</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Provides the mixColumns and sboxes tables</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td>&amp;$tables</td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
                 <td>
-</td>
+                                            r
+                                    </td>
+                <td>y</td>
+            </tr>
+                    <tr>
+                <td>
+                                            r
+                                    </td>
+                <td>y</td>
+            </tr>
+                    <tr>
+                <td>
+                                            r
+                                    </td>
+                <td>y</td>
             </tr>
             </table>
 
-            
-            
-            
                     </div>
     </div>
 
-                <h3 id="method__getTables">
-        <div class="location">at line 713</div>
-        <code>            public            array
-    <strong>_getTables</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__getInvTables">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/Rijndael.php#L802">at line 802</a></div>
+        <code>                    array
+    <strong>_getInvTables</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Provides the mixColumns and sboxes tables</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Provides the inverse mixColumns and inverse sboxes tables</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>array</td>
             <td>&amp;$tables</td>
@@ -2371,70 +2864,38 @@ for which $mode the lambda function was created.</p>
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>Crypt_Rijndael:_encryptBlock()</td>
-                <td></td>
+                <td>
+                                            r
+                                    </td>
+                <td>y</td>
             </tr>
                     <tr>
-                <td>Crypt_Rijndael:_setupInlineCrypt()</td>
-                <td></td>
+                <td>
+                                            r
+                                    </td>
+                <td>y</td>
             </tr>
                     <tr>
-                <td>Crypt_Rijndael:_subWord()</td>
-                <td></td>
-            </tr>
-            </table>
-
-                    </div>
-    </div>
-
-                <h3 id="method__getInvTables">
-        <div class="location">at line 802</div>
-        <code>            public            array
-    <strong>_getInvTables</strong>()</code>
-    </h3>
-    <div class="details">
-        <p>Provides the inverse mixColumns and inverse sboxes tables</p>
-        <p>
-</p>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table>
-        <tr>
-            <td>array</td>
-            <td>&amp;$tables</td>
-        </tr>
-    </table>
-
-            
-            
-                            <h4>See also</h4>
-
-                    <table>
-                    <tr>
-                <td>Crypt_Rijndael:_decryptBlock()</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>Crypt_Rijndael:_setupInlineCrypt()</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>Crypt_Rijndael:_setupKey()</td>
-                <td></td>
+                <td>
+                                            r
+                                    </td>
+                <td>y</td>
             </tr>
             </table>
 
                     </div>
     </div>
+
+            </div>
+            </div>
 
     
-            </div>
-            <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
+
 </html>

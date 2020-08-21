@@ -1,70 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="robots" content="index, follow, all" />
-        <title>phpseclib\Net\SCP | phpseclib API Documentation</title>
-                    <link rel="stylesheet" type="text/css" href="../../stylesheet.css">
-                            </head>
-        <body id="class">
-            <div class="header">
-        <ul>
-            <li><a href="../../classes.html">Classes</a></li>
-                            <li><a href="../../namespaces.html">Namespaces</a></li>
-                        <li><a href="../../interfaces.html">Interfaces</a></li>
-            <li><a href="../../traits.html">Traits</a></li>
-            <li><a href="../../doc-index.html">Index</a></li>
-            
-        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>phpseclib\Net\SCP | phpseclib API Documentation</title>
 
-        <div id="title">phpseclib API Documentation</div>
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
 
-            <div class="type">Class</div>
-    <h1><a href="../../phpseclib/Net.html">phpseclib\Net</a>\SCP</h1>
+    <body id="class" data-name="class:phpseclib_Net_SCP" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select  class="form-control" id="version-switcher" name="version">
+                                            <option value="../../../1.0/index.html" data-version="1.0">1.0</option>
+                                            <option value="../../../2.0/index.html" data-version="2.0">2.0</option>
+                                            <option value="../../../3.0/index.html" data-version="3.0">3.0</option>
+                                            <option value="../../../master/index.html" data-version="master">master</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
     </div>
-        <div class="content">
-                <p>    class
-    <strong>SCP</strong></p>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">phpseclib API Documentation</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../phpseclib.html">phpseclib</a></li><li class="backslash">\</li><li><a href="../../phpseclib/Net.html">Net</a></li><li class="backslash">\</li><li>SCP</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            SCP
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>SCP</strong>        (<a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SCP.php">View source</a>)
+</p>
+
+        
+    
 
             <div class="description">
-            <p>Pure-PHP implementations of SCP.</p>
-            <p>
-</p>
-        </div>
+            <p>Pure-PHP implementations of SCP.</p>                                </div>
+    
     
             <h2>Constants</h2>
 
-            <table>
+            <table class="table table-condensed">
                     <tr>
                 <td>SOURCE_LOCAL_FILE</td>
                 <td class="last">
                     <p><em>Reads data from a local file.</em></p>
-                    <p>
-</p>
+                    <p></p>
                 </td>
             </tr>
                     <tr>
                 <td>SOURCE_STRING</td>
                 <td class="last">
                     <p><em>Reads data from a string.</em></p>
-                    <p>
-</p>
+                    <p></p>
                 </td>
             </tr>
                     <tr>
                 <td>MODE_SSH1</td>
                 <td class="last">
                     <p><em>SSH1 is being used.</em></p>
-                    <p>
-</p>
+                    <p></p>
                 </td>
             </tr>
                     <tr>
                 <td>MODE_SSH2</td>
                 <td class="last">
                     <p><em>SSH2 is being used.</em></p>
-                    <p>
-</p>
+                    <p></p>
                 </td>
             </tr>
             </table>
@@ -72,127 +129,134 @@
     
             <h2>Properties</h2>
 
-            <table>
+            <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_ssh">
-                                                            object
+                                                                                object
                 </td>
                 <td>$ssh</td>
                 <td class="last">SSH Object</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_packet_size">
-                                                            int
+                                                                                int
                 </td>
                 <td>$packet_size</td>
                 <td class="last">Packet Size</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_mode">
-                                                            int
+                                                                                int
                 </td>
                 <td>$mode</td>
                 <td class="last">Mode</td>
+                <td></td>
             </tr>
             </table>
 
     
             <h2>Methods</h2>
 
-            <table>
-                    <tr>
-                <td class="type">
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
                     <a href="../../phpseclib/Net/SCP.html"><abbr title="phpseclib\Net\SCP">SCP</abbr></a>
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___construct">__construct</a>(<a href="../../phpseclib/Net/SSH1.html"><abbr title="phpseclib\Net\SSH1">SSH1</abbr></a>|<a href="../../phpseclib/Net/SSH2.html"><abbr title="phpseclib\Net\SSH2">SSH2</abbr></a> $ssh)
-                    <p>Default Constructor.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Default Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_put">put</a>(string $remote_file, string $data, int $mode = self::SOURCE_STRING, callable $callback = null)
-                    <p>Uploads a file to the SCP server.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Uploads a file to the SCP server.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     mixed
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_get">get</a>(string $remote_file, string $local_file = false)
-                    <p>Downloads a file from the SCP server.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Downloads a file from the SCP server.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__send">_send</a>(string $data)
-                    <p>Sends a packet to an SSH server</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Sends a packet to an SSH server</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__receive">_receive</a>()
-                    <p>Receives a packet from an SSH server</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Receives a packet from an SSH server</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__close">_close</a>()
-                    <p>Closes the connection to an SSH server</p>
-                </td>
-                <td></td>
-            </tr>
-            </table>
+        
+                                            <p>Closes the connection to an SSH server</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">at line 106</div>
-        <code>            public            <a href="../../phpseclib/Net/SCP.html"><abbr title="phpseclib\Net\SCP">SCP</abbr></a>
-    <strong>__construct</strong>(<a href="../../phpseclib/Net/SSH1.html"><abbr title="phpseclib\Net\SSH1">SSH1</abbr></a>|<a href="../../phpseclib/Net/SSH2.html"><abbr title="phpseclib\Net\SSH2">SSH2</abbr></a> $ssh)</code>
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SCP.php#L106">at line 106</a></div>
+        <code>                    <a href="../../phpseclib/Net/SCP.html"><abbr title="phpseclib\Net\SCP">SCP</abbr></a>
+    <strong>__construct</strong>(<a href="../../phpseclib/Net/SSH1.html"><abbr title="phpseclib\Net\SSH1">SSH1</abbr></a>|<a href="../../phpseclib/Net/SSH2.html"><abbr title="phpseclib\Net\SSH2">SSH2</abbr></a> $ssh)
+        </code>
     </h3>
     <div class="details">
-        <p>Default Constructor.</p>
-        <p>Connects to an SSH server</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Default Constructor.</p>                    <p>Connects to an SSH server</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td><a href="../../phpseclib/Net/SSH1.html"><abbr title="phpseclib\Net\SSH1">SSH1</abbr></a>|<a href="../../phpseclib/Net/SSH2.html"><abbr title="phpseclib\Net\SSH2">SSH2</abbr></a></td>
                 <td>$ssh</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td><a href="../../phpseclib/Net/SCP.html"><abbr title="phpseclib\Net\SCP">SCP</abbr></a></td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -201,61 +265,62 @@
                     </div>
     </div>
 
-                <h3 id="method_put">
-        <div class="location">at line 141</div>
-        <code>            public            bool
-    <strong>put</strong>(string $remote_file, string $data, int $mode = self::SOURCE_STRING, callable $callback = null)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_put">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SCP.php#L141">at line 141</a></div>
+        <code>                    bool
+    <strong>put</strong>(string $remote_file, string $data, int $mode = self::SOURCE_STRING, callable $callback = null)
+        </code>
     </h3>
     <div class="details">
-        <p>Uploads a file to the SCP server.</p>
-        <p>By default, \phpseclib\Net\SCP::put() does not read from the local filesystem.  $data is dumped directly into $remote_file.
+            
+    
+
+                    <div class="method-description">
+                                    <p>Uploads a file to the SCP server.</p>                    <p>By default, \phpseclib\Net\SCP::put() does not read from the local filesystem.  $data is dumped directly into $remote_file.
 So, for example, if you set $data to 'filename.ext' and then do \phpseclib\Net\SCP::get(), you will get a file, twelve bytes
 long, containing 'filename.ext' as its contents.</p>
 
-<p>Setting $mode to self::SOURCE<em>LOCAL</em>FILE will change the above behavior.  With self::SOURCE<em>LOCAL</em>FILE, $remote<em>file will
+<p>Setting $mode to self::SOURCE_LOCAL_FILE will change the above behavior.  With self::SOURCE_LOCAL_FILE, $remote_file will
 contain as many bytes as filename.ext does on your local filesystem.  If your filename.ext is 1MB then that is how
-large $remote</em>file will be, as well.</p>
+large $remote_file will be, as well.</p>
 
 <p>Currently, only binary mode is supported.  As such, if the line endings need to be adjusted, you will need to take
-care of that, yourself.</p>
-        <div class="tags">
+care of that, yourself.</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$remote_file</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$data</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$mode</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>callable</td>
                 <td>$callback</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>bool</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -264,42 +329,45 @@ care of that, yourself.</p>
                     </div>
     </div>
 
-                <h3 id="method_get">
-        <div class="location">at line 220</div>
-        <code>            public            mixed
-    <strong>get</strong>(string $remote_file, string $local_file = false)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SCP.php#L220">at line 220</a></div>
+        <code>                    mixed
+    <strong>get</strong>(string $remote_file, string $local_file = false)
+        </code>
     </h3>
     <div class="details">
-        <p>Downloads a file from the SCP server.</p>
-        <p>Returns a string containing the contents of $remote<em>file if $local</em>file is left undefined or a boolean false if
+            
+    
+
+                    <div class="method-description">
+                                    <p>Downloads a file from the SCP server.</p>                    <p>Returns a string containing the contents of $remote_file if $local_file is left undefined or a boolean false if
 the operation was unsuccessful.  If $local_file is defined, returns true or false depending on the success of the
-operation</p>
-        <div class="tags">
+operation</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$remote_file</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$local_file</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>mixed</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -308,24 +376,28 @@ operation</p>
                     </div>
     </div>
 
-                <h3 id="method__send">
-        <div class="location">at line 276</div>
-        <code>            public            
-    <strong>_send</strong>(string $data)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__send">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SCP.php#L276">at line 276</a></div>
+        <code>                    
+    <strong>_send</strong>(string $data)
+        </code>
     </h3>
     <div class="details">
-        <p>Sends a packet to an SSH server</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sends a packet to an SSH server</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$data</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -335,24 +407,28 @@ operation</p>
                     </div>
     </div>
 
-                <h3 id="method__receive">
-        <div class="location">at line 294</div>
-        <code>            public            string
-    <strong>_receive</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__receive">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SCP.php#L294">at line 294</a></div>
+        <code>                    string
+    <strong>_receive</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Receives a packet from an SSH server</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Receives a packet from an SSH server</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -361,26 +437,35 @@ operation</p>
                     </div>
     </div>
 
-                <h3 id="method__close">
-        <div class="location">at line 332</div>
-        <code>            public            
-    <strong>_close</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__close">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SCP.php#L332">at line 332</a></div>
+        <code>                    
+    <strong>_close</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Closes the connection to an SSH server</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Closes the connection to an SSH server</p>                                                </div>
+                <div class="tags">
             
             
             
                     </div>
     </div>
 
-    
             </div>
-            <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
+
 </html>

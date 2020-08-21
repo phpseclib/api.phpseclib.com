@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>phpseclib3\System\SSH\Agent\Identity | phpseclib API Documentation</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
+
+    <body id="class" data-name="class:phpseclib3_System_SSH_Agent_Identity" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select  class="form-control" id="version-switcher" name="version">
+                                            <option value="../../../../../1.0/index.html" data-version="1.0">1.0</option>
+                                            <option value="../../../../../2.0/index.html" data-version="2.0">2.0</option>
+                                            <option value="../../../../../3.0/index.html" data-version="3.0">3.0</option>
+                                            <option value="../../../../../master/index.html" data-version="master">master</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">phpseclib API Documentation</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../phpseclib3.html">phpseclib3</a></li><li class="backslash">\</li><li><a href="../../../../phpseclib3/System.html">System</a></li><li class="backslash">\</li><li><a href="../../../../phpseclib3/System/SSH.html">SSH</a></li><li class="backslash">\</li><li><a href="../../../../phpseclib3/System/SSH/Agent.html">Agent</a></li><li class="backslash">\</li><li>Identity</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Identity
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Identity</strong>        implements
+        <a href="../../../../phpseclib3/Crypt/Common/PrivateKey.html"><abbr title="phpseclib3\Crypt\Common\PrivateKey">PrivateKey</abbr></a>        (<a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Pure-PHP ssh-agent client identity object</p>            <p>Instantiation should only be performed by \phpseclib3\System\SSH\Agent class.
+This could be thought of as implementing an interface that phpseclib3\Crypt\RSA
+implements. ie. maybe a Net_SSH_Auth_PublicKey interface or something.
+The methods in this interface would be getPublicKey and sign since those are the
+methods phpseclib looks for to perform public key authentication.</p>                    </div>
+    
+            <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../phpseclib3/System/SSH/Common/Traits/ReadBytes.html"><abbr title="phpseclib3\System\SSH\Common\Traits\ReadBytes">ReadBytes</abbr></a>    </div>
+                <div class="col-md-6">ReadBytes trait</div>
+            </div>
+            </div>
+    
+            <h2>Constants</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td>SSH_AGENT_RSA2_256</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>SSH_AGENT_RSA2_512</td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_readBytes">readBytes</a>($length)
+        
+                                            <p>Read data</p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../phpseclib3/System/SSH/Common/Traits/ReadBytes.html#method_readBytes">
+<abbr title="phpseclib3\System\SSH\Common\Traits\ReadBytes">ReadBytes</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../phpseclib3/System/SSH/Agent/Identity.html"><abbr title="phpseclib3\System\SSH\Agent\Identity">Identity</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(resource $fsock)
+        
+                                            <p>Default Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withPublicKey">withPublicKey</a>(<a href="../../../../phpseclib3/Crypt/Common/PublicKey.html"><abbr title="phpseclib3\Crypt\Common\PublicKey">PublicKey</abbr></a> $key)
+        
+                                            <p>Set Public Key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withPublicKeyBlob">withPublicKeyBlob</a>(string $key_blob)
+        
+                                            <p>Set Public Key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPublicKey">getPublicKey</a>(string $type = &#039;PKCS8&#039;)
+        
+                                            <p>Get Public Key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withHash">withHash</a>(string $hash)
+        
+                                            <p>Sets the hash</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withPadding">withPadding</a>(string $padding)
+        
+                                            <p>Sets the padding</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withSignatureFormat">withSignatureFormat</a>($format)
+        
+                                            <p>Determines the signature padding mode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCurve">getCurve</a>()
+        
+                                            <p>Returns the curve</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_sign">sign</a>($message)
+        
+                                            <p>Create a signature</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toString">toString</a>($type, array $options = [])
+        
+                                            <p>Returns the private key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_withPassword">withPassword</a>(string|bool $password = false)
+        
+                                            <p>Sets the password</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_readBytes">
+        <div class="location">in <a href="../../../../phpseclib3/System/SSH/Common/Traits/ReadBytes.html#method_readBytes">
+<abbr title="phpseclib3\System\SSH\Common\Traits\ReadBytes">ReadBytes</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Common/Traits/ReadBytes.php#L35">at line 35</a></div>
+        <code>                    string
+    <strong>readBytes</strong>($length)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Read data</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td>Data from SSH Agent</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td>on connection errors</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L112">at line 112</a></div>
+        <code>                    <a href="../../../../phpseclib3/System/SSH/Agent/Identity.html"><abbr title="phpseclib3\System\SSH\Agent\Identity">Identity</abbr></a>
+    <strong>__construct</strong>(resource $fsock)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Default Constructor.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>resource</td>
+                <td>$fsock</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../phpseclib3/System/SSH/Agent/Identity.html"><abbr title="phpseclib3\System\SSH\Agent\Identity">Identity</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withPublicKey">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L125">at line 125</a></div>
+        <code>                    
+    <strong>withPublicKey</strong>(<a href="../../../../phpseclib3/Crypt/Common/PublicKey.html"><abbr title="phpseclib3\Crypt\Common\PublicKey">PublicKey</abbr></a> $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Public Key</p>                    <p>Called by \phpseclib3\System\SSH\Agent::requestIdentities()</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../phpseclib3/Crypt/Common/PublicKey.html"><abbr title="phpseclib3\Crypt\Common\PublicKey">PublicKey</abbr></a></td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withPublicKeyBlob">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L147">at line 147</a></div>
+        <code>                    
+    <strong>withPublicKeyBlob</strong>(string $key_blob)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set Public Key</p>                    <p>Called by \phpseclib3\System\SSH\Agent::requestIdentities(). The key blob could be extracted from $this->key
+but this saves a small amount of computation.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key_blob</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPublicKey">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L163">at line 163</a></div>
+        <code>                    
+    <strong>getPublicKey</strong>(string $type = &#039;PKCS8&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get Public Key</p>                    <p>Wrapper for $this->key->getPublicKey()</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withHash">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L174">at line 174</a></div>
+        <code>                    
+    <strong>withHash</strong>(string $hash)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the hash</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$hash</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withPadding">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L228">at line 228</a></div>
+        <code>                    
+    <strong>withPadding</strong>(string $padding)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the padding</p>                    <p>Only PKCS1 padding is supported</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$padding</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withSignatureFormat">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L247">at line 247</a></div>
+        <code>                    
+    <strong>withSignatureFormat</strong>($format)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Determines the signature padding mode</p>                    <p>Valid values are: ASN1, SSH2, Raw</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$format</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCurve">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L267">at line 267</a></div>
+        <code>                    string|array
+    <strong>getCurve</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the curve</p>                    <p>Returns a string if it's a named curve, an array if not</p>                            </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_sign">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L288">at line 288</a></div>
+        <code>                    
+    <strong>sign</strong>($message)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a signature</p>                    <p>See "2.6.2 Protocol 2 private key signature request"</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/RuntimeException">RuntimeException</a></td>
+                <td>on connection errors</td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../phpseclib3/Exception/UnsupportedAlgorithmException.html"><abbr title="phpseclib3\Exception\UnsupportedAlgorithmException">UnsupportedAlgorithmException</abbr></a></td>
+                <td>if the algorithm is unsupported</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toString">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L327">at line 327</a></div>
+        <code>                    
+    <strong>toString</strong>($type, array $options = [])
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the private key</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_withPassword">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L338">at line 338</a></div>
+        <code>                    
+    <strong>withPassword</strong>(string|bool $password = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the password</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|bool</td>
+                <td>$password</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
+    </div>
+    </body>
+
+</html>

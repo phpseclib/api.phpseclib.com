@@ -1,291 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="robots" content="index, follow, all" />
-        <title>File_ANSI | phpseclib API Documentation</title>
-                    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-                            </head>
-        <body id="class">
-            <div class="header">
-        <ul>
-            <li><a href="classes.html">Classes</a></li>
-                        <li><a href="interfaces.html">Interfaces</a></li>
-            <li><a href="traits.html">Traits</a></li>
-            <li><a href="doc-index.html">Index</a></li>
-            
-        </ul>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>File_ANSI | phpseclib API Documentation</title>
 
-        <div id="title">phpseclib API Documentation</div>
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
 
-            <div class="type">Class</div>
-    <h1><a href=".html"></a>File_ANSI</h1>
+    <body id="class" data-name="class:File_ANSI" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select  class="form-control" id="version-switcher" name="version">
+                                            <option value="../1.0/index.html" data-version="1.0">1.0</option>
+                                            <option value="../2.0/index.html" data-version="2.0">2.0</option>
+                                            <option value="../3.0/index.html" data-version="3.0">3.0</option>
+                                            <option value="../master/index.html" data-version="master">master</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
     </div>
-        <div class="content">
-                <p>    class
-    <strong>File_ANSI</strong></p>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">phpseclib API Documentation</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            File_ANSI
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>File_ANSI</strong>        (<a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ANSI.php">View source</a>)
+</p>
+
+        
+    
 
             <div class="description">
-            <p>Pure-PHP ANSI Decoder</p>
-            <p>
-</p>
-        </div>
+            <p>Pure-PHP ANSI Decoder</p>                                </div>
+    
     
     
             <h2>Properties</h2>
 
-            <table>
+            <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_max_x">
-                                                            int
+                                                                                int
                 </td>
                 <td>$max_x</td>
                 <td class="last">Max Width</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_max_y">
-                                                            int
+                                                                                int
                 </td>
                 <td>$max_y</td>
                 <td class="last">Max Height</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_max_history">
-                                                            int
+                                                                                int
                 </td>
                 <td>$max_history</td>
                 <td class="last">Max History</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_history">
-                                                            array
+                                                                                array
                 </td>
                 <td>$history</td>
                 <td class="last">History</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_history_attrs">
-                                                            array
+                                                                                array
                 </td>
                 <td>$history_attrs</td>
                 <td class="last">History Attributes</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_x">
-                                                            int
+                                                                                int
                 </td>
                 <td>$x</td>
                 <td class="last">Current Column</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_y">
-                                                            int
+                                                                                int
                 </td>
                 <td>$y</td>
                 <td class="last">Current Row</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_old_x">
-                                                            int
+                                                                                int
                 </td>
                 <td>$old_x</td>
                 <td class="last">Old Column</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_old_y">
-                                                            int
+                                                                                int
                 </td>
                 <td>$old_y</td>
                 <td class="last">Old Row</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_base_attr_cell">
-                                                            object
+                                                                                object
                 </td>
                 <td>$base_attr_cell</td>
                 <td class="last">An empty attribute cell</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_attr_cell">
-                                                            object
+                                                                                object
                 </td>
                 <td>$attr_cell</td>
                 <td class="last">The current attribute cell</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_attr_row">
-                                                            array
+                                                                                array
                 </td>
                 <td>$attr_row</td>
                 <td class="last">An empty attribute row</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_screen">
-                                                            array
+                                                                                array
                 </td>
                 <td>$screen</td>
                 <td class="last">The current screen text</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_attrs">
-                                                            array
+                                                                                array
                 </td>
                 <td>$attrs</td>
                 <td class="last">The current screen attributes</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_ansi">
-                                                            string
+                                                                                string
                 </td>
                 <td>$ansi</td>
                 <td class="last">Current ANSI code</td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_tokenization">
-                                                            array
+                                                                                array
                 </td>
                 <td>$tokenization</td>
                 <td class="last">Tokenization</td>
+                <td></td>
             </tr>
             </table>
 
     
             <h2>Methods</h2>
 
-            <table>
-                    <tr>
-                <td class="type">
-                    <a href="File_ANSI.html"><abbr title="File_ANSI">File_ANSI</abbr></a>
-                </td>
-                <td class="last">
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="File_ANSI.html">File_ANSI</a>
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method___construct">__construct</a>()
-                    <p>Default Constructor.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Default Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_File_ANSI">File_ANSI</a>()
-                    <p>PHP4 compatible Default Constructor.</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>PHP4 compatible Default Constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setDimensions">setDimensions</a>(int $x, int $y)
-                    <p>Set terminal width and height</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Set terminal width and height</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_setHistory">setHistory</a>($history)
-                    <p>Set the number of lines that should be logged past the terminal height</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Set the number of lines that should be logged past the terminal height</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_loadString">loadString</a>(string $source)
-                    <p>Load a string</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Load a string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_appendString">appendString</a>(string $source)
-                    <p>Appdend a string</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Appdend a string</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__newLine">_newLine</a>()
-                    <p>Add a new line</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Add a new line</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__processCoordinate">_processCoordinate</a>($last_attr, $cur_attr, $char)
-                    <p>Returns the current coordinate without preformating</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Returns the current coordinate without preformating</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__getScreen">_getScreen</a>()
-                    <p>Returns the current screen without preformating</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Returns the current screen without preformating</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getScreen">getScreen</a>()
-                    <p>Returns the current screen</p>
-                </td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td class="type">
+        
+                                            <p>Returns the current screen</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     string
-                </td>
-                <td class="last">
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method_getHistory">getHistory</a>()
-                    <p>Returns the current screen and the x previous lines</p>
-                </td>
-                <td></td>
-            </tr>
-            </table>
+        
+                                            <p>Returns the current screen and the x previous lines</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
 
 
         <h2>Details</h2>
 
-                        <h3 id="method___construct">
-        <div class="location">at line 182</div>
-        <code>            public            <a href="File_ANSI.html"><abbr title="File_ANSI">File_ANSI</abbr></a>
-    <strong>__construct</strong>()</code>
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ANSI.php#L182">at line 182</a></div>
+        <code>                    <a href="File_ANSI.html">File_ANSI</a>
+    <strong>__construct</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Default Constructor.</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Default Constructor.</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
-            <td><a href="File_ANSI.html"><abbr title="File_ANSI">File_ANSI</abbr></a></td>
-            <td>
-</td>
+            <td><a href="File_ANSI.html">File_ANSI</a></td>
+            <td></td>
         </tr>
     </table>
 
@@ -294,24 +369,31 @@
                     </div>
     </div>
 
-                <h3 id="method_File_ANSI">
-        <div class="location">at line 204</div>
-        <code>            public            
-    <strong>File_ANSI</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_File_ANSI">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ANSI.php#L204">at line 204</a></div>
+        <code>                    
+    <strong>File_ANSI</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>PHP4 compatible Default Constructor.</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>PHP4 compatible Default Constructor.</p>                                                </div>
+                <div class="tags">
             
             
             
                             <h4>See also</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
-                <td>self::__construct()</td>
+                <td>
+                                            \self::__construct()
+                                    </td>
                 <td></td>
             </tr>
             </table>
@@ -319,29 +401,33 @@
                     </div>
     </div>
 
-                <h3 id="method_setDimensions">
-        <div class="location">at line 218</div>
-        <code>            public            
-    <strong>setDimensions</strong>(int $x, int $y)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setDimensions">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ANSI.php#L218">at line 218</a></div>
+        <code>                    
+    <strong>setDimensions</strong>(int $x, int $y)
+        </code>
     </h3>
     <div class="details">
-        <p>Set terminal width and height</p>
-        <p>Resets the screen as well</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set terminal width and height</p>                    <p>Resets the screen as well</p>                            </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>int</td>
                 <td>$x</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$y</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -351,24 +437,28 @@
                     </div>
     </div>
 
-                <h3 id="method_setHistory">
-        <div class="location">at line 237</div>
-        <code>            public            
-    <strong>setHistory</strong>($history)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setHistory">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ANSI.php#L237">at line 237</a></div>
+        <code>                    
+    <strong>setHistory</strong>($history)
+        </code>
     </h3>
     <div class="details">
-        <p>Set the number of lines that should be logged past the terminal height</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the number of lines that should be logged past the terminal height</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td></td>
                 <td>$history</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -378,24 +468,28 @@
                     </div>
     </div>
 
-                <h3 id="method_loadString">
-        <div class="location">at line 248</div>
-        <code>            public            
-    <strong>loadString</strong>(string $source)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadString">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ANSI.php#L248">at line 248</a></div>
+        <code>                    
+    <strong>loadString</strong>(string $source)
+        </code>
     </h3>
     <div class="details">
-        <p>Load a string</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Load a string</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$source</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -405,24 +499,28 @@
                     </div>
     </div>
 
-                <h3 id="method_appendString">
-        <div class="location">at line 260</div>
-        <code>            public            
-    <strong>appendString</strong>(string $source)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendString">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ANSI.php#L260">at line 260</a></div>
+        <code>                    
+    <strong>appendString</strong>(string $source)
+        </code>
     </h3>
     <div class="details">
-        <p>Appdend a string</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Appdend a string</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td>string</td>
                 <td>$source</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
@@ -432,62 +530,69 @@
                     </div>
     </div>
 
-                <h3 id="method__newLine">
-        <div class="location">at line 464</div>
-        <code>            public            
-    <strong>_newLine</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__newLine">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ANSI.php#L464">at line 464</a></div>
+        <code>                    
+    <strong>_newLine</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Add a new line</p>
-        <p>Also update the $this->screen and $this->history buffers</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add a new line</p>                    <p>Also update the $this->screen and $this->history buffers</p>                            </div>
+                <div class="tags">
             
             
             
                     </div>
     </div>
 
-                <h3 id="method__processCoordinate">
-        <div class="location">at line 493</div>
-        <code>            public            string
-    <strong>_processCoordinate</strong>($last_attr, $cur_attr, $char)</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__processCoordinate">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ANSI.php#L493">at line 493</a></div>
+        <code>                    string
+    <strong>_processCoordinate</strong>($last_attr, $cur_attr, $char)
+        </code>
     </h3>
     <div class="details">
-        <p>Returns the current coordinate without preformating</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the current coordinate without preformating</p>                                                </div>
+                <div class="tags">
                             <h4>Parameters</h4>
 
-                    <table>
+                    <table class="table table-condensed">
                     <tr>
                 <td></td>
                 <td>$last_attr</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td></td>
                 <td>$cur_attr</td>
-                <td>
-</td>
+                <td></td>
             </tr>
                     <tr>
                 <td></td>
                 <td>$char</td>
-                <td>
-</td>
+                <td></td>
             </tr>
             </table>
 
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -496,24 +601,28 @@
                     </div>
     </div>
 
-                <h3 id="method__getScreen">
-        <div class="location">at line 550</div>
-        <code>            public            string
-    <strong>_getScreen</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__getScreen">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ANSI.php#L550">at line 550</a></div>
+        <code>                    string
+    <strong>_getScreen</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Returns the current screen without preformating</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the current screen without preformating</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -522,24 +631,28 @@
                     </div>
     </div>
 
-                <h3 id="method_getScreen">
-        <div class="location">at line 574</div>
-        <code>            public            string
-    <strong>getScreen</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getScreen">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ANSI.php#L574">at line 574</a></div>
+        <code>                    string
+    <strong>getScreen</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Returns the current screen</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the current screen</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -548,24 +661,28 @@
                     </div>
     </div>
 
-                <h3 id="method_getHistory">
-        <div class="location">at line 585</div>
-        <code>            public            string
-    <strong>getHistory</strong>()</code>
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHistory">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ANSI.php#L585">at line 585</a></div>
+        <code>                    string
+    <strong>getHistory</strong>()
+        </code>
     </h3>
     <div class="details">
-        <p>Returns the current screen and the x previous lines</p>
-        <p>
-</p>
-        <div class="tags">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the current screen and the x previous lines</p>                                                </div>
+                <div class="tags">
             
                             <h4>Return Value</h4>
 
-                    <table>
+                    <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td>
-</td>
+            <td></td>
         </tr>
     </table>
 
@@ -573,11 +690,15 @@
             
                     </div>
     </div>
+
+            </div>
+            </div>
 
     
-            </div>
-            <div id="footer">
-        Generated by <a href="http://sami.sensiolabs.org/" target="_top">Sami, the API Documentation Generator</a>.
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
     </div>
     </body>
+
 </html>

@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>phpseclib3\Crypt\EC\BaseCurves\Base | phpseclib API Documentation</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
+
+    <body id="class" data-name="class:phpseclib3_Crypt_EC_BaseCurves_Base" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                    <form action="#">
+                <select  class="form-control" id="version-switcher" name="version">
+                                            <option value="../../../../../1.0/index.html" data-version="1.0">1.0</option>
+                                            <option value="../../../../../2.0/index.html" data-version="2.0">2.0</option>
+                                            <option value="../../../../../3.0/index.html" data-version="3.0">3.0</option>
+                                            <option value="../../../../../master/index.html" data-version="master">master</option>
+                                    </select>
+            </form>
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">phpseclib API Documentation</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../phpseclib3.html">phpseclib3</a></li><li class="backslash">\</li><li><a href="../../../../phpseclib3/Crypt.html">Crypt</a></li><li class="backslash">\</li><li><a href="../../../../phpseclib3/Crypt/EC.html">EC</a></li><li class="backslash">\</li><li><a href="../../../../phpseclib3/Crypt/EC/BaseCurves.html">BaseCurves</a></li><li class="backslash">\</li><li>Base</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Base
+                
+        </h1>
+    </div>
+
+    <p>abstract     class
+    <strong>Base</strong>        (<a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Base</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_doubles">
+                                        protected                                        object[]
+                </td>
+                <td>$doubles</td>
+                <td class="last">Doubles</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_order">
+                                        protected                                        BigInteger
+                </td>
+                <td>$order</td>
+                <td class="last">The Order</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_factory">
+                                        protected                                        <abbr title="phpseclib3\Math\FiniteField\Integer">Integer</abbr>
+                </td>
+                <td>$factory</td>
+                <td class="last">Finite Field Integer factory</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_randomInteger">randomInteger</a>()
+        
+                                            <p>Returns a random integer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertInteger">convertInteger</a>(<a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x)
+        
+                                            <p>Converts a BigInteger to a FiniteField integer</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLengthInBytes">getLengthInBytes</a>()
+        
+                                            <p>Returns the length, in bytes, of the modulo</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getLength">getLength</a>()
+        
+                                            <p>Returns the length, in bits, of the modulo</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_multiplyPoint">multiplyPoint</a>(array $p, <a href="../../../../phpseclib3/Math/Common/FiniteField/Integer.html"><abbr title="phpseclib3\Math\Common\FiniteField\Integer">Integer</abbr></a> $d)
+        
+                                            <p>Multiply a point on the curve by a scalar</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    FiniteField
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createRandomMultiplier">createRandomMultiplier</a>()
+        
+                                            <p>Creates a random scalar multiplier</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOrder">setOrder</a>(<a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $order)
+        
+                                            <p>Sets the Order</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getOrder">getOrder</a>()
+        
+                                            <p>Returns the Order</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setReduction">setReduction</a>(callable $func)
+        
+                                            <p>Use a custom defined modular reduction function</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertToAffine">convertToAffine</a>(array $p)
+        
+                                            <p>Returns the affine point</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertToInternal">convertToInternal</a>(array $p)
+        
+                                            <p>Converts an affine point to a jacobian coordinate</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    object[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_negatePoint">negatePoint</a>(array $p)
+        
+                                            <p>Negates a point</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int[]
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_multiplyAddPoints">multiplyAddPoints</a>(array $points, array $scalars)
+        
+                                            <p>Multiply and Add Points</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_randomInteger">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L63">at line 63</a></div>
+        <code>                    object
+    <strong>randomInteger</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a random integer</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertInteger">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L73">at line 73</a></div>
+        <code>                    object
+    <strong>convertInteger</strong>(<a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts a BigInteger to a FiniteField integer</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$x</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLengthInBytes">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L83">at line 83</a></div>
+        <code>                    int
+    <strong>getLengthInBytes</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the length, in bytes, of the modulo</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLength">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L93">at line 93</a></div>
+        <code>                    int
+    <strong>getLength</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the length, in bits, of the modulo</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_multiplyPoint">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L108">at line 108</a></div>
+        <code>                    array
+    <strong>multiplyPoint</strong>(array $p, <a href="../../../../phpseclib3/Math/Common/FiniteField/Integer.html"><abbr title="phpseclib3\Math\Common\FiniteField\Integer">Integer</abbr></a> $d)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Multiply a point on the curve by a scalar</p>                    <p>Uses the montgomery ladder technique as described here:</p>
+
+<p>https://en.wikipedia.org/wiki/Elliptic_curve_point_multiplication#Montgomery_ladder
+https://github.com/phpecc/phpecc/issues/16#issuecomment-59176772</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$p</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../phpseclib3/Math/Common/FiniteField/Integer.html"><abbr title="phpseclib3\Math\Common\FiniteField\Integer">Integer</abbr></a></td>
+                <td>$d</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createRandomMultiplier">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L130">at line 130</a></div>
+        <code>                    FiniteField
+    <strong>createRandomMultiplier</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates a random scalar multiplier</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>FiniteField</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setOrder">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L144">at line 144</a></div>
+        <code>                    
+    <strong>setOrder</strong>(<a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $order)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the Order</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a></td>
+                <td>$order</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getOrder">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L154">at line 154</a></div>
+        <code>                    <a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
+    <strong>getOrder</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the Order</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setReduction">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L164">at line 164</a></div>
+        <code>                    object
+    <strong>setReduction</strong>(callable $func)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Use a custom defined modular reduction function</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$func</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertToAffine">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L174">at line 174</a></div>
+        <code>                    object[]
+    <strong>convertToAffine</strong>(array $p)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the affine point</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$p</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertToInternal">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L184">at line 184</a></div>
+        <code>                    object[]
+    <strong>convertToInternal</strong>(array $p)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts an affine point to a jacobian coordinate</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$p</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_negatePoint">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L194">at line 194</a></div>
+        <code>                    object[]
+    <strong>negatePoint</strong>(array $p)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Negates a point</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$p</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>object[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_multiplyAddPoints">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/EC/BaseCurves/Base.php#L211">at line 211</a></div>
+        <code>                    int[]
+    <strong>multiplyAddPoints</strong>(array $points, array $scalars)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Multiply and Add Points</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$points</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$scalars</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int[]</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.
+    </div></div>
+    </div>
+    </body>
+
+</html>
