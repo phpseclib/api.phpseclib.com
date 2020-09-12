@@ -469,7 +469,7 @@ function callback($length) returns string to proceed, null for EOF</em></p>
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_login">login</a>($username, ...$args)
+                    <a href="#method_login">login</a>(string $username, string[] ...$args)
         
                                             <p>Login</p>                </div>
                 <div class="col-md-2"></div>
@@ -479,7 +479,7 @@ function callback($length) returns string to proceed, null for EOF</em></p>
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_sublogin">sublogin</a>($username, ...$args)
+                    <a href="#method_sublogin">sublogin</a>(string $username, string[] ...$args)
         
                                             <p>Login Helper</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../phpseclib3/Net/SSH2.html#method_sublogin">
@@ -774,7 +774,7 @@ function callback($length) returns string to proceed, null for EOF</em></p>
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_define_array">define_array</a>(...$args)
+                    <a href="#method_define_array">define_array</a>(array ...$args)
         
                                             <p>Define Array</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../phpseclib3/Net/SSH2.html#method_define_array">
@@ -1161,7 +1161,7 @@ function callback($length) returns string to proceed, null for EOF</em></p>
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setListOrder">setListOrder</a>(...$args)
+                    <a href="#method_setListOrder">setListOrder</a>(string[] ...$args)
         
                                             <p>Defines how nlist() and rawlist() will be sorted - if at all.</p>                </div>
                 <div class="col-md-2"></div>
@@ -1715,7 +1715,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
                     <h3 id="method_login">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L428">at line 428</a></div>
         <code>                    bool
-    <strong>login</strong>($username, ...$args)
+    <strong>login</strong>(string $username, string[] ...$args)
         </code>
     </h3>
     <div class="details">
@@ -1729,12 +1729,12 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$username</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string[]</td>
                 <td>...$args</td>
                 <td></td>
             </tr>
@@ -1770,7 +1770,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
         <div class="location">in <a href="../../phpseclib3/Net/SSH2.html#method_sublogin">
 <abbr title="phpseclib3\Net\SSH2">SSH2</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SSH2.php#L2072">at line 2072</a></div>
         <code>            protected        bool
-    <strong>sublogin</strong>($username, ...$args)
+    <strong>sublogin</strong>(string $username, string[] ...$args)
         </code>
     </h3>
     <div class="details">
@@ -1784,12 +1784,12 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$username</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string[]</td>
                 <td>...$args</td>
                 <td></td>
             </tr>
@@ -2374,7 +2374,7 @@ disconnect().</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_reset_connection">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L2899">at line 2899</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L2900">at line 2900</a></div>
         <code>            protected        
     <strong>reset_connection</strong>(int $reason)
         </code>
@@ -2747,7 +2747,7 @@ disconnect().</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_disconnect_helper">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3079">at line 3079</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3080">at line 3080</a></div>
         <code>            protected        bool
     <strong>disconnect_helper</strong>(int $reason)
         </code>
@@ -2790,7 +2790,7 @@ disconnect().</p>                            </div>
         <div class="location">in <a href="../../phpseclib3/Net/SSH2.html#method_define_array">
 <abbr title="phpseclib3\Net\SSH2">SSH2</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SSH2.php#L4141">at line 4141</a></div>
         <code>            protected        
-    <strong>define_array</strong>(...$args)
+    <strong>define_array</strong>(array ...$args)
         </code>
     </h3>
     <div class="details">
@@ -2806,7 +2806,7 @@ If any of the constants that would be defined already exists, none of the consta
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>array</td>
                 <td>...$args</td>
                 <td></td>
             </tr>
@@ -3994,7 +3994,7 @@ the absolute (canonicalized) path.</p>
                     <h3 id="method_setListOrder">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L1060">at line 1060</a></div>
         <code>                    
-    <strong>setListOrder</strong>(...$args)
+    <strong>setListOrder</strong>(string[] ...$args)
         </code>
     </h3>
     <div class="details">
@@ -4021,7 +4021,7 @@ $sftp->setListOrder();
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string[]</td>
                 <td>...$args</td>
                 <td></td>
             </tr>
@@ -5475,7 +5475,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getSFTPLog">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3019">at line 3019</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3020">at line 3020</a></div>
         <code>                    array|string
     <strong>getSFTPLog</strong>()
         </code>
@@ -5505,7 +5505,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getSFTPErrors">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3041">at line 3041</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3042">at line 3042</a></div>
         <code>                    array
     <strong>getSFTPErrors</strong>()
         </code>
@@ -5535,7 +5535,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getLastSFTPError">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3052">at line 3052</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3053">at line 3053</a></div>
         <code>                    string
     <strong>getLastSFTPError</strong>()
         </code>
@@ -5565,7 +5565,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getSupportedVersions">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3063">at line 3063</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3064">at line 3064</a></div>
         <code>                    array
     <strong>getSupportedVersions</strong>()
         </code>
@@ -5595,7 +5595,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_enableDatePreservation">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3090">at line 3090</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3091">at line 3091</a></div>
         <code>                    
     <strong>enableDatePreservation</strong>()
         </code>
@@ -5616,7 +5616,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_disableDatePreservation">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3100">at line 3100</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Net/SFTP.php#L3101">at line 3101</a></div>
         <code>                    
     <strong>disableDatePreservation</strong>()
         </code>

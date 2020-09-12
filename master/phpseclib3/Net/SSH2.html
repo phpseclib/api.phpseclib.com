@@ -387,7 +387,7 @@ to call read() multiple times when using this option</p>
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_login">login</a>($username, ...$args)
+                    <a href="#method_login">login</a>(string $username, string[] ...$args)
         
                                             <p>Login</p>                </div>
                 <div class="col-md-2"></div>
@@ -397,7 +397,7 @@ to call read() multiple times when using this option</p>
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_sublogin">sublogin</a>($username, ...$args)
+                    <a href="#method_sublogin">sublogin</a>(string $username, string[] ...$args)
         
                                             <p>Login Helper</p>                </div>
                 <div class="col-md-2"></div>
@@ -667,7 +667,7 @@ to call read() multiple times when using this option</p>
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_define_array">define_array</a>(...$args)
+                    <a href="#method_define_array">define_array</a>(array ...$args)
         
                                             <p>Define Array</p>                </div>
                 <div class="col-md-2"></div>
@@ -1118,7 +1118,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
                     <h3 id="method_login">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SSH2.php#L2046">at line 2046</a></div>
         <code>                    bool
-    <strong>login</strong>($username, ...$args)
+    <strong>login</strong>(string $username, string[] ...$args)
         </code>
     </h3>
     <div class="details">
@@ -1132,12 +1132,12 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$username</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string[]</td>
                 <td>...$args</td>
                 <td></td>
             </tr>
@@ -1174,7 +1174,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
                     <h3 id="method_sublogin">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SSH2.php#L2072">at line 2072</a></div>
         <code>            protected        bool
-    <strong>sublogin</strong>($username, ...$args)
+    <strong>sublogin</strong>(string $username, string[] ...$args)
         </code>
     </h3>
     <div class="details">
@@ -1188,12 +1188,12 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$username</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string[]</td>
                 <td>...$args</td>
                 <td></td>
             </tr>
@@ -2169,7 +2169,7 @@ disconnect().</p>                            </div>
                     <h3 id="method_define_array">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SSH2.php#L4141">at line 4141</a></div>
         <code>            protected        
-    <strong>define_array</strong>(...$args)
+    <strong>define_array</strong>(array ...$args)
         </code>
     </h3>
     <div class="details">
@@ -2185,7 +2185,7 @@ If any of the constants that would be defined already exists, none of the consta
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>array</td>
                 <td>...$args</td>
                 <td></td>
             </tr>

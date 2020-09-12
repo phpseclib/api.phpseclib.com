@@ -539,7 +539,7 @@ uses it (see cipher.c)</p>
                     mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_exec">exec</a>($cmd, $block = true)
+                    <a href="#method_exec">exec</a>(string $cmd, bool $block = true)
         
                                             <p>Executes a command on a non-interactive shell, returns the output, and quits.</p>                </div>
                 <div class="col-md-2"></div>
@@ -789,7 +789,7 @@ uses it (see cipher.c)</p>
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__append_log">_append_log</a>($protocol_flags, $message)
+                    <a href="#method__append_log">_append_log</a>(int $protocol_flags, string $message)
         
                                             <p>Logs data packets</p>                </div>
                 <div class="col-md-2"></div>
@@ -964,9 +964,9 @@ Setting $timeout to false or 0 will mean there is no timeout.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_exec">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L818">at line 818</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L819">at line 819</a></div>
         <code>                    mixed
-    <strong>exec</strong>($cmd, $block = true)
+    <strong>exec</strong>(string $cmd, bool $block = true)
         </code>
     </h3>
     <div class="details">
@@ -989,12 +989,12 @@ shell with the -s option, as discussed in the following links:</p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$cmd</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>bool</td>
                 <td>$block</td>
                 <td></td>
             </tr>
@@ -1035,7 +1035,7 @@ shell with the -s option, as discussed in the following links:</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__initShell">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L867">at line 867</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L868">at line 868</a></div>
         <code>                    bool
     <strong>_initShell</strong>()
         </code>
@@ -1082,7 +1082,7 @@ shell with the -s option, as discussed in the following links:</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_write">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L911">at line 911</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L912">at line 912</a></div>
         <code>                    bool
     <strong>write</strong>(string $cmd)
         </code>
@@ -1133,7 +1133,7 @@ shell with the -s option, as discussed in the following links:</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_read">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L928">at line 928</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L929">at line 929</a></div>
         <code>                    bool
     <strong>read</strong>(string $expect, int $mode = self::READ_SIMPLE)
         </code>
@@ -1190,7 +1190,7 @@ a regular expression.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_interactiveWrite">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L967">at line 967</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L968">at line 968</a></div>
         <code>                    bool
     <strong>interactiveWrite</strong>(string $cmd)
         </code>
@@ -1241,7 +1241,7 @@ a regular expression.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_interactiveRead">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1002">at line 1002</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1003">at line 1003</a></div>
         <code>                    string
     <strong>interactiveRead</strong>()
         </code>
@@ -1286,7 +1286,7 @@ there's not going to be much recourse.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_disconnect">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1029">at line 1029</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1030">at line 1030</a></div>
         <code>                    
     <strong>disconnect</strong>()
         </code>
@@ -1307,7 +1307,7 @@ there's not going to be much recourse.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___destruct">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1042">at line 1042</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1043">at line 1043</a></div>
         <code>                    
     <strong>__destruct</strong>()
         </code>
@@ -1329,7 +1329,7 @@ disconnect().</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__disconnect">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1053">at line 1053</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1054">at line 1054</a></div>
         <code>                    
     <strong>_disconnect</strong>(string $msg = &#039;Client Quit&#039;)
         </code>
@@ -1360,7 +1360,7 @@ disconnect().</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__get_binary_packet">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1091">at line 1091</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1092">at line 1092</a></div>
         <code>                    array
     <strong>_get_binary_packet</strong>()
         </code>
@@ -1404,7 +1404,7 @@ http://www.securiteam.com/securitynews/5LP042K3FY.html</p>                      
             </div>
                     <div class="method-item">
                     <h3 id="method__send_binary_packet">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1178">at line 1178</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1179">at line 1179</a></div>
         <code>                    bool
     <strong>_send_binary_packet</strong>(string $data)
         </code>
@@ -1455,7 +1455,7 @@ http://www.securiteam.com/securitynews/5LP042K3FY.html</p>                      
             </div>
                     <div class="method-item">
                     <h3 id="method__crc">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1226">at line 1226</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1227">at line 1227</a></div>
         <code>                    int
     <strong>_crc</strong>(string $data)
         </code>
@@ -1514,7 +1514,7 @@ $crc_lookup_table's initialization.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__string_shift">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1323">at line 1323</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1324">at line 1324</a></div>
         <code>                    string
     <strong>_string_shift</strong>(string $string, int $index = 1)
         </code>
@@ -1559,7 +1559,7 @@ $crc_lookup_table's initialization.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__rsa_crypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1343">at line 1343</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1344">at line 1344</a></div>
         <code>                    BigInteger
     <strong>_rsa_crypt</strong>(BigInteger $m, array $key)
         </code>
@@ -2033,9 +2033,9 @@ get array(self::AUTH_PASSWORD).</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__append_log">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1590">at line 1590</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Net/SSH1.php#L1591">at line 1591</a></div>
         <code>                    
-    <strong>_append_log</strong>($protocol_flags, $message)
+    <strong>_append_log</strong>(int $protocol_flags, string $message)
         </code>
     </h3>
     <div class="details">
@@ -2049,12 +2049,12 @@ get array(self::AUTH_PASSWORD).</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$protocol_flags</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$message</td>
                 <td></td>
             </tr>

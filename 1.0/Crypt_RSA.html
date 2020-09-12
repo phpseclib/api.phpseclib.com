@@ -313,7 +313,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_createKey">createKey</a>($bits = 1024, $timeout = false, $partial = array())
+                    <a href="#method_createKey">createKey</a>(int $bits = 1024, int $timeout = false, array $partial = array())
         
                                             <p>Create public / private key pair</p>                </div>
                 <div class="col-md-2"></div>
@@ -323,17 +323,17 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__convertPrivateKey">_convertPrivateKey</a>($n, $e, $d, $primes, $exponents, $coefficients)
+                    <a href="#method__convertPrivateKey">_convertPrivateKey</a>(<a href="Math_BigInteger.html">Math_BigInteger</a> $n, <a href="Math_BigInteger.html">Math_BigInteger</a> $e, <a href="Math_BigInteger.html">Math_BigInteger</a> $d, <abbr title="array&lt;int,\Math_BigInteger&gt;">Math_BigInteger&gt;</abbr> $primes, <abbr title="array&lt;int,\Math_BigInteger&gt;">Math_BigInteger&gt;</abbr> $exponents, <abbr title="array&lt;int,\Math_BigInteger&gt;">Math_BigInteger&gt;</abbr> $coefficients)
         
                                             <p>Convert a private key to the appropriate format.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    string|<abbr title="array&lt;string,\Math_BigInteger&gt;">Math_BigInteger&gt;</abbr>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__convertPublicKey">_convertPublicKey</a>($n, $e)
+                    <a href="#method__convertPublicKey">_convertPublicKey</a>(<a href="Math_BigInteger.html">Math_BigInteger</a> $n, <a href="Math_BigInteger.html">Math_BigInteger</a> $e)
         
                                             <p>Convert a public key to the appropriate format</p>                </div>
                 <div class="col-md-2"></div>
@@ -433,7 +433,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getPublicKey">getPublicKey</a>($type = CRYPT_RSA_PUBLIC_FORMAT_PKCS8)
+                    <a href="#method_getPublicKey">getPublicKey</a>(int $type = CRYPT_RSA_PUBLIC_FORMAT_PKCS8)
         
                                             <p>Returns the public key</p>                </div>
                 <div class="col-md-2"></div>
@@ -453,7 +453,7 @@
                     mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getPrivateKey">getPrivateKey</a>($type = CRYPT_RSA_PUBLIC_FORMAT_PKCS1)
+                    <a href="#method_getPrivateKey">getPrivateKey</a>(int $type = CRYPT_RSA_PUBLIC_FORMAT_PKCS1)
         
                                             <p>Returns the private key</p>                </div>
                 <div class="col-md-2"></div>
@@ -463,7 +463,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__getPrivatePublicKey">_getPrivatePublicKey</a>($mode = CRYPT_RSA_PUBLIC_FORMAT_PKCS8)
+                    <a href="#method__getPrivatePublicKey">_getPrivatePublicKey</a>(int $mode = CRYPT_RSA_PUBLIC_FORMAT_PKCS8)
         
                                             <p>Returns a minimalistic private key</p>                </div>
                 <div class="col-md-2"></div>
@@ -573,7 +573,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setSaltLength">setSaltLength</a>($sLen)
+                    <a href="#method_setSaltLength">setSaltLength</a>(int $sLen)
         
                                             <p>Determines the salt length</p>                </div>
                 <div class="col-md-2"></div>
@@ -593,7 +593,7 @@
                     <a href="Math_BigInteger.html">Math_BigInteger</a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__os2ip">_os2ip</a>(string $x)
+                    <a href="#method__os2ip">_os2ip</a>(int|string|resource $x)
         
                                             <p>Octet-String-to-Integer primitive</p>                </div>
                 <div class="col-md-2"></div>
@@ -673,7 +673,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__mgf1">_mgf1</a>($mgfSeed, $maskLen)
+                    <a href="#method__mgf1">_mgf1</a>(string $mgfSeed, int $maskLen)
         
                                             <p>MGF1</p>                </div>
                 <div class="col-md-2"></div>
@@ -793,7 +793,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__rsassa_pkcs1_v1_5_verify">_rsassa_pkcs1_v1_5_verify</a>($m, $s)
+                    <a href="#method__rsassa_pkcs1_v1_5_verify">_rsassa_pkcs1_v1_5_verify</a>(string $m, string $s)
         
                                             <p>RSASSA-PKCS1-V1_5-VERIFY</p>                </div>
                 <div class="col-md-2"></div>
@@ -853,7 +853,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_decrypt">decrypt</a>($ciphertext)
+                    <a href="#method_decrypt">decrypt</a>(string $ciphertext)
         
                                             <p>Decryption</p>                </div>
                 <div class="col-md-2"></div>
@@ -962,7 +962,7 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
                     <h3 id="method_createKey">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L594">at line 594</a></div>
         <code>                    
-    <strong>createKey</strong>($bits = 1024, $timeout = false, $partial = array())
+    <strong>createKey</strong>(int $bits = 1024, int $timeout = false, array $partial = array())
         </code>
     </h3>
     <div class="details">
@@ -980,17 +980,17 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$bits</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$timeout</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>array</td>
                 <td>$partial</td>
                 <td></td>
             </tr>
@@ -1005,9 +1005,9 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
             </div>
                     <div class="method-item">
                     <h3 id="method__convertPrivateKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L774">at line 774</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L779">at line 779</a></div>
         <code>                    string
-    <strong>_convertPrivateKey</strong>($n, $e, $d, $primes, $exponents, $coefficients)
+    <strong>_convertPrivateKey</strong>(<a href="Math_BigInteger.html">Math_BigInteger</a> $n, <a href="Math_BigInteger.html">Math_BigInteger</a> $e, <a href="Math_BigInteger.html">Math_BigInteger</a> $d, <abbr title="array&lt;int,\Math_BigInteger&gt;">Math_BigInteger&gt;</abbr> $primes, <abbr title="array&lt;int,\Math_BigInteger&gt;">Math_BigInteger&gt;</abbr> $exponents, <abbr title="array&lt;int,\Math_BigInteger&gt;">Math_BigInteger&gt;</abbr> $coefficients)
         </code>
     </h3>
     <div class="details">
@@ -1021,32 +1021,32 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td><a href="Math_BigInteger.html">Math_BigInteger</a></td>
                 <td>$n</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td><a href="Math_BigInteger.html">Math_BigInteger</a></td>
                 <td>$e</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td><a href="Math_BigInteger.html">Math_BigInteger</a></td>
                 <td>$d</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td><abbr title="array&lt;int,\Math_BigInteger&gt;">Math_BigInteger&gt;</abbr></td>
                 <td>$primes</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td><abbr title="array&lt;int,\Math_BigInteger&gt;">Math_BigInteger&gt;</abbr></td>
                 <td>$exponents</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td><abbr title="array&lt;int,\Math_BigInteger&gt;">Math_BigInteger&gt;</abbr></td>
                 <td>$coefficients</td>
                 <td></td>
             </tr>
@@ -1081,9 +1081,9 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
             </div>
                     <div class="method-item">
                     <h3 id="method__convertPublicKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1067">at line 1067</a></div>
-        <code>                    string
-    <strong>_convertPublicKey</strong>($n, $e)
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1073">at line 1073</a></div>
+        <code>                    string|<abbr title="array&lt;string,\Math_BigInteger&gt;">Math_BigInteger&gt;</abbr>
+    <strong>_convertPublicKey</strong>(<a href="Math_BigInteger.html">Math_BigInteger</a> $n, <a href="Math_BigInteger.html">Math_BigInteger</a> $e)
         </code>
     </h3>
     <div class="details">
@@ -1097,12 +1097,12 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td><a href="Math_BigInteger.html">Math_BigInteger</a></td>
                 <td>$n</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td><a href="Math_BigInteger.html">Math_BigInteger</a></td>
                 <td>$e</td>
                 <td></td>
             </tr>
@@ -1113,7 +1113,7 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>string|<abbr title="array&lt;string,\Math_BigInteger&gt;">Math_BigInteger&gt;</abbr></td>
             <td></td>
         </tr>
     </table>
@@ -1137,7 +1137,7 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
             </div>
                     <div class="method-item">
                     <h3 id="method__parseKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1147">at line 1147</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1153">at line 1153</a></div>
         <code>                    array
     <strong>_parseKey</strong>(string $key, int $type)
         </code>
@@ -1199,7 +1199,7 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
             </div>
                     <div class="method-item">
                     <h3 id="method_getSize">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1639">at line 1639</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1645">at line 1645</a></div>
         <code>                    int
     <strong>getSize</strong>()
         </code>
@@ -1229,7 +1229,7 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
             </div>
                     <div class="method-item">
                     <h3 id="method__start_element_handler">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1654">at line 1654</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1660">at line 1660</a></div>
         <code>                    
     <strong>_start_element_handler</strong>(resource $parser, string $name, array $attribs)
         </code>
@@ -1270,7 +1270,7 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
             </div>
                     <div class="method-item">
                     <h3 id="method__stop_element_handler">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1694">at line 1694</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1700">at line 1700</a></div>
         <code>                    
     <strong>_stop_element_handler</strong>(resource $parser, string $name)
         </code>
@@ -1306,7 +1306,7 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
             </div>
                     <div class="method-item">
                     <h3 id="method__data_handler">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1711">at line 1711</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1717">at line 1717</a></div>
         <code>                    
     <strong>_data_handler</strong>(resource $parser, string $data)
         </code>
@@ -1342,7 +1342,7 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
             </div>
                     <div class="method-item">
                     <h3 id="method_loadKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1728">at line 1728</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1734">at line 1734</a></div>
         <code>                    
     <strong>loadKey</strong>(string $key, int $type = false)
         </code>
@@ -1378,7 +1378,7 @@ openssl.cnf be present somewhere and, unfortunately, the only real way to find o
             </div>
                     <div class="method-item">
                     <h3 id="method_setPassword">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1854">at line 1854</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1860">at line 1860</a></div>
         <code>                    
     <strong>setPassword</strong>(string $password = false)
         </code>
@@ -1427,7 +1427,7 @@ Or rather, pass in $password such that empty($password) &amp;&amp; !is_string($p
             </div>
                     <div class="method-item">
                     <h3 id="method_setPublicKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1880">at line 1880</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1886">at line 1886</a></div>
         <code>                    bool
     <strong>setPublicKey</strong>(string $key = false, int $type = false)
         </code>
@@ -1493,7 +1493,7 @@ public.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_setPrivateKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1940">at line 1940</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1946">at line 1946</a></div>
         <code>                    bool
     <strong>setPrivateKey</strong>(string $key = false, int $type = false)
         </code>
@@ -1554,9 +1554,9 @@ phpseclib to treat the key as a private key. This function will do that.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getPublicKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1970">at line 1970</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1975">at line 1975</a></div>
         <code>                    
-    <strong>getPublicKey</strong>($type = CRYPT_RSA_PUBLIC_FORMAT_PKCS8)
+    <strong>getPublicKey</strong>(int $type = CRYPT_RSA_PUBLIC_FORMAT_PKCS8)
         </code>
     </h3>
     <div class="details">
@@ -1572,9 +1572,9 @@ function won't return it since this library, for the most part, doesn't distingu
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$type</td>
-                <td></td>
+                <td>optional</td>
             </tr>
             </table>
 
@@ -1598,7 +1598,7 @@ function won't return it since this library, for the most part, doesn't distingu
             </div>
                     <div class="method-item">
                     <h3 id="method_getPublicKeyFingerprint">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L1995">at line 1995</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2000">at line 2000</a></div>
         <code>                    mixed
     <strong>getPublicKeyFingerprint</strong>(string $algorithm = &#039;md5&#039;)
         </code>
@@ -1641,9 +1641,9 @@ for invalid values.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method_getPrivateKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2029">at line 2029</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2033">at line 2033</a></div>
         <code>                    mixed
-    <strong>getPrivateKey</strong>($type = CRYPT_RSA_PUBLIC_FORMAT_PKCS1)
+    <strong>getPrivateKey</strong>(int $type = CRYPT_RSA_PUBLIC_FORMAT_PKCS1)
         </code>
     </h3>
     <div class="details">
@@ -1657,9 +1657,9 @@ for invalid values.</td>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$type</td>
-                <td></td>
+                <td>optional</td>
             </tr>
             </table>
 
@@ -1692,9 +1692,9 @@ for invalid values.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method__getPrivatePublicKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2053">at line 2053</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2056">at line 2056</a></div>
         <code>                    
-    <strong>_getPrivatePublicKey</strong>($mode = CRYPT_RSA_PUBLIC_FORMAT_PKCS8)
+    <strong>_getPrivatePublicKey</strong>(int $mode = CRYPT_RSA_PUBLIC_FORMAT_PKCS8)
         </code>
     </h3>
     <div class="details">
@@ -1709,9 +1709,9 @@ hasn't been set as the public key</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$mode</td>
-                <td></td>
+                <td>optional</td>
             </tr>
             </table>
 
@@ -1735,7 +1735,7 @@ hasn't been set as the public key</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___toString">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2072">at line 2072</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2075">at line 2075</a></div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -1765,7 +1765,7 @@ hasn't been set as the public key</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___clone">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2088">at line 2088</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2091">at line 2091</a></div>
         <code>                    <a href="Crypt_RSA.html">Crypt_RSA</a>
     <strong>__clone</strong>()
         </code>
@@ -1795,7 +1795,7 @@ hasn't been set as the public key</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__generateMinMax">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2102">at line 2102</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2105">at line 2105</a></div>
         <code>                    array
     <strong>_generateMinMax</strong>(int $bits)
         </code>
@@ -1835,7 +1835,7 @@ hasn't been set as the public key</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__decodeLength">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2131">at line 2131</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2134">at line 2134</a></div>
         <code>                    int
     <strong>_decodeLength</strong>(string $string)
         </code>
@@ -1876,7 +1876,7 @@ hasn't been set as the public key</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__encodeLength">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2152">at line 2152</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2155">at line 2155</a></div>
         <code>                    string
     <strong>_encodeLength</strong>(int $length)
         </code>
@@ -1917,7 +1917,7 @@ hasn't been set as the public key</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__string_shift">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2172">at line 2172</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2175">at line 2175</a></div>
         <code>                    string
     <strong>_string_shift</strong>(string $string, int $index = 1)
         </code>
@@ -1962,7 +1962,7 @@ hasn't been set as the public key</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setPrivateKeyFormat">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2186">at line 2186</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2189">at line 2189</a></div>
         <code>                    
     <strong>setPrivateKeyFormat</strong>(int $format)
         </code>
@@ -2004,7 +2004,7 @@ hasn't been set as the public key</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setPublicKeyFormat">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2198">at line 2198</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2201">at line 2201</a></div>
         <code>                    
     <strong>setPublicKeyFormat</strong>(int $format)
         </code>
@@ -2046,7 +2046,7 @@ hasn't been set as the public key</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setHash">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2212">at line 2212</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2215">at line 2215</a></div>
         <code>                    
     <strong>setHash</strong>(string $hash)
         </code>
@@ -2078,7 +2078,7 @@ decryption.  If $hash isn't supported, sha1 is used.</p>                        
             </div>
                     <div class="method-item">
                     <h3 id="method_setMGFHash">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2241">at line 2241</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2244">at line 2244</a></div>
         <code>                    
     <strong>setMGFHash</strong>(string $hash)
         </code>
@@ -2110,9 +2110,9 @@ best if Hash and MGFHash are set to the same thing this is not a requirement.</p
             </div>
                     <div class="method-item">
                     <h3 id="method_setSaltLength">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2270">at line 2270</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2273">at line 2273</a></div>
         <code>                    
-    <strong>setSaltLength</strong>($sLen)
+    <strong>setSaltLength</strong>(int $sLen)
         </code>
     </h3>
     <div class="details">
@@ -2129,7 +2129,7 @@ of the hash function Hash) and 0.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$sLen</td>
                 <td></td>
             </tr>
@@ -2144,7 +2144,7 @@ of the hash function Hash) and 0.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__i2osp">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2285">at line 2285</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2288">at line 2288</a></div>
         <code>                    string
     <strong>_i2osp</strong>(<a href="Math_BigInteger.html">Math_BigInteger</a> $x, int $xLen)
         </code>
@@ -2189,9 +2189,9 @@ of the hash function Hash) and 0.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__os2ip">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2304">at line 2304</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2307">at line 2307</a></div>
         <code>                    <a href="Math_BigInteger.html">Math_BigInteger</a>
-    <strong>_os2ip</strong>(string $x)
+    <strong>_os2ip</strong>(int|string|resource $x)
         </code>
     </h3>
     <div class="details">
@@ -2205,7 +2205,7 @@ of the hash function Hash) and 0.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>int|string|resource</td>
                 <td>$x</td>
                 <td></td>
             </tr>
@@ -2229,7 +2229,7 @@ of the hash function Hash) and 0.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__exponentiate">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2318">at line 2318</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2321">at line 2321</a></div>
         <code>                    <a href="Math_BigInteger.html">Math_BigInteger</a>
     <strong>_exponentiate</strong>(<a href="Math_BigInteger.html">Math_BigInteger</a> $x)
         </code>
@@ -2269,7 +2269,7 @@ of the hash function Hash) and 0.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__blind">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2404">at line 2404</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2407">at line 2407</a></div>
         <code>                    <a href="Math_BigInteger.html">Math_BigInteger</a>
     <strong>_blind</strong>(<a href="Math_BigInteger.html">Math_BigInteger</a> $x, <a href="Math_BigInteger.html">Math_BigInteger</a> $r, int $i)
         </code>
@@ -2320,7 +2320,7 @@ Returns $x->modPow($this->exponents[$i], $this->primes[$i])</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method__equals">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2430">at line 2430</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2433">at line 2433</a></div>
         <code>                    bool
     <strong>_equals</strong>(string $x, string $y)
         </code>
@@ -2369,7 +2369,7 @@ Returns $x->modPow($this->exponents[$i], $this->primes[$i])</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method__rsaep">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2458">at line 2458</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2461">at line 2461</a></div>
         <code>                    <a href="Math_BigInteger.html">Math_BigInteger</a>
     <strong>_rsaep</strong>(<a href="Math_BigInteger.html">Math_BigInteger</a> $m)
         </code>
@@ -2409,7 +2409,7 @@ Returns $x->modPow($this->exponents[$i], $this->primes[$i])</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method__rsadp">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2476">at line 2476</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2479">at line 2479</a></div>
         <code>                    <a href="Math_BigInteger.html">Math_BigInteger</a>
     <strong>_rsadp</strong>(<a href="Math_BigInteger.html">Math_BigInteger</a> $c)
         </code>
@@ -2449,7 +2449,7 @@ Returns $x->modPow($this->exponents[$i], $this->primes[$i])</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method__rsasp1">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2494">at line 2494</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2497">at line 2497</a></div>
         <code>                    <a href="Math_BigInteger.html">Math_BigInteger</a>
     <strong>_rsasp1</strong>(<a href="Math_BigInteger.html">Math_BigInteger</a> $m)
         </code>
@@ -2489,7 +2489,7 @@ Returns $x->modPow($this->exponents[$i], $this->primes[$i])</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method__rsavp1">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2512">at line 2512</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2515">at line 2515</a></div>
         <code>                    <a href="Math_BigInteger.html">Math_BigInteger</a>
     <strong>_rsavp1</strong>(<a href="Math_BigInteger.html">Math_BigInteger</a> $s)
         </code>
@@ -2529,9 +2529,9 @@ Returns $x->modPow($this->exponents[$i], $this->primes[$i])</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method__mgf1">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2531">at line 2531</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2534">at line 2534</a></div>
         <code>                    string
-    <strong>_mgf1</strong>($mgfSeed, $maskLen)
+    <strong>_mgf1</strong>(string $mgfSeed, int $maskLen)
         </code>
     </h3>
     <div class="details">
@@ -2545,12 +2545,12 @@ Returns $x->modPow($this->exponents[$i], $this->primes[$i])</p>                 
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$mgfSeed</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$maskLen</td>
                 <td></td>
             </tr>
@@ -2574,7 +2574,7 @@ Returns $x->modPow($this->exponents[$i], $this->primes[$i])</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method__rsaes_oaep_encrypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2556">at line 2556</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2559">at line 2559</a></div>
         <code>                    string
     <strong>_rsaes_oaep_encrypt</strong>(string $m, string $l = &#039;&#039;)
         </code>
@@ -2620,7 +2620,7 @@ Returns $x->modPow($this->exponents[$i], $this->primes[$i])</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method__rsaes_oaep_decrypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2619">at line 2619</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2622">at line 2622</a></div>
         <code>                    string
     <strong>_rsaes_oaep_decrypt</strong>(string $c, string $l = &#039;&#039;)
         </code>
@@ -2681,7 +2681,7 @@ messages aren't distinguishable from one another hinders debugging, but, to quot
             </div>
                     <div class="method-item">
                     <h3 id="method__raw_encrypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2684">at line 2684</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2687">at line 2687</a></div>
         <code>                    string
     <strong>_raw_encrypt</strong>(string $m)
         </code>
@@ -2721,7 +2721,7 @@ messages aren't distinguishable from one another hinders debugging, but, to quot
             </div>
                     <div class="method-item">
                     <h3 id="method__rsaes_pkcs1_v1_5_encrypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2700">at line 2700</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2703">at line 2703</a></div>
         <code>                    string
     <strong>_rsaes_pkcs1_v1_5_encrypt</strong>(string $m)
         </code>
@@ -2761,7 +2761,7 @@ messages aren't distinguishable from one another hinders debugging, but, to quot
             </div>
                     <div class="method-item">
                     <h3 id="method__rsaes_pkcs1_v1_5_decrypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2759">at line 2759</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2762">at line 2762</a></div>
         <code>                    string
     <strong>_rsaes_pkcs1_v1_5_decrypt</strong>(string $c)
         </code>
@@ -2812,7 +2812,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__emsa_pss_encode">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2808">at line 2808</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2811">at line 2811</a></div>
         <code>                    
     <strong>_emsa_pss_encode</strong>(string $m, int $emBits)
         </code>
@@ -2848,7 +2848,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__emsa_pss_verify">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2846">at line 2846</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2849">at line 2849</a></div>
         <code>                    string
     <strong>_emsa_pss_verify</strong>(string $m, string $em, int $emBits)
         </code>
@@ -2898,7 +2898,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__rsassa_pss_sign">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2891">at line 2891</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2894">at line 2894</a></div>
         <code>                    string
     <strong>_rsassa_pss_sign</strong>(string $m)
         </code>
@@ -2938,7 +2938,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__rsassa_pss_verify">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2918">at line 2918</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2921">at line 2921</a></div>
         <code>                    string
     <strong>_rsassa_pss_verify</strong>(string $m, string $s)
         </code>
@@ -2983,7 +2983,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__emsa_pkcs1_v1_5_encode">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2958">at line 2958</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L2961">at line 2961</a></div>
         <code>                    string
     <strong>_emsa_pkcs1_v1_5_encode</strong>(string $m, int $emLen)
         </code>
@@ -3028,7 +3028,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__rsassa_pkcs1_v1_5_sign">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3009">at line 3009</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3012">at line 3012</a></div>
         <code>                    string
     <strong>_rsassa_pkcs1_v1_5_sign</strong>(string $m)
         </code>
@@ -3068,9 +3068,9 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__rsassa_pkcs1_v1_5_verify">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3039">at line 3039</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3043">at line 3043</a></div>
         <code>                    string
-    <strong>_rsassa_pkcs1_v1_5_verify</strong>($m, $s)
+    <strong>_rsassa_pkcs1_v1_5_verify</strong>(string $m, string $s)
         </code>
     </h3>
     <div class="details">
@@ -3084,12 +3084,12 @@ not private key encrypted ciphertext's.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$m</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$s</td>
                 <td></td>
             </tr>
@@ -3113,7 +3113,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setEncryptionMode">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3082">at line 3082</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3086">at line 3086</a></div>
         <code>                    
     <strong>setEncryptionMode</strong>(int $mode)
         </code>
@@ -3144,7 +3144,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setSignatureMode">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3095">at line 3095</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3099">at line 3099</a></div>
         <code>                    
     <strong>setSignatureMode</strong>(int $mode)
         </code>
@@ -3175,7 +3175,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setComment">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3106">at line 3106</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3110">at line 3110</a></div>
         <code>                    
     <strong>setComment</strong>(string $comment)
         </code>
@@ -3206,7 +3206,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getComment">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3117">at line 3117</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3121">at line 3121</a></div>
         <code>                    string
     <strong>getComment</strong>()
         </code>
@@ -3236,7 +3236,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_encrypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3134">at line 3134</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3138">at line 3138</a></div>
         <code>                    string
     <strong>encrypt</strong>(string $plaintext)
         </code>
@@ -3289,9 +3289,9 @@ be concatenated together.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_decrypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3180">at line 3180</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3184">at line 3184</a></div>
         <code>                    string
-    <strong>decrypt</strong>($ciphertext)
+    <strong>decrypt</strong>(string $ciphertext)
         </code>
     </h3>
     <div class="details">
@@ -3305,7 +3305,7 @@ be concatenated together.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$ciphertext</td>
                 <td></td>
             </tr>
@@ -3340,7 +3340,7 @@ be concatenated together.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_sign">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3222">at line 3222</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3226">at line 3226</a></div>
         <code>                    string
     <strong>sign</strong>(string $message)
         </code>
@@ -3391,7 +3391,7 @@ be concatenated together.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_verify">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3246">at line 3246</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3250">at line 3250</a></div>
         <code>                    bool
     <strong>verify</strong>(string $message, string $signature)
         </code>
@@ -3447,7 +3447,7 @@ be concatenated together.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__extractBER">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3268">at line 3268</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Crypt/RSA.php#L3272">at line 3272</a></div>
         <code>                    string
     <strong>_extractBER</strong>(string $str)
         </code>

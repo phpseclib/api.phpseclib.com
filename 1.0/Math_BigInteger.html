@@ -142,7 +142,7 @@ numbers.</p>                                </div>
                     <a href="Math_BigInteger.html">Math_BigInteger</a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>($x = 0, int $base = 10)
+                    <a href="#method___construct">__construct</a>(int|string|resource $x = 0, int $base = 10)
         
                                             <p>Converts base-2, base-10, base-16, and binary strings (base-256) to BigIntegers.</p>                </div>
                 <div class="col-md-2"></div>
@@ -712,7 +712,7 @@ numbers.</p>                                </div>
                     <a href="Math_BigInteger.html">Math_BigInteger</a>
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__random_number_helper">_random_number_helper</a>($size)
+                    <a href="#method__random_number_helper">_random_number_helper</a>(int $size)
         
                                             <p>Generates a random BigInteger</p>                </div>
                 <div class="col-md-2"></div>
@@ -802,7 +802,7 @@ numbers.</p>                                </div>
                     array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__array_repeat">_array_repeat</a>($input, $multiplier)
+                    <a href="#method__array_repeat">_array_repeat</a>(array $input, mixed $multiplier)
         
                                             <p>Array Repeat</p>                </div>
                 <div class="col-md-2"></div>
@@ -812,7 +812,7 @@ numbers.</p>                                </div>
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__base256_lshift">_base256_lshift</a>($x, $shift)
+                    <a href="#method__base256_lshift">_base256_lshift</a>(string $x, int $shift)
         
                                             <p>Logical Left Shift</p>                </div>
                 <div class="col-md-2"></div>
@@ -822,7 +822,7 @@ numbers.</p>                                </div>
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__base256_rshift">_base256_rshift</a>($x, $shift)
+                    <a href="#method__base256_rshift">_base256_rshift</a>(string $x, int $shift)
         
                                             <p>Logical Right Shift</p>                </div>
                 <div class="col-md-2"></div>
@@ -877,7 +877,7 @@ numbers.</p>                                </div>
                     <h3 id="method___construct">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Math/BigInteger.php#L245">at line 245</a></div>
         <code>                    <a href="Math_BigInteger.html">Math_BigInteger</a>
-    <strong>__construct</strong>($x = 0, int $base = 10)
+    <strong>__construct</strong>(int|string|resource $x = 0, int $base = 10)
         </code>
     </h3>
     <div class="details">
@@ -903,9 +903,9 @@ two's compliment.  The sole exception to this is -10, which is treated the same 
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>int|string|resource</td>
                 <td>$x</td>
-                <td>number or base-$base number if $base set.</td>
+                <td>base-10 number or base-$base number if $base set.</td>
             </tr>
                     <tr>
                 <td>int</td>
@@ -3675,7 +3675,7 @@ shift, not, and rotates.</p>                            </div>
                     <h3 id="method__random_number_helper">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Math/BigInteger.php#L3143">at line 3143</a></div>
         <code>                    <a href="Math_BigInteger.html">Math_BigInteger</a>
-    <strong>_random_number_helper</strong>($size)
+    <strong>_random_number_helper</strong>(int $size)
         </code>
     </h3>
     <div class="details">
@@ -3689,7 +3689,7 @@ shift, not, and rotates.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$size</td>
                 <td></td>
             </tr>
@@ -4042,7 +4042,7 @@ on a website instead of just one.</p>                            </div>
                     <h3 id="method__array_repeat">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Math/BigInteger.php#L3688">at line 3688</a></div>
         <code>                    array
-    <strong>_array_repeat</strong>($input, $multiplier)
+    <strong>_array_repeat</strong>(array $input, mixed $multiplier)
         </code>
     </h3>
     <div class="details">
@@ -4056,12 +4056,12 @@ on a website instead of just one.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>array</td>
                 <td>$input</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>mixed</td>
                 <td>$multiplier</td>
                 <td></td>
             </tr>
@@ -4087,7 +4087,7 @@ on a website instead of just one.</p>                            </div>
                     <h3 id="method__base256_lshift">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Math/BigInteger.php#L3703">at line 3703</a></div>
         <code>                    string
-    <strong>_base256_lshift</strong>($x, $shift)
+    <strong>_base256_lshift</strong>(string $x, int $shift)
         </code>
     </h3>
     <div class="details">
@@ -4101,12 +4101,12 @@ on a website instead of just one.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$x</td>
-                <td></td>
+                <td>(by reference)</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$shift</td>
                 <td></td>
             </tr>
@@ -4132,7 +4132,7 @@ on a website instead of just one.</p>                            </div>
                     <h3 id="method__base256_rshift">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Math/BigInteger.php#L3732">at line 3732</a></div>
         <code>                    string
-    <strong>_base256_rshift</strong>($x, $shift)
+    <strong>_base256_rshift</strong>(string $x, int $shift)
         </code>
     </h3>
     <div class="details">
@@ -4146,12 +4146,12 @@ on a website instead of just one.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$x</td>
-                <td></td>
+                <td>(by referenc)</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$shift</td>
                 <td></td>
             </tr>

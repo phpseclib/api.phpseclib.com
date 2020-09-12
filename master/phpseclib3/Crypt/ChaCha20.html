@@ -633,7 +633,7 @@ which will be determined automatically on __construct()</td>
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setPassword">setPassword</a>($password, $method = &#039;pbkdf2&#039;, ...$func_args)
+                    <a href="#method_setPassword">setPassword</a>(string $password, string $method = &#039;pbkdf2&#039;, string[] ...$func_args)
         
                                             <p>Sets the password.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setPassword">
@@ -915,7 +915,7 @@ which will be determined automatically on __construct()</td>
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_poly1305">poly1305</a>($ciphertext)
+                    <a href="#method_poly1305">poly1305</a>(string $ciphertext)
         
                                             <p>Calculates Poly1305 MAC</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../phpseclib3/Crypt/Salsa20.html#method_poly1305">
@@ -1451,7 +1451,7 @@ will be made.</p>                            </div>
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setPassword">
 <abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L891">at line 891</a></div>
         <code>                    bool
-    <strong>setPassword</strong>($password, $method = &#039;pbkdf2&#039;, ...$func_args)
+    <strong>setPassword</strong>(string $password, string $method = &#039;pbkdf2&#039;, string[] ...$func_args)
         </code>
     </h3>
     <div class="details">
@@ -1471,17 +1471,17 @@ will be made.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$password</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$method</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string[]</td>
                 <td>...$func_args</td>
                 <td></td>
             </tr>
@@ -2828,7 +2828,7 @@ $cipher_code = [
         <div class="location">in <a href="../../phpseclib3/Crypt/Salsa20.html#method_poly1305">
 <abbr title="phpseclib3\Crypt\Salsa20">Salsa20</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Salsa20.php#L481">at line 481</a></div>
         <code>            protected        string
-    <strong>poly1305</strong>($ciphertext)
+    <strong>poly1305</strong>(string $ciphertext)
         </code>
     </h3>
     <div class="details">
@@ -2842,7 +2842,7 @@ $cipher_code = [
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$ciphertext</td>
                 <td></td>
             </tr>

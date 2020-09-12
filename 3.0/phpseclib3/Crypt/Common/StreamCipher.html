@@ -573,7 +573,7 @@ which will be determined automatically on __construct()</td>
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setPassword">setPassword</a>($password, $method = &#039;pbkdf2&#039;, ...$func_args)
+                    <a href="#method_setPassword">setPassword</a>(string $password, string $method = &#039;pbkdf2&#039;, string[] ...$func_args)
         
                                             <p>Sets the password.</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setPassword">
@@ -1336,7 +1336,7 @@ we trim the excess bits.</p>
         <div class="location">in <a href="../../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setPassword">
 <abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/Common/SymmetricKey.php#L891">at line 891</a></div>
         <code>                    bool
-    <strong>setPassword</strong>($password, $method = &#039;pbkdf2&#039;, ...$func_args)
+    <strong>setPassword</strong>(string $password, string $method = &#039;pbkdf2&#039;, string[] ...$func_args)
         </code>
     </h3>
     <div class="details">
@@ -1356,17 +1356,17 @@ we trim the excess bits.</p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$password</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$method</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string[]</td>
                 <td>...$func_args</td>
                 <td></td>
             </tr>

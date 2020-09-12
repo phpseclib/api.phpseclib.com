@@ -134,10 +134,10 @@ methods phpseclib looks for to perform public key authentication.</p>           
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_readBytes">readBytes</a>($length)
+                    <a href="#method_readBytes">readBytes</a>(int $length)
         
                                             <p>Read data</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../phpseclib3/System/SSH/Common/Traits/ReadBytes.html#method_readBytes">
@@ -208,7 +208,7 @@ methods phpseclib looks for to perform public key authentication.</p>           
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_withSignatureFormat">withSignatureFormat</a>($format)
+                    <a href="#method_withSignatureFormat">withSignatureFormat</a>(string $format)
         
                                             <p>Determines the signature padding mode</p>                </div>
                 <div class="col-md-2"></div>
@@ -262,9 +262,9 @@ methods phpseclib looks for to perform public key authentication.</p>           
                     <div class="method-item">
                     <h3 id="method_readBytes">
         <div class="location">in <a href="../../../../phpseclib3/System/SSH/Common/Traits/ReadBytes.html#method_readBytes">
-<abbr title="phpseclib3\System\SSH\Common\Traits\ReadBytes">ReadBytes</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Common/Traits/ReadBytes.php#L35">at line 35</a></div>
-        <code>                    string
-    <strong>readBytes</strong>($length)
+<abbr title="phpseclib3\System\SSH\Common\Traits\ReadBytes">ReadBytes</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Common/Traits/ReadBytes.php#L34">at line 34</a></div>
+        <code>                    
+    <strong>readBytes</strong>(int $length)
         </code>
     </h3>
     <div class="details">
@@ -278,22 +278,13 @@ methods phpseclib looks for to perform public key authentication.</p>           
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$length</td>
                 <td></td>
             </tr>
             </table>
 
             
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td>Data from SSH Agent</td>
-        </tr>
-    </table>
-
             
                             <h4>Exceptions</h4>
 
@@ -509,7 +500,7 @@ but this saves a small amount of computation.</p>                            </d
                     <h3 id="method_withSignatureFormat">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L247">at line 247</a></div>
         <code>                    
-    <strong>withSignatureFormat</strong>($format)
+    <strong>withSignatureFormat</strong>(string $format)
         </code>
     </h3>
     <div class="details">
@@ -523,7 +514,7 @@ but this saves a small amount of computation.</p>                            </d
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$format</td>
                 <td></td>
             </tr>
@@ -568,7 +559,7 @@ but this saves a small amount of computation.</p>                            </d
             </div>
                     <div class="method-item">
                     <h3 id="method_sign">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L288">at line 288</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L287">at line 287</a></div>
         <code>                    
     <strong>sign</strong>($message)
         </code>
@@ -612,7 +603,7 @@ but this saves a small amount of computation.</p>                            </d
             </div>
                     <div class="method-item">
                     <h3 id="method_toString">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L327">at line 327</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L326">at line 326</a></div>
         <code>                    
     <strong>toString</strong>($type, array $options = [])
         </code>
@@ -648,7 +639,7 @@ but this saves a small amount of computation.</p>                            </d
             </div>
                     <div class="method-item">
                     <h3 id="method_withPassword">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L338">at line 338</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/System/SSH/Agent/Identity.php#L337">at line 337</a></div>
         <code>                    
     <strong>withPassword</strong>(string|bool $password = false)
         </code>

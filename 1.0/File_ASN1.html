@@ -199,7 +199,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_encodeDER">encodeDER</a>($source, $mapping, $special = array())
+                    <a href="#method_encodeDER">encodeDER</a>(string $source, string $mapping, array $special = array())
         
                                             <p>ASN.1 Encode</p>                </div>
                 <div class="col-md-2"></div>
@@ -209,7 +209,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__encode_der">_encode_der</a>($source, $mapping, $idx = null, $special = array())
+                    <a href="#method__encode_der">_encode_der</a>(string $source, string $mapping, int $idx = null, array $special = array())
         
                                             <p>ASN.1 Encode (Helper function)</p>                </div>
                 <div class="col-md-2"></div>
@@ -239,7 +239,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__encodeOID">_encodeOID</a>($source)
+                    <a href="#method__encodeOID">_encodeOID</a>(string $source)
         
                                             <p>DER-encode the OID</p>                </div>
                 <div class="col-md-2"></div>
@@ -521,7 +521,7 @@ FILE_ASN1_TYPE_OCTET_STRING. In those cases, the indefinite length is used.</p> 
                     <h3 id="method_encodeDER">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L894">at line 894</a></div>
         <code>                    string
-    <strong>encodeDER</strong>($source, $mapping, $special = array())
+    <strong>encodeDER</strong>(string $source, string $mapping, array $special = array())
         </code>
     </h3>
     <div class="details">
@@ -538,17 +538,17 @@ an ASN.1 compiler.</p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$source</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$mapping</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>array</td>
                 <td>$special</td>
                 <td></td>
             </tr>
@@ -572,9 +572,9 @@ an ASN.1 compiler.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__encode_der">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L909">at line 909</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L910">at line 910</a></div>
         <code>                    string
-    <strong>_encode_der</strong>($source, $mapping, $idx = null, $special = array())
+    <strong>_encode_der</strong>(string $source, string $mapping, int $idx = null, array $special = array())
         </code>
     </h3>
     <div class="details">
@@ -588,22 +588,22 @@ an ASN.1 compiler.</p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$source</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$mapping</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$idx</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>array</td>
                 <td>$special</td>
                 <td></td>
             </tr>
@@ -627,7 +627,7 @@ an ASN.1 compiler.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__encodeLength">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1201">at line 1201</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1202">at line 1202</a></div>
         <code>                    string
     <strong>_encodeLength</strong>(int $length)
         </code>
@@ -668,7 +668,7 @@ an ASN.1 compiler.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__decodeOID">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1220">at line 1220</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1221">at line 1221</a></div>
         <code>                    string
     <strong>_decodeOID</strong>(string $content)
         </code>
@@ -708,9 +708,9 @@ an ASN.1 compiler.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__encodeOID">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1268">at line 1268</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1269">at line 1269</a></div>
         <code>                    string
-    <strong>_encodeOID</strong>($source)
+    <strong>_encodeOID</strong>(string $source)
         </code>
     </h3>
     <div class="details">
@@ -724,7 +724,7 @@ an ASN.1 compiler.</p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$source</td>
                 <td></td>
             </tr>
@@ -748,7 +748,7 @@ an ASN.1 compiler.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__decodeUnixTime">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1323">at line 1323</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1324">at line 1324</a></div>
         <code>                    string
     <strong>_decodeUnixTime</strong>(string $content, int $tag)
         </code>
@@ -793,7 +793,7 @@ an ASN.1 compiler.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__decodeDateTime">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1373">at line 1373</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1374">at line 1374</a></div>
         <code>                    string
     <strong>_decodeDateTime</strong>(string $content, int $tag)
         </code>
@@ -838,7 +838,7 @@ an ASN.1 compiler.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_setTimeFormat">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1419">at line 1419</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1420">at line 1420</a></div>
         <code>                    
     <strong>setTimeFormat</strong>(string $format)
         </code>
@@ -869,7 +869,7 @@ an ASN.1 compiler.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_loadOIDs">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1432">at line 1432</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1433">at line 1433</a></div>
         <code>                    
     <strong>loadOIDs</strong>(array $oids)
         </code>
@@ -900,7 +900,7 @@ an ASN.1 compiler.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_loadFilters">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1445">at line 1445</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1446">at line 1446</a></div>
         <code>                    
     <strong>loadFilters</strong>(array $filters)
         </code>
@@ -931,7 +931,7 @@ an ASN.1 compiler.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__string_shift">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1460">at line 1460</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1461">at line 1461</a></div>
         <code>                    string
     <strong>_string_shift</strong>(string $string, int $index = 1)
         </code>
@@ -976,7 +976,7 @@ an ASN.1 compiler.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_convert">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1479">at line 1479</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/File/ASN1.php#L1480">at line 1480</a></div>
         <code>                    string
     <strong>convert</strong>(string $in, int $from = FILE_ASN1_TYPE_UTF8_STRING, int $to = FILE_ASN1_TYPE_UTF8_STRING)
         </code>

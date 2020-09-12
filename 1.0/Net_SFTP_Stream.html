@@ -361,7 +361,7 @@
                     bool
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__rmdir">_rmdir</a>($path, $options)
+                    <a href="#method__rmdir">_rmdir</a>(string $path, int $options)
         
                                             <p>Removes a directory</p>                </div>
                 <div class="col-md-2"></div>
@@ -1181,9 +1181,9 @@ the SFTP specs:</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__rmdir">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L652">at line 652</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L651">at line 651</a></div>
         <code>                    bool
-    <strong>_rmdir</strong>($path, $options)
+    <strong>_rmdir</strong>(string $path, int $options)
         </code>
     </h3>
     <div class="details">
@@ -1200,12 +1200,12 @@ $options. What does 8 correspond to?</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$path</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>int</td>
                 <td>$options</td>
                 <td></td>
             </tr>
@@ -1229,7 +1229,7 @@ $options. What does 8 correspond to?</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__stream_flush">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L670">at line 670</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L669">at line 669</a></div>
         <code>                    bool
     <strong>_stream_flush</strong>()
         </code>
@@ -1259,7 +1259,7 @@ $options. What does 8 correspond to?</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__stream_stat">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L681">at line 681</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L680">at line 680</a></div>
         <code>                    mixed
     <strong>_stream_stat</strong>()
         </code>
@@ -1289,7 +1289,7 @@ $options. What does 8 correspond to?</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__unlink">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L697">at line 697</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L696">at line 696</a></div>
         <code>                    bool
     <strong>_unlink</strong>(string $path)
         </code>
@@ -1329,7 +1329,7 @@ $options. What does 8 correspond to?</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__url_stat">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L719">at line 719</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L718">at line 718</a></div>
         <code>                    mixed
     <strong>_url_stat</strong>(string $path, int $flags)
         </code>
@@ -1376,7 +1376,7 @@ cross that bridge when and if it's reached</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__stream_truncate">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L741">at line 741</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L740">at line 740</a></div>
         <code>                    bool
     <strong>_stream_truncate</strong>(int $new_size)
         </code>
@@ -1416,7 +1416,7 @@ cross that bridge when and if it's reached</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__stream_set_option">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L765">at line 765</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L764">at line 764</a></div>
         <code>                    bool
     <strong>_stream_set_option</strong>(int $option, int $arg1, int $arg2)
         </code>
@@ -1467,7 +1467,7 @@ The other two aren't supported because of limitations in Net_SFTP.</p>          
             </div>
                     <div class="method-item">
                     <h3 id="method__stream_close">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L775">at line 775</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L774">at line 774</a></div>
         <code>                    
     <strong>_stream_close</strong>()
         </code>
@@ -1488,7 +1488,7 @@ The other two aren't supported because of limitations in Net_SFTP.</p>          
             </div>
                     <div class="method-item">
                     <h3 id="method___call">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L794">at line 794</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/1.0/phpseclib/Net/SFTP/Stream.php#L793">at line 793</a></div>
         <code>                    mixed
     <strong>__call</strong>(string $name, array $arguments)
         </code>

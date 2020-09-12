@@ -455,7 +455,7 @@
                     object[]
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_recoverX">recoverX</a>(<a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $y, $sign)
+                    <a href="#method_recoverX">recoverX</a>(<a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $y, bool $sign)
         
                                             <p>Recover X from Y</p>                </div>
                 <div class="col-md-2"></div>
@@ -475,7 +475,7 @@
                     string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_encodePoint">encodePoint</a>($point)
+                    <a href="#method_encodePoint">encodePoint</a>(array $point)
         
                                             <p>Encode a point as a string</p>                </div>
                 <div class="col-md-2"></div>
@@ -1288,7 +1288,7 @@ with x = X/Z, y = Y/Z, x * y = T/Z.</p>                            </div>
                     <h3 id="method_recoverX">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/EC/Curves/Ed25519.php#L109">at line 109</a></div>
         <code>                    object[]
-    <strong>recoverX</strong>(<a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $y, $sign)
+    <strong>recoverX</strong>(<a href="../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $y, bool $sign)
         </code>
     </h3>
     <div class="details">
@@ -1309,7 +1309,7 @@ with x = X/Z, y = Y/Z, x * y = T/Z.</p>                            </div>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>bool</td>
                 <td>$sign</td>
                 <td></td>
             </tr>
@@ -1377,7 +1377,7 @@ with x = X/Z, y = Y/Z, x * y = T/Z.</p>                            </div>
                     <h3 id="method_encodePoint">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/EC/Curves/Ed25519.php#L195">at line 195</a></div>
         <code>                    string
-    <strong>encodePoint</strong>($point)
+    <strong>encodePoint</strong>(array $point)
         </code>
     </h3>
     <div class="details">
@@ -1391,7 +1391,7 @@ with x = X/Z, y = Y/Z, x * y = T/Z.</p>                            </div>
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>array</td>
                 <td>$point</td>
                 <td></td>
             </tr>
