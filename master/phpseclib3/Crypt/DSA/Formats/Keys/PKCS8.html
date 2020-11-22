@@ -263,7 +263,7 @@
                     static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_wrapPublicKey">wrapPublicKey</a>($key, $params, $oid = null)
+                    <a href="#method_wrapPublicKey">wrapPublicKey</a>(string $key, mixed $params, string $oid = null)
         
                                             <p>Wrap a public key appropriately</p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../../phpseclib3/Crypt/Common/Formats/Keys/PKCS8.html#method_wrapPublicKey">
@@ -285,7 +285,7 @@
                     static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_savePrivateKey">savePrivateKey</a>(<a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $p, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $q, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $g, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $y, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x, $password = &#039;&#039;, array $options = [])
+                    <a href="#method_savePrivateKey">savePrivateKey</a>(<a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $p, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $q, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $g, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $y, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x, string $password = &#039;&#039;, array $options = [])
         
                                             <p>Convert a private key to the appropriate format.</p>                </div>
                 <div class="col-md-2"></div>
@@ -619,9 +619,9 @@
                     <div class="method-item">
                     <h3 id="method_wrapPublicKey">
         <div class="location">in <a href="../../../../../phpseclib3/Crypt/Common/Formats/Keys/PKCS8.html#method_wrapPublicKey">
-<abbr title="phpseclib3\Crypt\Common\Formats\Keys\PKCS8">PKCS8</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/Formats/Keys/PKCS8.php#L622">at line 622</a></div>
+<abbr title="phpseclib3\Crypt\Common\Formats\Keys\PKCS8">PKCS8</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/Formats/Keys/PKCS8.php#L623">at line 623</a></div>
         <code>        static    protected        string
-    <strong>wrapPublicKey</strong>($key, $params, $oid = null)
+    <strong>wrapPublicKey</strong>(string $key, mixed $params, string $oid = null)
         </code>
     </h3>
     <div class="details">
@@ -635,17 +635,17 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$key</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>mixed</td>
                 <td>$params</td>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$oid</td>
                 <td></td>
             </tr>
@@ -670,7 +670,7 @@
                     <div class="method-item">
                     <h3 id="method_extractEncryptionAlgorithm">
         <div class="location">in <a href="../../../../../phpseclib3/Crypt/Common/Formats/Keys/PKCS8.html#method_extractEncryptionAlgorithm">
-<abbr title="phpseclib3\Crypt\Common\Formats\Keys\PKCS8">PKCS8</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/Formats/Keys/PKCS8.php#L678">at line 678</a></div>
+<abbr title="phpseclib3\Crypt\Common\Formats\Keys\PKCS8">PKCS8</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/Formats/Keys/PKCS8.php#L679">at line 679</a></div>
         <code>        static            array
     <strong>extractEncryptionAlgorithm</strong>(string $key)
         </code>
@@ -712,7 +712,7 @@
                     <h3 id="method_savePrivateKey">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/DSA/Formats/Keys/PKCS8.php#L134">at line 134</a></div>
         <code>        static            string
-    <strong>savePrivateKey</strong>(<a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $p, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $q, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $g, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $y, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x, $password = &#039;&#039;, array $options = [])
+    <strong>savePrivateKey</strong>(<a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $p, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $q, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $g, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $y, <a href="../../../../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x, string $password = &#039;&#039;, array $options = [])
         </code>
     </h3>
     <div class="details">
@@ -751,14 +751,14 @@
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td>string</td>
                 <td>$password</td>
-                <td></td>
+                <td>optional</td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$options</td>
-                <td></td>
+                <td>optional</td>
             </tr>
             </table>
 
