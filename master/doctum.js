@@ -1666,6 +1666,7 @@
         {"type":"Method","fromName":"phpseclib3\\Net\\SSH2","fromLink":"phpseclib3/Net/SSH2.html","link":"phpseclib3/Net/SSH2.html#method_login","name":"phpseclib3\\Net\\SSH2::login","doc":"Login"},
         {"type":"Method","fromName":"phpseclib3\\Net\\SSH2","fromLink":"phpseclib3/Net/SSH2.html","link":"phpseclib3/Net/SSH2.html#method_sublogin","name":"phpseclib3\\Net\\SSH2::sublogin","doc":"Login Helper"},
         {"type":"Method","fromName":"phpseclib3\\Net\\SSH2","fromLink":"phpseclib3/Net/SSH2.html","link":"phpseclib3/Net/SSH2.html#method_setTimeout","name":"phpseclib3\\Net\\SSH2::setTimeout","doc":"Set Timeout"},
+        {"type":"Method","fromName":"phpseclib3\\Net\\SSH2","fromLink":"phpseclib3/Net/SSH2.html","link":"phpseclib3/Net/SSH2.html#method_setKeepAlive","name":"phpseclib3\\Net\\SSH2::setKeepAlive","doc":"Set Keep Alive"},
         {"type":"Method","fromName":"phpseclib3\\Net\\SSH2","fromLink":"phpseclib3/Net/SSH2.html","link":"phpseclib3/Net/SSH2.html#method_getStdError","name":"phpseclib3\\Net\\SSH2::getStdError","doc":"Get the output from stdError"},
         {"type":"Method","fromName":"phpseclib3\\Net\\SSH2","fromLink":"phpseclib3/Net/SSH2.html","link":"phpseclib3/Net/SSH2.html#method_exec","name":"phpseclib3\\Net\\SSH2::exec","doc":"Execute Command"},
         {"type":"Method","fromName":"phpseclib3\\Net\\SSH2","fromLink":"phpseclib3/Net/SSH2.html","link":"phpseclib3/Net/SSH2.html#method_requestAgentForwarding","name":"phpseclib3\\Net\\SSH2::requestAgentForwarding","doc":"Request agent forwarding of remote server"},

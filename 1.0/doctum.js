@@ -593,6 +593,7 @@
         {"type":"Method","fromName":"Net_SSH2","fromLink":"Net_SSH2.html","link":"Net_SSH2.html#method__ssh_agent_login","name":"Net_SSH2::_ssh_agent_login","doc":"Login with an ssh-agent provided key"},
         {"type":"Method","fromName":"Net_SSH2","fromLink":"Net_SSH2.html","link":"Net_SSH2.html#method__privatekey_login","name":"Net_SSH2::_privatekey_login","doc":"Login with an RSA private key"},
         {"type":"Method","fromName":"Net_SSH2","fromLink":"Net_SSH2.html","link":"Net_SSH2.html#method_setTimeout","name":"Net_SSH2::setTimeout","doc":"Set Timeout"},
+        {"type":"Method","fromName":"Net_SSH2","fromLink":"Net_SSH2.html","link":"Net_SSH2.html#method_setKeepAlive","name":"Net_SSH2::setKeepAlive","doc":"Set Keep Alive"},
         {"type":"Method","fromName":"Net_SSH2","fromLink":"Net_SSH2.html","link":"Net_SSH2.html#method_getStdError","name":"Net_SSH2::getStdError","doc":"Get the output from stdError"},
         {"type":"Method","fromName":"Net_SSH2","fromLink":"Net_SSH2.html","link":"Net_SSH2.html#method_exec","name":"Net_SSH2::exec","doc":"Execute Command"},
         {"type":"Method","fromName":"Net_SSH2","fromLink":"Net_SSH2.html","link":"Net_SSH2.html#method__initShell","name":"Net_SSH2::_initShell","doc":"Creates an interactive shell"},
