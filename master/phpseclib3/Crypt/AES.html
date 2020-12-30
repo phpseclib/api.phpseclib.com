@@ -927,7 +927,7 @@ which will be determined automatically on __construct()</td>
                     <div class="method-item">
                     <h3 id="method___construct">
         <div class="location">in <a href="../../phpseclib3/Crypt/Rijndael.html#method___construct">
-<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L175">at line 175</a></div>
+<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L178">at line 178</a></div>
         <code>                    
     <strong>__construct</strong>(string $mode)
         </code>
@@ -968,7 +968,7 @@ which will be determined automatically on __construct()</td>
                     <div class="method-item">
                     <h3 id="method_setIV">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setIV">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L669">at line 669</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L703">at line 703</a></div>
         <code>                    
     <strong>setIV</strong>(string $iv)
         </code>
@@ -978,7 +978,9 @@ which will be determined automatically on __construct()</td>
     
 
                     <div class="method-description">
-                                    <p>Sets the initialization vector.</p>                    <p>setIV() is not required when ecb or gcm modes are being used.</p>                            </div>
+                                    <p>Sets the initialization vector.</p>                    <p>setIV() is not required when ecb or gcm modes are being used.</p>
+
+<p>{@internal Can be overwritten by a sub class, but does not have to be}</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -1013,7 +1015,7 @@ which will be determined automatically on __construct()</td>
                     <div class="method-item">
                     <h3 id="method_enablePoly1305">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_enablePoly1305">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L699">at line 699</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L733">at line 733</a></div>
         <code>                    
     <strong>enablePoly1305</strong>()
         </code>
@@ -1044,7 +1046,7 @@ which will be determined automatically on __construct()</td>
                     <div class="method-item">
                     <h3 id="method_setPoly1305Key">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setPoly1305Key">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L719">at line 719</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L753">at line 753</a></div>
         <code>                    
     <strong>setPoly1305Key</strong>(string $key = null)
         </code>
@@ -1090,7 +1092,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_setNonce">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setNonce">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L747">at line 747</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L781">at line 781</a></div>
         <code>                    
     <strong>setNonce</strong>(string $nonce)
         </code>
@@ -1131,7 +1133,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_setAAD">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setAAD">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L766">at line 766</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L800">at line 800</a></div>
         <code>                    
     <strong>setAAD</strong>(string $aad)
         </code>
@@ -1172,7 +1174,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_usesIV">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_usesIV">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L781">at line 781</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L815">at line 815</a></div>
         <code>                    bool
     <strong>usesIV</strong>()
         </code>
@@ -1203,7 +1205,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_usesNonce">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_usesNonce">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L792">at line 792</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L826">at line 826</a></div>
         <code>                    bool
     <strong>usesNonce</strong>()
         </code>
@@ -1234,7 +1236,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_getKeyLength">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_getKeyLength">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L803">at line 803</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L837">at line 837</a></div>
         <code>                    int
     <strong>getKeyLength</strong>()
         </code>
@@ -1265,7 +1267,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_getBlockLength">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_getBlockLength">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L814">at line 814</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L848">at line 848</a></div>
         <code>                    int
     <strong>getBlockLength</strong>()
         </code>
@@ -1296,7 +1298,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_getBlockLengthInBytes">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_getBlockLengthInBytes">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L825">at line 825</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L859">at line 859</a></div>
         <code>                    int
     <strong>getBlockLengthInBytes</strong>()
         </code>
@@ -1435,7 +1437,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_setPassword">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setPassword">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L891">at line 891</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L927">at line 927</a></div>
         <code>                    bool
     <strong>setPassword</strong>(string $password, string $method = &#039;pbkdf2&#039;, string[] ...$func_args)
         </code>
@@ -1446,12 +1448,13 @@ will be made.</p>                            </div>
 
                     <div class="method-description">
                                     <p>Sets the password.</p>                    <p>Depending on what $method is set to, setPassword()'s (optional) parameters are as follows:
-{@link http://en.wikipedia.org/wiki/PBKDF2 pbkdf2} or pbkdf1:
-    $hash, $salt, $count, $dkLen</p>
+    {@link http://en.wikipedia.org/wiki/PBKDF2 pbkdf2} or pbkdf1:
+        $hash, $salt, $count, $dkLen</p>
 
-<pre><code>Where $hash (default = sha1) currently supports the following hashes: see: Crypt/Hash.php
+<pre><code>    Where $hash (default = sha1) currently supports the following hashes: see: Crypt/Hash.php
 </code></pre>
-</p>                            </div>
+
+<p>{@internal Could, but not must, extend by the child Crypt_* class}</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -1512,7 +1515,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_encrypt">
         <div class="location">in <a href="../../phpseclib3/Crypt/Rijndael.html#method_encrypt">
-<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L947">at line 947</a></div>
+<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L950">at line 950</a></div>
         <code>                    string
     <strong>encrypt</strong>(string $plaintext)
         </code>
@@ -1570,7 +1573,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_decrypt">
         <div class="location">in <a href="../../phpseclib3/Crypt/Rijndael.html#method_decrypt">
-<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L979">at line 979</a></div>
+<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L982">at line 982</a></div>
         <code>                    string
     <strong>decrypt</strong>(string $ciphertext)
         </code>
@@ -1628,7 +1631,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_getTag">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_getTag">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L1774">at line 1774</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L1812">at line 1812</a></div>
         <code>                    string
     <strong>getTag</strong>(int $length = 16)
         </code>
@@ -1693,7 +1696,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_setTag">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setTag">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L1809">at line 1809</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L1847">at line 1847</a></div>
         <code>                    
     <strong>setTag</strong>(string $tag)
         </code>
@@ -1749,7 +1752,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_getIV">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_getIV">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L1837">at line 1837</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L1875">at line 1875</a></div>
         <code>            protected        string
     <strong>getIV</strong>(string $iv)
         </code>
@@ -1807,7 +1810,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_openssl_translate_mode">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_openssl_translate_mode">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L1992">at line 1992</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2030">at line 2030</a></div>
         <code>            protected        string
     <strong>openssl_translate_mode</strong>()
         </code>
@@ -1838,7 +1841,7 @@ will be made.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_enablePadding">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_enablePadding">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2026">at line 2026</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2064">at line 2064</a></div>
         <code>                    
     <strong>enablePadding</strong>()
         </code>
@@ -1878,7 +1881,7 @@ transmitted separately)</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_disablePadding">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_disablePadding">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2037">at line 2037</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2075">at line 2075</a></div>
         <code>                    
     <strong>disablePadding</strong>()
         </code>
@@ -1911,7 +1914,7 @@ transmitted separately)</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_enableContinuousBuffer">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_enableContinuousBuffer">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2080">at line 2080</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2119">at line 2119</a></div>
         <code>                    
     <strong>enableContinuousBuffer</strong>()
         </code>
@@ -1950,7 +1953,9 @@ decryption round when the continuous buffer is enabled.  When it's disabled, the
 <p>Put another way, when the continuous buffer is enabled, the state of the \phpseclib3\Crypt&#42;() object changes after each
 encryption / decryption round, whereas otherwise, it'd remain constant.  For this reason, it's recommended that
 continuous buffers not be used.  They do offer better security and are, in fact, sometimes required (SSH uses them),
-however, they are also less intuitive and more likely to cause you problems.</p>                            </div>
+however, they are also less intuitive and more likely to cause you problems.</p>
+
+<p>{@internal Could, but not must, extend by the child Crypt_* class}</p>                            </div>
                 <div class="tags">
             
             
@@ -1973,7 +1978,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     <div class="method-item">
                     <h3 id="method_disableContinuousBuffer">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_disableContinuousBuffer">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2104">at line 2104</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2144">at line 2144</a></div>
         <code>                    
     <strong>disableContinuousBuffer</strong>()
         </code>
@@ -1983,7 +1988,9 @@ however, they are also less intuitive and more likely to cause you problems.</p>
     
 
                     <div class="method-description">
-                                    <p>Treat consecutive packets as if they are a discontinuous buffer.</p>                    <p>The default behavior.</p>                            </div>
+                                    <p>Treat consecutive packets as if they are a discontinuous buffer.</p>                    <p>The default behavior.</p>
+
+<p>{@internal Could, but not must, extend by the child Crypt_* class}</p>                            </div>
                 <div class="tags">
             
             
@@ -2006,7 +2013,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     <div class="method-item">
                     <h3 id="method_isValidEngineHelper">
         <div class="location">in <a href="../../phpseclib3/Crypt/Rijndael.html#method_isValidEngineHelper">
-<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L284">at line 284</a></div>
+<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L287">at line 287</a></div>
         <code>            protected        bool
     <strong>isValidEngineHelper</strong>(int $engine)
         </code>
@@ -2059,7 +2066,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     <div class="method-item">
                     <h3 id="method_isValidEngine">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_isValidEngine">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2172">at line 2172</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2212">at line 2212</a></div>
         <code>                    bool
     <strong>isValidEngine</strong>(string $engine)
         </code>
@@ -2111,7 +2118,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     <div class="method-item">
                     <h3 id="method_setPreferredEngine">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setPreferredEngine">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2208">at line 2208</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2248">at line 2248</a></div>
         <code>                    
     <strong>setPreferredEngine</strong>(string $engine)
         </code>
@@ -2164,7 +2171,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     <div class="method-item">
                     <h3 id="method_getEngine">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_getEngine">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2227">at line 2227</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2267">at line 2267</a></div>
         <code>                    
     <strong>getEngine</strong>()
         </code>
@@ -2197,7 +2204,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     <div class="method-item">
                     <h3 id="method_setEngine">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setEngine">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2238">at line 2238</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2278">at line 2278</a></div>
         <code>            protected        
     <strong>setEngine</strong>()
         </code>
@@ -2230,7 +2237,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     <div class="method-item">
                     <h3 id="method_encryptBlock">
         <div class="location">in <a href="../../phpseclib3/Crypt/Rijndael.html#method_encryptBlock">
-<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L328">at line 328</a></div>
+<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L331">at line 331</a></div>
         <code>            protected        string
     <strong>encryptBlock</strong>(string $in)
         </code>
@@ -2271,7 +2278,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     <div class="method-item">
                     <h3 id="method_decryptBlock">
         <div class="location">in <a href="../../phpseclib3/Crypt/Rijndael.html#method_decryptBlock">
-<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L418">at line 418</a></div>
+<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L421">at line 421</a></div>
         <code>            protected        string
     <strong>decryptBlock</strong>(string $in)
         </code>
@@ -2312,7 +2319,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     <div class="method-item">
                     <h3 id="method_setupKey">
         <div class="location">in <a href="../../phpseclib3/Crypt/Rijndael.html#method_setupKey">
-<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L496">at line 496</a></div>
+<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L499">at line 499</a></div>
         <code>            protected        
     <strong>setupKey</strong>()
         </code>
@@ -2346,7 +2353,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
                     <div class="method-item">
                     <h3 id="method_setup">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_setup">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2341">at line 2341</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2383">at line 2383</a></div>
         <code>            protected        
     <strong>setup</strong>()
         </code>
@@ -2368,7 +2375,10 @@ typically this happens when using one or more of following public methods:</p>
 <li><p>disableContinuousBuffer()</p></li>
 <li><p>First run of encrypt() / decrypt() with no init-settings</p></li>
 </ul>
-</p>                            </div>
+
+<p>{@internal setup() is always called before en/decryption.}</p>
+
+<p>{@internal Could, but not must, extend by the child Crypt_* class}</p>                            </div>
                 <div class="tags">
             
             
@@ -2403,7 +2413,7 @@ typically this happens when using one or more of following public methods:</p>
                     <div class="method-item">
                     <h3 id="method_pad">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_pad">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2438">at line 2438</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2480">at line 2480</a></div>
         <code>            protected        string
     <strong>pad</strong>(string $text)
         </code>
@@ -2469,7 +2479,7 @@ and padding will, hence forth, be enabled.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_unpad">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_unpad">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2467">at line 2467</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2509">at line 2509</a></div>
         <code>            protected        string
     <strong>unpad</strong>(string $text)
         </code>
@@ -2531,7 +2541,7 @@ and false will be returned.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_createInlineCryptFunction">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_createInlineCryptFunction">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2653">at line 2653</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L2695">at line 2695</a></div>
         <code>            protected        string
     <strong>createInlineCryptFunction</strong>(array $cipher_code)
         </code>
@@ -2691,7 +2701,7 @@ $cipher_code = [
                     <div class="method-item">
                     <h3 id="method_safe_intval">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_safe_intval">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L3064">at line 3064</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L3106">at line 3106</a></div>
         <code>        static    protected        int
     <strong>safe_intval</strong>(string $x)
         </code>
@@ -2732,7 +2742,7 @@ $cipher_code = [
                     <div class="method-item">
                     <h3 id="method_safe_intval_inline">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_safe_intval_inline">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L3082">at line 3082</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L3124">at line 3124</a></div>
         <code>        static    protected        string
     <strong>safe_intval_inline</strong>()
         </code>
@@ -2763,7 +2773,7 @@ $cipher_code = [
                     <div class="method-item">
                     <h3 id="method_nullPad128">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_nullPad128">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L3188">at line 3188</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L3230">at line 3230</a></div>
         <code>        static    protected        string
     <strong>nullPad128</strong>(string $str)
         </code>
@@ -2827,7 +2837,7 @@ $cipher_code = [
                     <div class="method-item">
                     <h3 id="method_poly1305">
         <div class="location">in <a href="../../phpseclib3/Crypt/Common/SymmetricKey.html#method_poly1305">
-<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L3206">at line 3206</a></div>
+<abbr title="phpseclib3\Crypt\Common\SymmetricKey">SymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Common/SymmetricKey.php#L3248">at line 3248</a></div>
         <code>            protected        string
     <strong>poly1305</strong>(string $text)
         </code>
@@ -2938,7 +2948,7 @@ it takes 1.2s.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_getTables">
         <div class="location">in <a href="../../phpseclib3/Crypt/Rijndael.html#method_getTables">
-<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L632">at line 632</a></div>
+<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L635">at line 635</a></div>
         <code>            protected        array
     <strong>getTables</strong>()
         </code>
@@ -2992,7 +3002,7 @@ it takes 1.2s.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_getInvTables">
         <div class="location">in <a href="../../phpseclib3/Crypt/Rijndael.html#method_getInvTables">
-<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L721">at line 721</a></div>
+<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L724">at line 724</a></div>
         <code>            protected        array
     <strong>getInvTables</strong>()
         </code>
@@ -3046,7 +3056,7 @@ it takes 1.2s.</p>                            </div>
                     <div class="method-item">
                     <h3 id="method_setupInlineCrypt">
         <div class="location">in <a href="../../phpseclib3/Crypt/Rijndael.html#method_setupInlineCrypt">
-<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L802">at line 802</a></div>
+<abbr title="phpseclib3\Crypt\Rijndael">Rijndael</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/Rijndael.php#L805">at line 805</a></div>
         <code>            protected        
     <strong>setupInlineCrypt</strong>()
         </code>

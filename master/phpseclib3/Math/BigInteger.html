@@ -1499,7 +1499,7 @@ C:25:"phpseclib\Math\BigInteger":42:{a:1:{s:3:"hex";s:18:"00ab54a98ceb1f0ad2";}}
             </div>
                     <div class="method-item">
                     <h3 id="method_compare">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L471">at line 471</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L472">at line 472</a></div>
         <code>                    int
     <strong>compare</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $y)
         </code>
@@ -1516,7 +1516,9 @@ demonstrated thusly:</p>
 $x  &lt; $y: $x->compare($y)  &lt; 0
 $x == $y: $x->compare($y) == 0</p>
 
-<p>Note how the same comparison operator is used.  If you want to test for equality, use $x->equals($y).</p>                            </div>
+<p>Note how the same comparison operator is used.  If you want to test for equality, use $x->equals($y).</p>
+
+<p>{@internal Could return $this->subtract($x), but that's not as fast as what we do do.}</p>                            </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -1557,7 +1559,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_equals">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L484">at line 484</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L485">at line 485</a></div>
         <code>                    bool
     <strong>equals</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x)
         </code>
@@ -1597,7 +1599,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_bitwise_not">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L494">at line 494</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L495">at line 495</a></div>
         <code>                    BigInteger
     <strong>bitwise_not</strong>()
         </code>
@@ -1627,7 +1629,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_bitwise_and">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L505">at line 505</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L506">at line 506</a></div>
         <code>                    BigInteger
     <strong>bitwise_and</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x)
         </code>
@@ -1667,7 +1669,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_bitwise_or">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L516">at line 516</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L517">at line 517</a></div>
         <code>                    BigInteger
     <strong>bitwise_or</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x)
         </code>
@@ -1707,7 +1709,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_bitwise_xor">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L527">at line 527</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L528">at line 528</a></div>
         <code>                    BigInteger
     <strong>bitwise_xor</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x)
         </code>
@@ -1747,7 +1749,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_bitwise_rightShift">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L540">at line 540</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L541">at line 541</a></div>
         <code>                    BigInteger
     <strong>bitwise_rightShift</strong>(int $shift)
         </code>
@@ -1787,7 +1789,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_bitwise_leftShift">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L553">at line 553</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L554">at line 554</a></div>
         <code>                    BigInteger
     <strong>bitwise_leftShift</strong>(int $shift)
         </code>
@@ -1827,7 +1829,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_bitwise_leftRotate">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L566">at line 566</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L567">at line 567</a></div>
         <code>                    BigInteger
     <strong>bitwise_leftRotate</strong>(int $shift)
         </code>
@@ -1867,7 +1869,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_bitwise_rightRotate">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L579">at line 579</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L580">at line 580</a></div>
         <code>                    BigInteger
     <strong>bitwise_rightRotate</strong>(int $shift)
         </code>
@@ -1907,7 +1909,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_minMaxBits">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L590">at line 590</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L591">at line 591</a></div>
         <code>        static            BigInteger[]
     <strong>minMaxBits</strong>(int $bits)
         </code>
@@ -1947,7 +1949,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getLength">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L610">at line 610</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L611">at line 611</a></div>
         <code>                    int
     <strong>getLength</strong>()
         </code>
@@ -1977,7 +1979,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getLengthInBytes">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L620">at line 620</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L621">at line 621</a></div>
         <code>                    int
     <strong>getLengthInBytes</strong>()
         </code>
@@ -2007,7 +2009,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_random">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L633">at line 633</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L634">at line 634</a></div>
         <code>        static            BigInteger
     <strong>random</strong>(int $size)
         </code>
@@ -2047,7 +2049,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_randomPrime">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L649">at line 649</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L650">at line 650</a></div>
         <code>        static            BigInteger
     <strong>randomPrime</strong>(int $size)
         </code>
@@ -2087,7 +2089,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_randomRangePrime">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L666">at line 666</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L667">at line 667</a></div>
         <code>        static            false|BigInteger
     <strong>randomRangePrime</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $min, <a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $max)
         </code>
@@ -2132,7 +2134,7 @@ $x == $y: $x->compare($y) == 0</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_randomRange">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L685">at line 685</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L686">at line 686</a></div>
         <code>        static            BigInteger
     <strong>randomRange</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $min, <a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $max)
         </code>
@@ -2181,7 +2183,7 @@ BigInteger::randomRange($max, $min)</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_isPrime">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L701">at line 701</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L702">at line 702</a></div>
         <code>                    bool
     <strong>isPrime</strong>(int|bool $t = false)
         </code>
@@ -2223,7 +2225,7 @@ on a website instead of just one.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_root">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L714">at line 714</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L715">at line 715</a></div>
         <code>                    BigInteger
     <strong>root</strong>(int $n = 2)
         </code>
@@ -2263,7 +2265,7 @@ on a website instead of just one.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_pow">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L725">at line 725</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L726">at line 726</a></div>
         <code>                    BigInteger
     <strong>pow</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $n)
         </code>
@@ -2303,7 +2305,7 @@ on a website instead of just one.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_min">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L736">at line 736</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L737">at line 737</a></div>
         <code>        static            BigInteger
     <strong>min</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> ...$nums)
         </code>
@@ -2343,7 +2345,7 @@ on a website instead of just one.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_max">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L749">at line 749</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L750">at line 750</a></div>
         <code>        static            BigInteger
     <strong>max</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> ...$nums)
         </code>
@@ -2383,7 +2385,7 @@ on a website instead of just one.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_between">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L763">at line 763</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L764">at line 764</a></div>
         <code>                    bool
     <strong>between</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $min, <a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $max)
         </code>
@@ -2428,7 +2430,7 @@ on a website instead of just one.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___clone">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L771">at line 771</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L772">at line 772</a></div>
         <code>                    
     <strong>__clone</strong>()
         </code>
@@ -2449,7 +2451,7 @@ on a website instead of just one.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_isOdd">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L781">at line 781</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L782">at line 782</a></div>
         <code>                    bool
     <strong>isOdd</strong>()
         </code>
@@ -2479,7 +2481,7 @@ on a website instead of just one.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_testBit">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L792">at line 792</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L793">at line 793</a></div>
         <code>                    bool
     <strong>testBit</strong>(int $x)
         </code>
@@ -2519,7 +2521,7 @@ on a website instead of just one.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_isNegative">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L802">at line 802</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L803">at line 803</a></div>
         <code>                    bool
     <strong>isNegative</strong>()
         </code>
@@ -2549,7 +2551,7 @@ on a website instead of just one.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_negate">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L814">at line 814</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L815">at line 815</a></div>
         <code>                    BigInteger
     <strong>negate</strong>()
         </code>
@@ -2579,7 +2581,7 @@ on a website instead of just one.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_scan1divide">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L827">at line 827</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L828">at line 828</a></div>
         <code>        static            int
     <strong>scan1divide</strong>(<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $r)
         </code>
@@ -2619,7 +2621,7 @@ on a website instead of just one.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_createRecurringModuloFunction">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L841">at line 841</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L842">at line 842</a></div>
         <code>                    callable
     <strong>createRecurringModuloFunction</strong>()
         </code>
@@ -2650,7 +2652,7 @@ modular exponentiation</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_bitwise_split">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L857">at line 857</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Math/BigInteger.php#L858">at line 858</a></div>
         <code>                    <a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>[]
     <strong>bitwise_split</strong>(int $split)
         </code>
