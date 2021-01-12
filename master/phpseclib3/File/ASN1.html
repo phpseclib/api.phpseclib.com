@@ -358,7 +358,7 @@ size == 0 indicates variable length encoding.</p>
                     static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_encodeDER">encodeDER</a>(string $source, array $mapping, array $special = [])
+                    <a href="#method_encodeDER">encodeDER</a>(Element|string|array $source, array $mapping, array $special = [])
         
                                             <p>ASN.1 Encode</p>                </div>
                 <div class="col-md-2"></div>
@@ -596,7 +596,7 @@ size == 0 indicates variable length encoding.</p>
                     <h3 id="method_encodeDER">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/File/ASN1.php#L835">at line 835</a></div>
         <code>        static            string
-    <strong>encodeDER</strong>(string $source, array $mapping, array $special = [])
+    <strong>encodeDER</strong>(Element|string|array $source, array $mapping, array $special = [])
         </code>
     </h3>
     <div class="details">
@@ -613,7 +613,7 @@ an ASN.1 compiler.</p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>Element|string|array</td>
                 <td>$source</td>
                 <td></td>
             </tr>
