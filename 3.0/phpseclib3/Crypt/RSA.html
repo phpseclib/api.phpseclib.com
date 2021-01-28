@@ -287,6 +287,14 @@ stuff, if you're trying to diagnose why an encrypted message isn't decrypting, e
                 <td class="last">Enable Blinding?</td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_configFile">
+                    static                    protected                                        <abbr title="phpseclib3\Crypt\?string">?string</abbr>
+                </td>
+                <td>$configFile</td>
+                <td class="last">OpenSSL configuration file name.</td>
+                <td></td>
+            </tr>
             </table>
 
     
@@ -311,8 +319,7 @@ stuff, if you're trying to diagnose why an encrypted message isn't decrypting, e
                     <a href="#method_initialize_static_variables">initialize_static_variables</a>()
         
                                             <p>Initialize static variables</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_initialize_static_variables">
-<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -475,6 +482,16 @@ using the process specified for deterministic DSA.</p>                </div>
                     <a href="#method_setSmallestPrime">setSmallestPrime</a>(int $val)
         
                                             <p>Sets the smallest prime number in bits. Used for key generation</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setOpenSSLConfigPath">setOpenSSLConfigPath</a>(string $val)
+        
+                                            <p>Sets the OpenSSL config file path</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -665,7 +682,7 @@ using the process specified for deterministic DSA.</p>                </div>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L462">at line 462</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L517">at line 517</a></div>
         <code>            protected        
     <strong>__construct</strong>()
         </code>
@@ -686,8 +703,7 @@ using the process specified for deterministic DSA.</p>                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_initialize_static_variables">
-        <div class="location">in <a href="../../phpseclib3/Crypt/Common/AsymmetricKey.html#method_initialize_static_variables">
-<abbr title="phpseclib3\Crypt\Common\AsymmetricKey">AsymmetricKey</abbr></a> <a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/Common/AsymmetricKey.php#L132">at line 132</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L503">at line 503</a></div>
         <code>        static    protected        
     <strong>initialize_static_variables</strong>()
         </code>
@@ -1058,7 +1074,7 @@ with RSA::createKey() then this will throw an exception.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_withHash">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L612">at line 612</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L667">at line 667</a></div>
         <code>                    
     <strong>withHash</strong>(string $hash)
         </code>
@@ -1195,7 +1211,7 @@ using the process specified for deterministic DSA.</p>                          
             </div>
                     <div class="method-item">
                     <h3 id="method_setExponent">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L276">at line 276</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L284">at line 284</a></div>
         <code>        static            
     <strong>setExponent</strong>(int $val)
         </code>
@@ -1226,7 +1242,7 @@ using the process specified for deterministic DSA.</p>                          
             </div>
                     <div class="method-item">
                     <h3 id="method_setSmallestPrime">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L289">at line 289</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L297">at line 297</a></div>
         <code>        static            
     <strong>setSmallestPrime</strong>(int $val)
         </code>
@@ -1256,8 +1272,39 @@ using the process specified for deterministic DSA.</p>                          
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_setOpenSSLConfigPath">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L310">at line 310</a></div>
+        <code>        static            
+    <strong>setOpenSSLConfigPath</strong>(string $val)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Sets the OpenSSL config file path</p>                    <p>Set to the empty string to use the default config file</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$val</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_createKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L303">at line 303</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L324">at line 324</a></div>
         <code>        static            RSA
     <strong>createKey</strong>(int $bits = 2048)
         </code>
@@ -1297,7 +1344,7 @@ using the process specified for deterministic DSA.</p>                          
             </div>
                     <div class="method-item">
                     <h3 id="method_onLoad">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L414">at line 414</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L457">at line 457</a></div>
         <code>        static    protected        bool
     <strong>onLoad</strong>(array $components)
         </code>
@@ -1337,7 +1384,7 @@ using the process specified for deterministic DSA.</p>                          
             </div>
                     <div class="method-item">
                     <h3 id="method_i2osp">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L481">at line 481</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L536">at line 536</a></div>
         <code>            protected        bool|string
     <strong>i2osp</strong>(bool|<a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a> $x, int $xLen)
         </code>
@@ -1382,7 +1429,7 @@ using the process specified for deterministic DSA.</p>                          
             </div>
                     <div class="method-item">
                     <h3 id="method_os2ip">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L502">at line 502</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L557">at line 557</a></div>
         <code>            protected        <a href="../../phpseclib3/Math/BigInteger.html"><abbr title="phpseclib3\Math\BigInteger">BigInteger</abbr></a>
     <strong>os2ip</strong>(string $x)
         </code>
@@ -1422,7 +1469,7 @@ using the process specified for deterministic DSA.</p>                          
             </div>
                     <div class="method-item">
                     <h3 id="method_emsa_pkcs1_v1_5_encode">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L518">at line 518</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L573">at line 573</a></div>
         <code>            protected        string
     <strong>emsa_pkcs1_v1_5_encode</strong>(string $m, int $emLen)
         </code>
@@ -1476,7 +1523,7 @@ using the process specified for deterministic DSA.</p>                          
             </div>
                     <div class="method-item">
                     <h3 id="method_mgf1">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L576">at line 576</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L631">at line 631</a></div>
         <code>            protected        string
     <strong>mgf1</strong>(string $mgfSeed, int $maskLen)
         </code>
@@ -1521,7 +1568,7 @@ using the process specified for deterministic DSA.</p>                          
             </div>
                     <div class="method-item">
                     <h3 id="method_getLength">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L598">at line 598</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L653">at line 653</a></div>
         <code>                    int
     <strong>getLength</strong>()
         </code>
@@ -1551,7 +1598,7 @@ using the process specified for deterministic DSA.</p>                          
             </div>
                     <div class="method-item">
                     <h3 id="method_withMGFHash">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L648">at line 648</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L703">at line 703</a></div>
         <code>                    
     <strong>withMGFHash</strong>(string $hash)
         </code>
@@ -1583,7 +1630,7 @@ best if Hash and MGFHash are set to the same thing this is not a requirement.</p
             </div>
                     <div class="method-item">
                     <h3 id="method_getMGFHash">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L680">at line 680</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L735">at line 735</a></div>
         <code>                    
     <strong>getMGFHash</strong>()
         </code>
@@ -1604,7 +1651,7 @@ best if Hash and MGFHash are set to the same thing this is not a requirement.</p
             </div>
                     <div class="method-item">
                     <h3 id="method_withSaltLength">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L698">at line 698</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L753">at line 753</a></div>
         <code>                    
     <strong>withSaltLength</strong>(int $sLen)
         </code>
@@ -1640,7 +1687,7 @@ best if Hash and MGFHash are set to the same thing this is not a requirement.</p
             </div>
                     <div class="method-item">
                     <h3 id="method_getSaltLength">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L710">at line 710</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L765">at line 765</a></div>
         <code>                    
     <strong>getSaltLength</strong>()
         </code>
@@ -1661,7 +1708,7 @@ best if Hash and MGFHash are set to the same thing this is not a requirement.</p
             </div>
                     <div class="method-item">
                     <h3 id="method_withLabel">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L730">at line 730</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L785">at line 785</a></div>
         <code>                    
     <strong>withLabel</strong>(string $label)
         </code>
@@ -1699,7 +1746,7 @@ best if Hash and MGFHash are set to the same thing this is not a requirement.</p
             </div>
                     <div class="method-item">
                     <h3 id="method_getLabel">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L742">at line 742</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L797">at line 797</a></div>
         <code>                    
     <strong>getLabel</strong>()
         </code>
@@ -1720,7 +1767,7 @@ best if Hash and MGFHash are set to the same thing this is not a requirement.</p
             </div>
                     <div class="method-item">
                     <h3 id="method_withPadding">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L755">at line 755</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L810">at line 810</a></div>
         <code>                    
     <strong>withPadding</strong>(int $padding)
         </code>
@@ -1751,7 +1798,7 @@ best if Hash and MGFHash are set to the same thing this is not a requirement.</p
             </div>
                     <div class="method-item">
                     <h3 id="method_getPadding">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L804">at line 804</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L859">at line 859</a></div>
         <code>                    
     <strong>getPadding</strong>()
         </code>
@@ -1772,7 +1819,7 @@ best if Hash and MGFHash are set to the same thing this is not a requirement.</p
             </div>
                     <div class="method-item">
                     <h3 id="method_getEngine">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L817">at line 817</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L877">at line 877</a></div>
         <code>                    string
     <strong>getEngine</strong>()
         </code>
@@ -1782,7 +1829,10 @@ best if Hash and MGFHash are set to the same thing this is not a requirement.</p
     
 
                     <div class="method-description">
-                                    <p>Returns the current engine being used</p>                                                </div>
+                                    <p>Returns the current engine being used</p>                    <p>OpenSSL is only used in this class (and it's subclasses) for key generation
+Even then it depends on the parameters you're using. It's not used for
+multi-prime RSA nor is it used if the key length is outside of the range
+supported by OpenSSL</p>                            </div>
                 <div class="tags">
             
                             <h4>Return Value</h4>
@@ -1819,7 +1869,7 @@ best if Hash and MGFHash are set to the same thing this is not a requirement.</p
             </div>
                     <div class="method-item">
                     <h3 id="method_enableBlinding">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L827">at line 827</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L889">at line 889</a></div>
         <code>        static            
     <strong>enableBlinding</strong>()
         </code>
@@ -1840,7 +1890,7 @@ best if Hash and MGFHash are set to the same thing this is not a requirement.</p
             </div>
                     <div class="method-item">
                     <h3 id="method_disableBlinding">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L837">at line 837</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Crypt/RSA.php#L899">at line 899</a></div>
         <code>        static            
     <strong>disableBlinding</strong>()
         </code>
