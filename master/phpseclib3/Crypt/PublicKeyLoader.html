@@ -108,6 +108,36 @@
                                             <p>Loads a public or private key</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    PrivateKey
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadPrivate">loadPrivate</a>(string|array $key, string $password = false)
+        
+                                            <p>Loads a private key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    PublicKey
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadPublic">loadPublic</a>(string|array $key)
+        
+                                            <p>Loads a public key</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    AsymmetricKey
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_loadParameters">loadParameters</a>(string|array $key)
+        
+                                            <p>Loads parameters</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -116,7 +146,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_load">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/PublicKeyLoader.php#L39">at line 39</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/PublicKeyLoader.php#L41">at line 41</a></div>
         <code>        static            AsymmetricKey
     <strong>load</strong>(string|array $key, string $password = false)
         </code>
@@ -140,6 +170,131 @@
                 <td>string</td>
                 <td>$password</td>
                 <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>AsymmetricKey</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadPrivate">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/PublicKeyLoader.php#L75">at line 75</a></div>
+        <code>                    PrivateKey
+    <strong>loadPrivate</strong>(string|array $key, string $password = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Loads a private key</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>optional</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>PrivateKey</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadPublic">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/PublicKeyLoader.php#L91">at line 91</a></div>
+        <code>                    PublicKey
+    <strong>loadPublic</strong>(string|array $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Loads a public key</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>PublicKey</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_loadParameters">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Crypt/PublicKeyLoader.php#L107">at line 107</a></div>
+        <code>                    AsymmetricKey
+    <strong>loadParameters</strong>(string|array $key)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Loads parameters</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|array</td>
+                <td>$key</td>
+                <td></td>
             </tr>
             </table>
 
