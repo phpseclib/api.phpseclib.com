@@ -434,6 +434,16 @@ Alias of getDN()</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    array|bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCurrentCert">getCurrentCert</a>()
+        
+                                            <p>Returns the current cert</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
                 </div>
                 <div class="col-md-8 type">
@@ -1765,8 +1775,38 @@ Alias of getDN()</p>                                                </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_getCurrentCert">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2116">at line 2116</a></div>
+        <code>                    array|bool
+    <strong>getCurrentCert</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the current cert</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_setPublicKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2119">at line 2119</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2130">at line 2130</a></div>
         <code>                    bool
     <strong>setPublicKey</strong>(<a href="../../phpseclib3/Crypt/Common/PublicKey.html"><abbr title="phpseclib3\Crypt\Common\PublicKey">PublicKey</abbr></a> $key)
         </code>
@@ -1806,7 +1846,7 @@ Alias of getDN()</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setPrivateKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2132">at line 2132</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2143">at line 2143</a></div>
         <code>                    
     <strong>setPrivateKey</strong>(<a href="../../phpseclib3/Crypt/Common/PrivateKey.html"><abbr title="phpseclib3\Crypt\Common\PrivateKey">PrivateKey</abbr></a> $key)
         </code>
@@ -1837,7 +1877,7 @@ Alias of getDN()</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setChallenge">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2145">at line 2145</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2156">at line 2156</a></div>
         <code>                    
     <strong>setChallenge</strong>(string $challenge)
         </code>
@@ -1868,7 +1908,7 @@ Alias of getDN()</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getPublicKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2158">at line 2158</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2169">at line 2169</a></div>
         <code>                    mixed
     <strong>getPublicKey</strong>()
         </code>
@@ -1898,7 +1938,7 @@ Alias of getDN()</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_loadCSR">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2205">at line 2205</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2216">at line 2216</a></div>
         <code>                    mixed
     <strong>loadCSR</strong>(string $csr, int $mode = self::FORMAT_AUTO_DETECT)
         </code>
@@ -1943,7 +1983,7 @@ Alias of getDN()</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_saveCSR">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2280">at line 2280</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2291">at line 2291</a></div>
         <code>                    string
     <strong>saveCSR</strong>(array $csr, int $format = self::FORMAT_PEM)
         </code>
@@ -1988,7 +2028,7 @@ Alias of getDN()</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_loadSPKAC">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2326">at line 2326</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2337">at line 2337</a></div>
         <code>                    mixed
     <strong>loadSPKAC</strong>(string $spkac)
         </code>
@@ -2030,7 +2070,7 @@ Alias of getDN()</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_saveSPKAC">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2391">at line 2391</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2402">at line 2402</a></div>
         <code>                    string
     <strong>saveSPKAC</strong>(array $spkac, int $format = self::FORMAT_PEM)
         </code>
@@ -2075,7 +2115,7 @@ Alias of getDN()</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_loadCRL">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2429">at line 2429</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2440">at line 2440</a></div>
         <code>                    mixed
     <strong>loadCRL</strong>(string $crl, int $mode = self::FORMAT_AUTO_DETECT)
         </code>
@@ -2120,7 +2160,7 @@ Alias of getDN()</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_saveCRL">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2496">at line 2496</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2507">at line 2507</a></div>
         <code>                    string
     <strong>saveCRL</strong>(array $crl, int $format = self::FORMAT_PEM)
         </code>
@@ -2165,7 +2205,7 @@ Alias of getDN()</p>                                                </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_sign">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2580">at line 2580</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2591">at line 2591</a></div>
         <code>                    mixed
     <strong>sign</strong>(<a href="../../phpseclib3/File/X509.html"><abbr title="phpseclib3\File\X509">X509</abbr></a> $issuer, <a href="../../phpseclib3/File/X509.html"><abbr title="phpseclib3\File\X509">X509</abbr></a> $subject)
         </code>
@@ -2212,7 +2252,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_signCSR">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2773">at line 2773</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2784">at line 2784</a></div>
         <code>                    mixed
     <strong>signCSR</strong>()
         </code>
@@ -2242,7 +2282,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_signSPKAC">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2828">at line 2828</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2839">at line 2839</a></div>
         <code>                    mixed
     <strong>signSPKAC</strong>()
         </code>
@@ -2272,7 +2312,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_signCRL">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2893">at line 2893</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L2904">at line 2904</a></div>
         <code>                    mixed
     <strong>signCRL</strong>(<a href="../../phpseclib3/File/X509.html"><abbr title="phpseclib3\File\X509">X509</abbr></a> $issuer, <a href="../../phpseclib3/File/X509.html"><abbr title="phpseclib3\File\X509">X509</abbr></a> $crl)
         </code>
@@ -2317,7 +2357,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setStartDate">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3080">at line 3080</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3091">at line 3091</a></div>
         <code>                    
     <strong>setStartDate</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|string $date)
         </code>
@@ -2348,7 +2388,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setEndDate">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3095">at line 3095</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3106">at line 3106</a></div>
         <code>                    
     <strong>setEndDate</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/DateTimeInterface">DateTimeInterface</a>|string $date)
         </code>
@@ -2379,7 +2419,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setSerialNumber">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3124">at line 3124</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3135">at line 3135</a></div>
         <code>                    
     <strong>setSerialNumber</strong>(string $serial, int $base = -256)
         </code>
@@ -2415,7 +2455,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_makeCA">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3134">at line 3134</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3145">at line 3145</a></div>
         <code>                    
     <strong>makeCA</strong>()
         </code>
@@ -2436,7 +2476,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_removeExtension">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3423">at line 3423</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3434">at line 3434</a></div>
         <code>                    bool
     <strong>removeExtension</strong>(string $id)
         </code>
@@ -2476,7 +2516,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_getExtension">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3439">at line 3439</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3450">at line 3450</a></div>
         <code>                    mixed
     <strong>getExtension</strong>(string $id, array $cert = null, string $path = null)
         </code>
@@ -2526,7 +2566,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_getExtensions">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3452">at line 3452</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3463">at line 3463</a></div>
         <code>                    array
     <strong>getExtensions</strong>(array $cert = null, string $path = null)
         </code>
@@ -2571,7 +2611,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setExtension">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3467">at line 3467</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3478">at line 3478</a></div>
         <code>                    bool
     <strong>setExtension</strong>(string $id, mixed $value, bool $critical = false, bool $replace = true)
         </code>
@@ -2626,7 +2666,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_removeAttribute">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3480">at line 3480</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3491">at line 3491</a></div>
         <code>                    bool
     <strong>removeAttribute</strong>(string $id, int $disposition = self::ATTR_ALL)
         </code>
@@ -2671,7 +2711,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_getAttribute">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3531">at line 3531</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3542">at line 3542</a></div>
         <code>                    mixed
     <strong>getAttribute</strong>(string $id, int $disposition = self::ATTR_ALL, array $csr = null)
         </code>
@@ -2721,7 +2761,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_getAttributes">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3571">at line 3571</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3582">at line 3582</a></div>
         <code>                    array
     <strong>getAttributes</strong>(array $csr = null)
         </code>
@@ -2761,7 +2801,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setAttribute">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3598">at line 3598</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3609">at line 3609</a></div>
         <code>                    bool
     <strong>setAttribute</strong>(string $id, mixed $value, int $disposition = self::ATTR_ALL)
         </code>
@@ -2811,7 +2851,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setKeyIdentifier">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3653">at line 3653</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3664">at line 3664</a></div>
         <code>                    
     <strong>setKeyIdentifier</strong>(string $value)
         </code>
@@ -2842,7 +2882,7 @@ a CSR or something with the DN and public key explicitly set.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_computeKeyIdentifier">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3680">at line 3680</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3691">at line 3691</a></div>
         <code>                    string
     <strong>computeKeyIdentifier</strong>(mixed $key = null, int $method = 1)
         </code>
@@ -2895,7 +2935,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_setDomain">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3772">at line 3772</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3783">at line 3783</a></div>
         <code>                    array
     <strong>setDomain</strong>(array ...$domains)
         </code>
@@ -2935,7 +2975,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_setIPAddress">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3785">at line 3785</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3796">at line 3796</a></div>
         <code>                    
     <strong>setIPAddress</strong>(array ...$ipAddresses)
         </code>
@@ -2966,7 +3006,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_revoke">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3860">at line 3860</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3871">at line 3871</a></div>
         <code>                    bool
     <strong>revoke</strong>(string $serial, string $date = null)
         </code>
@@ -3011,7 +3051,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_unrevoke">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3886">at line 3886</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3897">at line 3897</a></div>
         <code>                    bool
     <strong>unrevoke</strong>(string $serial)
         </code>
@@ -3051,7 +3091,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_getRevoked">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3906">at line 3906</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3917">at line 3917</a></div>
         <code>                    mixed
     <strong>getRevoked</strong>(string $serial)
         </code>
@@ -3091,7 +3131,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_listRevoked">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3924">at line 3924</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3935">at line 3935</a></div>
         <code>                    array|bool
     <strong>listRevoked</strong>(array $crl = null)
         </code>
@@ -3131,7 +3171,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_removeRevokedCertificateExtension">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3953">at line 3953</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3964">at line 3964</a></div>
         <code>                    bool
     <strong>removeRevokedCertificateExtension</strong>(string $serial, string $id)
         </code>
@@ -3176,7 +3216,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_getRevokedCertificateExtension">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3975">at line 3975</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3986">at line 3986</a></div>
         <code>                    mixed
     <strong>getRevokedCertificateExtension</strong>(string $serial, string $id, array $crl = null)
         </code>
@@ -3226,7 +3266,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_getRevokedCertificateExtensions">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L3998">at line 3998</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L4009">at line 4009</a></div>
         <code>                    array|bool
     <strong>getRevokedCertificateExtensions</strong>(string $serial, array $crl = null)
         </code>
@@ -3271,7 +3311,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_setRevokedCertificateExtension">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L4024">at line 4024</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L4035">at line 4035</a></div>
         <code>                    bool
     <strong>setRevokedCertificateExtension</strong>(string $serial, string $id, mixed $value, bool $critical = false, bool $replace = true)
         </code>
@@ -3331,7 +3371,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_registerExtension">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L4043">at line 4043</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L4054">at line 4054</a></div>
         <code>        static            
     <strong>registerExtension</strong>(string $id, array $mapping)
         </code>
@@ -3367,7 +3407,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_getRegisteredExtension">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L4061">at line 4061</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L4072">at line 4072</a></div>
         <code>        static            array|null
     <strong>getRegisteredExtension</strong>(string $id)
         </code>
@@ -3407,7 +3447,7 @@ Highly polymorphic: try to accept all possible forms of key:
             </div>
                     <div class="method-item">
                     <h3 id="method_setExtensionValue">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L4072">at line 4072</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/File/X509.php#L4083">at line 4083</a></div>
         <code>                    
     <strong>setExtensionValue</strong>(string $id, mixed $value)
         </code>
