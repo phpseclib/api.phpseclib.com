@@ -1320,7 +1320,7 @@ function callback($length) returns string to proceed, null for EOF</em></p>
                     mixed
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_get">get</a>(string $remote_file, string|bool|resource $local_file = false, int $offset = 0, int $length = -1, callable|null $progressCallback = null)
+                    <a href="#method_get">get</a>(string $remote_file, string|bool|resource|callable $local_file = false, int $offset = 0, int $length = -1, callable|null $progressCallback = null)
         
                                             <p>Downloads a file from the SFTP server.</p>                </div>
                 <div class="col-md-2"></div>
@@ -1563,7 +1563,7 @@ function callback($length) returns string to proceed, null for EOF</em></p>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L297">at line 297</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L298">at line 298</a></div>
         <code>                    SSH2|void
     <strong>__construct</strong>(mixed $host, int $port = 22, int $timeout = 10)
         </code>
@@ -1742,7 +1742,7 @@ it shouldn't matter but it is a fact of life that some SSH servers are simply bu
             </div>
                     <div class="method-item">
                     <h3 id="method_login">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L438">at line 438</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L439">at line 439</a></div>
         <code>                    bool
     <strong>login</strong>(string $username, string[] ...$args)
         </code>
@@ -2435,7 +2435,7 @@ disconnect().</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_reset_connection">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2921">at line 2921</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2922">at line 2922</a></div>
         <code>            protected        
     <strong>reset_connection</strong>(int $reason)
         </code>
@@ -2808,7 +2808,7 @@ disconnect().</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_disconnect_helper">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3109">at line 3109</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3110">at line 3110</a></div>
         <code>            protected        bool
     <strong>disconnect_helper</strong>(int $reason)
         </code>
@@ -3710,7 +3710,7 @@ match all alphanumeric domains.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_disableStatCache">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L579">at line 579</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L580">at line 580</a></div>
         <code>                    
     <strong>disableStatCache</strong>()
         </code>
@@ -3731,7 +3731,7 @@ match all alphanumeric domains.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_enableStatCache">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L589">at line 589</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L590">at line 590</a></div>
         <code>                    
     <strong>enableStatCache</strong>()
         </code>
@@ -3752,7 +3752,7 @@ match all alphanumeric domains.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_clearStatCache">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L599">at line 599</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L600">at line 600</a></div>
         <code>                    
     <strong>clearStatCache</strong>()
         </code>
@@ -3773,7 +3773,7 @@ match all alphanumeric domains.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_enablePathCanonicalization">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L609">at line 609</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L610">at line 610</a></div>
         <code>                    
     <strong>enablePathCanonicalization</strong>()
         </code>
@@ -3794,7 +3794,7 @@ match all alphanumeric domains.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_disablePathCanonicalization">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L619">at line 619</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L620">at line 620</a></div>
         <code>                    
     <strong>disablePathCanonicalization</strong>()
         </code>
@@ -3815,7 +3815,7 @@ match all alphanumeric domains.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_pwd">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L630">at line 630</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L631">at line 631</a></div>
         <code>                    mixed
     <strong>pwd</strong>()
         </code>
@@ -3845,7 +3845,7 @@ match all alphanumeric domains.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_realpath">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L673">at line 673</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L674">at line 674</a></div>
         <code>                    mixed
     <strong>realpath</strong>(string $path)
         </code>
@@ -3914,7 +3914,7 @@ the absolute (canonicalized) path.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_chdir">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L733">at line 733</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L734">at line 734</a></div>
         <code>                    bool
     <strong>chdir</strong>(string $dir)
         </code>
@@ -3963,7 +3963,7 @@ the absolute (canonicalized) path.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_nlist">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L796">at line 796</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L797">at line 797</a></div>
         <code>                    mixed
     <strong>nlist</strong>(string $dir = &#039;.&#039;, bool $recursive = false)
         </code>
@@ -4008,7 +4008,7 @@ the absolute (canonicalized) path.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_rawlist">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L844">at line 844</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L845">at line 845</a></div>
         <code>                    mixed
     <strong>rawlist</strong>(string $dir = &#039;.&#039;, bool $recursive = false)
         </code>
@@ -4053,7 +4053,7 @@ the absolute (canonicalized) path.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_setListOrder">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1070">at line 1070</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1071">at line 1071</a></div>
         <code>                    
     <strong>setListOrder</strong>(string[] ...$args)
         </code>
@@ -4097,7 +4097,7 @@ $sftp->setListOrder();
             </div>
                     <div class="method-item">
                     <h3 id="method_stat">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1192">at line 1192</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1193">at line 1193</a></div>
         <code>                    mixed
     <strong>stat</strong>(string $filename)
         </code>
@@ -4137,7 +4137,7 @@ $sftp->setListOrder();
             </div>
                     <div class="method-item">
                     <h3 id="method_lstat">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1249">at line 1249</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1250">at line 1250</a></div>
         <code>                    mixed
     <strong>lstat</strong>(string $filename)
         </code>
@@ -4177,7 +4177,7 @@ $sftp->setListOrder();
             </div>
                     <div class="method-item">
                     <h3 id="method_truncate">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1346">at line 1346</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1347">at line 1347</a></div>
         <code>                    bool
     <strong>truncate</strong>(string $filename, int $new_size)
         </code>
@@ -4222,7 +4222,7 @@ $sftp->setListOrder();
             </div>
                     <div class="method-item">
                     <h3 id="method_touch">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1365">at line 1365</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1366">at line 1366</a></div>
         <code>                    bool
     <strong>touch</strong>(string $filename, int $time = null, int $atime = null)
         </code>
@@ -4281,7 +4281,7 @@ $sftp->setListOrder();
             </div>
                     <div class="method-item">
                     <h3 id="method_chown">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1416">at line 1416</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1417">at line 1417</a></div>
         <code>                    bool
     <strong>chown</strong>(string $filename, int $uid, bool $recursive = false)
         </code>
@@ -4331,7 +4331,7 @@ $sftp->setListOrder();
             </div>
                     <div class="method-item">
                     <h3 id="method_chgrp">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1436">at line 1436</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1437">at line 1437</a></div>
         <code>                    bool
     <strong>chgrp</strong>(string $filename, int $gid, bool $recursive = false)
         </code>
@@ -4381,7 +4381,7 @@ $sftp->setListOrder();
             </div>
                     <div class="method-item">
                     <h3 id="method_chmod">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1456">at line 1456</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1457">at line 1457</a></div>
         <code>                    mixed
     <strong>chmod</strong>(int $mode, string $filename, bool $recursive = false)
         </code>
@@ -4441,7 +4441,7 @@ If $recursive is true than this just returns true or false.</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method_readlink">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1633">at line 1633</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1634">at line 1634</a></div>
         <code>                    mixed
     <strong>readlink</strong>(string $link)
         </code>
@@ -4490,7 +4490,7 @@ If $recursive is true than this just returns true or false.</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method_symlink">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1679">at line 1679</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1680">at line 1680</a></div>
         <code>                    bool
     <strong>symlink</strong>(string $target, string $link)
         </code>
@@ -4544,7 +4544,7 @@ If $recursive is true than this just returns true or false.</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method_mkdir">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1717">at line 1717</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1718">at line 1718</a></div>
         <code>                    bool
     <strong>mkdir</strong>(string $dir, int $mode = -1, bool $recursive = false)
         </code>
@@ -4594,7 +4594,7 @@ If $recursive is true than this just returns true or false.</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method_rmdir">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1784">at line 1784</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1785">at line 1785</a></div>
         <code>                    bool
     <strong>rmdir</strong>(string $dir)
         </code>
@@ -4643,7 +4643,7 @@ If $recursive is true than this just returns true or false.</p>                 
             </div>
                     <div class="method-item">
                     <h3 id="method_put">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1870">at line 1870</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L1871">at line 1871</a></div>
         <code>                    bool
     <strong>put</strong>(string $remote_file, string|resource $data, int $mode = self::SOURCE_STRING, int $start = -1, int $local_start = -1, callable|null $progressCallback = null)
         </code>
@@ -4757,9 +4757,9 @@ middle of one.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_get">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2107">at line 2107</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2108">at line 2108</a></div>
         <code>                    mixed
-    <strong>get</strong>(string $remote_file, string|bool|resource $local_file = false, int $offset = 0, int $length = -1, callable|null $progressCallback = null)
+    <strong>get</strong>(string $remote_file, string|bool|resource|callable $local_file = false, int $offset = 0, int $length = -1, callable|null $progressCallback = null)
         </code>
     </h3>
     <div class="details">
@@ -4782,7 +4782,7 @@ operation.</p>
                 <td></td>
             </tr>
                     <tr>
-                <td>string|bool|resource</td>
+                <td>string|bool|resource|callable</td>
                 <td>$local_file</td>
                 <td></td>
             </tr>
@@ -4830,7 +4830,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_delete">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2263">at line 2263</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2264">at line 2264</a></div>
         <code>                    bool
     <strong>delete</strong>(string $path, bool $recursive = true)
         </code>
@@ -4884,7 +4884,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_file_exists">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2389">at line 2389</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2390">at line 2390</a></div>
         <code>                    bool
     <strong>file_exists</strong>(string $path)
         </code>
@@ -4924,7 +4924,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_is_dir">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2412">at line 2412</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2413">at line 2413</a></div>
         <code>                    bool
     <strong>is_dir</strong>(string $path)
         </code>
@@ -4964,7 +4964,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_is_file">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2428">at line 2428</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2429">at line 2429</a></div>
         <code>                    bool
     <strong>is_file</strong>(string $path)
         </code>
@@ -5004,7 +5004,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_is_link">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2444">at line 2444</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2445">at line 2445</a></div>
         <code>                    bool
     <strong>is_link</strong>(string $path)
         </code>
@@ -5044,7 +5044,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_is_readable">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2460">at line 2460</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2461">at line 2461</a></div>
         <code>                    bool
     <strong>is_readable</strong>(string $path)
         </code>
@@ -5084,7 +5084,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_is_writable">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2486">at line 2486</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2487">at line 2487</a></div>
         <code>                    bool
     <strong>is_writable</strong>(string $path)
         </code>
@@ -5124,7 +5124,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_is_writeable">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2514">at line 2514</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2515">at line 2515</a></div>
         <code>                    bool
     <strong>is_writeable</strong>(string $path)
         </code>
@@ -5164,7 +5164,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_fileatime">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2526">at line 2526</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2527">at line 2527</a></div>
         <code>                    mixed
     <strong>fileatime</strong>(string $path)
         </code>
@@ -5204,7 +5204,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_filemtime">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2538">at line 2538</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2539">at line 2539</a></div>
         <code>                    mixed
     <strong>filemtime</strong>(string $path)
         </code>
@@ -5244,7 +5244,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_fileperms">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2550">at line 2550</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2551">at line 2551</a></div>
         <code>                    mixed
     <strong>fileperms</strong>(string $path)
         </code>
@@ -5284,7 +5284,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_fileowner">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2562">at line 2562</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2563">at line 2563</a></div>
         <code>                    mixed
     <strong>fileowner</strong>(string $path)
         </code>
@@ -5324,7 +5324,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_filegroup">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2574">at line 2574</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2575">at line 2575</a></div>
         <code>                    mixed
     <strong>filegroup</strong>(string $path)
         </code>
@@ -5364,7 +5364,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_filesize">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2586">at line 2586</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2587">at line 2587</a></div>
         <code>                    mixed
     <strong>filesize</strong>(string $path)
         </code>
@@ -5404,7 +5404,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_filetype">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2598">at line 2598</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2599">at line 2599</a></div>
         <code>                    mixed
     <strong>filetype</strong>(string $path)
         </code>
@@ -5444,7 +5444,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_rename">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2694">at line 2694</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2695">at line 2695</a></div>
         <code>                    bool
     <strong>rename</strong>(string $oldname, string $newname)
         </code>
@@ -5498,7 +5498,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_parseAttributes">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2743">at line 2743</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L2744">at line 2744</a></div>
         <code>            protected        array
     <strong>parseAttributes</strong>(string $response)
         </code>
@@ -5538,7 +5538,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getSFTPLog">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3049">at line 3049</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3050">at line 3050</a></div>
         <code>                    array|string
     <strong>getSFTPLog</strong>()
         </code>
@@ -5568,7 +5568,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getSFTPErrors">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3071">at line 3071</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3072">at line 3072</a></div>
         <code>                    array
     <strong>getSFTPErrors</strong>()
         </code>
@@ -5598,7 +5598,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getLastSFTPError">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3082">at line 3082</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3083">at line 3083</a></div>
         <code>                    string
     <strong>getLastSFTPError</strong>()
         </code>
@@ -5628,7 +5628,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getSupportedVersions">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3093">at line 3093</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3094">at line 3094</a></div>
         <code>                    array
     <strong>getSupportedVersions</strong>()
         </code>
@@ -5658,7 +5658,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_enableDatePreservation">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3120">at line 3120</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3121">at line 3121</a></div>
         <code>                    
     <strong>enableDatePreservation</strong>()
         </code>
@@ -5679,7 +5679,7 @@ operation.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_disableDatePreservation">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3130">at line 3130</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/master/phpseclib/Net/SFTP.php#L3131">at line 3131</a></div>
         <code>                    
     <strong>disableDatePreservation</strong>()
         </code>
