@@ -59,6 +59,7 @@
         {"type":"Method","fromName":"phpseclib\\Crypt\\Base","fromLink":"phpseclib/Crypt/Base.html","link":"phpseclib/Crypt/Base.html#method__hashInlineCryptFunction","name":"phpseclib\\Crypt\\Base::_hashInlineCryptFunction","doc":"Generates a digest from $bytes"},
         {"type":"Method","fromName":"phpseclib\\Crypt\\Base","fromLink":"phpseclib/Crypt/Base.html","link":"phpseclib/Crypt/Base.html#method_safe_intval","name":"phpseclib\\Crypt\\Base::safe_intval","doc":"Convert float to int"},
         {"type":"Method","fromName":"phpseclib\\Crypt\\Base","fromLink":"phpseclib/Crypt/Base.html","link":"phpseclib/Crypt/Base.html#method_safe_intval_inline","name":"phpseclib\\Crypt\\Base::safe_intval_inline","doc":"eval()'able string for in-line float to int"},
+        {"type":"Method","fromName":"phpseclib\\Crypt\\Base","fromLink":"phpseclib/Crypt/Base.html","link":"phpseclib/Crypt/Base.html#method_do_nothing","name":"phpseclib\\Crypt\\Base::do_nothing","doc":"Dummy error handler to suppress mcrypt errors"},
             
                                                 {"type":"Class","fromName":"phpseclib\\Crypt","fromLink":"phpseclib/Crypt.html","link":"phpseclib/Crypt/Blowfish.html","name":"phpseclib\\Crypt\\Blowfish","doc":"Pure-PHP implementation of Blowfish."},
                                 {"type":"Method","fromName":"phpseclib\\Crypt\\Blowfish","fromLink":"phpseclib/Crypt/Blowfish.html","link":"phpseclib/Crypt/Blowfish.html#method_setKeyLength","name":"phpseclib\\Crypt\\Blowfish::setKeyLength","doc":"Sets the key length."},

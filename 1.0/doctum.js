@@ -60,6 +60,7 @@
         {"type":"Method","fromName":"Crypt_Base","fromLink":"Crypt_Base.html","link":"Crypt_Base.html#method__hashInlineCryptFunction","name":"Crypt_Base::_hashInlineCryptFunction","doc":"Generates a digest from $bytes"},
         {"type":"Method","fromName":"Crypt_Base","fromLink":"Crypt_Base.html","link":"Crypt_Base.html#method_safe_intval","name":"Crypt_Base::safe_intval","doc":"Convert float to int"},
         {"type":"Method","fromName":"Crypt_Base","fromLink":"Crypt_Base.html","link":"Crypt_Base.html#method_safe_intval_inline","name":"Crypt_Base::safe_intval_inline","doc":"eval()'able string for in-line float to int"},
+        {"type":"Method","fromName":"Crypt_Base","fromLink":"Crypt_Base.html","link":"Crypt_Base.html#method_do_nothing","name":"Crypt_Base::do_nothing","doc":"Dummy error handler to suppress mcrypt errors"},
             
                     {"type":"Class","link":"Crypt_Blowfish.html","name":"Crypt_Blowfish","doc":"Pure-PHP implementation of Blowfish."},
                                 {"type":"Method","fromName":"Crypt_Blowfish","fromLink":"Crypt_Blowfish.html","link":"Crypt_Blowfish.html#method_setKeyLength","name":"Crypt_Blowfish::setKeyLength","doc":"Sets the key length."},

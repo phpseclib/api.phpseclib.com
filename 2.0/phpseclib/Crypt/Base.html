@@ -797,6 +797,16 @@ which will be determined automatically on __construct()</td>
                                             <p>eval()'able string for in-line float to int</p>                </div>
                 <div class="col-md-2"></div>
             </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_do_nothing">do_nothing</a>()
+        
+                                            <p>Dummy error handler to suppress mcrypt errors</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
             </div>
 
 
@@ -1129,7 +1139,7 @@ length.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_decrypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1019">at line 1019</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1025">at line 1025</a></div>
         <code>                    string
     <strong>decrypt</strong>(string $ciphertext)
         </code>
@@ -1181,7 +1191,7 @@ it is.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__openssl_ctr_process">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1343">at line 1343</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1354">at line 1354</a></div>
         <code>                    string
     <strong>_openssl_ctr_process</strong>(string $plaintext, string $encryptIV, array $buffer)
         </code>
@@ -1251,7 +1261,7 @@ function will emulate CTR with ECB when necessary.</p>                          
             </div>
                     <div class="method-item">
                     <h3 id="method__openssl_ofb_process">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1437">at line 1437</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1448">at line 1448</a></div>
         <code>                    string
     <strong>_openssl_ofb_process</strong>(string $plaintext, string $encryptIV, array $buffer)
         </code>
@@ -1320,7 +1330,7 @@ and Base::decrypt().</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__openssl_translate_mode">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1483">at line 1483</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1494">at line 1494</a></div>
         <code>                    int
     <strong>_openssl_translate_mode</strong>()
         </code>
@@ -1350,7 +1360,7 @@ and Base::decrypt().</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_enablePadding">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1516">at line 1516</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1527">at line 1527</a></div>
         <code>                    
     <strong>enablePadding</strong>()
         </code>
@@ -1389,7 +1399,7 @@ transmitted separately)</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_disablePadding">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1527">at line 1527</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1538">at line 1538</a></div>
         <code>                    
     <strong>disablePadding</strong>()
         </code>
@@ -1421,7 +1431,7 @@ transmitted separately)</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_enableContinuousBuffer">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1570">at line 1570</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1581">at line 1581</a></div>
         <code>                    
     <strong>enableContinuousBuffer</strong>()
         </code>
@@ -1482,7 +1492,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_disableContinuousBuffer">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1590">at line 1590</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1601">at line 1601</a></div>
         <code>                    
     <strong>disableContinuousBuffer</strong>()
         </code>
@@ -1514,7 +1524,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_isValidEngine">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1613">at line 1613</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1624">at line 1624</a></div>
         <code>                    bool
     <strong>isValidEngine</strong>(int $engine)
         </code>
@@ -1565,7 +1575,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_setPreferredEngine">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1679">at line 1679</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1693">at line 1693</a></div>
         <code>                    
     <strong>setPreferredEngine</strong>(int $engine)
         </code>
@@ -1615,7 +1625,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getEngine">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1700">at line 1700</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1714">at line 1714</a></div>
         <code>                    
     <strong>getEngine</strong>()
         </code>
@@ -1647,7 +1657,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__setEngine">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1711">at line 1711</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1725">at line 1725</a></div>
         <code>                    
     <strong>_setEngine</strong>()
         </code>
@@ -1679,7 +1689,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__encryptBlock">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1756">at line 1756</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1772">at line 1772</a></div>
         <code>    abstract                string
     <strong>_encryptBlock</strong>(string $in)
         </code>
@@ -1719,7 +1729,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__decryptBlock">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1767">at line 1767</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1783">at line 1783</a></div>
         <code>    abstract                string
     <strong>_decryptBlock</strong>(string $in)
         </code>
@@ -1759,7 +1769,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__setupKey">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1779">at line 1779</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1795">at line 1795</a></div>
         <code>    abstract                
     <strong>_setupKey</strong>()
         </code>
@@ -1793,7 +1803,7 @@ however, they are also less intuitive and more likely to cause you problems.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__setup">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1805">at line 1805</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1821">at line 1821</a></div>
         <code>                    
     <strong>_setup</strong>()
         </code>
@@ -1849,7 +1859,7 @@ typically this happens when using one or more of following public methods:</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__setupMcrypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1838">at line 1838</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1854">at line 1854</a></div>
         <code>                    
     <strong>_setupMcrypt</strong>()
         </code>
@@ -1905,7 +1915,7 @@ typically this happens when using one or more of following public methods:</p>
             </div>
                     <div class="method-item">
                     <h3 id="method__pad">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1885">at line 1885</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1901">at line 1901</a></div>
         <code>                    string
     <strong>_pad</strong>(string $text)
         </code>
@@ -1961,7 +1971,7 @@ and padding will, hence forth, be enabled.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__unpad">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1914">at line 1914</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1930">at line 1930</a></div>
         <code>                    string
     <strong>_unpad</strong>(string $text)
         </code>
@@ -2013,7 +2023,7 @@ and false will be returned.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__clearBuffers">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1939">at line 1939</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1955">at line 1955</a></div>
         <code>                    
     <strong>_clearBuffers</strong>()
         </code>
@@ -2036,7 +2046,7 @@ ie after setKey() or setIV()</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__string_shift">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1962">at line 1962</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1978">at line 1978</a></div>
         <code>                    string
     <strong>_string_shift</strong>(string $string, int $index = 1)
         </code>
@@ -2081,7 +2091,7 @@ ie after setKey() or setIV()</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__string_pop">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1979">at line 1979</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1995">at line 1995</a></div>
         <code>                    string
     <strong>_string_pop</strong>(string $string, int $index = 1)
         </code>
@@ -2126,7 +2136,7 @@ ie after setKey() or setIV()</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__increment_str">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L1994">at line 1994</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2010">at line 2010</a></div>
         <code>                    
     <strong>_increment_str</strong>(string $var)
         </code>
@@ -2174,7 +2184,7 @@ ie after setKey() or setIV()</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__setupInlineCrypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2083">at line 2083</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2099">at line 2099</a></div>
         <code>                    
     <strong>_setupInlineCrypt</strong>()
         </code>
@@ -2272,7 +2282,7 @@ It is, each time if called, the responsibility of _setupInlineCrypt():
             </div>
                     <div class="method-item">
                     <h3 id="method__createInlineCryptFunction">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2205">at line 2205</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2221">at line 2221</a></div>
         <code>                    string
     <strong>_createInlineCryptFunction</strong>(array $cipher_code)
         </code>
@@ -2431,7 +2441,7 @@ $cipher_code = array(
             </div>
                     <div class="method-item">
                     <h3 id="method__getLambdaFunctions">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2619">at line 2619</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2635">at line 2635</a></div>
         <code>                    array
     <strong>_getLambdaFunctions</strong>()
         </code>
@@ -2468,7 +2478,7 @@ for which $mode the lambda function was created.</p>                            
             </div>
                     <div class="method-item">
                     <h3 id="method__hashInlineCryptFunction">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2633">at line 2633</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2649">at line 2649</a></div>
         <code>                    string
     <strong>_hashInlineCryptFunction</strong>(string $bytes)
         </code>
@@ -2519,7 +2529,7 @@ for which $mode the lambda function was created.</p>                            
             </div>
                     <div class="method-item">
                     <h3 id="method_safe_intval">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2669">at line 2669</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2685">at line 2685</a></div>
         <code>                    int
     <strong>safe_intval</strong>(string $x)
         </code>
@@ -2559,7 +2569,7 @@ for which $mode the lambda function was created.</p>                            
             </div>
                     <div class="method-item">
                     <h3 id="method_safe_intval_inline">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2687">at line 2687</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2703">at line 2703</a></div>
         <code>                    string
     <strong>safe_intval_inline</strong>()
         </code>
@@ -2581,6 +2591,27 @@ for which $mode the lambda function was created.</p>                            
         </tr>
     </table>
 
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_do_nothing">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/Base.php#L2721">at line 2721</a></div>
+        <code>                    
+    <strong>do_nothing</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Dummy error handler to suppress mcrypt errors</p>                                                </div>
+                <div class="tags">
+            
             
             
                     </div>
