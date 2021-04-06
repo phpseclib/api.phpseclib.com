@@ -173,6 +173,7 @@
         {"type":"Method","fromName":"Crypt_RSA","fromLink":"Crypt_RSA.html","link":"Crypt_RSA.html#method__rsassa_pss_sign","name":"Crypt_RSA::_rsassa_pss_sign","doc":"RSASSA-PSS-SIGN"},
         {"type":"Method","fromName":"Crypt_RSA","fromLink":"Crypt_RSA.html","link":"Crypt_RSA.html#method__rsassa_pss_verify","name":"Crypt_RSA::_rsassa_pss_verify","doc":"RSASSA-PSS-VERIFY"},
         {"type":"Method","fromName":"Crypt_RSA","fromLink":"Crypt_RSA.html","link":"Crypt_RSA.html#method__emsa_pkcs1_v1_5_encode","name":"Crypt_RSA::_emsa_pkcs1_v1_5_encode","doc":"EMSA-PKCS1-V1_5-ENCODE"},
+        {"type":"Method","fromName":"Crypt_RSA","fromLink":"Crypt_RSA.html","link":"Crypt_RSA.html#method__emsa_pkcs1_v1_5_encode_without_null","name":"Crypt_RSA::_emsa_pkcs1_v1_5_encode_without_null","doc":"EMSA-PKCS1-V1_5-ENCODE (without NULL)"},
         {"type":"Method","fromName":"Crypt_RSA","fromLink":"Crypt_RSA.html","link":"Crypt_RSA.html#method__rsassa_pkcs1_v1_5_sign","name":"Crypt_RSA::_rsassa_pkcs1_v1_5_sign","doc":"RSASSA-PKCS1-V1_5-SIGN"},
         {"type":"Method","fromName":"Crypt_RSA","fromLink":"Crypt_RSA.html","link":"Crypt_RSA.html#method__rsassa_pkcs1_v1_5_verify","name":"Crypt_RSA::_rsassa_pkcs1_v1_5_verify","doc":"RSASSA-PKCS1-V1_5-VERIFY"},
         {"type":"Method","fromName":"Crypt_RSA","fromLink":"Crypt_RSA.html","link":"Crypt_RSA.html#method_setEncryptionMode","name":"Crypt_RSA::setEncryptionMode","doc":"Set Encryption Mode"},

@@ -972,6 +972,16 @@ for keys. This just extends that same concept to public keys (much like ssh-keyg
                     string
                 </div>
                 <div class="col-md-8 type">
+                    <a href="#method__emsa_pkcs1_v1_5_encode_without_null">_emsa_pkcs1_v1_5_encode_without_null</a>(string $m, int $emLen)
+        
+                                            <p>EMSA-PKCS1-V1_5-ENCODE (without NULL)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
                     <a href="#method__rsassa_pkcs1_v1_5_sign">_rsassa_pkcs1_v1_5_sign</a>(string $m)
         
                                             <p>RSASSA-PKCS1-V1_5-SIGN</p>                </div>
@@ -3193,8 +3203,58 @@ not private key encrypted ciphertext's.</p>                            </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method__emsa_pkcs1_v1_5_encode_without_null">
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L2935">at line 2935</a></div>
+        <code>                    string
+    <strong>_emsa_pkcs1_v1_5_encode_without_null</strong>(string $m, int $emLen)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>EMSA-PKCS1-V1_5-ENCODE (without NULL)</p>                    <p>Quoting https://tools.ietf.org/html/rfc8017#page-65,</p>
+
+<p>"The parameters field associated with id-sha1, id-sha224, id-sha256,
+ id-sha384, id-sha512, id-sha512/224, and id-sha512/256 should
+ generally be omitted, but if present, it shall have a value of type
+ NULL"</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$m</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$emLen</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method__rsassa_pkcs1_v1_5_sign">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L2929">at line 2929</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L2982">at line 2982</a></div>
         <code>                    string
     <strong>_rsassa_pkcs1_v1_5_sign</strong>(string $m)
         </code>
@@ -3234,7 +3294,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__rsassa_pkcs1_v1_5_verify">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L2960">at line 2960</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3013">at line 3013</a></div>
         <code>                    string
     <strong>_rsassa_pkcs1_v1_5_verify</strong>(string $m, string $s)
         </code>
@@ -3279,7 +3339,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setEncryptionMode">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3003">at line 3003</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3060">at line 3060</a></div>
         <code>                    
     <strong>setEncryptionMode</strong>(int $mode)
         </code>
@@ -3310,7 +3370,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setSignatureMode">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3016">at line 3016</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3073">at line 3073</a></div>
         <code>                    
     <strong>setSignatureMode</strong>(int $mode)
         </code>
@@ -3341,7 +3401,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_setComment">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3027">at line 3027</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3084">at line 3084</a></div>
         <code>                    
     <strong>setComment</strong>(string $comment)
         </code>
@@ -3372,7 +3432,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getComment">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3038">at line 3038</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3095">at line 3095</a></div>
         <code>                    string
     <strong>getComment</strong>()
         </code>
@@ -3402,7 +3462,7 @@ not private key encrypted ciphertext's.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_encrypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3055">at line 3055</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3112">at line 3112</a></div>
         <code>                    string
     <strong>encrypt</strong>(string $plaintext)
         </code>
@@ -3455,7 +3515,7 @@ be concatenated together.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_decrypt">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3101">at line 3101</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3158">at line 3158</a></div>
         <code>                    string
     <strong>decrypt</strong>(string $ciphertext)
         </code>
@@ -3506,7 +3566,7 @@ be concatenated together.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_sign">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3143">at line 3143</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3200">at line 3200</a></div>
         <code>                    string
     <strong>sign</strong>(string $message)
         </code>
@@ -3557,7 +3617,7 @@ be concatenated together.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_verify">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3167">at line 3167</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3224">at line 3224</a></div>
         <code>                    bool
     <strong>verify</strong>(string $message, string $signature)
         </code>
@@ -3613,7 +3673,7 @@ be concatenated together.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__extractBER">
-        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3189">at line 3189</a></div>
+        <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/2.0/phpseclib/Crypt/RSA.php#L3246">at line 3246</a></div>
         <code>                    string
     <strong>_extractBER</strong>(string $str)
         </code>
