@@ -125,7 +125,7 @@ numbers.</p>                                </div>
                     BigInteger
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method___construct">__construct</a>(int|<abbr title="BigInteger\Engines\Engine">Engine</abbr> $x = 0, int $base = 10)
+                    <a href="#method___construct">__construct</a>(string|int|<abbr title="BigInteger\Engines\Engine">Engine</abbr> $x = 0, int $base = 10)
         
                                             <p>Converts base-2, base-10, base-16, and binary strings (base-256) to BigIntegers.</p>                </div>
                 <div class="col-md-2"></div>
@@ -716,7 +716,7 @@ numbers.</p>                                </div>
                     <h3 id="method___construct">
         <div class="location"><a href="https://github.com/phpseclib/phpseclib/blob/3.0/phpseclib/Math/BigInteger.php#L160">at line 160</a></div>
         <code>                    BigInteger
-    <strong>__construct</strong>(int|<abbr title="BigInteger\Engines\Engine">Engine</abbr> $x = 0, int $base = 10)
+    <strong>__construct</strong>(string|int|<abbr title="BigInteger\Engines\Engine">Engine</abbr> $x = 0, int $base = 10)
         </code>
     </h3>
     <div class="details">
@@ -731,7 +731,7 @@ two's compliment.  The sole exception to this is -10, which is treated the same 
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int|<abbr title="BigInteger\Engines\Engine">Engine</abbr></td>
+                <td>string|int|<abbr title="BigInteger\Engines\Engine">Engine</abbr></td>
                 <td>$x</td>
                 <td>Base-10 number or base-$base number if $base set.</td>
             </tr>
