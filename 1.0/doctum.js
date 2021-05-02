@@ -665,6 +665,7 @@
         {"type":"Method","fromName":"Net_SSH2","fromLink":"Net_SSH2.html","link":"Net_SSH2.html#method_setWindowRows","name":"Net_SSH2::setWindowRows","doc":"Sets the number of rows for the terminal window size."},
         {"type":"Method","fromName":"Net_SSH2","fromLink":"Net_SSH2.html","link":"Net_SSH2.html#method_setWindowSize","name":"Net_SSH2::setWindowSize","doc":"Sets the number of columns and rows for the terminal window size."},
         {"type":"Method","fromName":"Net_SSH2","fromLink":"Net_SSH2.html","link":"Net_SSH2.html#method__updateLogHistory","name":"Net_SSH2::_updateLogHistory","doc":"Update packet types in log history"},
+        {"type":"Method","fromName":"Net_SSH2","fromLink":"Net_SSH2.html","link":"Net_SSH2.html#method_getAuthMethodsToContinue","name":"Net_SSH2::getAuthMethodsToContinue","doc":"Return the list of authentication methods that may productively continue authentication."},
             
                     {"type":"Class","link":"System_SSH_Agent.html","name":"System_SSH_Agent","doc":"Pure-PHP ssh-agent client identity factory"},
                                 {"type":"Method","fromName":"System_SSH_Agent","fromLink":"System_SSH_Agent.html","link":"System_SSH_Agent.html#method___construct","name":"System_SSH_Agent::__construct","doc":"Default Constructor"},
