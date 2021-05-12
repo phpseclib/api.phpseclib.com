@@ -438,6 +438,7 @@
                                 {"type":"Method","fromName":"Net_SFTP","fromLink":"Net_SFTP.html","link":"Net_SFTP.html#method___construct","name":"Net_SFTP::__construct","doc":"Default Constructor."},
         {"type":"Method","fromName":"Net_SFTP","fromLink":"Net_SFTP.html","link":"Net_SFTP.html#method_Net_SFTP","name":"Net_SFTP::Net_SFTP","doc":"PHP4 compatible Default Constructor."},
         {"type":"Method","fromName":"Net_SFTP","fromLink":"Net_SFTP.html","link":"Net_SFTP.html#method_login","name":"Net_SFTP::login","doc":"Login"},
+        {"type":"Method","fromName":"Net_SFTP","fromLink":"Net_SFTP.html","link":"Net_SFTP.html#method__init_sftp_connection","name":"Net_SFTP::_init_sftp_connection","doc":"(Re)initializes the SFTP channel"},
         {"type":"Method","fromName":"Net_SFTP","fromLink":"Net_SFTP.html","link":"Net_SFTP.html#method_disableStatCache","name":"Net_SFTP::disableStatCache","doc":"Disable the stat cache"},
         {"type":"Method","fromName":"Net_SFTP","fromLink":"Net_SFTP.html","link":"Net_SFTP.html#method_enableStatCache","name":"Net_SFTP::enableStatCache","doc":"Enable the stat cache"},
         {"type":"Method","fromName":"Net_SFTP","fromLink":"Net_SFTP.html","link":"Net_SFTP.html#method_clearStatCache","name":"Net_SFTP::clearStatCache","doc":"Clear the stat cache"},
